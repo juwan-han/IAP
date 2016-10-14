@@ -1,5 +1,13 @@
 ## Common > IAP > Release Notes
 
+### 2016.10.12
+
+##### 버그 수정
+
+* [SDK][Android] 1.2.7 업데이트
+* [SDK][Unity] 1.4.5 업데이트
+    * AndroidManifest.xml 필수 permission 거부 시 앱 크래쉬 현상 수정
+
 ### 2016.09.29
 
 #### 기능 개선/변경
