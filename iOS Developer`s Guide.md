@@ -220,7 +220,7 @@ server.
     if (error)
     {
         // An error occurred, we need to handle the error
-        [_delegate onInAppPurchaseError:error];
+	NSLog(@"itemListWithCompletionHandler occured error, %@ %d", [error domain], [error code]);
         return;
     }
 
@@ -242,7 +242,47 @@ server.
 
     NSArray *itemList = result;
     NSLog(@"itemListWithCompletionHandler, size:%lu \nitemList:%@", [itemList count], itemList);
+}];
+```
 
+### 7\. 미처리 결제건 일괄 재처리
 
+미처리된 결제건(IAP 서버 검증 실패)들에 대해 일괄로 재처리 작업을 진행합니다.
+
+[Example Code]
+```objc
+[TIAPurchase processesIncompletePurchasesWithCompletionHandler:^(id result, NSError *error) {
+        if (error)
+        {
+            // An error occurred, we need to handle the error
+           NSLog(@"processesIncompletePurchasesWithCompletionHandler occured error, %@ %d", [error domain], [error code]);
+            return;
+        }
+
+        /**
+         Include your code to handle the results here
+         
+         JSON data to 'NSDictionany'.
+         [keys]
+         - successList : success data list (NSArray)
+                 [keys]
+                 - paymentSeq : generated payment id
+                 - itemSeq : represent item id
+                 - purchaseToken : represent token for validation
+                 - marketItemId : market item id (product id)
+                 - currency : represent to item currency
+                 - price : represent to item price
+
+         - failList : fail data list (NSArray)
+                 [keys]
+                 - paymentSeq : generated payment id
+                 - itemSeq : represent item id
+                 - purchaseToken : represent token for validation
+                 - marketItemId : market item id (product id)
+                 - currency : represent to item currency
+                 - price : represent to item price
+         */
+        NSDictionary *data = result;
+        NSLog(@"processesIncompletePurchasesWithCompletionHandler data:%@", data);
 }];
 ```
