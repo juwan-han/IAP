@@ -5,20 +5,20 @@ Common &gt; IAP &gt; Unity Plugin Developer's Guide
 
     Create project in Unity Editor
 
-<img src="media/image1.png" width="560" height="534" />
+<img src="http://static.toastoven.net/prod_iap/iap_11.png" />
 
 \[Figure 1 Create project\]
 
     In Unity Editor, select [Assets] > [Import Package] > [Custom Package]
     Select [In App Purchase Unity SDK]
 
-<img src="media/image2.png" width="560" height="382" />
+<img src="http://static.toastoven.net/prod_iap/iap_12.png" />
 
 \[Figure 2 Select Custom Package\]
 
     Step3 : Import all Assets.
 
-<img src="media/image3.png" width="396" height="512" />
+<img src="http://static.toastoven.net/prod_iap/iap_13.png" />
 
 \[Figure 3 Importing package\]
 
@@ -29,13 +29,13 @@ Common &gt; IAP &gt; Unity Plugin Developer's Guide
     In [Player Setting], modify [Android - Others Setting] information referring the content below.  
     [Minimum API Level] IAP unity plug-in supports Android API Level 10 or higher.
 
-<img src="media/image4.png" width="378" height="372" />
+<img src=http://static.toastoven.net/prod_iap/iap_14.png" />
 
 \[Figure 4 Setting For Android\]
 
     Modify information on AndroidManifest.xml of application referring AndroidManifest-iap-template.xml information  
 
-<img src="media/image5.png" width="233" height="96" />
+<img src="http://static.toastoven.net/prod_iap/iap_15.png"/>
 
 \[Figure 5 AndroidManifest-iap-template.xml\]
 
@@ -47,13 +47,13 @@ Common &gt; IAP &gt; Unity Plugin Developer's Guide
     In Unity Editor, select [File] – Build Settings] 
     select [Platform] - iOS then [Switch Platform]
 
-<img src="media/image6.jpg" width="560" height="601" />
+<img src="http://static.toastoven.net/prod_iap/iap_20.jpg" />
 
 \[Figure 6 Select iOS In Platform\]
 
     Enter [Player Settings] > [Settings For iOS] > Bundle identifier
 
-<img src="media/image7.jpg" width="452" height="405" />
+<img src="http://static.toastoven.net/prod_iap/iap_21.jpg"/>
 
 \[Figure 7 Settings For iOS\]
 
@@ -61,7 +61,7 @@ Common &gt; IAP &gt; Unity Plugin Developer's Guide
     Create project in temporary folder like [unity_ios] 
     Run Xcode through [iPhone.xcodeproj].
 
-<img src="media/image8.jpg" width="326" height="344" />
+<img src="http://static.toastoven.net/prod_iap/iap_22.jpg" />
 
 \[Figure 8 Create Xcode project by building using iOS Platform\]
 
@@ -95,7 +95,7 @@ Unity Editor provides sample Console to test InAppPurchase API as below.
 /refer to Sample folder
 Unity Editor transmits API response in Mock format, and for actual purchase test, test after build on Android device.
 
-<img src="media/image9.png" width="413" height="734" />
+<img src= "http://static.toastoven.net/prod_iap/iap_43.png" />
 
 \[Figure 9 Sample Console\]
 

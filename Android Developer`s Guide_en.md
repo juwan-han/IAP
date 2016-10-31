@@ -96,7 +96,7 @@ IAP Android SDK distributes in Android library project format.
 
     Right click on [project] > [Properties] > [Android] > [Add] > Add IAP
 
-<img src="media/image1.jpg" width="560" height="578" />
+<img src="http://static.toastoven.net/prod_iap/iap_5.jpg" />
 
 \[Figure 1 Add IAP SDK\]
 
@@ -244,7 +244,7 @@ Request an item purchase from a client. Receive the response for payment request
 > IAP Android SDK Confirm payment window
 > Starting from toast-iap-android-sdk-1.2.3, proceed directly to market purchase without the below previous confirm payment window.
 
-<img src="media/image2.jpg" width="96" height="96" />
+<img src="http://static.toastoven.net/prod_iap/iap_40.jpg"/>
 
 \[Table 2 Previous confirm payment window\]
 
@@ -367,7 +367,7 @@ Refer to the sample application in Eclipse + ADT development environment by impo
     Check [Copy Project into Workspace]
     By selecting [Finish] button, Import is completed
 
-<img src="media/image3.jpg" width="560" height="574" />
+<img src="http://static.toastoven.net/prod_iap/iap_7.jpg" />
 
 \[Figure 3 Add sample applications\]
 

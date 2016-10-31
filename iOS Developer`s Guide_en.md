@@ -30,7 +30,7 @@ IAP Console
     \- Market APP ID : Bundle Id  
     [APP ID] Confirm
 
-<img src="media/image1.jpg" width="560" height="207" />
+<img src="http://static.toastoven.net/prod_iap/iap_17.jpg" />
 
 \[Figure 1 Obtain APP ID\]
 
@@ -65,7 +65,7 @@ Set up Xcode project
     \- Libsqlite3.dylib
     \- coreTelephony.framework
 
-<img src="media/image2.png" width="297" height="216" />
+<img src="http://static.toastoven.net/prod_iap/iap_42.png" />
 
 \[Figure 2 Add library to connect IAP\]
 
@@ -74,7 +74,7 @@ Set up Xcode project
     Create string value in [plist] where TOAST_IAP_APP_ID is KEY, and enter APP ID.  
     When completed, .plist will appear as below.
 
-<img src="media/image3.jpg" width="560" height="258" />
+<img src="http://static.toastoven.net/prod_iap/iap_19.jpg" />
 
 \[Figure 3 Set up APP ID in plist\]
 
