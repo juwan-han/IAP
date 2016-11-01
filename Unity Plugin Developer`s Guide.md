@@ -113,6 +113,7 @@ Unity Editor에서는 Mock 형태의 API응답이 전달되고, 실제 결제 �
 * Request Purchase : 결제 요청
 * Query Purchase List : 미소비 결제 내역 조회
 * Query Item List : 구매가능 상품조회
+* Processes Incomplete Purchases : 미결제건 재처리
 
 ## API Reference
 
@@ -124,14 +125,15 @@ Unity Editor에서는 Mock 형태의 API응답이 전달되고, 실제 결제 �
 
 [Method Summary]
 
-| 이름                  | Return Value | 파라미터                                     |
-| ------------------- | ------------ | ---------------------------------------- |
-| Init                | Result       |                                          |
-| SetDebugMode        | void         | bool isDebuggable                        |
-| RegisterUserId      | Result       | String userId                            |
-| AsyncRequestPuchase | void         | long itemId, OnResponsePurchase callback |
-| AsyncQueryPurchases | void         | OnResponsePurchase callback              |
-| AsyncQueryItems     | void         | OnResponsePurchase callback              |
+| 이름                              | Return Value | 파라미터                                 |
+| --------------------------------- | ------------ | ---------------------------------------- |
+| Init                              | Result       |                                          |
+| SetDebugMode                      | void         | bool isDebuggable                        |
+| RegisterUserId                    | Result       | String userId                            |
+| AsyncRequestPuchase               | void         | long itemId, OnResponsePurchase callback |
+| AsyncQueryPurchases               | void         | OnResponsePurchase callback              |
+| AsyncQueryItems                   | void         | OnResponsePurchase callback              |
+| AsyncProcessesIncompletePurchases | void         | OnResponsePurchase callback              |
 
 [Init]
 
@@ -365,6 +367,65 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
     "price": 7.99,
     "currency": "USD"
 }]
+```
+
+[AsyncProcessesIncompletePurchases]
+
+|용어|설명|
+| ----- | ----- |
+| Description | 미처리된 결제건(IAP 서버 검증 실패)들에 대해 일괄로 재처리 작업을 진행합니다. |
+| Syntax | public static void AsyncProcessesIncompletePurchases(OnResponsePurchase callback) |
+| Parameters |  callback  [in] API 요청 결과를 전달 하는 delegate |
+| Return Value |  void |
+
+[Example Code]
+
+```java
+InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => {
+    if (!result.IsSuccessful)
+    {
+        PrintLog ("IncompletePurchasesCallback.OnCallback() -> Failed! -> " + result.ResultCode + ":" + result.ResultString);
+        return;
+    }
+
+    /// Examples)
+    /// {
+    /// 	"successList": [
+    ///			{
+    ///				"paymentSeq" : "2014082510002163",
+    ///				"purchaseToken" : "8nkx3SzHKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoB-AB",
+    ///				"itemSeq" : 1000208,
+    ///				"marketItemId" : "item01",
+    ///				"currency" : "KRW",
+    ///				"price" : 1000.0
+    ///			},
+    ///			{
+    ///				"paymentSeq" : "2014082510002164",
+    ///				"purchaseToken" : "8nkx3SzATKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBaAC",
+    ///				"itemSeq" : 1000209,
+    ///				"marketItemId"	: "item02",
+    ///				"currency" : "KRW",
+    ///				"price" : 1000.0
+    ///			}
+    ///		],
+    ///		"failList": [
+    ///			{
+    ///				"paymentSeq" : "2014082510002165",
+    ///				"purchaseToken" : null,
+    ///				"itemSeq" : 1000210,
+    ///				"marketItemId" : "item03",
+    ///				"currency" : "KRW",
+    ///				"price" : 1000.0
+    ///			}
+    ///		]
+    ///	}
+
+    string json = System.Convert.ToString (data);
+    PrintLog ("IncompletePurchasesCallback.OnCallback():" + json);
+
+    // TODO : 상품내역 조회 결과로 필요한 처리를 한다.
+
+});
 ```
 
 ### public class Result
