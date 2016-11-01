@@ -113,6 +113,7 @@ Unity Editor에서는 Mock 형태의 API응답이 전달되고, 실제 결제 �
 * Request Purchase : 결제 요청
 * Query Purchase List : 미소비 결제 내역 조회
 * Query Item List : 구매가능 상품조회
+* Processes Incomplete Purchases : 미결제건 재처리
 
 ## API Reference
 
