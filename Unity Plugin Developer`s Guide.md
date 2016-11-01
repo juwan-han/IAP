@@ -420,7 +420,7 @@ InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => 
     ///	}
 
     string json = System.Convert.ToString (data);
-    PrintLog ("QueryItemsCallback.OnCallback():" + json);
+    PrintLog ("IncompletePurchasesCallback.OnCallback():" + json);
 
     // TODO : 상품내역 조회 결과로 필요한 처리를 한다.
 
