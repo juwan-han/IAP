@@ -220,7 +220,7 @@ server.
     if (error)
     {
         // An error occurred, we need to handle the error
-        [_delegate onInAppPurchaseError:error];
+        NSLog(@"itemListWithCompletionHandler occured error, %@ %d", [error domain], [error code]);
         return;
     }
 
