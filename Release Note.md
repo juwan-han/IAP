@@ -1,5 +1,20 @@
 ## Common > IAP > Release Notes
 
+### 2016.11.02
+
+#### 기능 추가
+
+* [SDK][Android] 1.2.8 업데이트 
+* [SDK][iOS] 1.4.0 업데이트 
+* [SDK][Unity] 1.4.6 업데이트 
+    * 미처리된 결제에 대한 재처리 Client API 추가
+        * 미처리된 결제건(IAP 서버 검증 실패)들에 대해 일괄로 재처리 작업을 진행합니다.
+        * 참고 : Android Developer's Guide > IAP 결제 흐름도 > 미처리 결제건 일괄 재처리 & iOS Developer's Guide > API Reference > 7. 미처리 결제건 일괄 재처리
+
+#### 기능 삭제
+
+* [SDK][Android] 네이버 라이브러리 삭제
+
 ### 2016.10.12
 
 #### 버그 수정
