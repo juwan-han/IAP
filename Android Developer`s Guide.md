@@ -347,6 +347,69 @@ InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
 }]
 ```
 
+### 미처리 결제건 일괄 재처리
+
+미처리된 결제건(IAP 서버 검증 실패)들에 대해 일괄로 재처리 작업을 진행합니다.
+
+[Request Example]
+
+```java
+InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPurchase.IncompletePurchasesCallback() {
+
+    @Override
+    public void onCallback(JSONObject result, InAppPurchaseException exception) {
+           if (exception != null) {
+              // An error occurred, we need to handle the error
+              return;
+           }
+           // Success! Include your code to handle the results here }
+});
+```
+
+[Method]
+
+|용어|설명|
+|--------|--------|
+| Syntax |public void processesIncompletePurchases(Activity activity, IncompletePurchasesCallback callback)|
+| Parameters | activity [in] 어플리케이션의 현재 액티비티 |
+| Parameter | callback [in] API 요청 결과를 전달 하는 콜백 |
+| Return Value | void |
+
+[Response Example]
+
+```json
+{
+    "successList": [
+    	{
+    		"paymentSeq" : "2014082510002163",
+    		"purchaseToken" : "8nkx3SzHKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoB-AB",
+    		"itemSeq" : 1000208,
+    		"marketItemId"	: "item01",
+    		"currency" : "KRW",
+    		"price" : 1000.0
+    	},
+    	{
+    		"paymentSeq" : "2014082510002164",
+    		"purchaseToken" : "8nkx3SzATKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBaAC",
+    		"itemSeq" : 1000209,
+    	    "marketItemId"	: "item02",
+    		"currency" : "KRW",
+    		"price" : 1000.0
+    	}
+    ],
+    "failList": [
+    	{
+    		"paymentSeq" : "2014082510002165",
+    		"purchaseToken" : null,
+    		"itemSeq" : 1000210,
+    		"marketItemId"	: "item03",
+    		"currency" : "KRW",
+    		"price" : 1000.0
+    	}
+    ]
+}
+```
+
 ### API 호출 이후 에러 정보에 대한 처리
 
 InAppPurchaseException 클래스는 API 호출에 대한 에러 정보를 전달 합니다.
