@@ -157,7 +157,7 @@ If (!result) {
   }
   else
   {
-      /**
+     /**
        Success! Include your code to handle the results here
 
        JSON data to 'NSDicionary', This is nil if there was an error.
@@ -220,7 +220,7 @@ server.
     if (error)
     {
         // An error occurred, we need to handle the error
-        NSLog(@"itemListWithCompletionHandler occured error, %@ %d", [error domain], [error code]);
+	NSLog(@"itemListWithCompletionHandler occured error, %@ %d", [error domain], [error code]);
         return;
     }
 
@@ -242,8 +242,6 @@ server.
 
     NSArray *itemList = result;
     NSLog(@"itemListWithCompletionHandler, size:%lu \nitemList:%@", [itemList count], itemList);
-
-
 }];
 ```
 
