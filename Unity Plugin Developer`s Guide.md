@@ -428,6 +428,36 @@ InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => 
 });
 ```
 
+[Response(JSON)]
+
+| Attribute     | Value  | Description                      |
+| ------------- | ------ | -------------------------------- |
+| itemSeq    | Long | 아이템 번호                             |
+| itemName | String | 아이템명 |
+| marketItemId       | Long   | 마켓별 상품 ID                           |
+| currency      | String | 상품의 화폐 단위                        |
+| price         | Float  | 상품의 가격                           |
+
+[Response Example]
+
+```json
+
+[{
+    "itemSeq": 1000208,
+    "itemName": "Test item 01",
+    "marketItemId": "item01",
+    "price": 1000,
+    "currency": "KRW",
+},
+{
+    "itemSeq": 1000209,
+    "itemName": "Test item 02",
+    "marketItemId": "item02",
+    "price": 7.99,
+    "currency": "USD"
+}]
+```
+
 ### public class Result
 
 API의 응답 결과를 나타냅니다.
