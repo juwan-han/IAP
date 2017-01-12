@@ -6,10 +6,10 @@
 
 * [Console] 결제상태 변경 기능 추가
 * [Console] 앱 / 아이템 수정시 필수 입력값 검증처리 추가 
+* [SDK][Unity] 1.5.0 업데이트
 * [SDK][Android] 1.3.1 업데이트
     * 불필요한 권한 제거(WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE)
     * <a href="/ko/Common/IAP/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
-* [SDK][Unity] 1.5.0 업데이트
 * [SDK][iOS] 1.4.3 업데이트
     * <a href="/ko/Common/IAP/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
 
