@@ -1,5 +1,16 @@
 ## Common > IAP > Release Notes
 
+### 2017.01.19
+
+#### 기능 개선/변경
+
+* [Console] 결제상태 변경 기능 추가
+* [Console] 앱 및 아이템 수정시 필수로 입력해야 하는 필드 적용 
+* [SDK][Android] 1.3.1 업데이트
+* [SDK][iOS] 1.4.1 업데이트
+    * [<a href="/ko/Common/IAP/Error%20Code/" target="_blank">Error Code Guide</a>] 와 상이한 오류 코드 수정
+* [SDK][Unity] 1.4.9 업데이트
+
 ### 2016.12.22
 
 #### 기능 개선/변경
