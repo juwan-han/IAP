@@ -103,6 +103,7 @@ Common] > [IAP] > [Transaction] 탭을 클릭합니다.
 
 2. 결제과금 완료 후 consume처리를 하지 않아 유저가 아이템을 받지못하여 환불처리를 했을경우 ('Refunded' 상태로 변경)
    2.1 'Refunded' 상태로 변경되었을 경우 client의 미소비 결제내역 조회 API에서 조회되지 않습니다.
+
 변경이 가능한 결제상태는 아래와 같이 상태 컬럼 우측에 [수정] 버튼이 노출됩니다.
 ```
 ![[그림 6 결제 상태 수정]](http://static.toastoven.net/prod_iap/iap_45.png)
