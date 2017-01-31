@@ -10,7 +10,6 @@
 * [SDK][Android] 1.3.1 업데이트
     * 불필요한 권한 제거(WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE)
     * <a href="/ko/Common/IAP/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
-    * [Error Code Guide](/ko/Common/IAP/Error%20Code/)
 * [SDK][iOS] 1.4.3 업데이트
     * <a href="/ko/Common/IAP/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
 
