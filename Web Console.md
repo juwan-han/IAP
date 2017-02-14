@@ -79,7 +79,7 @@ Common] > [IAP] > [Transaction] 탭을 클릭합니다.
 [검색] 버튼을 클릭합니다.  
 ```
 
-![[그림 5 결제 정보 조회]](http://static.toastoven.net/prod_iap/iap_n_44.PNG)
+![[그림 5 결제 정보 조회]](http://static.toastoven.net/prod_iap/iap_n_44.png)
 <center>[그림 5 결제 정보 조회]</center>
 
 > [참고]
