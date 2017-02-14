@@ -18,33 +18,31 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 
 ## IAP Console
 
-### 1\. 마켓등록 - APP ID 획득
+### 1\. 스토어등록 - APP ID 획득
 
 ```
-[Market] 탭 선택 > [추가] 버튼 클릭  
-[Market ID]에서 AS(Apple Store) 선택  
-마켓 연동을 위한 정보 입력  
-\- Market APP ID : Bundle Id  
-[APP ID] 확인
+1. [App] 탭 선택 > [추가] 버튼 클릭  
+2. [Store ID]에서 AS(Apple Store) 선택  
+    - 마켓 연동을 위한 정보 입력(Market APP ID : Bundle Id)
+3. [APP ID] 확인
 ```
 
-![[그림 1 APP ID 획득]](http://static.toastoven.net/prod_iap/iap_17.jpg)
+![[그림 1 APP ID 획득]](http://static.toastoven.net/prod_iap/iap_n_32.jpg)
 <center>[그림 1 APP ID 획득]</center>
 
 ### 2\. 아이템 등록
 
 ```
-[Item] 탭 선택 > [추가] 버튼 클릭  
-[Market ID]에서 AS(Apple Store) 선택  
-[아이템 정보 입력]  
-- Item Name : 아이템의 이름  
-- Market Item ID : iTunes Connect에 등록한 어플리케이션의 아이템의 Product ID  
-[ITEM I] 확인
+1. [Item] 탭 선택 > [추가] 버튼 클릭  
+2. [Store ID]에서 AS(Apple Store) 선택  
+3. [아이템 정보 입력]  
+    - Item Name : 아이템의 이름  
+    - Store Item ID : iTunes Connect에 등록한 어플리케이션의 아이템의 Product ID  
+4. [ITEM] 확인
 ```
 
 ## Xcode 프로젝트 설정하기
 
-[표1 iOS SDK 디렉토리 정보]
 
 | 디렉토리명    | 설명                        |
 | -------- | ------------------------- |
@@ -52,17 +50,18 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 | /include | Header File               |
 | /lib     | Library                   |
 | /samples | Sample Application        |
+<center>[표1 iOS SDK 디렉토리 정보]</center>
 
 ### 1\. IAP SDK 및 framework 추가
 
 ```
-[Xcode] > [Project] > [Targets – Build Phases]  
-[TIAPurchase.h 파일을 프로젝트에 Drag & Drop 하여 추가]  
-[Link Bianry With Libraries] 에 아래의 framworks 추가  
-\- libTIAPurchase.a  
-\- StoreKit.framework  
-\- Libsqlite3.dylib
-\- coreTelephony.framework
+1. [Xcode] > [Project] > [Targets – Build Phases]  
+2. [TIAPurchase.h 파일을 프로젝트에 Drag & Drop 하여 추가]  
+3. [Link Bianry With Libraries] 에 아래의 framworks 추가  
+    - libTIAPurchase.a  
+    - StoreKit.framework  
+    - Libsqlite3.dylib
+    - coreTelephony.framework
 ```
 
 ![[그림 2 IAP 연동을 위한 라이브러리 추가]](http://static.toastoven.net/prod_iap/iap_42.png)
@@ -72,18 +71,16 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 
 ```
 [plist] 에서 TOAST_IAP_APP_ID 가 KEY인 string value를 생성하고, APP ID를 입력 합니다.  
-완료되면, .plist 는 아래와 같은 형태일 것입니다.
+.plist 는 아래와 같은 형태일 것입니다.
 ```
 
 ![[그림 3 plist에 APP ID 설정]](http://static.toastoven.net/prod_iap/iap_19.jpg)
 <center>[그림 3 plist에 APP ID 설정]</center>
 
-> [참고]  
-> iOS9 ATS 설정  
+> [참고-iOS9 ATS 설정]  
 > iOS9 SDK부터 ATS(App Transport Security)관련 설정을 적용해야 합니다.  
 > XCode7 이상에서 빌드할 경우 아래와 같이 IAP 특정 도메인에 대한 예외처리를 설정해야 합니다.  
-> 자세한 내용은 Apple 문서를 참고  
-> ([https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/))  
+> [Apple Document](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/))
 
 ```xml
 <key>NSAppTransportSecurity</key>

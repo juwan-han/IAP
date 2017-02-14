@@ -60,7 +60,7 @@ IAP 서비스를 사용하기 위해서는 Web Console (http://console.cloud.toa
 각 스토어 개발자 센터에서 등록한 InAppProducts의 상품유형([표 1])을 참고하여 아이템을 등록합니다.
 ```
 
-|Market|	상품유형|
+|Store|	상품유형|
 |---|---|
 |Google Play|	관리되는 제품|
 |App Store|	소모품 (consumable)|
