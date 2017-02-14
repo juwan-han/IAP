@@ -84,7 +84,7 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 아래와 같은 상황이 아닌 경우 웹콘솔을 통해 정상적인 앱, 아이템 등록이 불가할 수 있습니다.
 
 ```
-1. 'Google Developers Console' 에 등록된 프로젝트가 Google Play Developer API가 활성화 되어있는지 확인합니다.  
+1. 'Google Developers Console' 에 등록된 프로젝트가 Google Play Developer API가 활성화 되어있는지 확인합니다.
   - https://console.developers.google.com 접속  
   - [API 및 인증] > [API] 메뉴 접근  
   - [모바일 API] > [Google Play Developer API] 접근  
@@ -133,7 +133,7 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 
 > [참고]
 > 2016년 6월 1일 이후로는 네이버 앱스토어는 원스토어로 양도 되었습니다.
-> http://cafe.naver.com/naverappdev/10658
+> [네이버앱스토어 개발자센터 공식카페](http://cafe.naver.com/naverappdev/10658)
 
 ### 원스토어 연동 정보
 

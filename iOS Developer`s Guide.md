@@ -14,7 +14,7 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 
 > [참고]  
 > In App Purchase 테스트를 하기 위해 iTunes Connect에 어플리케이션 및 상품등록을 완료했다고 가정합니다.    
-> iTunes Connect : [<http://itunesconnect.apple.com>](http://itunesconnect.apple.com)
+> [iTunes Connect](http://itunesconnect.apple.com)
 
 ## IAP Console
 
@@ -27,7 +27,7 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 3. [APP ID] 확인
 ```
 
-![[그림 1 APP ID 획득]](http://static.toastoven.net/prod_iap/iap_n_32.jpg)
+![[그림 1 APP ID 획득]](http://static.toastoven.net/prod_iap/iap_n_32.png)
 <center>[그림 1 APP ID 획득]</center>
 
 ### 2\. 아이템 등록
@@ -80,7 +80,7 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 > [참고-iOS9 ATS 설정]  
 > iOS9 SDK부터 ATS(App Transport Security)관련 설정을 적용해야 합니다.  
 > XCode7 이상에서 빌드할 경우 아래와 같이 IAP 특정 도메인에 대한 예외처리를 설정해야 합니다.  
-> [Apple Document](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/))
+> [Apple Document](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/)
 
 ```xml
 <key>NSAppTransportSecurity</key>
