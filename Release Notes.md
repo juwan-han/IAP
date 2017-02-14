@@ -1,5 +1,20 @@
 ## Common > IAP > Release Notes
 
+### 2017.02.23
+
+#### 기능 개선/변경
+
+* [Console] 명칭 변경(Market > Store)
+* [Console] 결제내역 조회시 결제번호(ID 컬럼)  정렬 기능 추가
+
+#### 버그 수정
+* [SDK][Android] 1.3.2 업데이트
+    * (구매 가능한 아이템 조회](/Common/IAP/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 내려가는 문제 수정
+	```
+	변경 전: itmeSeq
+	변경 후: itemSeq
+	```
+
 ### 2017.01.19
 
 #### 기능 개선/변경
