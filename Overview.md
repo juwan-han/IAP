@@ -47,7 +47,7 @@ IAP 서비스에서는 다음 용어를 내부적으로 사용합니다.
 
 IAP 서비스는 다음 그림과 같이 IAP SDK, User Application Server, IAP Server, Market 4가지로 구성됩니다.
 
-![[그림 1 IAP 서비스 구조 - Server To Server Model]](http://static.toastoven.net/prod_iap/iap_n_1.jpg)
+![[그림 1 IAP 서비스 구조 - Server To Server Model]](http://static.toastoven.net/prod_iap/iap_n_1.png)
 <center>[그림 1 IAP 서비스 구조 - Server To Server Model]</center>
 
 ![[그림 2 IAP 서비스 구조 - Build-in Model]](http://static.toastoven.net/prod_iap/iap_n_23.png)
