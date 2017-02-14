@@ -66,7 +66,7 @@ IAP 서비스는 다음 그림과 같이 IAP SDK, User Application Server, IAP S
 
 인앱 결제에서는 IAP SDK와 IAP 서버 API를 제공하고 있습니다. 다음 그림은 결제 흐름도 입니다.
 
-![[그림 3 Server To Server Model 결제 흐름도]](http://static.toastoven.net/prod_iap/iap_28.png)
+![[그림 3 Server To Server Model 결제 흐름도]](http://static.toastoven.net/prod_iap/iap_n_28.png)
 <center>[그림 3 Server To Server Model 결제 흐름도]</center>
 
 ![[그림 4 Build-in model 결제 흐름도]](http://static.toastoven.net/prod_iap/iap_29.png)
