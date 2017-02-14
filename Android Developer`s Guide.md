@@ -59,13 +59,13 @@ Android Studio에서 Import Project 하여 SDK 패키지의 /toast-iap-android-s
 > Workspace Encoding Type   
 > Import 한 Project의 Workspace File Encoding이 UTF-8로 되어있는 확인합니다, 아닐경우 UTF-8로 변경합니다.  
 
-#### AndroidManifest.xml 에 마켓정보 설정
+#### AndroidManifest.xml 에 스토어 정보 설정
 
-IAP Web Console에 등록한 마켓정보를 통해 appId / market 을 설정합니다.
+IAP Web Console에 등록한 마켓정보를 통해 appId / Store 을 설정합니다.
 
 > [참고]  
-> appId / market 설정   
-> 설정방법은 샘플애플리케이션의 각마켓별 Flavor의 AndroidManifest.xml 을 참조하시면 됩니다.
+> appId / Store 설정   
+> 설정방법은 샘플애플리케이션의 각 스토어 Flavor의 AndroidManifest.xml 을 참조하시면 됩니다.
 
 ## 이클립스 환경에서 사용하기
 
@@ -129,15 +129,15 @@ AndroidManifest.xml의 설정 정보는 다음과 같습니다.
 | Property Name               | Description                  |
 | --------------------------- | ---------------------------- |
 | android.permission          | IAP 사용을 위한 공통 Android 권한 <br/> * 중복 permission 생략가능          |
-| com.android.vending.BILLING | Google Play를 위한 권한. <br/> * 마켓별로 이름이 다르거나 포함여부가 달라짐     |
+| com.android.vending.BILLING | Google Play를 위한 권한. <br/> * 스토어별로 이름이 다르거나 포함여부가 달라짐     |
 | activity                    | IAP에서 제공하는 액티비티 등록           |
 | com.toast.iap.config.appId  | IAP 웹콘솔에서 발급된 앱고유번호          |
-| com.toast.iap.config.market | 마켓정보 <br/>GG : 구글플레이<br/> TS : 티스토어<br/> NA : 네이버앱스토어<br/>TEST : 테스트 |
+| com.toast.iap.config.market | 스토어 정보 <br/>GG : 구글플레이<br/> TS : 티스토어<br/> NA : 네이버앱스토어<br/>TEST : 테스트 |
 
 [표2 AndroidManifest.xml 설정 정보]
 
 > [참고]  
-> 마켓정보를 TEST로 설정시 별도의 마켓연동 정보없이 IAP의 API를 손쉽게 테스트 해볼 수 있습니다.    
+> 스토어 정보를 TEST로 설정시 별도의 스토어 연동 정보없이 IAP의 API를 손쉽게 테스트 해볼 수 있습니다.    
 > 자세한 내용은 Sample Application 을 참고 해주세요.  
 
 ## IAP 결제 흐름도
@@ -146,8 +146,7 @@ AndroidManifest.xml의 설정 정보는 다음과 같습니다.
 결제소비까지 완료한 이후에는 사용자의 애플리케이션에서 아이템을 지급하면 됩니다.
 
 > [참고]  
-> IAP 결제 흐름도<br/>  
-> [http://docs.cloud.toast.com/ko/Common/IAP/Overview/#iap](http://docs.cloud.toast.com/ko/Common/IAP/Overview/#iap)
+> [IAP 결제 흐름도](/Common/IAP/Overview/#iap)
 
 ### 사용자 식별자 등록
 
@@ -251,7 +250,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 
 > [참고]  
 > IAP Android SDK 결제확인창   
-> toast-iap-android-sdk-1.2.3 부터 기존 아래의 결제확인창 없이 마켓결제로 바로 진행됩니다.
+> toast-iap-android-sdk-1.2.3 부터 기존 아래의 결제확인창 없이 스토어결제로 바로 진행됩니다.
 
 ![[그림 2 기존 결제확인창]](http://static.toastoven.net/prod_iap/iap_40.jpg)
 <center>[그림 2 기존 결제확인창]</center>
@@ -261,8 +260,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 사용자 애플리케이션 서버는 아이템을 지급하기 전 IAP 서버에게 결제를 소비할 것을 알려야 합니다. 이 때 결제 구매 토큰(Payment Purchase Token)을 이용하여 사용자 서버와 IAP서버간의 결제 유효성에 대한 보안을 체크합니다.
 
 > [참고]  
-> Server Payment Consume API <br/>  
-> [http://docs.cloud.toast.com/ko/Common/IAP/Server%20Developer%60s%20Guide/](http://docs.cloud.toast.com/ko/Common/IAP/Server%20Developer%60s%20Guide/)
+> [Server Payment Consume API](/Common/IAP/Server%20Developer%60s%20Guide/#payment-consume-api)  
 
 [HTTP Request Example]
 
@@ -431,8 +429,7 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 * errorMessage - 에러에 대한 상세 정보
 
 > [참고]  
-> error Code 참조    
-> Error Code 페이지 참조  
+> [Error Code Guide](/Common/IAP/Error%20Code/)    
 
 ## Android Sample Application
 
@@ -451,9 +448,9 @@ Import 할 프로젝트 체크
 ![[그림 3 샘플 애플리케이션 추가]](http://static.toastoven.net/prod_iap/iap_7.jpg)
 <center>[그림 3 샘플 애플리케이션 추가]</center>
 
-### 테스트 마켓을 통한 테스트
+### 테스트 스토어를 통한 테스트
 
-IAP Android SDK에서 제공하는 API를 실제 마켓 연동 정보 없이 테스트 하기 위해 마켓 코드를 TEST로 설정합니다.
+IAP Android SDK에서 제공하는 API를 실제 스토어 연동 정보 없이 테스트 하기 위해 스토어 코드를 TEST로 설정합니다.
 
 ```xml
 <meta-data android:name="com.toast.iap.config.market" android:value="TEST" />
@@ -498,7 +495,7 @@ InAppPurchases.InAppPurchase.setDebugMode(true);
 
 |용어|설명|
 | ----- |--|
-| Description |  애플리케이션에서 사용자에 대한 인증 이후에 사용자 식별이 가능한 값을 등록합니다. 마켓계정이 아닙니다. |
+| Description |  애플리케이션에서 사용자에 대한 인증 이후에 사용자 식별이 가능한 값을 등록합니다. 스토어 계정이 아닙니다. |
 | Syntax |public void registerUserId(String userId) |
 | Parameters |  userId [in] 사용자 식별자 값으로 userId는 변하지 않는 고유한 값이어야만 합니다. |
 | Return Value |  void |
@@ -606,7 +603,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 | ------------- | ------ | -------------------------------- |
 | itemSeq       | Long   | 아이템 번호                             |
 | itemName      | String | 아이템명 |
-| marketItemId  | String | 마켓별 상품 ID                           |
+| marketItemId  | String | 스토어별 상품 ID                           |
 | currency      | String | 상품의 화폐 단위                        |
 | price         | Float  | 상품의 가격                           |
 
