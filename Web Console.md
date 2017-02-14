@@ -8,14 +8,14 @@ IAP는 Web Console에서 앱과 아이템을 등록한 후 SDK를 사용할 수 
 IAP 서비스를 사용하기 위해서는 Web Console (http://console.cloud.toast.com)에서 [Common] > [IAP] 을 선택한 후 [상품 이용] 버튼을 클릭하여 서비스를 활성화합니다.
 ```
 
-![[그림 1 IAP 상품 활성화]](http://static.toastoven.net/prod_iap/iap_30.png)
+![[그림 1 IAP 상품 활성화]](http://static.toastoven.net/prod_iap/iap_n_30.png)
 <center>[그림 1 IAP 상품 활성화]</center>
 
 ```
 [그림 2]의 상단 'URL & Appkey'를 클릭하여 AppKey 확인하거나 클립보드에 복사합니다.
 ```
 
-![[그림 2 AppKey 확인]](http://static.toastoven.net/prod_iap/iap_31.png)
+![[그림 2 AppKey 확인]](http://static.toastoven.net/prod_iap/iap_n_31.png)
 <center>[그림 2 AppKey 확인]</center>
 
 ## 마켓 등록– APP ID 획득
@@ -36,7 +36,7 @@ IAP 서비스를 사용하기 위해서는 Web Console (http://console.cloud.toa
 > [참고]  
 > APP ID 획득을 위한 [마켓 연동 정보](./Market interlocking information)    
 
-![[그림 3 마켓 등록]](http://static.toastoven.net/prod_iap/iap_32.png)
+![[그림 3 마켓 등록]](http://static.toastoven.net/prod_iap/iap_n_32.png)
 <center>[그림 3 마켓 등록]</center>
 
 ## 아이템 등록
@@ -50,7 +50,7 @@ IAP 서비스를 사용하기 위해서는 Web Console (http://console.cloud.toa
 [추가] 버튼을 클릭하고, 등록한 [ITEM ID]를 확인합니다.  
 ```
 
-![[그림 4 아이템 등록]](http://static.toastoven.net/prod_iap/iap_33.png)
+![[그림 4 아이템 등록]](http://static.toastoven.net/prod_iap/iap_n_33.png)
 <center>[그림 4 아이템 등록]</center>
 
 ## 마켓 상품유형
@@ -79,7 +79,7 @@ Common] > [IAP] > [Transaction] 탭을 클릭합니다.
 [검색] 버튼을 클릭합니다.  
 ```
 
-![[그림 5 결제 정보 조회]](http://static.toastoven.net/prod_iap/iap_44.PNG)
+![[그림 5 결제 정보 조회]](http://static.toastoven.net/prod_iap/iap_n_44.PNG)
 <center>[그림 5 결제 정보 조회]</center>
 
 > [참고]
@@ -123,5 +123,5 @@ Common] > [IAP] > [Transaction] 탭을 클릭합니다.
 [<][>] 버튼으로 마켓별 '이달의 총 수입', '일별 상세내역'을 월별로 조회할 수 있습니다.  
 ```
 
-![[그림 6 결제 통계 조회]](http://static.toastoven.net/prod_iap/iap_35.png)
+![[그림 6 결제 통계 조회]](http://static.toastoven.net/prod_iap/iap_n_35.png)
 <center>[그림 6 결제 통계 조회]</center>
