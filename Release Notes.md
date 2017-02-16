@@ -8,7 +8,7 @@
 * [Console] 결제내역 조회시 결제번호(ID 컬럼)  정렬 기능 추가
 
 #### 버그 수정
-* [SDK][[Android-1.3.2/Unity-1.5.1](/Download/#common-iap)] 릴리스
+* [SDK][[Android-1.3.2](/Download/#common-iap)/[Unity-1.5.1](/Download/#common-iap)] 릴리스
     * [미처리 결제건 일괄 재처리](/Common/IAP/Android%20Developer%60s%20Guide/#_9)시 앱 크래시 현상 수정
     * [구매 가능한 아이템 조회](/Common/IAP/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 내려가는 문제 수정
 	```
