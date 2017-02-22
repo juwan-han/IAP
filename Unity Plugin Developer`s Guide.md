@@ -27,10 +27,10 @@ Step3 : 모든 Assets을 Import 합니다.
 ### Android 환경 설정 및 빌드
 
 ```
-Unity Editor 의 [File - Build Settings] 선택  
-[Platform]- Android 선택하고 [Switch Platform]  
-[Player Setting] 에서 [Android - Others Setting] 정보를 아래의 내용을 참조하여 수정 합니다.  
-[Minimum API Level] IAP 유니티플러그인은 Android API Level 10 이상을 지원합니다.
+1. Unity Editor 의 [File - Build Settings] 선택  
+2. [Platform]- Android 선택하고 [Switch Platform]  
+3. [Player Setting] 에서 [Android - Others Setting] 정보를 아래의 내용을 참조하여 수정 합니다.  
+4. [Minimum API Level] IAP 유니티플러그인은 Android API Level 10 이상을 지원합니다.
 ```
 
 ![[그림 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_14.png)
@@ -49,8 +49,8 @@ Unity Editor 의 [File - Build Settings] 선택
 ### iOS 환경 설정 및 빌드
 
 ```
-Unity Editor 의 [File] - Build Settings] 선택  
-[Platform]- iOS 선택하고 [Switch Platform]
+1. Unity Editor 의 [File] - Build Settings] 선택  
+2. [Platform]- iOS 선택하고 [Switch Platform]
 ```
 
 ![[그림 6 Platform을 iOS를 선택]](http://static.toastoven.net/prod_iap/iap_20.jpg)
@@ -64,9 +64,9 @@ Unity Editor 의 [File] - Build Settings] 선택
 <center>[그림 7 Settings for iOS]</center>
 
 ```
-[Build] 버튼을 선택하여 Xcode 프로젝트를 생성 합니다.  
-[unity_ios]와 같은 임의의 폴더에 프로젝트 생성  
-[iPhone.xcodeproj] 를 통해 Xcode를 실행 합니다.
+1. [Build] 버튼을 선택하여 Xcode 프로젝트를 생성 합니다.  
+2. [unity_ios]와 같은 임의의 폴더에 프로젝트 생성  
+3. [iPhone.xcodeproj] 를 통해 Xcode를 실행 합니다.
 ```
 
 ![[그림 8 iOS Platform으로 빌드하여 Xcode 프로젝트 생성]](http://static.toastoven.net/prod_iap/iap_22.jpg)
@@ -74,16 +74,16 @@ Unity Editor 의 [File] - Build Settings] 선택
 
 ```
 생성된 Xcode 프로젝트를 실행 합니다.  
-[Xcode] > [Project] > [Targets – Build Phases]  
-[Link Bianry With Libraries] 에 아래의 framworks 추가  
-\- StoreKit.framework  
-\- libsqlite3.dylib  
-\- CoreTelephony.framework (TOAST-IAP-UnityPlugin-1.3.0 이후버전)
-[plist] 에서 TOAST_IAP_APP_ID 가 KEY인 string value를 생성하고, APP ID를 입력 합니다.
+1. [Xcode] > [Project] > [Targets – Build Phases]  
+2. [Link Bianry With Libraries] 에 아래의 framworks 추가  
+    - StoreKit.framework  
+    - libsqlite3.dylib  
+    - CoreTelephony.framework (TOAST-IAP-UnityPlugin-1.3.0 이후버전)
+4. [plist] 에서 TOAST_IAP_APP_ID 가 KEY인 string value를 생성하고, APP ID를 입력 합니다.
 ```
 
 > [참고]  
-> 자세한 iOS 빌드 환경설정은 iOS SDK 개발가이드를 참조합니다.
+> 자세한 iOS 빌드 환경설정은 [iOS Developer's Guide](/Common/IAP/iOS%20Developer%60s%20Guide/)를 참조
 
 ### 유니티 플러그인 초기화
 
@@ -102,8 +102,7 @@ void Start()
 
 ### 샘플 어플리케이션
 
-Unity Editor에서 아래와 같이 InAppPurchase API를 테스트하기 위한 샘플 Console을 제공합니다.   
-/Sample 폴더 참조    
+Unity Editor에서 아래와 같이 InAppPurchase API를 테스트하기 위한 샘플 Console을 제공합니다.(Sample 폴더 참조)
 Unity Editor에서는 Mock 형태의 API응답이 전달되고, 실제 결제 테스트를 위해서는 Android 디바이스를 통해 빌드 후 테스트 하도록 합니다.  
 
 ![[그림 9 샘플 콘솔]](http://static.toastoven.net/prod_iap/iap_43.png)
@@ -345,7 +344,7 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
 | ------------- | ------ | -------------------------------- |
 | itemSeq    | Long | 아이템 번호                             |
 | itemName | String | 아이템명 |
-| marketItemId       | Long   | 마켓별 상품 ID                           |
+| marketItemId       | Long   | 스토어별 상품 ID                           |
 | currency      | String | 상품의 화폐 단위                        |
 | price         | Float  | 상품의 가격                           |
 
@@ -434,7 +433,7 @@ InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => 
 | ------------- | ------ | -------------------------------- |
 | itemSeq    | Long | 아이템 번호                             |
 | itemName | String | 아이템명 |
-| marketItemId       | Long   | 마켓별 상품 ID                           |
+| marketItemId       | Long   | 스토어별 상품 ID                           |
 | currency      | String | 상품의 화폐 단위                        |
 | price         | Float  | 상품의 가격                           |
 
