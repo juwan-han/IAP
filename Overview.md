@@ -1,6 +1,6 @@
 ## Common > IAP > Overview
 
-<code style="padding: 0; border: none;">In-App Purchase (이하 IAP) 서비스는 통합 인앱 결제 서비스 입니다.</code>
+In-App Purchase (이하 IAP) 서비스는 통합 인앱 결제 서비스 입니다.
 
 ## 주요 기능
 
