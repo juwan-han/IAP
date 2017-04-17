@@ -93,10 +93,10 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
           redirect_uri = http://localhost
 ```
 
-![[그림 3] Refresh Token 생성 1](http://static.toastoven.net/prod_iap/iap_49.png)
+![[그림 3] Refresh Token 생성 1](http://static.toastoven.net/prod_iap/iap_49.jpg)
 <center>[그림 3] Refresh Token 생성 1</center>
 
-![[그림 4] Refresh Token 생성 2](http://static.toastoven.net/prod_iap/iap_50.png)
+![[그림 4] Refresh Token 생성 2](http://static.toastoven.net/prod_iap/iap_50.jpg)
 <center>[그림 4] Refresh Token 생성 2</center>
 
 ### AndroidManifest.xml 설정 예시
