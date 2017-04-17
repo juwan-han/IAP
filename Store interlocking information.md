@@ -140,11 +140,11 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
   - API 사용 중지 상태확인
 ```
 
-![[그림 1] Google Developers Console 내부의 Google Play Developer API 메뉴](http://static.toastoven.net/prod_iap/iap_36_1.png)
-<center>[그림 1] Google Developers Console 내부의 Google Play Developer API 메뉴</center>
+![[그림 5] Google Developers Console 내부의 Google Play Developer API 메뉴](http://static.toastoven.net/prod_iap/iap_36_1.png)
+<center>[그림 5] Google Developers Console 내부의 Google Play Developer API 메뉴</center>
 
-![[그림 2] Google Play Developer API 활성화 확인](http://static.toastoven.net/prod_iap/iap_37.png)
-<center>[그림 2] Google Play Developer API 활성화 확인</center>
+![[그림 6] Google Play Developer API 활성화 확인](http://static.toastoven.net/prod_iap/iap_37.png)
+<center>[그림 6] Google Play Developer API 활성화 확인</center>
 
 ```
 2. 'Google Play Developer Console' 에서 프로젝트 ID와 연결되어있는지 [API 액세스] 메뉴를 통해 확인합니다.  
@@ -153,8 +153,8 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
   - 프로젝트가 연결되어있는지 확인
 ```
 
-![[그림 3] Google Play Developer API 활성화 확인](http://static.toastoven.net/prod_iap/iap_38.png)
-<center>[그림 3] Google Play Developer API 활성화 확인</center>
+![[그림 7] Google Play Developer API 활성화 확인](http://static.toastoven.net/prod_iap/iap_38.png)
+<center>[그림 7] Google Play Developer API 활성화 확인</center>
 
 ```
 3. 'Google Play Developer Console' 의 계정 소유자가 Google Developers Console의 프로젝트에 권한이 있는 사용자 이여야 합니다.  
@@ -163,8 +163,8 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
   - 계정 확인
 ```
 
-![[그림 4] 인앱상품 ID 확인](http://static.toastoven.net/prod_iap/iap_39.jpg)
-<center>[그림 4] 인앱상품 ID 확인</center>
+![[그림 8] 인앱상품 ID 확인](http://static.toastoven.net/prod_iap/iap_39.jpg)
+<center>[그림 8] 인앱상품 ID 확인</center>
 
 ```
 4. 'Google Play Developer Console' 인앱상품에서 Market Item ID와 일치하는 상품이 등록이 되어있어야 합니다.  
@@ -214,8 +214,8 @@ IAP Android SDK의 다운로드 받고 원스토어 연동을 위해서는 추�
 
 \- Download한 SDK패키지에서 /libs/tstore 폴더의 파일을 애플리케이션 프로젝트의 /libs 에 복사합니다.
 
-![[그림 5 원스토어 라이브러리의 추가]](http://static.toastoven.net/prod_iap/iap_41.png)
-<center>[그림 5 원스토어 라이브러리의 추가]</center>
+![[그림 9 원스토어 라이브러리의 추가]](http://static.toastoven.net/prod_iap/iap_41.png)
+<center>[그림 9 원스토어 라이브러리의 추가]</center>
 
 > [참고]  
 > Unity 프로젝트에서 Library 추가   
