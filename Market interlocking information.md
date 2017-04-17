@@ -74,14 +74,14 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 2. Refresh Token 생성
   
   1) 브라우저 URL 입력란에 아래와 같이 입력하고 마지막 {client_id} 부분을 위에서 발급받은 Client ID로 치환하고 실행합니다.
-     https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fandroidpublisher&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value&redirect_uri=http://localhost&response_type=code&client_id={client_id}
+      https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fandroidpublisher&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value&redirect_uri=http://localhost&response_type=code&client_id={client_id}
   
-   2) 브라우저 실행화면에서 권한을 요청하면 "허용" 버튼을 클릭합니다.
+  2) 브라우저 실행화면에서 권한을 요청하면 "허용" 버튼을 클릭합니다.
   
-   3) 브라우저 URL 입력란의 URL이 아래와 같이 변경되면, {code} 부분을 마지막 #을 제외하고 별도로 저장합니다.
+  3) 브라우저 URL 입력란의 URL이 아래와 같이 변경되면, {code} 부분을 마지막 #을 제외하고 별도로 저장합니다.
       localhost/?code={code}
   
-   4) 아래와 같이 HTTPS 요청을 하면 응답결과로 Refresh Token(refresh_token)을 취득할 수 있습니다.
+  4) 아래와 같이 HTTPS 요청을 하면 응답결과로 Refresh Token(refresh_token)을 취득할 수 있습니다.
       - URL : https://www.googleapis.com/oauth2/v4/token
       - Method : POST     
       - Headers : Content-Type = application/x-www-form-urlencoded
