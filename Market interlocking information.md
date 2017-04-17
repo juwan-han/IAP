@@ -112,7 +112,10 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 <uses-permission android:name="com.android.vending.BILLING" />
 
 <application>
-        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"/>
+        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"
+	        android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+	        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	        android:windowSoftInputMode="adjustResize|stateHidden" />
         <meta-data android:name="com.toast.iap.config.appId" android:value="1000000" />
         <meta-data android:name="com.toast.iap.config.market" android:value="GG" />
 </application>
