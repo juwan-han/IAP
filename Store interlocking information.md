@@ -46,13 +46,59 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 ```
 
 > [참고]  
-> [Android Developers - Authorization](https://developers.google.com/android-publisher/authorization)
+> [Android Developers - Authorization](https://developers.google.com/identity/protocols/OAuth2WebServer)
 
 <br/>
-> [주의]  
-> 인증정보 발급시 주의사항    
-> 1. 'Google Developer Console' > [프로젝트] > [권한] 메뉴에 구성원으로 등록이 된 계정을 통해 Refresh Token 발급을 진행하여야 합니다.    
-> 2. 'Google Play Developer Console' > [설정] > [API 액세스] > OAUTH 클라이언트의 Client ID / Client Secret 정보를 통해 RefreshToken 발급을 진행하여야 합니다.
+
+```
+1. Client ID 및 Client Secret 생성
+  
+  1) https://console.developers.google.com 로 접근합니다.
+  
+  2) "사용자 정보 인증 > 사용자 인증 정보 만들기 > OAuth 클라이언트 ID" 메뉴로 진입합니다.
+  
+  3) 아래와 같이 선택 및 입력 합니다.
+      - 애플리케이션 유형 : 웹 애플리케이션
+      - 이름 : {임의로 지정}
+      - 승인된 자바스크립트 원본 : http://localhost
+      - 승인된 리디렉션 URI : http://localhost
+  
+  4) 생성 버튼을 누르면 Client ID와 Client Secret이 생성되며 화면에 노출됩니다.
+```
+![[그림 1] Client ID 및 Client Secret 생성 1](http://static.toastoven.net/prod_iap/iap_47.png)
+<center>[그림 1] Client ID 및 Client Secret 생성 1</center>
+
+![[그림 2] Client ID 및 Client Secret 생성 2](http://static.toastoven.net/prod_iap/iap_48.png)
+<center>[그림 2] Client ID 및 Client Secret 생성 2</center>
+
+```
+2. Refresh Token 생성
+  
+  1) 브라우저 URL 입력란에 아래와 같이 입력하고 마지막 {client_id} 부분을 위에서 발급받은 Client ID로 치환하고 실행합니다.
+      https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fandroidpublisher&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value&redirect_uri=http://localhost&response_type=code&client_id={client_id}
+  
+  2) 브라우저 실행화면에서 권한을 요청하면 "허용" 버튼을 클릭합니다.
+  
+  3) 브라우저 URL 입력란의 URL이 아래와 같이 변경되면, {code} 부분을 마지막 #을 제외하고 별도로 저장합니다.
+      localhost/?code={code}
+  
+  4) 아래와 같이 HTTPS 요청을 하면 응답결과로 Refresh Token(refresh_token)을 취득할 수 있습니다.
+      - URL : https://www.googleapis.com/oauth2/v4/token
+      - Method : POST     
+      - Headers : Content-Type = application/x-www-form-urlencoded
+      - Body :
+          grant_type = authorization_code
+          code = {code}
+          client_id = {client_id}
+          client_secret = {client_secret}
+          redirect_uri = http://localhost
+```
+
+![[그림 3] Refresh Token 생성 1](http://static.toastoven.net/prod_iap/iap_49.jpg)
+<center>[그림 3] Refresh Token 생성 1</center>
+
+![[그림 4] Refresh Token 생성 2](http://static.toastoven.net/prod_iap/iap_50.jpg)
+<center>[그림 4] Refresh Token 생성 2</center>
 
 ### AndroidManifest.xml 설정 예시
 
@@ -67,7 +113,10 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 <uses-permission android:name="com.android.vending.BILLING" />
 
 <application>
-        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"/>
+        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"
+	        android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+	        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	        android:windowSoftInputMode="adjustResize|stateHidden" />
         <meta-data android:name="com.toast.iap.config.appId" android:value="1000000" />
         <meta-data android:name="com.toast.iap.config.market" android:value="GG" />
 </application>
