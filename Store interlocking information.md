@@ -45,7 +45,7 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 ```
 
 > [참고]  
-> [[Android Developers - Authorization](https://developers.google.com/identity/protocols/OAuth2WebServer)
+> [Android Developers - Authorization](https://developers.google.com/identity/protocols/OAuth2WebServer)
 
 <br/>
 
