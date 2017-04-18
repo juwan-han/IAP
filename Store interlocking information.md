@@ -15,14 +15,14 @@
 | Google API Client Secret           | Google API Project의 OAuth Client Secret        |
 | Refresh Token For Google OAuth     | Google Play Developer 계정을 통해 획득한 Refresh Token |
 
-[표 1] Google Play 마켓 연동을 위한 앱 등록 필드
+[표 1] Google Play 스토어 연동을 위한 앱 등록 필드
 
 | 필드        | 설명                              |
 | -------------- | ------------------------------- |
 | Item Name      | 아이템에 대한 제목 또는 설명                |
 | Market Item ID | Google Play 개발자 콘솔에 등록한 인앱상품 ID |
 
-[표 2] Google Play 마켓 연동을 위한 아이템 등록 필드
+[표 2] Google Play 스토어 연동을 위한 아이템 등록 필드
 
 ### Google Play 개발자 콘솔의 애플리케이션 Public Key 확인
 
