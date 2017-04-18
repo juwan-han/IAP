@@ -32,7 +32,7 @@ Google Play 개발자 콘솔 메뉴의 [애플리케이션 - 서비스 및 API] 
 
 ![](http://static.toastoven.net/prod_iap/iap_8.jpg)
 
-> [참고]
+> [참고]  
 > [Android Developers-인앱 결제 관리](http://developer.android.com/google/play/billing/billing_admin.html)
 
 ### Google API 개발자 콘솔에서 OAuth 클라이언트 정보 확인
