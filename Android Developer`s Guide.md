@@ -118,7 +118,10 @@ Google Play 기준으로 작성한 내용입니다.
 
 <application>
 ...
-        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"/>
+        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"
+	        android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+	        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	        android:windowSoftInputMode="adjustResize|stateHidden" />
         <meta-data android:name="com.toast.iap.config.appId" android:value="1000000" />
         <meta-data android:name="com.toast.iap.config.market" android:value="GG" />
 </application>
