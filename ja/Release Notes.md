@@ -21,8 +21,8 @@
 
 #### 버그 수정
 * [SDK][[Android-1.3.2](/Download/#common-iap)][[Unity-1.5.1](/Download/#common-iap)] 릴리스
-    * [미처리 결제건 일괄 재처리](/Common/IAP/Android%20Developer%60s%20Guide/#_9)시 앱 크래시 현상 수정
-    * [구매 가능한 아이템 조회](/Common/IAP/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 반환되는 문제 수정
+    * [미처리 결제건 일괄 재처리](/Common/IAP/ja/Android%20Developer%60s%20Guide/#_9)시 앱 크래시 현상 수정
+    * [구매 가능한 아이템 조회](/Common/IAP/ja/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 반환되는 문제 수정
 	```
 	변경 전: itmeSeq
 	변경 후: itemSeq
@@ -33,12 +33,12 @@
 #### 기능 개선/변경
 
 * [Console] 결제상태 변경 기능 추가
-* [Console] 앱 / 아이템 수정시 필수 입력값 검증처리 추가 
+* [Console] 앱 / 아이템 수정시 필수 입력값 검증처리 추가
 * [SDK][[Android-1.3.1](/Download/#common-iap)][[Unity-1.5.0](/Download/#common-iap)] 릴리스
     * 불필요한 권한 제거(WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE)
-    * <a href="/ko/Common/IAP/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
+    * <a href="/ko/Common/IAP/ja/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
 * [SDK][[iOS-1.4.3](/Download/#common-iap)] 릴리스
-    * <a href="/ko/Common/IAP/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
+    * <a href="/ko/Common/IAP/ja/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
 
 ### 2016.12.22
 
@@ -67,7 +67,7 @@
 
 #### 기능 추가
 
-* [SDK][[Android-1.2.8](/Download/#common-iap)][[iOS-1.4.0](/Download/#common-iap)][[Unity-1.4.6](/Download/#common-iap)] 릴리스 
+* [SDK][[Android-1.2.8](/Download/#common-iap)][[iOS-1.4.0](/Download/#common-iap)][[Unity-1.4.6](/Download/#common-iap)] 릴리스
     * 미처리된 결제에 대한 재처리 Client API 추가
         * 미처리된 결제건(IAP 서버 검증 실패)들에 대해 일괄로 재처리 작업을 진행합니다.
         * 참고 : Android Developer's Guide > IAP 결제 흐름도 > 미처리 결제건 일괄 재처리 & iOS Developer's Guide > API Reference > 7. 미처리 결제건 일괄 재처리
@@ -87,7 +87,7 @@
 
 #### 기능 개선/변경
 
-* [SDK][[iOS-1.3.3](/Download/#common-iap)][[Unity-1.4.4](/Download/#common-iap)] 릴리스 
+* [SDK][[iOS-1.3.3](/Download/#common-iap)][[Unity-1.4.4](/Download/#common-iap)] 릴리스
     * iOS에서 구매가능 상품 조회 API 호출 시 유저등록 API 호출 없이 가능하도록 수정
 
 ### 2016.09.22
@@ -101,7 +101,7 @@
 
 #### 기능 추가
 
-* [SDK][[Android-1.2.6](/Download/#common-iap)][[iOS-1.3.2](/Download/#common-iap)][[Unity-1.4.3](/Download/#common-iap)] 릴리스 
+* [SDK][[Android-1.2.6](/Download/#common-iap)][[iOS-1.3.2](/Download/#common-iap)][[Unity-1.4.3](/Download/#common-iap)] 릴리스
     * 구매가능한 상품 조회 Client API 추가
         * Web Console에서 상태값이 USE 인 아이템을 가격 및 통화값을 포함하여 조회할 수 있습니다.
         * 참고 : Android Developer's Guide > IAP 결제 흐름도 > 구매 가능한 아이템 내역 조회 & iOS Developer's Guide > API Reference > 6.구매 가능한 아이템 내역 조회
@@ -111,5 +111,5 @@
 
 #### 기능 개선/변경
 
-* [SDK][[Android-1.2.5](/Download/#common-iap)] 릴리스 
+* [SDK][[Android-1.2.5](/Download/#common-iap)] 릴리스
     * AndroidManifest.xml 필수 permission 거부시 callback 에러코드 리턴 수정
