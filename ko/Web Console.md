@@ -89,11 +89,13 @@ IAP 서비스를 사용하기 위해서는 Web Console (http://console.cloud.toa
 >  - In Progress : 결제 진행중   
 >  - Success : 결제 완료   
 >  - Failure : 결제 검증 실패  
+>  - Refund : 환불 완료
 
 > 결제 상태에 따른 상황  
 >  - In Progress : 스토어를 통한 결제가 더 이상의 진행이 되지 않거나 결제검증까지 진행되지 않은 경우  
 >  - Failure : 스토어에서 결제를 진행했으나 결제검증에서 오류가 난 경우  
 >  - Success : 스토어 결제 성공
+>  - Refund : 관리자가 수동으로 마켓에서 환불처리됬음을 업데이트한 경우
 
 
 ## 결제 상태 조회
