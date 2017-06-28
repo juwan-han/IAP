@@ -1,5 +1,21 @@
 ## Common > IAP > Release Notes
 
+### 2017.06.29
+
+#### 버그 수정
+
+* [SDK][[Android-1.3.3.1](/Download/#common-iap)][[Unity-1.5.2](/Download/#common-iap)] 릴리스
+    * 미처리 결제건 일괄 재처리 API가 connection timeout 과 관련된 항목만 처리하도록 수정
+    * 원스토어 응답실패 시 발생하는 앱 크래시 현상 수정
+    * 미처리 결제건 일괄 재처리 API 호출 시 간헐적으로 발생하는 앱 크래시 현상 수정
+    * 소수점 금액을 포함할 경우 발생하는 앱 크래시 현상 수정
+    * 간헐적 'IAB helper is not set up' 예외 발생으로 인한 앱 크래시 현상 수정
+
+#### 기능 개선/변경
+
+* [SDK][[Android-1.3.3.1](/Download/#common-iap)][[Unity-1.5.2](/Download/#common-iap)] 릴리스
+    * mobill-core 모듈에 물리적으로 포함되던 okhttp.jar 및 gson.jar 파일을 제거하고, gradle 의존성 설정으로 변경
+
 ### 2017.04.20
 
 #### 버그 수정
