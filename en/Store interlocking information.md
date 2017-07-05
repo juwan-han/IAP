@@ -65,11 +65,11 @@ Create below information required for OAuth verification in reference to below l
       - redirect URIs : http://localhost:8080
   
 ```
-![[그림 1] Client ID 및 Client Secret 생성 1](http://static.toastoven.net/prod_iap/iap_47.png)
-<center>[Figure. 1] Create authorization credentials</center>
+![Figure. 1 Create authorization credentials](http://static.toastoven.net/prod_iap/iap_47.png)
+<center>[Figure. 1 Create authorization credentials] </center>
 
-![[그림 2] Client ID 및 Client Secret 생성 2](http://static.toastoven.net/prod_iap/iap_48.png)
-<center>[Figure. 2] Create authorization credentials</center>
+![Figure. 2 Create authorization credentials](http://static.toastoven.net/prod_iap/iap_48.png)
+<center>[Figure. 2 Create authorization credentials] </center>
 
 ```
 2. Obtaining OAuth2.0 access tokens
@@ -107,11 +107,11 @@ Create below information required for OAuth verification in reference to below l
         }                    
 ```
 
-![[그림 3] Refresh Token 생성 1](http://static.toastoven.net/prod_iap/iap_49.jpg)
-<center>[Figure. 3] Creation Refresh Token</center>
+![Figure. 3 Creation Refresh Token](http://static.toastoven.net/prod_iap/iap_49.jpg)
+<center>[Figure. 3 Creation Refresh Token]</center>
 
-![[그림 4] Refresh Token 생성 2](http://static.toastoven.net/prod_iap/iap_50.jpg)
-<center>[Figure. 4] Creation Refresh Token</center>
+![Figure. 4 Creation Refresh Token](http://static.toastoven.net/prod_iap/iap_50.jpg)
+<center>[Figure. 4 Creation Refresh Token]</center>
 
 ### AndroidManifest.xml Setting Example
 
@@ -153,11 +153,11 @@ Registering app/ item via web console may not be available if you don’t follow
 
 ```
 
-![[그림 5] Google Developers Console 내부의 Google Play Developer API 메뉴](http://static.toastoven.net/prod_iap/iap_36_1.png)
-<center>[Figure. 5] Google Play Developer API</center>
+![Figure. 5 Google Play Developer API](http://static.toastoven.net/prod_iap/iap_36_1.png)
+<center>[Figure. 5 Google Play Developer API]</center>
 
-![[그림 6] Google Play Developer API 활성화 확인](http://static.toastoven.net/prod_iap/iap_37.png)
-<center>[Figure. 6] Google Play Developer API Enable</center>
+![Figure. 6 Google Play Developer API Enable](http://static.toastoven.net/prod_iap/iap_37.png)
+<center>[Figure. 6 Google Play Developer API Enable]</center>
 
 ```
 2. 'Check if the API is connected with project ID in 'Google Play Developer Console' by visiting [API Access menu]  
@@ -166,16 +166,16 @@ Registering app/ item via web console may not be available if you don’t follow
   - Check if project is successfully connected
 ```
 
-![[그림 7] Google Play Developer API 활성화 확인](http://static.toastoven.net/prod_iap/iap_38.png)
-<center>[Figure 7] Google Play Developer API Enable</center>
+![Figure 7 Google Play Developer API Enable](http://static.toastoven.net/prod_iap/iap_38.png)
+<center>[Figure 7 Google Play Developer API Enable]</center>
 
 ```
 3. The account holder of 'Google Play Developer Console' needs to be the user who has the authority over project in Google Developers Console.  
 
 ```
 
-![[그림 8] 인앱상품 ID 확인](http://static.toastoven.net/prod_iap/iap_39.jpg)
-<center>[Figure 8] Check in app product ID</center>
+![Figure 8 Check in app product ID](http://static.toastoven.net/prod_iap/iap_39.jpg)
+<center>[Figure 8 Check in app product ID]</center>
 
 ```
 4. In-app item in ‘Google Play Developer Console’ should match with item in Store Item ID.  
@@ -190,30 +190,30 @@ Synchronizing systems for in-app purchase is the same as before; publishing for 
 
 > [Reference]
 > Naver App store will be transferred to One Store from June 01, 2016.
-> [네이버앱스토어 개발자센터 공식카페](http://cafe.naver.com/naverappdev/10658)
+> [Naver App Store Developer Center](http://cafe.naver.com/naverappdev/10658)
 
 ### One Store 
 
-[Table. 3] 원스토어 연동을 위한 앱 등록 필드
+[Table. 3] App Form for One Store
 
 | Field | Description                               |
 | ------------- | ------------------------------ |
 | Market ID     | select TS in store list                 |
 | Market App ID | AID (Application ID) |
 
-[Table. 4] 원스토어 연동을 위한 아이템 등록 필드
+[Table. 4] Item Form for One Store
 
 | Field | Description                        |
 | -------------- | ----------------------- |
-| Item Name      | 아이템에 대한 제목 또는 설명        |
-| Market Item ID | 원스토어에 등록한 In-App 상품의 ID |
+| Item Name      | Item Name        |
+| Market Item ID | Product Id registered in One Store|
 
-### 원스토어 개발자 센터에서 AID와 In-App ID 발급
+### Obtaining AID and In-App ID in One Store
 
 ```
-원스토어 개발자 센터에서 아래의 정보를 확인 합니다.  
-1) AID : 원스토어 개발자 센터에서 생성한 애플리케이션의 ID  
-2) In-App ID : 생성한 애플리케이션에 등록한 In-App 상품의 ID
+You should check following information in One Store. 
+1) AID : Application Id created in One Store 
+2) In-App ID : In-App Product Id created in One Store
 ```
 
 ### Add One Store library 
@@ -222,8 +222,8 @@ In order to download IAP Android SDK and sync with T-store, you first need to ad
 Copy files from /libs/tstore folder in downloaded SDK package and paste them to /libs in application project.
 
 
-![[그림 9 원스토어 라이브러리의 추가]](http://static.toastoven.net/prod_iap/iap_41.png)
-<center>[Figure. 9 원스토어 라이브러리의 추가]</center>
+![Figure. 9 Add One Store Library](http://static.toastoven.net/prod_iap/iap_41.png)
+<center>[Figure. 9 Add One Store Library]</center>
 
 > [Reference]  
 > Adding Library in Unity Project   
@@ -262,7 +262,7 @@ Add AndroidManifest.xml setting information as shown below to sync with One stor
 ```
 
 > [참고]  
-> [원스토어 개발자 센터 개발도구](http://dev.onestore.co.kr/devpoc/reference/view/Tools)
+> [One Store Developer Tools](http://dev.onestore.co.kr/devpoc/reference/view/Tools)
 
 <br/>
 > [Reference]  
@@ -277,7 +277,7 @@ You need to apply the latest in-app SDK in order to register app via One Store d
 
 ## Apple App Store
 
-### 앱스토어 연동 정보
+### Apple App Store Form
 
 | Field         | Description                          |
 | ------------- | --------------------------- |

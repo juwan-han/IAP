@@ -33,20 +33,20 @@ These are terms for IAP service.
 | Term | Description |
 | --- | --- |
 | AppKey | These are terms for IAP service. |
-| 스토어(Store) | App Store, Google Play |
-| 결제내역(Payment) | User purchase history |
-| 결제요청(Purchase) | Item purchased in-app |
-| 결제소비(Consume) | Consuming purchase before creating item for user. |
+| Store | App Store, Google Play |
+| Payment | User purchase history |
+| Purchase | Item purchased in-app |
+| Consume | Consuming purchase before creating item for user. |
 | Payment Purchase Token | Verification token used when user application server consumes purchase. |
 
 ## Service Diagram
 
 IAP service is comprised of 4 components as in following figure: IAP SDK, User Application Server, IAP Server, and Market.
 
-![[그림 1 IAP 서비스 구조 - Server To Server Model]](http://static.toastoven.net/prod_iap/iap_n_1.png)
+![[Figure 1 IAP Service Diagram - Server To Server Model]](http://static.toastoven.net/prod_iap/iap_n_1.png)
 <center>[Figure 1 IAP Service Diagram - Server To Server Model]</center>
 
-![[그림 2 IAP 서비스 구조 - Build-in Model]](http://static.toastoven.net/prod_iap/iap_n_23.png)
+![[Figure 2 IAP Service Diagram - Build-in Model]](http://static.toastoven.net/prod_iap/iap_n_23.png)
 <center>[Figure 2 IAP Service Diagram - Build-in Model]</center>
 
 | Component | Description |
@@ -62,10 +62,10 @@ IAP service is comprised of 4 components as in following figure: IAP SDK, User A
 
 In-app purchase provides IAP SDK and IAP server API. The following figure is payment flow.
 
-![[그림 3 Server To Server Model 결제 흐름도]](http://static.toastoven.net/prod_iap/iap_n_28.png)
+![[Figure. 3 Server To Server Model Payment Flow]](http://static.toastoven.net/prod_iap/iap_n_28.png)
 <center>[Figure. 3 Server To Server Model Payment Flow]</center>
 
-![[그림 4 Build-in model 결제 흐름도]](http://static.toastoven.net/prod_iap/iap_n_29.png)
+![[Figure. 4 Build-in model Payment Flow]](http://static.toastoven.net/prod_iap/iap_n_29.png)
 <center>[Figure. 4 Build-in model Payment Flow]</center>
 
 [Table.4 IAP Payment Flow]

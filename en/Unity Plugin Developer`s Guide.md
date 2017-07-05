@@ -6,7 +6,7 @@
 Create project in Unity Editor
 ```
 
-![[그림 1 프로젝트 생성]](http://static.toastoven.net/prod_iap/iap_11.png)
+![[Figure. 1 Project Creation]](http://static.toastoven.net/prod_iap/iap_11.png)
 <center>[Figure. 1 Project Creation]</center>
 
 ```
@@ -14,14 +14,14 @@ In Unity Editor, Select [Assets] > [Import Package] > [Custom Package]
 select [In App Purchase Unity SDK]
 ```
 
-![[그림 2 Custom Package 선택]](http://static.toastoven.net/prod_iap/iap_12.png)
+![[Figure. 2 Select Custom Package]](http://static.toastoven.net/prod_iap/iap_12.png)
 <center>[Figure. 2 Select Custom Package]</center>
 
 ```
 Step3 : Import all assets
 ```
 
-![[그림 3 Importing package]](http://static.toastoven.net/prod_iap/iap_13.png)
+![[Figure 3 Importing package]](http://static.toastoven.net/prod_iap/iap_13.png)
 <center>[Figure. 3 Importing package]</center>
 
 ### Android Configuration and Build
@@ -33,17 +33,17 @@ Step3 : Import all assets
 4. [Minimum API Level] IAP Unity Plugin supports Android API Level 10 and beyond
 ```
 
-![[그림 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_14.png)
+![[Figure 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_14.png)
 <center>[Figure. 4 Setting for Android]</center>
 
 ```
 Modify your AndroidManifest.xml according to AndroidManifest-iap-template.xml.
 ```
 
-![[그림 5 AndroidManifest-iap-template.xml]](http://static.toastoven.net/prod_iap/iap_15.png)
+![[Figure 5 AndroidManifest-iap-template.xml]](http://static.toastoven.net/prod_iap/iap_15.png)
 <center>[Figure. 5 AndroidManifest-iap-template.xml]</center>
 
-> [참고]  
+> [Reference]  
 > Refer to Android project setting for Android Build Environment Setting.
 
 ### iOS Environment Setting and Build
@@ -53,14 +53,14 @@ Modify your AndroidManifest.xml according to AndroidManifest-iap-template.xml.
 2. Select [Platform]- iOS and click [Switch Platform] 
 ```
 
-![[그림 6 Platform을 iOS를 선택]](http://static.toastoven.net/prod_iap/iap_20.jpg)
+![[Figure 6 Select Platform IOS]](http://static.toastoven.net/prod_iap/iap_20.jpg)
 <center>[Figure. 6 Select Platform IOS]</center>
 
 ```
 Register [Player Settings] > [Settings for iOS] > Bundle identifier 
 ```
 
-![[그림 7 Settings for iOS]](http://static.toastoven.net/prod_iap/iap_21.jpg)
+![[Figure 7 Settings for iOS]](http://static.toastoven.net/prod_iap/iap_21.jpg)
 <center>[Figure. 7 Settings for iOS]</center>
 
 ```
@@ -68,7 +68,7 @@ Register [Player Settings] > [Settings for iOS] > Bundle identifier
 2. Implement Xcode through [iPhone.xcodeproj].
 ```
 
-![[그림 8 iOS Platform으로 빌드하여 Xcode 프로젝트 생성]](http://static.toastoven.net/prod_iap/iap_22.jpg)
+![[Figure. 8 Creation XCode Project]](http://static.toastoven.net/prod_iap/iap_22.jpg)
 <center>[Figure. 8 Creation XCode Project]</center>
 
 ```
@@ -104,7 +104,7 @@ void Start()
 Unity Editor offers sample console as below for InAppPurchase API test.(Refer to Sample directory)
 In Unity Editor, API response will be delivered in mock format. For actual payment test, complete the build with Android device.  
 
-![[그림 9 샘플 콘솔]](http://static.toastoven.net/prod_iap/iap_43.png)
+![[Figure. 9 Sample Console]](http://static.toastoven.net/prod_iap/iap_43.png)
 <center>[Figure. 9 Sample Console]</center>
 
 * RegisterUserId : Registration of User ID
@@ -356,7 +356,7 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
     "itemName": "Test item 01",
     "marketItemId": "item01",
     "price": 1000,
-    "currency": "KRW",
+    "currency": "KRW"
 },
 {
     "itemSeq": 1000209,
@@ -445,7 +445,7 @@ InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => 
     "itemName": "Test item 01",
     "marketItemId": "item01",
     "price": 1000,
-    "currency": "KRW",
+    "currency": "KRW"
 },
 {
     "itemSeq": 1000209,

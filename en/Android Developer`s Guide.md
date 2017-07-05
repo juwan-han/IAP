@@ -5,7 +5,7 @@
 * Windows
 * Eclipse in Android Development Tools / Android Studio IDE 1.2
 * Android 5.0.1 (API Level 21)
-* Android SDK Version은 **2.3.3 (API Level 10)** more
+* Android SDK Version is beyond **2.3.3 (API Level 10)**
 
 The open sources in use are as follows.
 
@@ -92,10 +92,10 @@ Once IAP SDK & sample application project are displayed in Import list, select [
 > \- [project] > [clean] select.    
 > \- [IAP] right click > [Properties] > [Resource] > [Text File Encoding] set to UTF-8.
 
-### IAP Android SDK 추가
+### Add IAP Android SDK 
 
 ```
-[project] 우클릭 > [Properties] > [Android] > [Add] > IAP 추가
+Right Click of [project] > [Properties] > [Android] > [Add] > Add IAP
 ```
 
 ![[Figure.1 IAP SDK]](http://static.toastoven.net/prod_iap/iap_5.jpg)
@@ -148,7 +148,7 @@ In-app purchase is proceeded in two stages: payment request and payment consume.
 If payment consume is complete, issue item in user’s application.
 
 > [Reference]  
-> [IAP 결제 흐름도](/Common/IAP/en/Overview/#iap)
+> [IAP Payment Flow](/Common/IAP/en/Overview/#iap)
 
 ### Registering User Identifier
 
@@ -254,7 +254,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 > IAP Android SDK payment confirmation pop-up   
 > There will be no payment confirmation pop-up appearing from toast-iap-android-sdk-1.2.3; it will be directly processed to market purchase.
 
-![[그림 2 기존 결제확인창]](http://static.toastoven.net/prod_iap/iap_40.jpg)
+![[Figure 2 Payment confirmation pop-up supported in old version]](http://static.toastoven.net/prod_iap/iap_40.jpg)
 <center>[Figure 2 Payment confirmation pop-up supported in old version]</center>
 
 ### Payment Consume
@@ -420,7 +420,7 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
            if (exception != null) {
               int errorCode = exception.getErrorCode();
               String errorMessage = exception.getMessage();
-              // TODO : 에러 발생시에 대한 처리를 정의 합니다.
+              // TODO : do something when error occurs.
               ....
               return;
            }
@@ -448,7 +448,7 @@ check [Copy Project into Workspace]
 click [Finish] button and Import completed
 ```
 
-![[그림 3 샘플 애플리케이션 추가]](http://static.toastoven.net/prod_iap/iap_7.jpg)
+![[Figure 3 Add sample application]](http://static.toastoven.net/prod_iap/iap_7.jpg)
 <center>[Figure 3 Add sample application]</center>
 
 ### Using Test Store
@@ -703,7 +703,7 @@ Entry Point for IAP payment interface
 
 ### public class InAppPurchaseException extends Exception
 
-API 요청에 대한 에러정보를 전달한다.
+Returns error of api request.
 
 [getErrorCode]
 
