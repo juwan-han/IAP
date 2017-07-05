@@ -8,15 +8,15 @@ To use SDK from IAP, you first need to register app and item at web console.
 To use IAP service, select [Common] > [IAP] at web console and click [Use Item] button to activate the service.
 ```
 
-![[그림 1 IAP 상품 활성화]](http://static.toastoven.net/prod_iap/iap_n_30.png)
+![[Figure. 1 IAP Activation]](http://static.toastoven.net/prod_iap/iap_n_30.png)
 <center>[Figure. 1 IAP Activation]</center>
 
 ```
 Click 'URL & Appkey' on top as in [Figure 2] to check AppKey or copy the key to clipboard.
 ```
 
-![[그림 2 AppKey 확인]](http://static.toastoven.net/prod_iap/iap_n_31.png)
-<center>[Figure. 2 AppKey]</center>
+![[Check AppKey]](http://static.toastoven.net/prod_iap/iap_n_31.png)
+<center>[Figure. 2 Check AppKey]</center>
 
 ## Store Registration
 
@@ -34,9 +34,9 @@ Click 'URL & Appkey' on top as in [Figure 2] to check AppKey or copy the key to 
 ```
 
 > [Reference]  
-> Refer to [스토어 연동 정보](./Store interlocking information) to obtain Store App ID.
+> Refer to [Store interlocking information](./Store interlocking information) to obtain Store App ID.
 
-![[그림 3 스토어 등록]](http://static.toastoven.net/prod_iap/iap_n_32.png)
+![[그림 3 Store Registration]](http://static.toastoven.net/prod_iap/iap_n_32.png)
 <center>[Figure. 3 Store Registration]</center>
 
 ## Item Registration
@@ -50,7 +50,7 @@ Click 'URL & Appkey' on top as in [Figure 2] to check AppKey or copy the key to 
 6. Click [Add] and check [ITEM ID].  
 ```
 
-![[그림 4 아이템 등록]](http://static.toastoven.net/prod_iap/iap_n_33.png)
+![[그림 4 Item Registration]](http://static.toastoven.net/prod_iap/iap_n_33.png)
 <center>[Figure. 4 Item Registration]</center>
 
 ## Store Product Type
@@ -80,8 +80,8 @@ Before registering item to IAP service, register item type of InAppProducts regi
 5. Click [Search]  
 ```
 
-![[그림 5 결제 정보 조회]](http://static.toastoven.net/prod_iap/iap_n_44.png)
-<center>[Figure. 5 Inquire payment information]</center>
+![[그림 5 Inquiry payment information]](http://static.toastoven.net/prod_iap/iap_n_44.png)
+<center>[Figure. 5 Inquiry payment information]</center>
 
 > [Reference]
 > Payment Status   
@@ -110,10 +110,10 @@ You can change payment status in following conditions,
 Payment which status will be changable shows [Modify] button right side as below. 
 
 ```
-![[그림 6 결제 상태 수정]](http://static.toastoven.net/prod_iap/iap_45.png)
+![[그림 6 Change payment status]](http://static.toastoven.net/prod_iap/iap_45.png)
 <center>[Figure. 6 Change payment status]</center>
  
-![[그림 7 결제 상태 수정]](http://static.toastoven.net/prod_iap/iap_46.PNG)
+![[그림 7 Add additional information when changing statu]](http://static.toastoven.net/prod_iap/iap_46.PNG)
 <center>[Figure. 7 Add additional information when changing status]</center>
 
 
@@ -127,5 +127,5 @@ Payment which status will be changable shows [Modify] button right side as below
 3. You may inquire ‘This month’s total gross’ and ‘Daily details’ using [<][>] button at store  
 ```
 
-![[그림 6 결제 통계 조회]](http://static.toastoven.net/prod_iap/iap_n_35.png)
+![[그림 6 Payment Statistics]](http://static.toastoven.net/prod_iap/iap_n_35.png)
 <center>[Figure. 6 Payment Statistics]</center>

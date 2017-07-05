@@ -27,7 +27,7 @@ Add below framework to application to use IAP SDK.
 3. check [APP ID].
 ```
 
-![[그림 1 APP ID 획득]](http://static.toastoven.net/prod_iap/iap_n_32.png)
+![[Figure 1 Getting APP ID]](http://static.toastoven.net/prod_iap/iap_n_32.png)
 <center>[Figure 1 Getting APP ID]</center>
 
 ### 2\. Item Registration
@@ -64,7 +64,7 @@ Add below framework to application to use IAP SDK.
     - coreTelephony.framework
 ```
 
-![[그림 2 IAP 연동을 위한 라이브러리 추가]](http://static.toastoven.net/prod_iap/iap_42.png)
+![[Figure 2 Add library for IAP]](http://static.toastoven.net/prod_iap/iap_42.png)
 <center>[Figure 2 Add library for IAP]</center>
 
 ### 2\. Setting plist
@@ -74,7 +74,7 @@ Create string value with TOAST_IAP_APP_ID key to [plist] and enter app ID.
 Once completed, .plist will be in the following format.
 ```
 
-![[그림 3 plist에 APP ID 설정]](http://static.toastoven.net/prod_iap/iap_19.jpg)
+![[Figure 3 Set App ID to plist]](http://static.toastoven.net/prod_iap/iap_19.jpg)
 <center>[Figure 3 Set App ID to plist ]</center>
 
 > [Reference - Setting iOS9 ATS]  
