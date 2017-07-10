@@ -17,7 +17,8 @@
 | 110 |  INAPP_VERIFY_SIGNATURE_ERROR |  fail when verifying store receipt signature |
 | 111 |  INAPP_CONSUME_ERROR |  store fail when consuming|
 | 112 |  INAPP_VERIFY_CONSUME_ERROR |  fail when verifying store receipt signature |
-| 113 |	 SERVER_NETWORK_FAIL	IAP server |  Network error |
+| 113 |	 SERVER_NETWORK_FAIL | IAP server Network error |
+| 116 |	 APP_STORE_REMAINS_PAYMENT | clear remained payments |
 
 ## Server API Errors
 

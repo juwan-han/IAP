@@ -17,7 +17,8 @@
 | 110 |  INAPP_VERIFY_SIGNATURE_ERROR |  스토어 결제 오류 - 서명 검증시 |
 | 111 |  INAPP_CONSUME_ERROR |  스토어 결제 오류 - 결제 내역 소모시 |
 | 112 |  INAPP_VERIFY_CONSUME_ERROR |  스토어 결제 검증 오류 - 영수증 검증 시 |
-| 113 |	 SERVER_NETWORK_FAIL	IAP 서버 |  NETWORK 오류 |
+| 113 |	 SERVER_NETWORK_FAIL |  IAP 서버 NETWORK 오류 |
+| 116 |	 APP_STORE_REMAINS_PAYMENT | 이전의 결제건에 대한 미처리작업 |
 
 ## Server API 에러타입
 
