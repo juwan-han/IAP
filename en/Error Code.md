@@ -18,7 +18,7 @@
 | 111 |  INAPP_CONSUME_ERROR |  store fail when consuming|
 | 112 |  INAPP_VERIFY_CONSUME_ERROR |  fail when verifying store receipt signature |
 | 113 |	 SERVER_NETWORK_FAIL | IAP server Network error |
-| 116 |	 APP_STORE_REMAINS_PAYMENT | clear remained payments |
+| 116 |	 APP_STORE_REMAINS_PAYMENT | clear remained payments (you should show repurchase message to user.) |
 
 ## Server API Errors
 

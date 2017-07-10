@@ -18,7 +18,7 @@
 | 111 |  INAPP_CONSUME_ERROR |  스토어 결제 오류 - 결제 내역 소모시 |
 | 112 |  INAPP_VERIFY_CONSUME_ERROR |  스토어 결제 검증 오류 - 영수증 검증 시 |
 | 113 |	 SERVER_NETWORK_FAIL |  IAP 서버 NETWORK 오류 |
-| 116 |	 APP_STORE_REMAINS_PAYMENT | 이전의 결제건에 대한 미처리작업 |
+| 116 |	 APP_STORE_REMAINS_PAYMENT | 이전의 결제건에 대한 미처리작업 (사용자에게 재구매유도 메시지를 보여줘야 함) |
 
 ## Server API 에러타입
 
