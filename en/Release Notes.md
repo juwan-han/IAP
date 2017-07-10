@@ -1,5 +1,19 @@
 ## Common > IAP > Release Notes
 
+### 2017.07.20
+
+#### 버그 수정
+
+* [SDK][[iOS-1.4.4](/Download/#common-iap)][[Unity-1.5.3](/Download/#common-iap)] 릴리스
+* 간헐적 '해당 항목은 무료로 복구됩니다.' 네이티브 얼럿 현상 수정
+* 신규 에러코드 116 추가
+
+#### 기능 개선/변경
+
+* [SDK][[iOS-1.4.4](/Download/#common-iap)][[Unity-1.5.3](/Download/#common-iap)] 릴리스
+* 결제 종료시점 변경
+
+
 ### 2017.06.29
 
 #### 버그 수정
