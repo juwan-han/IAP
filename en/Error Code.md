@@ -28,7 +28,6 @@
 |2111|	HTTP_CONTENT_TYPE_NOT_SUPPORT|	 HTTP Request Content-Type is not application/json.|
 |2112|	HTTP_REQUEST_METHOD_NOT_SUPPORT| not supported HTTP METHOD|
 |5000|	CONSUME_FAILED|	Consume fail|
-|5018|	ALREADY_CONSUMED|	already consumed payment|
 
 ## Web Console Errors
 

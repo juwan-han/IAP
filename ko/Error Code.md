@@ -28,9 +28,6 @@
 |2111|	HTTP_CONTENT_TYPE_NOT_SUPPORT|	Content-Type 오류 – Request 요청시Content-Type이 application/json 아닌 경우|
 |2112|	HTTP_REQUEST_METHOD_NOT_SUPPORT|	HTTP Method 오류 – Request 요청시 잘못된 HTTP Method로 요청시|
 |5000|	CONSUME_FAILED|	Consume 실패|
-|5018|	ALREADY_CONSUMED|	이미 소비된 결제건|
-
-
 
 ## Web Console 에러타입
 
