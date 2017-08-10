@@ -19,6 +19,7 @@
 | 112 |  INAPP_VERIFY_CONSUME_ERROR |  fail when verifying store receipt signature |
 | 113 |	 SERVER_NETWORK_FAIL | IAP server Network error |
 | 116 |	 APP_STORE_REMAINS_PAYMENT | clear remained payments (you should show repurchase message to user.) |
+| 117 |  IAP_IN_PROGRESS_ERROR | When an IAP API is still in process, an error may occur when a new request comes in, and the client can ignore or re-request as needed. |
 
 ## Server API Errors
 
