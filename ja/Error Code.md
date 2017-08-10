@@ -19,6 +19,7 @@
 | 112 |  INAPP_VERIFY_CONSUME_ERROR |  스토어 결제 검증 오류 - 영수증 검증 시 |
 | 113 |  SERVER_NETWORK_FAIL |  IAP 서버 NETWORK 오류 |
 | 116 |  APP_STORE_REMAINS_PAYMENT | 이전의 결제건에 대한 미처리작업 (사용자에게 재구매유도 메시지를 보여줘야 함) |
+| 117 |  IAP_IN_PROGRESS_ERROR | IAP API가 아직 처리 중일 때 새로운 요청이 들어오면 해당 에러가 발생할 수 있으며, 클라이언트는 필요에 따라 무시하거나 재요청할 수 있음 |
 
 ## Server API 에러타입
 
