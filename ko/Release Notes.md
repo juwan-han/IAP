@@ -6,6 +6,9 @@
 
 * [SDK][[AOS-1.3.4](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
     * 미처리 결제건 일괄 재처리 API 호출 시 간헐적으로 발생하는 앱 크래시 현상 수정
+* [SDK][[IOS-1.4.5](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
+    * 결제시도시 잔존하는 결제건들 처리중 발생하는 앱 크래시 현상 수정 
+
 
 ### 기능 개선/변경
 
