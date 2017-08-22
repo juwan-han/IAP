@@ -685,7 +685,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 
 [onCallback]
 
-| 用语 |           说明                                                                                  | 
+| 用语 |           说明   |                                                                               | 
 | ----- | ----- | ----- |
 |Description  |  传达API请求结果。                                                                     |
 |Syntax       |  public abstract void onCallback(JSONArray result, InAppPurchaseException exception)   |
