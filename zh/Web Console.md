@@ -120,7 +120,7 @@ IAP在Web Console上注册了App和项目之后，可使用SDK。
 
  
 ![[图 7 用成功结算的状态来修改时，记入添加信息]](http://static.toastoven.net/prod_iap/iap_46.PNG)
-</center>[图 7 用成功结算的状态来修改时，记入添加信息]<center>
+<center>[图 7 用成功结算的状态来修改时，记入添加信息]</center>
 
 ## 查询统计结算
 
@@ -130,6 +130,6 @@ IAP在Web Console上注册了App和项目之后，可使用SDK。
 3. 用[<][>]按钮，各Store 可按月查询‘本月总收入’、‘每日详细明细’。
 ```
 
-![[图 6 查询统计结算]](http://static.toastoven.net/prod_iap/iap_n_35.png)
+![[图 8 查询统计结算]](http://static.toastoven.net/prod_iap/iap_n_35.png)
 
-<center>[图 6 查询统计结算]</center>
+<center>[图 8 查询统计结算]</center>
