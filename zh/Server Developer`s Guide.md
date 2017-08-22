@@ -70,7 +70,7 @@ RequestBody
 
 [Header]
 
-|Property name   Value     Description|
+|Property name  | Value   |  Description|
 | ------------- | ------- | ----------------------- |
 |isSuccessful   | Boolean  | 结算消费是否正常，成功邀请API时为true，失败时为false|
 |resultCode     | Integer  | 结算消费失败时的详细代码|
