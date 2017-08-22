@@ -16,14 +16,14 @@ Web控制台上。按Market发行的应用Key值请参照下表。
 |Google API Client Secret            | Google API Project的OAuth Client Secret|
 |Refresh Token For Google OAuth      | 通过Google Play Developer账户获得的Refresh Token|
 
-[表 1] 关联Google Play Store的App注册领域
+<center>[表 1] 关联Google Play Store的App注册领域</center>
 
 |领域            | 说明|
 |---------------- | ----------------------------------------------|
 |Item Name       | 有关项目的题目或说明|
 |Market Item ID  | 注册于Google Play开发者控制台上的InApp商品ID|
 
-[表 2] 关联Google Play Store的项目注册领域
+<center>[表 2] 关联Google Play Store的项目注册领域</center>
 
 ### 确认Google Play开发者控制台的应用Public Key 
 
@@ -65,10 +65,10 @@ Web控制台上。按Market发行的应用Key值请参照下表。
 ```
 
 ![[图 1] Client ID 及Client Secret的生成 1](http://static.toastoven.net/prod_iap/iap_47.png)
-[图 1] Client ID 及Client Secret的生成 1
+<center>[图 1] Client ID 及Client Secret的生成 1</center>
 
 ![[图 2] Client ID 及Client Secret的生成 2](http://static.toastoven.net/prod_iap/iap_48.png)
-[图 2] Client ID 及Client Secret的生成 2
+<center>[图 2] Client ID 及Client Secret的生成 2</center>
 
 ```
 2. Refresh Token的生成
@@ -94,10 +94,10 @@ Web控制台上。按Market发行的应用Key值请参照下表。
 ```
 
 ![[图 3] Refresh Token的生成1](http://static.toastoven.net/prod_iap/iap_49.jpg)
-[图 3] Refresh Token的生成1
+<center>[图 3] Refresh Token的生成1</center>
 
 ![[图 4] Refresh Token的生成2](http://static.toastoven.net/prod_iap/iap_50.jpg)
-[图 4] Refresh Token的生成2
+<center>[图 4] Refresh Token的生成2</center>
 
 ### AndroidManifest.xml 设置示例
 
@@ -142,10 +142,10 @@ Web控制台上。按Market发行的应用Key值请参照下表。
 ```
 
 ![[图 5] Google Developers Console内部的 Google Play Developer API 菜单](http://static.toastoven.net/prod_iap/iap_36_1.png)
-[图 5] Google Developers Console内部的 Google Play Developer API 菜单
+<center>[图 5] Google Developers Console内部的 Google Play Developer API 菜单</center>
 
 ![[图 6] Google Play Developer API 活性化确认](http://static.toastoven.net/prod_iap/iap_37.png)
-[图 6] Google Play Developer API 活性化确认
+<center>[图 6] Google Play Developer API 活性化确认</center>
 
 ```
 2. 在‘Google Play Developer Console’上通过[API存取]菜单确认其是否与项目ID相连。
@@ -155,7 +155,7 @@ Web控制台上。按Market发行的应用Key值请参照下表。
 ```
 
 ![[图 7] Google Play Developer API 活性化确认](http://static.toastoven.net/prod_iap/iap_38.png)
-[图 7] Google Play Developer API 活性化确认
+<center>[图 7] Google Play Developer API 活性化确认</center>
 
 ```
 3. ‘Google Play Developer Console’的账户所有者必须是在Google Developers Console的项目上拥有权限的所有者。 
@@ -165,7 +165,7 @@ Web控制台上。按Market发行的应用Key值请参照下表。
 ```
 
 ![[图 8] 确认In App商品 ID](http://static.toastoven.net/prod_iap/iap_39.jpg)
-[图 8] 确认In App商品 ID
+<center>[图 8] 确认In App商品 ID</center>
 
 ```
 4. 应该在‘Google Play Developer Console’In App商品上注册与Market Item ID一致的商品。.  
@@ -216,7 +216,7 @@ ONE Store综合开发者中心是Olleh Market / U+Store / T Store / Naver Store�
 \- 在Download的SDK Package上，将/libs/tstore文件夹的文件复制于应用项目的/libs上。
 
 ![[图 9 添加ONE Store库]](http://static.toastoven.net/prod_iap/iap_41.png)
-[图 9 添加ONE Store库]
+<center>[图 9 添加ONE Store库]</center>
 
 > [参考]<br>
 > 在Unity 项目上添加 Library<br>
