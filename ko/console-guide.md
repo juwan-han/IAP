@@ -1,23 +1,27 @@
 ## Mobile Service > IAP > 콘솔 사용 가이드
 
-IAP는 Web Console에서 앱과 아이템을 등록한 후 SDK를 사용할 수 있습니다.
+IAP는 Console에서 앱과 아이템을 등록한 후 SDK를 사용할 수 있습니다.
 
 ## IAP 상품 활성화 및 Appkey 발급
 
 ```
-IAP 서비스를 사용하기 위해서는 Web Console (http://console.cloud.toast.com)에서
-[Common] > [IAP] 을 선택한 후 [상품 이용] 버튼을 클릭하여 서비스를 활성화합니다.
+IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)에서
+[Mobile Service] > [IAP] 을  클릭하여 활성화합니다.
 ```
 
-![[그림 1 IAP 상품 활성화]](http://static.toastoven.net/prod_iap/iap_n_30.png)
+![[그림 1 IAP 상품 활성화]](http://static.toastoven.net/prod_iap/iap_n_52.png)
 <center>[그림 1 IAP 상품 활성화]</center>
 
 ```
-[그림 2]의 상단 'URL & Appkey'를 클릭하여 AppKey를 확인하거나 클립보드에 복사합니다.
+[그림 2-1]의 'URL & Appkey'를 클릭하여 AppKey를 확인하거나 클립보드에 복사합니다.
 ```
 
-![[그림 2 AppKey 확인]](http://static.toastoven.net/prod_iap/iap_n_31.png)
-<center>[그림 2 AppKey 확인]</center>
+![[그림 2-1 URL & Appkey 메뉴]](http://static.toastoven.net/prod_iap/iap_n_53.png)
+<center>[그림 2-1 URL & Appkey 메뉴]</center>
+
+
+![[그림 2-2 AppKey 확인]](http://static.toastoven.net/prod_iap/iap_n_54.png)
+<center>[그림 2-2 AppKey 확인]</center>
 
 ## 스토어 등록 – APP ID 획득
 
