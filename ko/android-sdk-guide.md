@@ -134,7 +134,7 @@ AndroidManifest.xml의 설정 정보는 다음과 같습니다.
 | com.android.vending.BILLING | Google Play를 위한 권한. <br/> * 스토어별로 이름이 다르거나 포함여부가 달라짐     |
 | activity                    | IAP에서 제공하는 액티비티 등록           |
 | com.toast.iap.config.appId  | IAP 웹콘솔에서 발급된 앱고유번호          |
-| com.toast.iap.config.market | 스토어 정보 <br/>GG : 구글플레이<br/> TS : 티스토어<br/> <br/>TEST : 테스트 |
+| com.toast.iap.config.market | 스토어 정보 <br/>GG : 구글플레이<br/> TS : 티스토어<br/> TEST : 테스트 |
 
 [표2 AndroidManifest.xml 설정 정보]
 
