@@ -2,19 +2,19 @@
 
 ### 2018.01.31
 
-### 기능 개선
+#### 기능 개선
 * [SDK][[AOS-1.3.8](/Download/#common-iap)][[Unity-1.5.7](/Download/#common-iap)] 릴리스
     * 'android.permission.READ_PHONE_STATE' 권한 제거
 
 ### 2018.01.24
 
-### 버그 수정
+#### 버그 수정
 * [SDK][[AOS-1.3.7](/Download/#common-iap)] 릴리스
     * 구글 결제 시  20개 이상의 아이템을 한번에 검색하는 경우, 검색에 실패하는 버그 수정
 
 ### 2017.12.21
 
-### 버그 수정
+#### 버그 수정
 
 * [SDK][[AOS-1.3.5.2](/Download/#common-iap)][[iOS-1.5.1](/Download/#common-iap)][[Unity-1.5.6](/Download/#common-iap)] 릴리스
     * 간헐적으로 발생하는 앱 크래시 현상 수정
@@ -24,7 +24,7 @@
 
 ### 2017.09.21
 
-### 기능 개선/변경
+#### 기능 개선/변경
 
 * [SDK][[AOS-1.3.5](/Download/#common-iap)][[IOS-1.4.6](/Download/#common-iap)][[Unity-1.5.5](/Download/#common-iap)] 릴리스
     * 미소비 결제내역 조회 API 내부 로직 중 과거 결제가 있는 경우에만 서버를 통해 내역을 가져오고 그렇지 않을 경우 빈 리스트 반환하도록 개선
@@ -32,7 +32,7 @@
 
 ### 2017.08.24
 
-### 버그 수정
+#### 버그 수정
 
 * [SDK][[AOS-1.3.4](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
     * 미처리 결제건 일괄 재처리 API 호출 시 간헐적으로 발생하는 앱 크래시 현상 수정
@@ -40,7 +40,7 @@
     * 결제시도시 잔존하는 결제건들 처리중 발생하는 앱 크래시 현상 수정 
 
 
-### 기능 개선/변경
+#### 기능 개선/변경
 
 * [SDK][[AOS-1.3.4](/Download/#common-iap)][[IOS-1.4.5](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
     * 해외 네트워크 이슈로인한 가속 URL 적용
