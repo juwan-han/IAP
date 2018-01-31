@@ -1,5 +1,17 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.01.31
+
+### 기능 개선
+* [SDK][[AOS-1.3.8](/Download/#common-iap)][[Unity-1.5.7](/Download/#common-iap)] 릴리스
+    * 'android.permission.READ_PHONE_STATE' 권한 제거
+
+### 2018.01.24
+
+### 버그 수정
+* [SDK][[AOS-1.3.7](/Download/#common-iap)] 릴리스
+    * 구글 결제 시  20개 이상의 아이템을 한번에 검색하는 경우, 검색에 실패하는 버그 수정
+
 ### 2017.12.21
 
 ### 버그 수정

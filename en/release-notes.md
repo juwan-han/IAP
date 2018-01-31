@@ -1,4 +1,16 @@
-## Mobile Service > IAP > Release Notes
+## Mobile Service > IAP > 릴리스 노트
+
+### 2018.01.31
+
+### 기능 개선
+* [SDK][[AOS-1.3.8](/Download/#common-iap)][[Unity-1.5.7](/Download/#common-iap)] 릴리스
+    * 'android.permission.READ_PHONE_STATE' 권한 제거
+
+### 2018.01.24
+
+### 버그 수정
+* [SDK][[AOS-1.3.7](/Download/#common-iap)] 릴리스
+    * 구글 결제 시  20개 이상의 아이템을 한번에 검색하는 경우, 검색에 실패하는 버그 수정
 
 ### 2017.12.21
 
@@ -17,6 +29,7 @@
 * [SDK][[AOS-1.3.5](/Download/#common-iap)][[IOS-1.4.6](/Download/#common-iap)][[Unity-1.5.5](/Download/#common-iap)] 릴리스
     * 미소비 결제내역 조회 API 내부 로직 중 과거 결제가 있는 경우에만 서버를 통해 내역을 가져오고 그렇지 않을 경우 빈 리스트 반환하도록 개선
 
+
 ### 2017.08.24
 
 ### 버그 수정
@@ -25,6 +38,7 @@
     * 미처리 결제건 일괄 재처리 API 호출 시 간헐적으로 발생하는 앱 크래시 현상 수정
 * [SDK][[IOS-1.4.5](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
     * 결제시도시 잔존하는 결제건들 처리중 발생하는 앱 크래시 현상 수정 
+
 
 ### 기능 개선/변경
 
@@ -37,12 +51,12 @@
 
 * [SDK][[iOS-1.4.4](/Download/#common-iap)][[Unity-1.5.3](/Download/#common-iap)] 릴리스
     * 간헐적 '해당 항목은 무료로 복구됩니다.' native alert 대신 client 에러코드 116을 반환함  (network 상태가 좋지 않을때 발생 할 수 있음)
+    
 
 #### 기능 개선/변경
 
 * [SDK][[iOS-1.4.4](/Download/#common-iap)][[Unity-1.5.3](/Download/#common-iap)] 릴리스
     * 결제 종료시점 변경 (finishTransaction의 실행시점변경. 기존 : 영수증 검증이후, 변경 : 영수증 검증이전)
-
 
 ### 2017.06.29
 
@@ -81,8 +95,8 @@
 
 #### 버그 수정
 * [SDK][[Android-1.3.2](/Download/#common-iap)][[Unity-1.5.1](/Download/#common-iap)] 릴리스
-    * [미처리 결제건 일괄 재처리](/Common/IAP/en/Android%20Developer%60s%20Guide/#_9)시 앱 크래시 현상 수정
-    * [구매 가능한 아이템 조회](/Common/IAP/en/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 반환되는 문제 수정
+    * [미처리 결제건 일괄 재처리](/Common/IAP/ko/Android%20Developer%60s%20Guide/#_9)시 앱 크래시 현상 수정
+    * [구매 가능한 아이템 조회](/Common/IAP/ko/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 반환되는 문제 수정
 	```
 	변경 전: itmeSeq
 	변경 후: itemSeq
@@ -96,9 +110,9 @@
 * [Console] 앱 / 아이템 수정시 필수 입력값 검증처리 추가
 * [SDK][[Android-1.3.1](/Download/#common-iap)][[Unity-1.5.0](/Download/#common-iap)] 릴리스
     * 불필요한 권한 제거(WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE)
-    * <a href="/ko/Common/IAP/en/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
+    * <a href="/ko/Common/IAP/ko/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
 * [SDK][[iOS-1.4.3](/Download/#common-iap)] 릴리스
-    * <a href="/ko/Common/IAP/en/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
+    * <a href="/ko/Common/IAP/ko/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
 
 ### 2016.12.22
 
@@ -173,4 +187,3 @@
 
 * [SDK][[Android-1.2.5](/Download/#common-iap)] 릴리스
     * AndroidManifest.xml 필수 permission 거부시 callback 에러코드 리턴 수정
-

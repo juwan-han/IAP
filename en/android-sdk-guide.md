@@ -109,7 +109,6 @@ This is for Google Play development.
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <!-- google iab permission -->
