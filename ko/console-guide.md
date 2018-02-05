@@ -39,7 +39,7 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 ```
 
 > [참고]  
-> APP ID 획득을 위한 [스토어 연동 정보](./Store interlocking information)    
+> APP ID 획득을 위한 [스토어 연동 정보](./console-guide/#store-interlocking-information)    
 
 ![[그림 3 스토어 등록]](http://static.toastoven.net/prod_iap/iap_n_32.png)
 <center>[그림 3 스토어 등록]</center>
