@@ -11,8 +11,8 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 | 이름                 | 설명                                             |
 | ------------------ | ---------------------------------------------- |
 | StoreKit.framework | 앱스토어의 In App Purchase연동을 위한 framework          |
-| libsqlite3.dylib   | TOAST Cloud IAP SDK는 로컬데이터관리를 위해 sqlite를 사용합니다 |
-| coreTelephony.framework   | 사용자의 국가정보를 획득하기 위해 사용합니다 |
+| libsqlite3.tbd     | TOAST Cloud IAP SDK는 로컬데이터관리를 위해 sqlite를 사용합니다 |
+| CoreTelephony.framework   | 사용자의 국가정보를 획득하기 위해 사용합니다 |
 
 > [참고]  
 > In App Purchase 테스트를 하기 위해 iTunes Connect에 어플리케이션 및 상품등록을 완료했다고 가정합니다.    
@@ -49,24 +49,22 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 | 디렉토리명    | 설명                        |
 | -------- | ------------------------- |
 | /docs    | IAP iOS SDK API Reference |
-| /include | Header File               |
-| /lib     | Library                   |
+| /lib     | Framework                 |
 | /samples | Sample Application        |
 <center>[표1 iOS SDK 디렉토리 정보]</center>
 
 ### 1\. IAP SDK 및 framework 추가
 
 ```
-1. [Xcode] > [Project] > [Targets – Build Phases]  
-2. [TIAPurchase.h 파일을 프로젝트에 Drag & Drop 하여 추가]  
-3. [Link Bianry With Libraries] 에 아래의 framworks 추가  
-    - libTIAPurchase.a  
+1. [Xcode] > [Project] > [Targets – Build Phases]
+2. [Link Bianry With Libraries] 에 아래의 framworks 추가  
+    - libsqlite3.tbd
+    - TIAPurchase.framework
     - StoreKit.framework  
-    - Libsqlite3.dylib
-    - coreTelephony.framework
+    - CoreTelephony.framework
 ```
 
-![[그림 2 IAP 연동을 위한 라이브러리 추가]](http://static.toastoven.net/prod_iap/iap_42.png)
+![[그림 2 IAP 연동을 위한 라이브러리 추가]](http://static.toastoven.net/prod_iap/iap_51.png)
 <center>[그림 2 IAP 연동을 위한 라이브러리 추가]</center>
 
 ### 2\. plist 설정하기
@@ -110,7 +108,7 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 어플리케이션에 SDK 사용을 위한 준비가 완료되면, IAP SDK의 Header File을 아래와 같이 추가합니다.
 
 ``` objc
-#import "TIAPurchase.h"
+#import <TIAPurchase/TIAPurchase.h>
 ```
 
 ### 2\. 로그정보 활성화

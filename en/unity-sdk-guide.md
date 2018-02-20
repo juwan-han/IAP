@@ -76,7 +76,7 @@ Implement created Xcode project.
 1. [Xcode] > [Project] > [Targets – Build Phases]  
 2. Add frameworks under [Link Bianry With Libraries]  
     - StoreKit.framework  
-    - libsqlite3.dylib  
+    - libsqlite3.tbd  
     - CoreTelephony.framework (beyond TOAST-IAP-UnityPlugin-1.3.0 version)
 4. Create string value with TOAST_IAP_APP_ID key at [plist] and enter App ID
 ```

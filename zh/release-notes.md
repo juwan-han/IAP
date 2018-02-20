@@ -1,5 +1,11 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.02.22
+
+#### 버그 수정
+* [SDK][[iOS-1.5.2](/Download/#common-iap)][[AOS-1.3.9](/Download/#common-iap)][[Unity-1.5.8](/Download/#common-iap)] 릴리스
+    * Console에서 결제 상태 수정시 미지급 결제건 조회 API에서 항상 빈 값을 반환하던 버그 수정
+
 ### 2018.01.31
 
 #### 기능 개선
@@ -18,9 +24,9 @@
 
 * [SDK][[AOS-1.3.5.2](/Download/#common-iap)][[iOS-1.5.1](/Download/#common-iap)][[Unity-1.5.6](/Download/#common-iap)] 릴리스
     * 간헐적으로 발생하는 앱 크래시 현상 수정
-	* 결제내역이 존재하지 않은 경우 미소비내역 조회 API 리턴값을 기존과 통일되도록 수정
-	* 사용자 등록시점에 미처리된 결제건을 조회하도록 로직 수정
-	* 결제요청 API 호출 시 로컬 DB에서 조회하는 조건을 User key값만으로 조회하도록 수정
+    * 결제내역이 존재하지 않은 경우 미소비내역 조회 API 리턴값을 기존과 통일되도록 수정
+    * 사용자 등록시점에 미처리된 결제건을 조회하도록 로직 수정
+    * 결제요청 API 호출 시 로컬 DB에서 조회하는 조건을 User key값만으로 조회하도록 수정
 
 ### 2017.09.21
 
@@ -97,10 +103,10 @@
 * [SDK][[Android-1.3.2](/Download/#common-iap)][[Unity-1.5.1](/Download/#common-iap)] 릴리스
     * [미처리 결제건 일괄 재처리](/Common/IAP/ko/Android%20Developer%60s%20Guide/#_9)시 앱 크래시 현상 수정
     * [구매 가능한 아이템 조회](/Common/IAP/ko/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 반환되는 문제 수정
-	```
-	변경 전: itmeSeq
-	변경 후: itemSeq
-	```
+    ```
+    변경 전: itmeSeq
+    변경 후: itemSeq
+    ```
 
 ### 2017.01.19
 

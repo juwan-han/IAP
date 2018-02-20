@@ -11,7 +11,7 @@ Add below framework to application to use IAP SDK.
 | Name                 | Description                                             |
 | ------------------ | ---------------------------------------------- |
 | StoreKit.framework | Framework for in-app purchase sync in App Store          |
-| libsqlite3.dylib   | TOAST Cloud IAP SDK uses sqlite for managing local data |
+| libsqlite3.tbd     | TOAST Cloud IAP SDK uses sqlite for managing local data |
 | coreTelephony.framework   | This is for acquiring user’s country information. |
 
 > [Reference]  
@@ -49,8 +49,7 @@ Add below framework to application to use IAP SDK.
 | Directory Name    | Description                        |
 | -------- | ------------------------- |
 | /docs    | IAP iOS SDK API Reference |
-| /include | Header File               |
-| /lib     | Library                   |
+| /lib     | Framework                 |
 | /samples | Sample Application        |
 <center>[Table. 1 iOS SDK Directory]</center>
 
@@ -58,15 +57,14 @@ Add below framework to application to use IAP SDK.
 
 ```
 1. [Xcode] > [Project] > [Targets – Build Phases]  
-2. Add TIAPurchase.h into project by drag & drop  
-3. Add following frameworks to [Link Bianry With Libraries]  
-    - libTIAPurchase.a  
+2. Add following frameworks to [Link Bianry With Libraries]  
+    - libsqlite3.tbd
+    - TIAPurchase.framework
     - StoreKit.framework  
-    - Libsqlite3.dylib
-    - coreTelephony.framework
+    - CoreTelephony.framework
 ```
 
-![[Figure 2 Add library for IAP]](http://static.toastoven.net/prod_iap/iap_42.png)
+![[Figure 2 Add library for IAP]](http://static.toastoven.net/prod_iap/iap_51.png)
 <center>[Figure 2 Add library for IAP]</center>
 
 ### 2\. Setting plist
