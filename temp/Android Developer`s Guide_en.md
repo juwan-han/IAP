@@ -108,7 +108,6 @@ Android Project Settings
 Contents made up based on Google Play.
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -134,7 +133,7 @@ Setting information of AndroidManifest.xml as follows.
 | com.android.vending.BILLING | Authority for Google Play. \* Names or inclusions will vary depending on the market |
 | activity                    | Register activities provided by IAP                                                 |
 | com.toast.iap.config.appId  | Unique number of app issued from IAP Web Console                                    |
-| com.toast.iap.config.market | Market information GG : Google Play TS : T Store NA : NAVER App Store TEST : Test   |
+| com.toast.iap.config.market | Market information GG : Google Play TS : T Store TEST : Test   |
 
 \[Table 2 AndroidManifest.xml setting information\]
 
