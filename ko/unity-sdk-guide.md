@@ -77,7 +77,7 @@ Step3 : 모든 Assets을 Import 합니다.
 1. [Xcode] > [Project] > [Targets – Build Phases]  
 2. [Link Bianry With Libraries] 에 아래의 framworks 추가  
     - StoreKit.framework  
-    - libsqlite3.dylib  
+    - libsqlite3.tbd
     - CoreTelephony.framework (TOAST-IAP-UnityPlugin-1.3.0 이후버전)
 4. [plist] 에서 TOAST_IAP_APP_ID 가 KEY인 string value를 생성하고, APP ID를 입력 합니다.
 ```

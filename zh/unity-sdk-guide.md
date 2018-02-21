@@ -77,7 +77,7 @@ Step3 : 모든 Assets을 Import 합니다.
 1. [Xcode] > [Project] > [Targets – Build Phases]  
 2. [Link Bianry With Libraries] 에 아래의 framworks 추가  
     - StoreKit.framework  
-    - libsqlite3.dylib  
+    - libsqlite3.tbd
     - CoreTelephony.framework (TOAST-IAP-UnityPlugin-1.3.0 이후버전)
 4. [plist] 에서 TOAST_IAP_APP_ID 가 KEY인 string value를 생성하고, APP ID를 입력 합니다.
 ```
@@ -314,21 +314,21 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
         return;
     }
 
-    /// Examples)	 *
+    /// Examples)    *
     /// [{
-    ///	"itemSeq": 1000208,
-    ///	"itemName": "Test item 01",
-    ///	"marketItemId": "item01",
+    /// "itemSeq": 1000208,
+    /// "itemName": "Test item 01",
+    /// "marketItemId": "item01",
     /// "price": 1000,
     /// "currency": "KRW",
     /// },
     /// {
-    ///	"itemSeq": 1000209,
-    ///	"itemName": "Test item 02",
-    ///	"marketItemId": "item02",
+    /// "itemSeq": 1000209,
+    /// "itemName": "Test item 02",
+    /// "marketItemId": "item02",
     /// "price": 7.99,
     /// "currency": "USD"
-    ///	}]
+    /// }]
 
     string json = System.Convert.ToString (data);
     PrintLog ("QueryItemsCallback.OnCallback():" + json);
@@ -389,35 +389,35 @@ InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => 
 
     /// Examples)
     /// {
-    /// 	"successList": [
-    ///			{
-    ///				"paymentSeq" : "2014082510002163",
-    ///				"purchaseToken" : "8nkx3SzHKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoB-AB",
-    ///				"itemSeq" : 1000208,
-    ///				"marketItemId" : "item01",
-    ///				"currency" : "KRW",
-    ///				"price" : 1000.0
-    ///			},
-    ///			{
-    ///				"paymentSeq" : "2014082510002164",
-    ///				"purchaseToken" : "8nkx3SzATKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBaAC",
-    ///				"itemSeq" : 1000209,
-    ///				"marketItemId"	: "item02",
-    ///				"currency" : "KRW",
-    ///				"price" : 1000.0
-    ///			}
-    ///		],
-    ///		"failList": [
-    ///			{
-    ///				"paymentSeq" : "2014082510002165",
-    ///				"purchaseToken" : null,
-    ///				"itemSeq" : 1000210,
-    ///				"marketItemId" : "item03",
-    ///				"currency" : "KRW",
-    ///				"price" : 1000.0
-    ///			}
-    ///		]
-    ///	}
+    ///     "successList": [
+    ///         {
+    ///             "paymentSeq" : "2014082510002163",
+    ///             "purchaseToken" : "8nkx3SzHKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoB-AB",
+    ///             "itemSeq" : 1000208,
+    ///             "marketItemId" : "item01",
+    ///             "currency" : "KRW",
+    ///             "price" : 1000.0
+    ///         },
+    ///         {
+    ///             "paymentSeq" : "2014082510002164",
+    ///             "purchaseToken" : "8nkx3SzATKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBaAC",
+    ///             "itemSeq" : 1000209,
+    ///             "marketItemId"  : "item02",
+    ///             "currency" : "KRW",
+    ///             "price" : 1000.0
+    ///         }
+    ///     ],
+    ///     "failList": [
+    ///         {
+    ///             "paymentSeq" : "2014082510002165",
+    ///             "purchaseToken" : null,
+    ///             "itemSeq" : 1000210,
+    ///             "marketItemId" : "item03",
+    ///             "currency" : "KRW",
+    ///             "price" : 1000.0
+    ///         }
+    ///     ]
+    /// }
 
     string json = System.Convert.ToString (data);
     PrintLog ("IncompletePurchasesCallback.OnCallback():" + json);

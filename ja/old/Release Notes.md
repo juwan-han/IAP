@@ -36,13 +36,14 @@
 #### 버그 수정
 
 * [SDK][[iOS-1.4.4](/Download/#common-iap)][[Unity-1.5.3](/Download/#common-iap)] 릴리스
-    * 간헐적 '해당 항목은 무료로 복구됩니다.' 네이티브 얼럿 현상 수정
-    * 신규 에러코드 116 추가
+    * 간헐적 '해당 항목은 무료로 복구됩니다.' native alert 대신 client 에러코드 116을 반환함  (network 상태가 좋지 않을때 발생 할 수 있음)
+
 
 #### 기능 개선/변경
 
 * [SDK][[iOS-1.4.4](/Download/#common-iap)][[Unity-1.5.3](/Download/#common-iap)] 릴리스
-    * 결제 종료시점 변경
+    * 결제 종료시점 변경 (finishTransaction의 실행시점변경. 기존 : 영수증 검증이후, 변경 : 영수증 검증이전)
+
 
 ### 2017.06.29
 
