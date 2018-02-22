@@ -148,7 +148,7 @@ In-app purchase is proceeded in two stages: payment request and payment consume.
 If payment consume is complete, issue item in user’s application.
 
 > [Reference]  
-> [IAP Payment Flow](/Common/IAP/en/Overview/#iap)
+> [IAP Payment Flow](/Mobile Service/IAP/en/Overview/#iap)
 
 ### Registering User Identifier
 
@@ -262,7 +262,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 User application server should notify IAP server for payment consume before issuing item. Use Payment Purchase Token to check validity of the payment between user server and IAP server.
 
 > [Reference]  
-> [Server Payment Consume API](/Common/IAP/en/Server%20Developer%60s%20Guide/#payment-consume-api)  
+> [Server Payment Consume API](/Mobile Service/IAP/en/Server%20Developer%60s%20Guide/#payment-consume-api)  
 
 [HTTP Request Example]
 
@@ -432,7 +432,7 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 * errorMessage - error detail message
 
 > [Reference]  
-> [Error Code Guide](/Common/IAP/en/Error%20Code/)    
+> [Error Code Guide](/Mobile Service/IAP/en/Error%20Code/)    
 
 ## Android Sample Application
 

@@ -149,7 +149,7 @@ Once purchase consume is completed, provide the item from the user’s applicati
 
 > \[Note\]
 > IAP payment flow chart
-> <http://docs.cloud.toast.com/ko/Common/IAP/Overview/#iap>
+> <http://docs.cloud.toast.com/ko/Mobile Service/IAP/Overview/#iap>
 
 ### Register User Identifiers
 
@@ -256,7 +256,7 @@ User’s application server must notify IAP server to consume the payment before
 
 > \[Note\]
 > Server Payment Consume API
-> <http://docs.cloud.toast.com/ko/Common/IAP/Server%20Developer%60s%20Guide/>
+> <http://docs.cloud.toast.com/ko/Mobile Service/IAP/Server%20Developer%60s%20Guide/>
 
 \[HTTP Request Example\]
 

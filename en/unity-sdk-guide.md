@@ -82,7 +82,7 @@ Implement created Xcode project.
 ```
 
 > [Reference]  
-> Refer to iOS SDK Developer’s Guide for more detailed information on iOS build configuration. [iOS Developer's Guide](/Common/IAP/en/iOS%20Developer%60s%20Guide/)
+> Refer to iOS SDK Developer’s Guide for more detailed information on iOS build configuration. [iOS Developer's Guide](/Mobile Service/IAP/en/iOS%20Developer%60s%20Guide/)
 
 ### Unity Plugin Initialization
 

@@ -82,8 +82,8 @@
 
 #### 버그 수정
 * [SDK][[Android-1.3.2](/Download/#common-iap)][[Unity-1.5.1](/Download/#common-iap)] 릴리스
-    * [미처리 결제건 일괄 재처리](/Common/IAP/ja/Android%20Developer%60s%20Guide/#_9)시 앱 크래시 현상 수정
-    * [구매 가능한 아이템 조회](/Common/IAP/ja/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 반환되는 문제 수정
+    * [미처리 결제건 일괄 재처리](/Mobile Service/IAP/ja/Android%20Developer%60s%20Guide/#_9)시 앱 크래시 현상 수정
+    * [구매 가능한 아이템 조회](/Mobile Service/IAP/ja/Android%20Developer%60s%20Guide/#_5)시 잘못된 응답값이 반환되는 문제 수정
 	```
 	변경 전: itmeSeq
 	변경 후: itemSeq
@@ -97,9 +97,9 @@
 * [Console] 앱 / 아이템 수정시 필수 입력값 검증처리 추가
 * [SDK][[Android-1.3.1](/Download/#common-iap)][[Unity-1.5.0](/Download/#common-iap)] 릴리스
     * 불필요한 권한 제거(WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE)
-    * <a href="/ko/Common/IAP/ja/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
+    * <a href="/ko/Mobile Service/IAP/ja/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
 * [SDK][[iOS-1.4.3](/Download/#common-iap)] 릴리스
-    * <a href="/ko/Common/IAP/ja/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
+    * <a href="/ko/Mobile Service/IAP/ja/Error%20Code/" target="_blank">Error Code Guide</a> 와 상이한 오류 코드 수정
 
 ### 2016.12.22
 
