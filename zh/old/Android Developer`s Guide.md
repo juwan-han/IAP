@@ -149,7 +149,7 @@ AndroidManifest.xml의 설정 정보는 다음과 같습니다.
 결제소비까지 완료한 이후에는 사용자의 애플리케이션에서 아이템을 지급하면 됩니다.
 
 > [참고]  
-> [IAP 결제 흐름도](/Common/IAP/ko/Overview/#iap)
+> [IAP 결제 흐름도](/Mobile Service/IAP/ko/Overview/#iap)
 
 ### 사용자 식별자 등록
 
@@ -264,7 +264,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 사용자 애플리케이션 서버는 아이템을 지급하기 전 IAP 서버에게 결제를 소비할 것을 알려야 합니다. 이 때 결제 구매 토큰(Payment Purchase Token)을 이용하여 사용자 서버와 IAP서버간의 결제 유효성에 대한 보안을 체크합니다.
 
 > [참고]  
-> [Server Payment Consume API](/Common/IAP/ko/Server%20Developer%60s%20Guide/#payment-consume-api)  
+> [Server Payment Consume API](/Mobile Service/IAP/ko/Server%20Developer%60s%20Guide/#payment-consume-api)  
 
 [HTTP Request Example]
 
@@ -433,7 +433,7 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 * errorMessage - 에러에 대한 상세 정보
 
 > [참고]  
-> [Error Code Guide](/Common/IAP/ko/Error%20Code/)    
+> [Error Code Guide](/Mobile Service/IAP/ko/Error%20Code/)    
 
 ## Android Sample Application
 
