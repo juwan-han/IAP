@@ -34,7 +34,7 @@ Click 'URL & Appkey' on top as in [Figure 2] to check AppKey or copy the key to 
 ```
 
 > [Reference]  
-> Refer to [Store interlocking information](./Store interlocking information) to obtain Store App ID.
+> Refer to [Store interlocking information](./console-guide) to obtain Store App ID.
 
 ![[그림 3 Store Registration]](http://static.toastoven.net/prod_iap/iap_n_32.png)
 <center>[Figure. 3 Store Registration]</center>

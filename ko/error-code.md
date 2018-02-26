@@ -46,7 +46,7 @@
 |에러 코드|	설명|
 |---|---|
 |1100|	파라미터 정보 오류|
-|2111, 2112|	IAP Server에 Request 요청시 Content-type, HTTP Method를 확인합니다.<br/> [링크](./Server Developer`s Guide) |
-|5003, 5013|	스토어 연동정보를 아래 절차로 발급받았는지 확인합니다. <br/> [링크](./Store interlocking information) |
+|2111, 2112|	IAP Server에 Request 요청시 Content-type, HTTP Method를 확인합니다.<br/> [링크](./api-guide) |
+|5003, 5013|	스토어 연동정보를 아래 절차로 발급받았는지 확인합니다. <br/> [링크](./console-guide) |
 |5000| - PurchaseToken이 잘못되었는지 확인합니다. <br/> - 클라이언트를 통한 결제가 앞서 잘 진행되었는지 확인합니다.|
 

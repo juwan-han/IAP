@@ -431,7 +431,7 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 * errorMessage - error detail message
 
 > [Reference]  
-> [Error Code Guide](/Mobile Service/IAP/en/Error%20Code/)    
+> [Error Code Guide](/Mobile Service/IAP/en/error-code/)    
 
 ## Android Sample Application
 

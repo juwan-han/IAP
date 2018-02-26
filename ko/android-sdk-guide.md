@@ -431,7 +431,7 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 * errorMessage - 에러에 대한 상세 정보
 
 > [참고]  
-> [Error Code Guide](/Mobile Service/IAP/ko/Error%20Code/)    
+> [Error Code Guide](/Mobile Service/IAP/ko/error-code/)    
 
 ## Android Sample Application
 
