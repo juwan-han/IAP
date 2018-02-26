@@ -44,7 +44,7 @@
 |Error Code|	Description|
 |---|---|
 |1100|	invalid parameter|
-|2111, 2112|	When sending request to IAP server, check Content-type and HTTP Method.<br/> [Link](./Server Developer`s Guide) |
-|5003, 5013|	Check if store sync information is issued in following steps. <br/> [Link](./Store interlocking information) |
+|2111, 2112|	When sending request to IAP server, check Content-type and HTTP Method.<br/> [Link](./api-guide) |
+|5003, 5013|	Check if store sync information is issued in following steps. <br/> [Link](./console-guide/#store-interlocking-information) |
 |5000| - Check if PurchaseToken is valid. <br/> - Check if payment via client was well processed|
 
