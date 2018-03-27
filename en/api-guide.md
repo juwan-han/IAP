@@ -208,7 +208,7 @@ Inquire items registered to App ID in web console.
 [URL]
 
 ```http
-POST https://api-iap.cloud.toast.com/standard/item/list/{appSeq}
+GET https://api-iap.cloud.toast.com/standard/item/list/{appSeq}
 
 ```
 
@@ -228,7 +228,7 @@ POST https://api-iap.cloud.toast.com/standard/item/list/{appSeq}
 [Example]
 
 ```http
-POST https://api-iap.cloud.toast.com/standard/item/list/1000047
+GET https://api-iap.cloud.toast.com/standard/item/list/1000047
 ```
 
 ### Response
