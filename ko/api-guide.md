@@ -210,7 +210,7 @@ Response body에 JSON형태로 전달
 [URL]
 
 ```http
-POST https://api-iap.cloud.toast.com/standard/item/list/{appSeq}
+GET https://api-iap.cloud.toast.com/standard/item/list/{appSeq}
 
 ```
 
@@ -230,7 +230,7 @@ POST https://api-iap.cloud.toast.com/standard/item/list/{appSeq}
 [Example]
 
 ```http
-POST https://api-iap.cloud.toast.com/standard/item/list/1000047
+GET https://api-iap.cloud.toast.com/standard/item/list/1000047
 ```
 
 ### Response
