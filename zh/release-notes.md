@@ -8,6 +8,7 @@
 #### 기능 개선
 * [Console] Transaction 탭 Excel 다운로드 기능 추가
 * [Console] Transaction 탭 조회/Excel 다운로드 검색기간 7일로 수정
+* [Console] 스토어결제번호 검색기능추가
 
 #### 버그 수정
 * [SDK][[iOS-1.5.2](/Download/#common-iap)][[AOS-1.3.9](/Download/#common-iap)][[Unity-1.5.8](/Download/#common-iap)] 릴리스
