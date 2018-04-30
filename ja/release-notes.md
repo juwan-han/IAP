@@ -1,5 +1,11 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.05.02
+#### 기능개선
+* [SDK] [[iOS-1.5.3](/Download/#common-iap)] 릴리스
+    * Setting 예외처리 추가
+    * Refresh Receipt 버그 수정
+    
 ### 2018.03.22
 #### 기능개선
 * [Console] Transaction 탭 검색기간 한 달로 변경
