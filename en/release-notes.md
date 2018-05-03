@@ -1,5 +1,13 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.05.03
+#### 버그 수정
+* [SDK][[iOS-1.5.4](/Download/#common-iap)]
+    * 비정상적으로 중단된 결제의 재처리시 PaymentSeq가 없는 결제건의 간헐적 크래시 수정
+
+* [SDK][[Unity-1.5.10](/Download/#common-iap)]
+    * [iOS-1.5.4](/Download/#common-iap) 적용   
+
 ### 2018.05.02
 #### 기능 개선
 * [SDK][[AOS-1.4.0](/Download/#common-iap)]
