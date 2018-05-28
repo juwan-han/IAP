@@ -1,5 +1,12 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.05.29
+#### 기능 개선
+* [Console] 결제내역 조회 - 결제상태코드 변경 및 툴팁 노출 개선
+* [Console] 앱 삭제, 서비스 비활성화 시 데이터 처리 개선(데이터 삭제 처리)
+* [API] 결제내역조회 API 영수증번호(StoreReferenceKey)로 조회 가능하도록 파라메터 추가
+* [API] 검증 API 클라이언트 영수증 DB 저장
+
 ### 2018.05.03
 #### 버그 수정
 * [SDK][[iOS-1.5.4](/Download/#common-iap)]

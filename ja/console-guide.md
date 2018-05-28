@@ -85,13 +85,13 @@ Before registering item to IAP service, register item type of InAppProducts regi
 
 > [Reference]
 > Payment Status   
->  - In Progress : in process   
+>  - Reserved : ready to pay
 >  - Success : completed successfully   
 >  - Failure : failed  
 >  - Refund : refunded
 
 > Payment Status Detail 
->  - In Progress : If payment through store cannot be proceeded or payment cannot go through verification process.   
+>  - Reserved : If payment reservation request is complete but verification request is not received.   
 >  - Failure : If an error occurs in payment verification process even though payment was attempted at store.   
 >  - Success : Store financial payment succeeded.
 >  - Refund : If the admin manually refunded the payment in store. 
