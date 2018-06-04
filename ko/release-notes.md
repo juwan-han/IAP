@@ -1,5 +1,41 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.06.05
+
+#### 기능추가
+* [SDK][[iOS-1.5.5](/Download/#common-iap)]
+    * Bitcode 지원 추가
+    * sdkVersion Interface 추가
+    * 구매가능한 상품 조회시 국가별 통화기호가 포함된 가격정보 추가  
+        * localizedPrice
+    ```objc
+    /*
+    @abstract
+    Request for item list which is registered in webConsole and in itunesConnect
+ 
+    @param handler     handler's result has that translation of JSON data to 'NSArray'
+    [result data of array]
+    itemSeq - item id
+    itemName - item name
+    usingStatus - item status on IAP server
+    regYmdt - item registration date on IAP server
+    appName - app name
+    marketId - market id (AS : APPLE STORE)
+    marketItemId - market item id (product id)
+    currency - represent to item currency
+    price - represent to item price
+    localizedPrice - represent to localized item price
+    */
+    + (instancetype) itemListWithCompletionHandler:(TIARequestHandler)handler;
+    ```
+#### 기능개선
+* [SDK][[iOS-1.5.5](/Download/#common-iap)]
+    * 내부 Flow 개선
+        * Transaction 관리방안 변경
+        * 재처리시 UserID Check 추가
+        * 결제 요청시 116 Error가 지속적으로 발생할 수 있는 문제 개선
+
+
 ### 2018.05.29
 #### 기능 개선
 * [Console] 결제내역 조회 - 결제상태코드 변경 및 툴팁 노출 개선
