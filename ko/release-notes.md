@@ -3,6 +3,18 @@
 ### 2018.06.05
 
 #### 기능추가
+* [SDK][[AOS-1.4.1](/Download/#common-iap)]
+    * tstore binray 업로드
+        ```
+        //IAP SDK Google Play Store 사용 시 추가 - Store ID : GG
+        implementation 'com.toast.iap:iap:1.4.1'
+        ```
+        ```
+        //IAP SDK OneStore(TStore) 사용 시 추가 - Store ID : TS
+        implementation 'com.toast.iap:iap-tstore:1.4.1'
+        ```
+    * unity plugin 추가
+    * 공개용 Sample app 추가
 * [SDK][[iOS-1.5.5](/Download/#common-iap)]
     * Bitcode 지원 추가
     * sdkVersion Interface 추가
@@ -27,7 +39,11 @@
     */
     + (instancetype) itemListWithCompletionHandler:(TIARequestHandler)handler;
     ```
-#### 기능개선
+#### 기능개선/변경
+* [SDK][[AOS-1.4.1](/Download/#common-iap)]
+    * Eclipse 지원 중단
+    * aar 배포
+    * 에러코드 추가
 * [SDK][[iOS-1.5.5](/Download/#common-iap)]
     * 내부 Flow 개선
         * Transaction 관리방안 변경
@@ -113,7 +129,7 @@
 * [SDK][[AOS-1.3.4](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
     * 미처리 결제건 일괄 재처리 API 호출 시 간헐적으로 발생하는 앱 크래시 현상 수정
 * [SDK][[IOS-1.4.5](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
-    * 결제시도시 잔존하는 결제건들 처리중 발생하는 앱 크래시 현상 수정 
+    * 결제시도시 잔존하는 결제건들 처리중 발생하는 앱 크래시 현상 수정
 
 
 #### 기능 개선/변경
@@ -127,7 +143,7 @@
 
 * [SDK][[iOS-1.4.4](/Download/#common-iap)][[Unity-1.5.3](/Download/#common-iap)] 릴리스
     * 간헐적 '해당 항목은 무료로 복구됩니다.' native alert 대신 client 에러코드 116을 반환함  (network 상태가 좋지 않을때 발생 할 수 있음)
-    
+
 
 #### 기능 개선/변경
 
