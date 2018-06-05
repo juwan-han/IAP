@@ -321,13 +321,15 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
     ///	"marketItemId": "item01",
     /// "price": 1000,
     /// "currency": "KRW",
+    /// "localizedPrice":"₩1,000"
     /// },
     /// {
     ///	"itemSeq": 1000209,
     ///	"itemName": "Test item 02",
     ///	"marketItemId": "item02",
     /// "price": 7.99,
-    /// "currency": "USD"
+    /// "currency": "USD",
+    /// "localizedPrice":"$7.99"
     ///	}]
 
     string json = System.Convert.ToString (data);
@@ -347,7 +349,7 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
 | marketItemId       | Long   | 스토어별 상품 ID                           |
 | currency      | String | 상품의 화폐 단위                        |
 | price         | Float  | 상품의 가격                           |
-| local price         | String  | 상품의 현지 가격                           |
+| localizedPrice         | String  | 상품의 현지 가격                           |
 
 [Response Example]
 
@@ -359,13 +361,15 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
     "marketItemId": "item01",
     "price": 1000,
     "currency": "KRW",
+    "localizedPrice":"₩1,000"
 },
 {
     "itemSeq": 1000209,
     "itemName": "Test item 02",
     "marketItemId": "item02",
     "price": 7.99,
-    "currency": "USD"
+    "currency": "USD",
+    "localizedPrice":"$7.99"
 }]
 ```
 
