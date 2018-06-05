@@ -318,15 +318,17 @@ return;
 ///    "itemSeq": 1000208,
 ///    "itemName": "Test item 01",
 ///    "marketItemId": "item01",
-/// "price": 1000,
-/// "currency": "KRW",
+///    "price": 1000,
+///    "currency": "KRW",
+///    "localizedPrice":"₩1,000"
 /// },
 /// {
 ///    "itemSeq": 1000209,
 ///    "itemName": "Test item 02",
 ///    "marketItemId": "item02",
-/// "price": 7.99,
-/// "currency": "USD"
+///    "price": 7.99,
+///    "currency": "USD",
+///    "localizedPrice":"$7.99"
 ///    }]
 
 string json = System.Convert.ToString (data);
@@ -346,7 +348,7 @@ PrintLog ("QueryItemsCallback.OnCallback():" + json);
 | marketItemId       | Long   | product ID in store                          |
 | currency      | String | currency                        |
 | price         | Float  | price                           |
-| local price         | String  | local price                           |
+| localizedPrice         | String  | local price                           |
 
 
 [Response Example]
@@ -358,14 +360,16 @@ PrintLog ("QueryItemsCallback.OnCallback():" + json);
 "itemName": "Test item 01",
 "marketItemId": "item01",
 "price": 1000,
-"currency": "KRW"
+"currency": "KRW",
+"localizedPrice":"₩1,000"
 },
 {
 "itemSeq": 1000209,
 "itemName": "Test item 02",
 "marketItemId": "item02",
 "price": 7.99,
-"currency": "USD"
+"currency": "USD",
+"localizedPrice":"$7.99"
 }]
 ```
 
