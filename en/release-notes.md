@@ -1,5 +1,38 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.06.05
+
+#### 기능추가
+* [SDK][[AOS-1.4.1](/Download/#common-iap)]
+    * 구매가능한 상품 조회시 국가별 통화기호가 포함된 가격정보 추가
+        * localizedPrice
+
+
+* [SDK][[iOS-1.5.5](/Download/#common-iap)]
+    * Bitcode 지원 추가
+    * sdkVersion Interface 추가
+    * 구매가능한 상품 조회시 국가별 통화기호가 포함된 가격정보 추가
+        * localizedPrice
+
+#### 기능개선/변경
+* [SDK][[AOS-1.4.1](/Download/#common-iap)]
+    * Eclipse 지원 중단
+    * aar 형식으로 SDK 배포
+    * 에러코드 추가 (119)
+    * tstore bintray 지원 추가
+        ```
+        //IAP SDK Google Play Store 사용 시 추가 - Store ID : GG
+        implementation 'com.toast.iap:iap:1.4.1'
+        ```
+        ```
+        //IAP SDK OneStore(TStore) 사용 시 추가 - Store ID : TS
+        implementation 'com.toast.iap:iap-tstore:1.4.1'
+        ```
+    * 공개용 Sample app 추가
+
+* [SDK][[iOS-1.5.5](/Download/#common-iap)]
+    * 결제 요청시 116 Error가 지속적으로 발생할 수 있었던 문제 개선
+
 ### 2018.05.29
 #### 기능 개선
 * [Console] 결제내역 조회 - 결제상태코드 변경 및 툴팁 노출 개선

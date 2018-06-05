@@ -3,8 +3,8 @@
 ## 개발 환경
 
 * OSX is required
-* Xcode 6.0.1 and higher
-* IAP SDK Support for iOS 6.x and higher
+* Xcode 9.0.0 and higher
+* IAP SDK Support for iOS 7.x and higher
 
 IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추가 해야 합니다.
 
@@ -235,6 +235,7 @@ server.
     - marketItemId : market item id (product id)
     - currency : represent to item currency
     - price : represent to item price
+    - localizedPrice - represent to localized item price
     */
 
     NSArray *itemList = result;
