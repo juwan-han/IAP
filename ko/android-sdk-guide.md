@@ -80,7 +80,6 @@ One Store 결제 테스트의 경우 아래의 사항을 추가로 입력해주�
 > applicationId
 > 반드시 실제 스토어(Google Play Store, One Store)의 정보와 일치해야 합니다.
 
-
 ## IAP 결제 흐름도
 
 인앱 결제는 결제요청과 결제소비 2단계로 진행됩니다.  
@@ -91,18 +90,18 @@ One Store 결제 테스트의 경우 아래의 사항을 추가로 입력해주�
 
 ### 스토어(마켓) 설정
 
-SDK에서 초기화 시 사용할 스토어(어)를 설정합니다.
+SDK에서 초기화 시 사용할 스토어(마켓)를 설정합니다.
+
+|MarketId|Store|
+|---|---|
+|GG|Google Play Store|
+|TS|One Store(구 TStore)|
 
 [Request Example]
 
 ```java
 InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String value
 ```
-스토어(마켓) 정보
-|Store Code|Description|
-|---|---|
-|GG|Google Play Store|
-|TS|One Store(구 TStore)|
 
 ### 사용자 식별자 등록
 
