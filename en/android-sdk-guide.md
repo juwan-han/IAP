@@ -196,14 +196,16 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
         "itemName" : "Test item 01",
         "marketItemId": "item01",
         "price": 1000,
-        "currency": "KRW"
+        "currency": "KRW",
+        "localizedPrice":"₩1,000"
     },
     {
         "itemSeq" : 1000209,
         "itemName" : "Test item 02",
         "marketItemId": "item02",
         "price": 7.99,
-        "currency": "USD"
+        "currency": "USD",
+        "localizedPrice":"$7.99"
 }]
 ```
 
