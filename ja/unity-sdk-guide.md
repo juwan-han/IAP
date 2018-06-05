@@ -21,7 +21,7 @@ select [In App Purchase Unity SDK]
 Step3 : Import all assets
 ```
 
-![[Figure 3 Importing package]](http://static.toastoven.net/prod_iap/iap_13.png)
+![[Figure 3 Importing package]](http://static.toastoven.net/prod_iap/iap_u_01.png)
 <center>[Figure. 3 Importing package]</center>
 
 ### Android Configuration and Build
@@ -33,11 +33,11 @@ Step3 : Import all assets
 4. [Minimum API Level] IAP Unity Plugin supports Android API Level 10 and beyond
 ```
 
-![[Figure 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_14.png)
+![[Figure 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_u_02.png)
 <center>[Figure. 4 Setting for Android]</center>
 
 ```
-Modify your AndroidManifest.xml according to AndroidManifest-iap-template.xml.
+Modify your AndroidManifest.xml depending on market type. 
 ```
 
 ![[Figure 5 AndroidManifest-iap-template.xml]](http://static.toastoven.net/prod_iap/iap_15.png)
@@ -346,6 +346,8 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
 | marketItemId       | Long   | product ID in store                          |
 | currency      | String | currency                        |
 | price         | Float  | price                           |
+| local price         | String  | local price                           |
+
 
 [Response Example]
 

@@ -10,7 +10,7 @@ Create project in Unity Editor
 <center>[Figure. 1 Project Creation]</center>
 
 ```
-In Unity Editor, Select [Assets] > [Import Package] > [Custom Package] 
+In Unity Editor, Select [Assets] > [Import Package] > [Custom Package]
 select [In App Purchase Unity SDK]
 ```
 
@@ -21,43 +21,43 @@ select [In App Purchase Unity SDK]
 Step3 : Import all assets
 ```
 
-![[Figure 3 Importing package]](http://static.toastoven.net/prod_iap/iap_13.png)
+![[Figure 3 Importing package]](http://static.toastoven.net/prod_iap/iap_u_01.png)
 <center>[Figure. 3 Importing package]</center>
 
 ### Android Configuration and Build
 
 ```
 1. Select [File - Build Settings] in Unity Editor
-2. Select [Platform]- Android and  [Switch Platform]  
+2. Select [Platform]- Android and  [Switch Platform]
 3. Change setting  of [Android - Others Setting] according to below.
 4. [Minimum API Level] IAP Unity Plugin supports Android API Level 10 and beyond
 ```
 
-![[Figure 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_14.png)
+![[Figure 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_u_02.png)
 <center>[Figure. 4 Setting for Android]</center>
 
 ```
-Modify your AndroidManifest.xml according to AndroidManifest-iap-template.xml.
+Modify your AndroidManifest.xml depending on market type.
 ```
 
 ![[Figure 5 AndroidManifest-iap-template.xml]](http://static.toastoven.net/prod_iap/iap_15.png)
 <center>[Figure. 5 AndroidManifest-iap-template.xml]</center>
 
-> [Reference]  
+> [Reference]
 > Refer to Android project setting for Android Build Environment Setting.
 
 ### iOS Environment Setting and Build
 
 ```
 1. Select [File] - Build Settings] in Unity Editor
-2. Select [Platform]- iOS and click [Switch Platform] 
+2. Select [Platform]- iOS and click [Switch Platform]
 ```
 
 ![[Figure 6 Select Platform IOS]](http://static.toastoven.net/prod_iap/iap_20.jpg)
 <center>[Figure. 6 Select Platform IOS]</center>
 
 ```
-Register [Player Settings] > [Settings for iOS] > Bundle identifier 
+Register [Player Settings] > [Settings for iOS] > Bundle identifier
 ```
 
 ![[Figure 7 Settings for iOS]](http://static.toastoven.net/prod_iap/iap_21.jpg)
@@ -72,21 +72,21 @@ Register [Player Settings] > [Settings for iOS] > Bundle identifier
 <center>[Figure. 8 Creation XCode Project]</center>
 
 ```
-Implement created Xcode project.   
-1. [Xcode] > [Project] > [Targets – Build Phases]  
-2. Add frameworks under [Link Bianry With Libraries]  
-    - StoreKit.framework  
-    - libsqlite3.tbd  
-    - CoreTelephony.framework (beyond TOAST-IAP-UnityPlugin-1.3.0 version)
+Implement created Xcode project.
+1. [Xcode] > [Project] > [Targets – Build Phases]
+2. Add frameworks under [Link Bianry With Libraries]
+- StoreKit.framework
+- libsqlite3.tbd
+- CoreTelephony.framework (beyond TOAST-IAP-UnityPlugin-1.3.0 version)
 4. Create string value with TOAST_IAP_APP_ID key at [plist] and enter App ID
 ```
 
-> [Reference]  
+> [Reference]
 > Refer to iOS SDK Developer’s Guide for more detailed information on iOS build configuration. [iOS Developer's Guide](/Mobile Service/IAP/en/iOS%20Developer%60s%20Guide/)
 
 ### Unity Plugin Initialization
 
-Follow below initialization instruction to use IAP Unity plugin. 
+Follow below initialization instruction to use IAP Unity plugin.
 
 [Example Response]
 
@@ -95,14 +95,14 @@ using Toast.IAP;
 ...
 void Start()
 {
-   InAppPurchase.Init();
+InAppPurchase.Init();
 }
 ```
 
 ### Sample Application
 
 Unity Editor offers sample console as below for InAppPurchase API test.(Refer to Sample directory)
-In Unity Editor, API response will be delivered in mock format. For actual payment test, complete the build with Android device.  
+In Unity Editor, API response will be delivered in mock format. For actual payment test, complete the build with Android device.
 
 ![[Figure. 9 Sample Console]](http://static.toastoven.net/prod_iap/iap_43.png)
 <center>[Figure. 9 Sample Console]</center>
@@ -119,7 +119,7 @@ In Unity Editor, API response will be delivered in mock format. For actual payme
 
 ### public class InAppPurchase
 
-Provide method for in-app purchase 
+Provide method for in-app purchase
 
 [Method Summary]
 
@@ -148,7 +148,7 @@ using Toast.IAP;
 ….
 void start()
 {
-   InAppPurchase.Init();
+InAppPurchase.Init();
 }
 ```
 
@@ -166,7 +166,7 @@ using Toast.IAP;
 ….
 void start()
 {
-   InAppPurchase.SetDebugMode(true);
+InAppPurchase.SetDebugMode(true);
 }
 ```
 
@@ -199,16 +199,16 @@ InAppPurchase.RegisterUserId("guest001");
 
 ```java
 InAppPurchase.AsyncRequestPurchase(1000001, (Result result, object data) => {
-      if (!result.IsSuccessful)
-      {
-         int errorCode = result.ResultCode;
-         string errorMessage = result.ResultString;
-         // TODO : handle exception
-         return;
-      }
+if (!result.IsSuccessful)
+{
+int errorCode = result.ResultCode;
+string errorMessage = result.ResultString;
+// TODO : handle exception
+return;
+}
 
-      string purchaseJson = System.Convert.ToString (data);
-      // TODO: handle api success...
+string purchaseJson = System.Convert.ToString (data);
+// TODO: handle api success...
 });
 ```
 
@@ -226,11 +226,11 @@ InAppPurchase.AsyncRequestPurchase(1000001, (Result result, object data) => {
 
 ```json
 {
-    "paymentSeq": "2014082210002092",
-    "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
-    "itemSeq": 1000001,
-    "currency": "KRW",
-    "price":1000.0
+"paymentSeq": "2014082210002092",
+"purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
+"itemSeq": 1000001,
+"currency": "KRW",
+"price":1000.0
 }
 ```
 
@@ -247,16 +247,16 @@ InAppPurchase.AsyncRequestPurchase(1000001, (Result result, object data) => {
 
 ```java
 InAppPurchase.AsyncQueryPurchases((Result result, object data) => {
-      if (!result.IsSuccessful)
-      {
-          int errorCode = result.ResultCode;
-          string errorMessage = result.ResultString;
-          // TODO : handle exception....
-          return;
-      }
+if (!result.IsSuccessful)
+{
+int errorCode = result.ResultCode;
+string errorMessage = result.ResultString;
+// TODO : handle exception....
+return;
+}
 
-      string purchaseListJson = System.Convert.ToString(data);
-      // TODO: handle api success...
+string purchaseListJson = System.Convert.ToString(data);
+// TODO: handle api success...
 });
 ```
 
@@ -274,23 +274,23 @@ InAppPurchase.AsyncQueryPurchases((Result result, object data) => {
 
 ```json
 [{
-    "paymentSeq": "2014082210002092",
-    "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
-    "itemSeq": 1000208,
-    "currency": "KRW",
-    "price":1000.0
+"paymentSeq": "2014082210002092",
+"purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
+"itemSeq": 1000208,
+"currency": "KRW",
+"price":1000.0
 }, {
-    "paymentSeq": "2014082210002093",
-    "purchaseToken": "Q+os4dDsYaGiEEqkLeXQfhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
-    "itemSeq": 1000208,
-    "currency": "KRW",
-    "price":1000.0
+"paymentSeq": "2014082210002093",
+"purchaseToken": "Q+os4dDsYaGiEEqkLeXQfhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
+"itemSeq": 1000208,
+"currency": "KRW",
+"price":1000.0
 }, {
-    "paymentSeq": "2014082210002094",
-    "purchaseToken": "GMBcODtMnX306wVlFGIcDRmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
-    "itemSeq": 1000208,
-    "currency": "KRW",
-    "price":1000.0
+"paymentSeq": "2014082210002094",
+"purchaseToken": "GMBcODtMnX306wVlFGIcDRmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
+"itemSeq": 1000208,
+"currency": "KRW",
+"price":1000.0
 }]
 ```
 
@@ -307,32 +307,32 @@ InAppPurchase.AsyncQueryPurchases((Result result, object data) => {
 
 ```java
 InAppPurchase.AsyncQueryItems((Result result, object data) => {
-    if (!result.IsSuccessful)
-    {
-        PrintLog ("QueryItemsCallback.OnCallback() -> Failed! -> " + result.ResultCode + ":" + result.ResultString);
-        return;
-    }
+if (!result.IsSuccessful)
+{
+PrintLog ("QueryItemsCallback.OnCallback() -> Failed! -> " + result.ResultCode + ":" + result.ResultString);
+return;
+}
 
-    /// Examples)	 *
-    /// [{
-    ///	"itemSeq": 1000208,
-    ///	"itemName": "Test item 01",
-    ///	"marketItemId": "item01",
-    /// "price": 1000,
-    /// "currency": "KRW",
-    /// },
-    /// {
-    ///	"itemSeq": 1000209,
-    ///	"itemName": "Test item 02",
-    ///	"marketItemId": "item02",
-    /// "price": 7.99,
-    /// "currency": "USD"
-    ///	}]
+/// Examples)     *
+/// [{
+///    "itemSeq": 1000208,
+///    "itemName": "Test item 01",
+///    "marketItemId": "item01",
+/// "price": 1000,
+/// "currency": "KRW",
+/// },
+/// {
+///    "itemSeq": 1000209,
+///    "itemName": "Test item 02",
+///    "marketItemId": "item02",
+/// "price": 7.99,
+/// "currency": "USD"
+///    }]
 
-    string json = System.Convert.ToString (data);
-    PrintLog ("QueryItemsCallback.OnCallback():" + json);
+string json = System.Convert.ToString (data);
+PrintLog ("QueryItemsCallback.OnCallback():" + json);
 
-    // TODO : process your job after successful inquiry
+// TODO : process your job after successful inquiry
 
 });
 ```
@@ -346,24 +346,26 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
 | marketItemId       | Long   | product ID in store                          |
 | currency      | String | currency                        |
 | price         | Float  | price                           |
+| local price         | String  | local price                           |
+
 
 [Response Example]
 
 ```json
 
 [{
-    "itemSeq": 1000208,
-    "itemName": "Test item 01",
-    "marketItemId": "item01",
-    "price": 1000,
-    "currency": "KRW"
+"itemSeq": 1000208,
+"itemName": "Test item 01",
+"marketItemId": "item01",
+"price": 1000,
+"currency": "KRW"
 },
 {
-    "itemSeq": 1000209,
-    "itemName": "Test item 02",
-    "marketItemId": "item02",
-    "price": 7.99,
-    "currency": "USD"
+"itemSeq": 1000209,
+"itemName": "Test item 02",
+"marketItemId": "item02",
+"price": 7.99,
+"currency": "USD"
 }]
 ```
 
@@ -380,48 +382,48 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
 
 ```java
 InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => {
-    if (!result.IsSuccessful)
-    {
-        PrintLog ("IncompletePurchasesCallback.OnCallback() -> Failed! -> " + result.ResultCode + ":" + result.ResultString);
-        return;
-    }
+if (!result.IsSuccessful)
+{
+PrintLog ("IncompletePurchasesCallback.OnCallback() -> Failed! -> " + result.ResultCode + ":" + result.ResultString);
+return;
+}
 
-    /// Examples)
-    /// {
-    /// 	"successList": [
-    ///			{
-    ///				"paymentSeq" : "2014082510002163",
-    ///				"purchaseToken" : "8nkx3SzHKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoB-AB",
-    ///				"itemSeq" : 1000208,
-    ///				"marketItemId" : "item01",
-    ///				"currency" : "KRW",
-    ///				"price" : 1000.0
-    ///			},
-    ///			{
-    ///				"paymentSeq" : "2014082510002164",
-    ///				"purchaseToken" : "8nkx3SzATKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBaAC",
-    ///				"itemSeq" : 1000209,
-    ///				"marketItemId"	: "item02",
-    ///				"currency" : "KRW",
-    ///				"price" : 1000.0
-    ///			}
-    ///		],
-    ///		"failList": [
-    ///			{
-    ///				"paymentSeq" : "2014082510002165",
-    ///				"purchaseToken" : null,
-    ///				"itemSeq" : 1000210,
-    ///				"marketItemId" : "item03",
-    ///				"currency" : "KRW",
-    ///				"price" : 1000.0
-    ///			}
-    ///		]
-    ///	}
+/// Examples)
+/// {
+///     "successList": [
+///            {
+///                "paymentSeq" : "2014082510002163",
+///                "purchaseToken" : "8nkx3SzHKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoB-AB",
+///                "itemSeq" : 1000208,
+///                "marketItemId" : "item01",
+///                "currency" : "KRW",
+///                "price" : 1000.0
+///            },
+///            {
+///                "paymentSeq" : "2014082510002164",
+///                "purchaseToken" : "8nkx3SzATKlI74vmgQLzHExmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBaAC",
+///                "itemSeq" : 1000209,
+///                "marketItemId"    : "item02",
+///                "currency" : "KRW",
+///                "price" : 1000.0
+///            }
+///        ],
+///        "failList": [
+///            {
+///                "paymentSeq" : "2014082510002165",
+///                "purchaseToken" : null,
+///                "itemSeq" : 1000210,
+///                "marketItemId" : "item03",
+///                "currency" : "KRW",
+///                "price" : 1000.0
+///            }
+///        ]
+///    }
 
-    string json = System.Convert.ToString (data);
-    PrintLog ("IncompletePurchasesCallback.OnCallback():" + json);
+string json = System.Convert.ToString (data);
+PrintLog ("IncompletePurchasesCallback.OnCallback():" + json);
 
-    // TODO : process your job after successful process
+// TODO : process your job after successful process
 
 });
 ```
@@ -441,18 +443,18 @@ InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => 
 ```json
 
 [{
-    "itemSeq": 1000208,
-    "itemName": "Test item 01",
-    "marketItemId": "item01",
-    "price": 1000,
-    "currency": "KRW"
+"itemSeq": 1000208,
+"itemName": "Test item 01",
+"marketItemId": "item01",
+"price": 1000,
+"currency": "KRW"
 },
 {
-    "itemSeq": 1000209,
-    "itemName": "Test item 02",
-    "marketItemId": "item02",
-    "price": 7.99,
-    "currency": "USD"
+"itemSeq": 1000209,
+"itemName": "Test item 02",
+"marketItemId": "item02",
+"price": 7.99,
+"currency": "USD"
 }]
 ```
 
