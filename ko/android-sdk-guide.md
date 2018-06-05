@@ -52,7 +52,7 @@ dependencies {
 IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리케이션을 제공합니다. 샘플 애플리케이션을 사용하여 IAP Android SDK가 제공하는 기능을 간편하게 테스트 할 수 있습니다.
 
 > [참고]  
-> 테스트 전 유의 사항
+> 테스트 전 유의 사항   
 > 결제 테스트에 앞서 [콘솔 사용 가이드](/Mobile Service/IAP/ko/console-guide/)를 숙지 하시어 콘솔 환경 구성을 먼저 진행 하시기 바랍니다.
 
 ### Import Project
@@ -77,7 +77,7 @@ One Store 결제 테스트의 경우 아래의 사항을 추가로 입력해주�
 ```
 
 > [참고]  
-> applicationId
+> applicationId   
 > 반드시 실제 스토어(Google Play Store, One Store)의 정보와 일치해야 합니다.
 
 ## IAP 결제 흐름도
