@@ -546,7 +546,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 [queryPurchases]
 
 |Word|Description|
-| ----- | ----- | ----- |
+| ----- | ----- |
 | Description |  Inquire unconsumed payment history. |
 | Syntax | public void queryPurchases(Activity activity, PurchaseListCallback callback) |
 | Parameters | activity [in] of current application. |
@@ -594,7 +594,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 [queryItems]
 
 |Word|Description|
-| ----- | ----- | ----- |
+| ----- | ----- |
 | Description |  Inquire all purchasable items. |
 | Syntax | public void queryItems(Activity activity, ItemListCallback callback) |
 | Parameters | activity [in] of current application. |
@@ -643,7 +643,7 @@ callback interface for receiving response after payment request
 [onCallback]
 
 |Word|Description|
-| ----- | ----- | ----- |
+| ----- | ----- |
 | Description |  Send API request result. |
 | Syntax | public abstract void onCallback(JSONObject result, InAppPurchaseException exception) |
 | Parameters |  result [in]  return result code and message. |
@@ -663,7 +663,7 @@ callback interface for receiving response after payment request
 [onCallback]
 
 |Word|Description|
-| ----- | ----- | ----- |
+| ----- | ----- |
 | Description |  Send API request result. |
 | Syntax | public abstract void onCallback(JSONArray result, InAppPurchaseException exception) |
 | Parameters |  result [in]  return result code and message. |
