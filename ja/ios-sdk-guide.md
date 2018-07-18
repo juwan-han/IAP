@@ -235,6 +235,7 @@ Inquire all purchasable items
     - marketItemId : market item id (product id)
     - currency : represent to item currency
     - price : represent to item price
+    - localizedPrice - represent to localized item price
     */
 
     NSArray *itemList = result;

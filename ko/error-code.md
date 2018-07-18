@@ -17,9 +17,10 @@
 | 110 |  INAPP_VERIFY_SIGNATURE_ERROR |  스토어 결제 오류 - 서명 검증시 |
 | 111 |  INAPP_CONSUME_ERROR |  스토어 결제 오류 - 결제 내역 소모시 |
 | 112 |  INAPP_VERIFY_CONSUME_ERROR |  스토어 결제 검증 오류 - 영수증 검증 시 |
-| 113 |	 SERVER_NETWORK_FAIL |  IAP 서버 NETWORK 오류 |
-| 116 |	 APP_STORE_REMAINS_PAYMENT | 이전의 결제건에 대한 미처리작업 (사용자에게 재구매유도 메시지를 보여줘야 함) |
+| 115 |	 INAPP_ONGATE_CASH_INSUFFICIENT_ERROR |  ONGATE 캐시 부족 |
 | 117 |  IAP_IN_PROGRESS_ERROR | IAP API가 아직 처리 중일 때 새로운 요청이 들어오면 해당 에러가 발생할 수 있으며, 클라이언트는 필요에 따라 무시하거나 재요청할 수 있음 |
+| 118 |  FORCED_TERMINATION_ERROR | Activity가 강제 종료시 |
+| 119 |  INAPP_PURCHASE_ERROR_ALREADY_PURCHASED_AT_OTHER_ACCOUNT | 같은 상품을 다른 계정으로 이미 구매하고 지급이 경우 |
 
 ## Server API 에러타입
 
@@ -49,4 +50,3 @@
 |2111, 2112|	IAP Server에 Request 요청시 Content-type, HTTP Method를 확인합니다.<br/> [링크](./api-guide) |
 |5003, 5013|	스토어 연동정보를 아래 절차로 발급받았는지 확인합니다. <br/> [링크](./console-guide) |
 |5000| - PurchaseToken이 잘못되었는지 확인합니다. <br/> - 클라이언트를 통한 결제가 앞서 잘 진행되었는지 확인합니다.|
-

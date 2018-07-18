@@ -2,9 +2,7 @@
 
 ## 개발환경
 
-* Windows
-* Eclipse in Android Development Tools / Android Studio IDE 1.2
-* Android 5.0.1 (API Level 21)
+* Android Studio IDE 2.3.3
 * Android SDK Version은 **2.3.3 (API Level 10)** 이상
 
 사용하는 오픈 소스 정보는 다음과 같습니다.
@@ -28,119 +26,60 @@ buildscript {
 }
 ```
 
+### Google Play Store 사용의 경우
 ```
 dependencies {
-    compile group: 'com.toast.iap', name: 'iap', version: project.TOAST_IAP_SDK_VERSION
+    implementation 'com.toast.iap:iap:' + project.TOAST_IAP_SDK_VERSION
 }
 ```
 
+### One Store 사용의 경우
+```
+dependencies {
+    implementation 'com.toast.iap:iap-tstore:' + project.TOAST_IAP_SDK_VERSION
+}
+```
 > [참고]  
-> project.TOAST_IAP_SDK_VERSION 에는 SDK의 version을 명시합니다. Gradle 은 1.1.0 Version 이상의 Gradle Project를 사용하는 것을 권장합니다.  
+> project.TOAST_IAP_SDK_VERSION 에는 SDK의 version을 명시합니다. Gradle 은 2.3.3 Version 이상의 Gradle Project를 사용하는 것을 권장합니다.  
 
 <br/>
 > [참고]  
 > Release History   
 > SDK의 Version의 변경이력은 패키지내의 RELEASE-NOTES.md 를 참조해주세요.
 
-### 샘플 애플리케이션 실행하기
+## 샘플 애플리케이션 제공
 
-IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다. jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다. 아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.
-
-#### Import Project
-
-Android Studio에서 Import Project 하여 SDK 패키지의 /toast-iap-android-sdk-studio 를 추가합니다.
+IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리케이션을 제공합니다. 샘플 애플리케이션을 사용하여 IAP Android SDK가 제공하는 기능을 간편하게 테스트 할 수 있습니다.
 
 > [참고]  
-> local.properties 수정   
-> local.properties 내부의 sdk.dir 의 값을 로컬에 설정된 Android SDK의 경로로 변경합니다. 만약 샘플 애플리케이션을 빌드타입을 release 로 빌드한다면, APK signing을 위한 keystore 정보를 입력해야 합니다. Flavor 및 buildType은 Android Studio의 Build Variants 메뉴에서 선택가능합니다.  
+> 테스트 전 유의 사항   
+> 결제 테스트에 앞서 [콘솔 사용 가이드](/Mobile Service/IAP/ko/console-guide/)를 숙지 하시어 콘솔 환경 구성을 먼저 진행 하시기 바랍니다.
 
-<br/>
-> [참고]  
-> Workspace Encoding Type   
-> Import 한 Project의 Workspace File Encoding이 UTF-8로 되어있는 확인합니다, 아닐경우 UTF-8로 변경합니다.  
+### Import Project
 
-#### AndroidManifest.xml 에 스토어 정보 설정
+배포된 SDK 패키지 내의 '/sample' 디렉토리를 Android Studio에서 'Import Project'를 합니다.
 
-IAP Web Console에 등록한 마켓정보를 통해 appId / Store 을 설정합니다.
+### AndroidManifest.xml 정보 설정
 
-> [참고]  
-> appId / Store 설정   
-> 설정방법은 샘플애플리케이션의 각 스토어 Flavor의 AndroidManifest.xml 을 참조하시면 됩니다.
-
-## 이클립스 환경에서 사용하기
-
-IAP Android SDK는 안드로이드 라이브러리 프로젝트 형태로 배포합니다.
-
-| 디렉토리명                                     | 설명                     |
-| ----------------------------------------- | ---------------------- |
-| /docs                                     | API 레퍼런스               |
-| /toast-iap-android-sdk-eclipse/iap        | IAP Android 라이브러리 프로젝트 |
-| /toast-iap-android-sdk-eclipse/iap-sample | 샘플 애플리케이션              |
-
-[표1 Android SDK 디렉토리 정보]
-
-### Import 방법
-
+IAP Web Console에 등록한 'Store APP ID'를 샘플 애플리케이션의 applicationId와 동일하게 설정 합니다.
 ```
-[Eclipse] > [File] > [Import] 선택  
-[Android] - [Existing Android Code into Workspace] 선택  
-<Import Projects> 창 > [Browse] 버튼 > [IAP SDK] 폴더 선택  
-IAP SDK와 샘플 애플리케이션의 프로젝트가 Import 목록에 표시되면, 프로젝트를 모두 선택한 상태에서 [Finish] 선택
+android {
+    defaultConfig {
+        applicationId "your app id"
+    }
+}
 ```
 
-> [참고]  
-> Import 후에 Project에 에러 발생시 다음과 같이 합니다.   
-> \- [project] > [clean] 선택    
-> \- [IAP] 우클릭 > [Properties] > [Resource] > [Text File Encoding]을 UTF-8로 설정
-
-### IAP Android SDK 추가
-
+One Store 결제 테스트의 경우 아래의 사항을 추가로 입력해주세요.
 ```
-[project] 우클릭 > [Properties] > [Android] > [Add] > IAP 추가
-```
-
-![[그림 1 IAP SDK 추가]](http://static.toastoven.net/prod_iap/iap_5.jpg)
-<center>[그림 1 IAP SDK 추가]</center>
-
-## Android 프로젝트 설정
-
-### AndroidManifest.xml 추가
-
-Google Play 기준으로 작성한 내용입니다.
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<!-- google iab permission -->
-<uses-permission android:name="com.android.vending.BILLING" />
-
 <application>
-...
-        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"
-	        android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-	        android:theme="@android:style/Theme.Translucent.NoTitleBar"
-	        android:windowSoftInputMode="adjustResize|stateHidden" />
-        <meta-data android:name="com.toast.iap.config.appId" android:value="1000000" />
-        <meta-data android:name="com.toast.iap.config.market" android:value="GG" />
+    <meta-data android:name="iap:plugin_mode" android:value="development" />
 </application>
 ```
 
-AndroidManifest.xml의 설정 정보는 다음과 같습니다.
-
-| Property Name               | Description                  |
-| --------------------------- | ---------------------------- |
-| android.permission          | IAP 사용을 위한 공통 Android 권한 <br/> * 중복 permission 생략가능          |
-| com.android.vending.BILLING | Google Play를 위한 권한. <br/> * 스토어별로 이름이 다르거나 포함여부가 달라짐     |
-| activity                    | IAP에서 제공하는 액티비티 등록           |
-| com.toast.iap.config.appId  | IAP 웹콘솔에서 발급된 앱고유번호          |
-| com.toast.iap.config.market | 스토어 정보 <br/>GG : 구글플레이<br/> TS : 티스토어<br/> TEST : 테스트 |
-
-[표2 AndroidManifest.xml 설정 정보]
-
 > [참고]  
-> 스토어 정보를 TEST로 설정시 별도의 스토어 연동 정보없이 IAP의 API를 손쉽게 테스트 해볼 수 있습니다.    
-> 자세한 내용은 Sample Application 을 참고 해주세요.  
+> applicationId   
+> 반드시 실제 스토어(Google Play Store, One Store)의 정보와 일치해야 합니다.
 
 ## IAP 결제 흐름도
 
@@ -149,6 +88,21 @@ AndroidManifest.xml의 설정 정보는 다음과 같습니다.
 
 > [참고]  
 > [IAP 결제 흐름도](/Mobile Service/IAP/ko/Overview/#iap)
+
+### 스토어(마켓) 설정
+
+SDK에서 초기화 시 사용할 스토어(마켓)를 설정합니다.
+
+|MarketId|Store|
+|---|---|
+|GG|Google Play Store|
+|TS|One Store(구 TStore)|
+
+[Request Example]
+
+```java
+InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String value
+```
 
 ### 사용자 식별자 등록
 
@@ -197,14 +151,16 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
         "itemName" : "Test item 01",
         "marketItemId": "item01",
         "price": 1000,
-        "currency": "KRW"
+        "currency": "KRW",
+        "localizedPrice":"₩1,000"
     },
     {
         "itemSeq" : 1000209,
         "itemName" : "Test item 02",
         "marketItemId": "item02",
         "price": 7.99,
-        "currency": "USD"
+        "currency": "USD",
+        "localizedPrice":"$7.99"
 }]
 ```
 
@@ -249,13 +205,6 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
     "price": 1000.0
 }
 ```
-
-> [참고]  
-> IAP Android SDK 결제확인창   
-> toast-iap-android-sdk-1.2.3 부터 기존 아래의 결제확인창 없이 스토어결제로 바로 진행됩니다.
-
-![[그림 2 기존 결제확인창]](http://static.toastoven.net/prod_iap/iap_40.jpg)
-<center>[그림 2 기존 결제확인창]</center>
 
 ### 결제 소비
 
@@ -433,35 +382,6 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 > [참고]  
 > [Error Code Guide](/Mobile Service/IAP/ko/error-code/)    
 
-## Android Sample Application
-
-Eclipse + ADT 개발환경에서 샘플 애플리케이션을 다음과 같이 import하여 참고할 수 있습니다.
-
-```
-[Eclipse] > [File] > [Import] 선택  
-[Android - Existing Android Code into Workspace] 선택 > [Next] 선택  
-<Import Projects> 창 > [Browse] 버튼 클릭 > [IAP Android SDK]의 폴더 선택  
-[IAP Android SDK]와 샘플 애플리케이션의 프로젝트가 [Import] 목록에 표시  
-Import 할 프로젝트 체크  
-[Copy Project into Workspace] 체크  
-[Finish] 버튼을 선택하여 Import 완료
-```
-
-![[그림 3 샘플 애플리케이션 추가]](http://static.toastoven.net/prod_iap/iap_7.jpg)
-<center>[그림 3 샘플 애플리케이션 추가]</center>
-
-### 테스트 스토어를 통한 테스트
-
-IAP Android SDK에서 제공하는 API를 실제 스토어 연동 정보 없이 테스트 하기 위해 스토어 코드를 TEST로 설정합니다.
-
-```xml
-<meta-data android:name="com.toast.iap.config.market" android:value="TEST" />
-```
-
-### 예제 코드
-
-com.nhnent.iap.sample 패키지의 IAPServiceProvider 클래스 참고.
-
 ## Android Reference
 
 # Package: com.toast.android.iap
@@ -544,7 +464,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 [queryPurchases]
 
 |용어|설명|
-| ----- | ----- | ----- |
+| ----- | ----- | 
 | Description |  소비(Consume) 되지 않은 결제내역을 조회합니다. |
 | Syntax | public void queryPurchases(Activity activity, PurchaseListCallback callback) |
 | Parameters |  activity [in] 어플리케이션의 현재 액티비티 |
@@ -592,7 +512,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 [queryItems]
 
 |용어|설명|
-| ----- | ----- | ----- |
+| ----- | ----- | 
 | Description |  구매 가능한 모든 아이템 내역을 조회합니다. |
 | Syntax | public void queryItems(Activity activity, ItemListCallback callback) |
 | Parameters |  activity [in] 어플리케이션의 현재 액티비티 |
@@ -641,7 +561,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 [onCallback]
 
 |용어|설명|
-| ----- | ----- | ----- |
+| ----- | ----- | 
 | Description |  API 요청 결과를 전달합니다. |
 | Syntax | public abstract void onCallback(JSONObject result, InAppPurchaseException exception) |
 | Parameters |  result [in] 응답 결과에 대한 코드 및 추가 정보를 전달 |
@@ -661,7 +581,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 [onCallback]
 
 |용어|설명|
-| ----- | ----- | ----- |
+| ----- | ----- | 
 | Description |  API 요청 결과를 전달합니다. |
 | Syntax | public abstract void onCallback(JSONArray result, InAppPurchaseException exception) |
 | Parameters |  result [in] 응답 결과에 대한 코드 및 추가 정보를 전달 |
