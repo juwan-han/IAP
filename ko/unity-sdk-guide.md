@@ -21,7 +21,7 @@ Unity Editor 에서 [Assets] > [Import Package] > [Custom Package] 를 선택
 Step3 : 모든 Assets을 Import 합니다.
 ```
 
-![[그림 3 Importing package]](http://static.toastoven.net/prod_iap/iap_13.png)
+![[그림 3 Importing package]](http://static.toastoven.net/prod_iap/iap_u_01.png)
 <center>[그림 3 Importing package]</center>
 
 ### Android 환경 설정 및 빌드
@@ -37,10 +37,10 @@ Step3 : 모든 Assets을 Import 합니다.
 <center>[그림 4 Setting for Android]</center>
 
 ```
-어플리케이션의 AndroidManifest.xml 정보를 AndroidManifest-iap-template.xml 정보를 참조하여 수정  
+사용하는 마켓에 따라 AndroidManifest.xml을 수정하여 사용합니다.
 ```
 
-![[그림 5 AndroidManifest-iap-template.xml]](http://static.toastoven.net/prod_iap/iap_15.png)
+![[그림 5 AndroidManifest-iap-template.xml]](http://static.toastoven.net/prod_iap/iap_u_02.png)
 <center>[그림 5 AndroidManifest-iap-template.xml]</center>
 
 > [참고]  
@@ -321,13 +321,15 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
     ///	"marketItemId": "item01",
     /// "price": 1000,
     /// "currency": "KRW",
+    /// "localizedPrice":"₩1,000"
     /// },
     /// {
     ///	"itemSeq": 1000209,
     ///	"itemName": "Test item 02",
     ///	"marketItemId": "item02",
     /// "price": 7.99,
-    /// "currency": "USD"
+    /// "currency": "USD",
+    /// "localizedPrice":"$7.99"
     ///	}]
 
     string json = System.Convert.ToString (data);
@@ -347,6 +349,7 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
 | marketItemId       | Long   | 스토어별 상품 ID                           |
 | currency      | String | 상품의 화폐 단위                        |
 | price         | Float  | 상품의 가격                           |
+| localizedPrice         | String  | 상품의 현지 가격                           |
 
 [Response Example]
 
@@ -358,13 +361,15 @@ InAppPurchase.AsyncQueryItems((Result result, object data) => {
     "marketItemId": "item01",
     "price": 1000,
     "currency": "KRW",
+    "localizedPrice":"₩1,000"
 },
 {
     "itemSeq": 1000209,
     "itemName": "Test item 02",
     "marketItemId": "item02",
     "price": 7.99,
-    "currency": "USD"
+    "currency": "USD",
+    "localizedPrice":"$7.99"
 }]
 ```
 

@@ -196,14 +196,16 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
         "itemName" : "Test item 01",
         "marketItemId": "item01",
         "price": 1000,
-        "currency": "KRW"
+        "currency": "KRW",
+        "localizedPrice":"₩1,000"
     },
     {
         "itemSeq" : 1000209,
         "itemName" : "Test item 02",
         "marketItemId": "item02",
         "price": 7.99,
-        "currency": "USD"
+        "currency": "USD",
+        "localizedPrice":"$7.99"
 }]
 ```
 
@@ -544,7 +546,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 [queryPurchases]
 
 |Word|Description|
-| ----- | ----- | ----- |
+| ----- | ----- |
 | Description |  Inquire unconsumed payment history. |
 | Syntax | public void queryPurchases(Activity activity, PurchaseListCallback callback) |
 | Parameters | activity [in] of current application. |
@@ -592,7 +594,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 [queryItems]
 
 |Word|Description|
-| ----- | ----- | ----- |
+| ----- | ----- |
 | Description |  Inquire all purchasable items. |
 | Syntax | public void queryItems(Activity activity, ItemListCallback callback) |
 | Parameters | activity [in] of current application. |
@@ -641,7 +643,7 @@ callback interface for receiving response after payment request
 [onCallback]
 
 |Word|Description|
-| ----- | ----- | ----- |
+| ----- | ----- |
 | Description |  Send API request result. |
 | Syntax | public abstract void onCallback(JSONObject result, InAppPurchaseException exception) |
 | Parameters |  result [in]  return result code and message. |
@@ -661,7 +663,7 @@ callback interface for receiving response after payment request
 [onCallback]
 
 |Word|Description|
-| ----- | ----- | ----- |
+| ----- | ----- |
 | Description |  Send API request result. |
 | Syntax | public abstract void onCallback(JSONArray result, InAppPurchaseException exception) |
 | Parameters |  result [in]  return result code and message. |
