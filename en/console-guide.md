@@ -36,7 +36,7 @@ Click 'URL & Appkey' on top as in [Figure 2] to check AppKey or copy the key to 
 > [Reference]  
 > Refer to [Store interlocking information](./console-guide/#store-interlocking-information) to obtain Store App ID.
 
-![[그림 3 Store Registration]](http://static.toastoven.net/prod_iap/iap_n_32.png)
+![[picture 3 Store Registration]](http://static.toastoven.net/prod_iap/iap_n_32.png)
 <center>[Figure. 3 Store Registration]</center>
 
 ## Item Registration
@@ -50,7 +50,7 @@ Click 'URL & Appkey' on top as in [Figure 2] to check AppKey or copy the key to 
 6. Click [Add] and check [ITEM ID].  
 ```
 
-![[그림 4 Item Registration]](http://static.toastoven.net/prod_iap/iap_n_33.png)
+![[picture 4 Item Registration]](http://static.toastoven.net/prod_iap/iap_n_33.png)
 <center>[Figure. 4 Item Registration]</center>
 
 ## Store Product Type
@@ -80,7 +80,7 @@ Before registering item to IAP service, register item type of InAppProducts regi
 5. Click [Search]  
 ```
 
-![[그림 5 Inquiry payment information]](http://static.toastoven.net/prod_iap/iap_n_44.png)
+![[picture 5 Inquiry payment information]](http://static.toastoven.net/prod_iap/iap_n_44.png)
 <center>[Figure. 5 Inquiry payment information]</center>
 
 > [Reference]
@@ -110,10 +110,10 @@ You can change payment status in following conditions,
 Payment which status will be changable shows [Modify] button right side as below. 
 
 ```
-![[그림 6 Change payment status]](http://static.toastoven.net/prod_iap/iap_45.png)
+![[picture 6 Change payment status]](http://static.toastoven.net/prod_iap/iap_45.png)
 <center>[Figure. 6 Change payment status]</center>
  
-![[그림 7 Add additional information when changing statu]](http://static.toastoven.net/prod_iap/iap_46.PNG)
+![[picture 7 Add additional information when changing statu]](http://static.toastoven.net/prod_iap/iap_46.PNG)
 <center>[Figure. 7 Add additional information when changing status]</center>
 
 
@@ -127,6 +127,39 @@ Payment which status will be changable shows [Modify] button right side as below
 3. You may inquire ‘This month’s total gross’ and ‘Daily details’ using [<][>] button at store  
 ```
 
-![[그림 6 Payment Statistics]](http://static.toastoven.net/prod_iap/iap_n_35.png)
+![[picture 6 Payment Statistics]](http://static.toastoven.net/prod_iap/iap_n_35.png)
 <center>[Figure. 6 Payment Statistics]</center>
 
+### See OAuth client information in the Google APIs Developer Console
+
+```
+Create a project in the Google APIs Console with the same account as the Google Play Developer Console. Use the links below to generate the following information required for OAuth authentication.  
+1) Client ID  
+2) Client Secret  
+3) Refresh Token  
+```
+
+> [참고]  
+> [Android Developers - Authorization](https://developers.google.com/identity/protocols/OAuth2WebServer)
+
+<br/>
+
+1. Create an OAuth client at https://console.developers.google.com/apis/credentials (web application)
+![[picture 1] Creating Client ID / Client Secret 1](http://static.toastoven.net/prod_iap/iap_g_01_en.png)
+<center>[picture 1] Creating Client ID / Client Secret  1</center>
+
+2. Enter https://developers.google.com/oauthplayground in the Authorized redirection urls
+![[picture 2] Creating Client ID / Client Secret 2](http://static.toastoven.net/prod_iap/iap_g_02_en.png)
+<center>[picture 2] Creating Client ID / Client Secret 2</center>
+
+3. oauthplayground Setting > Use your own OAuth credentials
+![[picture 3] Creating Client ID / Client Secret 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
+<center>[picture 3] Creating Client ID / Client Secret 3</center>
+
+4. Enter Authorization code code by entering https://www.googleapis.com/auth/androidpublisher in Step 1
+![[picture 4] Creating Client ID / Client Secret 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
+<center>[picture 4] Creating Client ID / Client Secret 4</center>
+
+5. In Step 2, click the Exchange authorization code for tokens button to issue a token.
+![[picture 5] Creating Client ID / Client Secret 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
+<center>[picture 5] Creating Client ID / Client Secret 5</center>
