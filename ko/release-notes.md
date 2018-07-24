@@ -1,5 +1,12 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.07.31
+  
+#### 기능개선/변경
+* [SDK][[iOS-1.5.6](/Download/#common-iap)]
+    * Release Build 시 발생하던 ModuleCache Warning 제거
+    * 내부 네트워크 통신 모듈 개선
+
 ### 2018.07.24
 ### 기능개선/변경
 * [Console] 결제내역 조회 - 조회 화면 개선
