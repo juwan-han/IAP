@@ -192,15 +192,19 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 
 2. 승인된 redirection url에 https://developers.google.com/oauthplayground 입력
 ![[그림 2] Client ID 및 Client Secret 생성 2](http://static.toastoven.net/prod_iap/iap_g_02.png)
+<center>[그림 2] Client ID 및 Client Secret 생성 2</center>
 
 3. oauthplayground 설정 > Use your own OAuth credentials 사용
 ![[그림 3] Client ID 및 Client Secret 생성 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
+<center>[그림 3] Client ID 및 Client Secret 생성 3</center>
 
 4. Step 1에서 https://www.googleapis.com/auth/androidpublisher 입력하여 Authorization code 코드 발급
 ![[그림 4] Client ID 및 Client Secret 생성 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
+<center>[그림 4] Client ID 및 Client Secret 생성 4</center>
 
 5. Step 2에서 Exchange authorization code for tokens 버튼을 눌러 토큰 발급
 ![[그림 5] Client ID 및 Client Secret 생성 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
+<center>[그림 5] Client ID 및 Client Secret 생성 5</center>
 
 ### AndroidManifest.xml 설정 예시
 

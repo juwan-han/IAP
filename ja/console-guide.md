@@ -130,3 +130,36 @@ Payment which status will be changable shows [Modify] button right side as below
 ![[그림 6 Payment Statistics]](http://static.toastoven.net/prod_iap/iap_n_35.png)
 <center>[Figure. 6 Payment Statistics]</center>
 
+### See OAuth client information in the Google APIs Developer Console
+
+```
+Create a project in the Google APIs Console with the same account as the Google Play Developer Console. Use the links below to generate the following information required for OAuth authentication.  
+1) Client ID  
+2) Client Secret  
+3) Refresh Token  
+```
+
+> [참고]  
+> [Android Developers - Authorization](https://developers.google.com/identity/protocols/OAuth2WebServer)
+
+<br/>
+
+1. Create an OAuth client at https://console.developers.google.com/apis/credentials (web application)
+![[picture 1] Creating Client ID / Client Secret 1](http://static.toastoven.net/prod_iap/iap_g_01_en.png)
+<center>[picture 1] Creating Client ID / Client Secret  1</center>
+
+2. Enter https://developers.google.com/oauthplayground in the Authorized redirection urls
+![[picture 2] Creating Client ID / Client Secret 2](http://static.toastoven.net/prod_iap/iap_g_02_en.png)
+<center>[picture 2] Creating Client ID / Client Secret 2</center>
+
+3. oauthplayground Setting > Use your own OAuth credentials
+![[picture 3] Creating Client ID / Client Secret 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
+<center>[picture 3] Creating Client ID / Client Secret 3</center>
+
+4. Enter Authorization code code by entering https://www.googleapis.com/auth/androidpublisher in Step 1
+![[picture 4] Creating Client ID / Client Secret 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
+<center>[picture 4] Creating Client ID / Client Secret 4</center>
+
+5. In Step 2, click the Exchange authorization code for tokens button to issue a token.
+![[picture 5] Creating Client ID / Client Secret 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
+<center>[picture 5] Creating Client ID / Client Secret 5</center>
