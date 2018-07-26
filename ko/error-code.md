@@ -21,6 +21,9 @@
 | 117 |  IAP_IN_PROGRESS_ERROR | IAP API가 아직 처리 중일 때 새로운 요청이 들어오면 해당 에러가 발생할 수 있으며, 클라이언트는 필요에 따라 무시하거나 재요청할 수 있음 |
 | 118 |  FORCED_TERMINATION_ERROR | Activity가 강제 종료시 |
 | 119 |  INAPP_PURCHASE_ERROR_ALREADY_PURCHASED_AT_OTHER_ACCOUNT | 같은 상품을 다른 계정으로 이미 구매하고 지급이 경우 |
+| 120 |  INAPP_DEVELOPER_ERROR | 개발 과정에서 발생 수 있는 오류, 결제 플로우 진행 중 필수 정보가 없거나 잘못된 인수가 활용되는 경우 |
+| 201 |  INAPP_ONESTORE_NEED_UPDATE | OneStore 앱 업데이트가 필요한 경우 |
+| 202 |  INAPP_ONESTORE_NEED_LOGIN | OneStore 앱 로그인이 필요한 경우 |
 
 ## Server API 에러타입
 

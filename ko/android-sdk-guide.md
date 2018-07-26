@@ -34,18 +34,45 @@ dependencies {
 ```
 
 ### One Store 사용의 경우
+2018년 6월 12일(화)부터 구버전 SDK V16 이하가 적용된 신규 앱의 등록이 불가능합니다.
+신규 앱을 작업하실 경우 SDK V17을 사용하시기 바랍니다.
+* [인앱 SDK v15.xx.xx 버전 미만 적용 상품 지원 종료 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31245&noticeNo=789&pageFlag=List&searchValue=)  
+* [구버전 IAP SDK 적용 신규 앱 등록 불가 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31224&noticeNo=788&pageFlag=List&searchValue=)  
+
+#### SDK V17 (API V5) - 권장
+```
+dependencies {
+    implementation 'com.toast.iap:iap-onestore:' + project.TOAST_IAP_SDK_VERSION
+}
+```
+
+#### SDK V16 (API V4) 
 ```
 dependencies {
     implementation 'com.toast.iap:iap-tstore:' + project.TOAST_IAP_SDK_VERSION
 }
 ```
+
+#### One Store V16 결제 테스트
+One Store V16 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
+```
+<application>
+    <meta-data android:name="iap:plugin_mode" android:value="development" />
+</application>
+```
+
+<br/>
+
 > [참고]  
 > project.TOAST_IAP_SDK_VERSION 에는 SDK의 version을 명시합니다. Gradle 은 2.3.3 Version 이상의 Gradle Project를 사용하는 것을 권장합니다.  
 
 <br/>
+
 > [참고]  
 > Release History   
 > SDK의 Version의 변경이력은 패키지내의 RELEASE-NOTES.md 를 참조해주세요.
+
+
 
 ## 샘플 애플리케이션 제공
 
@@ -70,16 +97,62 @@ android {
 }
 ```
 
-One Store 결제 테스트의 경우 아래의 사항을 추가로 입력해주세요.
-```
-<application>
-    <meta-data android:name="iap:plugin_mode" android:value="development" />
-</application>
-```
-
 > [참고]  
 > applicationId   
 > 반드시 실제 스토어(Google Play Store, One Store)의 정보와 일치해야 합니다.
+
+
+## SDK 초기화
+IAP SDK를 사용하기 위해서는 초기화 과정이 필요합니다.
+
+### 스토어(마켓) 설정
+SDK에서 초기화 시 사용할 스토어(마켓)를 설정합니다.  
+
+|MarketId|Store|  
+|---|---|  
+|GG|Google Play Store|  
+|TS|One Store SDK V16 (API V4) - 구 TStore|  
+|ONESTORE|One Store SDK V17 (API V5)|  
+
+**[Request Example]**  
+
+`AndroidMenifest.xml`파일에서 설정 시 :
+```xml
+<meta-data 
+    android:name="com.toast.iap.config.market" 
+    android:value="GG" />
+```
+`Java`코드 에서 설정 시 :
+```java
+InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String value
+```
+
+### App ID 설정
+App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
+
+**[Request Example]**  
+
+`AndroidMenifest.xml`파일에서 설정 시 :
+```xml
+<meta-data 
+    android:name="com.toast.iap.config.appId" 
+    android:value="1234567" />
+```
+`Java`코드 에서 설정 시 :
+```java
+InAppPurchases.InAppPurchase.registerAppId(1234567);// appId : long integer
+```
+
+### 사용자 식별자 등록
+
+인증을 완료한 사용자 ID를 등록합니다.  
+개발사에서 정의한 사용자 식별키이며, 아이템이 지급되는 대상입니다.
+
+**[Request Example]**  
+
+```java
+InAppPurchases.InAppPurchase.registerUserId(userId); // userId : String value
+```
 
 ## IAP 결제 흐름도
 
@@ -89,37 +162,11 @@ One Store 결제 테스트의 경우 아래의 사항을 추가로 입력해주�
 > [참고]  
 > [IAP 결제 흐름도](/Mobile Service/IAP/ko/Overview/#iap)
 
-### 스토어(마켓) 설정
-
-SDK에서 초기화 시 사용할 스토어(마켓)를 설정합니다.
-
-|MarketId|Store|
-|---|---|
-|GG|Google Play Store|
-|TS|One Store(구 TStore)|
-
-[Request Example]
-
-```java
-InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String value
-```
-
-### 사용자 식별자 등록
-
-인증을 완료한 사용자 ID를 등록합니다.  
-개발사에서 정의한 사용자 식별키이며, 아이템이 지급되는 대상입니다.
-
-[Request Example]
-
-```java
-InAppPurchases.InAppPurchase.registerUserId(userId); // userId : String value
-```
-
 ### 구매 가능한 아이템 내역 조회
 
 구매 가능한 모든 아이템 내역을 조회합니다.
 
-[Request Example]
+**[Request Example]**  
 
 ```java
 InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCallback() {
@@ -134,7 +181,7 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
 });
 ```
 
-[Method]
+**[Method]**
 
 |용어|설명|
 | ----- | --- |
@@ -143,7 +190,7 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
 | Parameter | callback [in] API 요청 결과를 전달 하는 콜백 |
 | Return Value | void |
 
-[Response Example]
+**[Response Example]**
 ```json
 [
     {
@@ -168,7 +215,7 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
 
 클라이언트에서 아이템 구매를 요청합니다. 결제 요청에 대한 응답은 PurchaseCallback 을 통해 전달 받게 되고, 결제가 성공적으로 완료되면 결과값을 서버에 전달하여 결제내역을 (Consume) 해야 합니다.
 
-[Request Example]
+**[Request Example]**
 
 ```java
 InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback() {
@@ -184,7 +231,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 });
 ```
 
-[Method]
+**[Method]**
 
 |용어|설명|
 | ----- |  --- |
@@ -194,7 +241,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 | Parameters | callback [in] API 요청 결과를 전달 하는 콜백 |
 | Return Value |  void |
 
-[Response Example]
+**[Response Example]**
 
 ```json
 {
@@ -213,7 +260,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 > [참고]  
 > [Server Payment Consume API](/Mobile Service/IAP/ko/Server%20Developer%60s%20Guide/#payment-consume-api)  
 
-[HTTP Request Example]
+**[HTTP Request Example]**
 
 ```http
 POST
@@ -225,7 +272,7 @@ RequestBody
 }
 ```
 
-[Response Example]
+**[Response Example]**
 
 ```json
 {
@@ -245,7 +292,7 @@ RequestBody
 
 유저의 소비(Consume) 되지 않은 결제내역을 조회합니다.
 
-[Request Example]
+**[Request Example]**
 
 ```java
 InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
@@ -260,7 +307,7 @@ InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
 });
 ```
 
-[Method]
+**[Method]**
 
 |용어|설명|
 |--------|--------|
@@ -269,7 +316,7 @@ InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
 | Parameter | callback [in] API 요청 결과를 전달 하는 콜백 |
 | Return Value | void |
 
-[Response Example]
+**[Response Example]**
 
 ```json
 [{
@@ -297,7 +344,7 @@ InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
 
 미처리된 결제건(IAP 서버 검증 실패)들에 대해 일괄로 재처리 작업을 진행합니다.
 
-[Request Example]
+**[Request Example]**
 
 ```java
 InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPurchase.IncompletePurchasesCallback() {
@@ -312,7 +359,7 @@ InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPur
 });
 ```
 
-[Method]
+**[Method]**
 
 |용어|설명|
 |--------|--------|
@@ -321,7 +368,7 @@ InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPur
 | Parameter | callback [in] API 요청 결과를 전달 하는 콜백 |
 | Return Value | void |
 
-[Response Example]
+**[Response Example]**
 
 ```json
 {
@@ -390,7 +437,7 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 
 인앱 결제 요청을 위한 interface
 
-[Method Summary]
+**[Method Summary]**
 
 | 이름             | Return Value | 파라미터                                                      |
 | -------------- | ------------ | --------------------------------------------------------- |
@@ -399,7 +446,7 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 | requestPuchase | void         | Activity activity, long itemId, PurchaseCallback callback |
 | queryPurchases | void         | Activity activity, PurchaseListCallback callback          |
 
-[setDebugMode]
+**[setDebugMode]**
 
 |용어|설명|
 | ----- | -- |
@@ -407,13 +454,13 @@ InAppPurchases.InAppPurchase.queryPurchases(activity, new PurchaseListCallback()
 | Syntax | public void setDebugMode(boolean isDebuggable)  |
 | Parameters |  isDebuggable [in] 로그 활성화 여부, true 일때 로그정보를 노출 합니다. |
 
-[Example Code]
+**[Example Code]**
 
 ```java
 InAppPurchases.InAppPurchase.setDebugMode(true);
 ```
 
-[registerUserId]
+**[registerUserId]**
 
 |용어|설명|
 | ----- |--|
@@ -422,13 +469,13 @@ InAppPurchases.InAppPurchase.setDebugMode(true);
 | Parameters |  userId [in] 사용자 식별자 값으로 userId는 변하지 않는 고유한 값이어야만 합니다. |
 | Return Value |  void |
 
-[Example Code]
+**[Example Code]**
 
 ```java
 InAppPurchases.InAppPurchase.registerUserId("guest0001");
 ```
 
-[requestPurchase]
+**[requestPurchase]**
 
 |용어 |설명|
 | ----- | -- |
@@ -439,7 +486,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 | Parameters |callback [in] API 요청 결과를 전달 하는 콜백 |
 | Return Value |  void |
 
-[Response (JSON)]
+**[Response (JSON)]**
 
 | Attribute     | Value  | Description                                       |
 | ------------- | ------ | ------------------------------------------------- |
@@ -449,7 +496,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 | currency      | String | 상품의 화폐 단위                                         |
 | price         | Float  | 상품의 가격                                            |
 
-[Response Example]
+**[Response Example]**
 
 ```json
 {
@@ -461,7 +508,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 }
 ```
 
-[queryPurchases]
+**[queryPurchases]**
 
 |용어|설명|
 | ----- | ----- | 
@@ -481,7 +528,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 | currency      | String | 상품의 화폐 단위                        |
 | price         | Float  | 상품의 가격                           |
 
-[Response Example]
+**[Response Example]**
 
 ```json
 [{
@@ -509,7 +556,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 ```
 
 
-[queryItems]
+**[queryItems]**
 
 |용어|설명|
 | ----- | ----- | 
@@ -529,7 +576,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 | currency      | String | 상품의 화폐 단위                        |
 | price         | Float  | 상품의 가격                           |
 
-[Response Example]
+**[Response Example]**
 
 ```json
 [{
@@ -552,13 +599,13 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 
 인앱 결제 요청 후에 결과를 전달받기 위한 callback interface
 
-[Method Summary]
+**[Method Summary]**
 
 | 이름         | Return Value | 파라미터                                                |
 | ---------- | ------------ | --------------------------------------------------- |
 | onCallback | void         | JSONObject result, InAppPurchaseException exception |
 
-[onCallback]
+**[onCallback]**
 
 |용어|설명|
 | ----- | ----- | 
@@ -572,13 +619,13 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 
 결제 내역 요청 후에 결과를 전달받기 위한 callback interface
 
-[Method Summary]
+**[Method Summary]**
 
 | 이름         | Return Value | 파라미터                                               |
 | ---------- | ------------ | -------------------------------------------------- |
 | onCallback | void         | JSONArray result, InAppPurchaseException exception |
 
-[onCallback]
+**[onCallback]**
 
 |용어|설명|
 | ----- | ----- | 
@@ -596,13 +643,13 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 
 인앱 결제를 위한 인터페이스를 제공하는 Entry Point
 
-[Field]
+**[Field]**
 
 | Type                              | Variable       | Description     |
 | --------------------------------- | -------------- | --------------- |
 | public static final InAppPurchase | InAppPurchases | 인앱 결제를 위한 인터페이스 |
 
-[getSdkVersion]
+**[getSdkVersion]**
 
 |용어|설명|
 | ----- | ----- |
@@ -610,7 +657,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 | Syntax | public static String getSdkVersion() |
 | Return Value |  String SDK의 Version 정보 |
 
-[getAppId]
+**[getAppId]**
 
 |용어|설명|
 | ----- | ----- |
@@ -624,7 +671,7 @@ InAppPurchases.InAppPurchase.registerUserId("guest0001");
 
 API 요청에 대한 에러정보를 전달한다.
 
-[getErrorCode]
+**[getErrorCode]**
 
 |용어|설명|
 | ----- | ----- |
@@ -632,7 +679,7 @@ API 요청에 대한 에러정보를 전달한다.
 | Syntax | public int getErrorCode() |
 | Return Value |  int 에러코드 |
 
-[getMessage]
+**[getMessage]**
 
 |용어|설명|
 | ----- | ----- |

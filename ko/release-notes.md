@@ -1,14 +1,18 @@
 ## Mobile Service > IAP > 릴리스 노트
 
 ### 2018.07.31
-  
+
+#### 기능추가
+* [SDK][[AOS-1.5.0](/Download/#common-iap)]
+    * OneStore V17 추가  
+      
 #### 기능개선/변경
 * [SDK][[iOS-1.5.6](/Download/#common-iap)]
     * Release Build 시 발생하던 ModuleCache Warning 제거
     * 내부 네트워크 통신 모듈 개선
 
 ### 2018.07.24
-### 기능개선/변경
+#### 기능개선/변경
 * [Console] 결제내역 조회 - 조회 화면 개선
 * [Console] 아이템 삭제 기능 제거 및 아이템 조회 상태 조건 추가
 * [Console] Store Item Id 중복 체크 
