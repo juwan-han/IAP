@@ -84,11 +84,11 @@ IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리
 
 ### Import Project
 
-배포된 SDK 패키지 내의 '/sample' 디렉토리를 Android Studio에서 'Import Project'를 합니다.
+배포된 SDK 패키지 내의 `/sample` 디렉토리를 Android Studio에서 `Import Project`를 합니다.
 
 ### AndroidManifest.xml 정보 설정
 
-IAP Web Console에 등록한 'Store APP ID'를 샘플 애플리케이션의 applicationId와 동일하게 설정 합니다.
+IAP Web Console에 등록한 `Store APP ID`를 샘플 애플리케이션의 applicationId와 동일하게 설정 합니다.
 ```
 android {
     defaultConfig {
