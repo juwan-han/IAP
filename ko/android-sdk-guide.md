@@ -35,7 +35,8 @@ dependencies {
 
 ### One Store 사용의 경우
 2018년 6월 12일(화)부터 구버전 SDK V16 이하가 적용된 신규 앱의 등록이 불가능합니다.
-신규 앱을 작업하실 경우 SDK V17을 사용하시기 바랍니다.
+신규 앱을 작업하실 경우 SDK V17을 사용하시기 바랍니다.  
+
 * [인앱 SDK v15.xx.xx 버전 미만 적용 상품 지원 종료 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31245&noticeNo=789&pageFlag=List&searchValue=)  
 * [구버전 IAP SDK 적용 신규 앱 등록 불가 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31224&noticeNo=788&pageFlag=List&searchValue=)  
 
@@ -53,8 +54,7 @@ dependencies {
 }
 ```
 
-#### One Store V16 결제 테스트
-One Store V16 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
+SDK V16 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
 ```
 <application>
     <meta-data android:name="iap:plugin_mode" android:value="development" />
@@ -128,6 +128,7 @@ InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String va
 ```
 
 ### App ID 설정
+IAP Android SDK를 사용하기 위한 서비스 ID 입니다.
 App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
 
 **[Request Example]**  
