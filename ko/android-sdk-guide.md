@@ -92,7 +92,7 @@ SDK에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 
         android:value="popup | full" />
 </application>
 ```
-> 참고   
+> [참고]   
 > [OneStore - 인앱결제 적용을 위한 사전준비](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_04_preparation) > `7. Android Manifest 파일 설정`
 
 ### SDK V16
