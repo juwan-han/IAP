@@ -76,7 +76,7 @@ dependencies {
 
 ### SDK V17
 #### One Store 업데이트 및 설치 유도하기 
-만약 SDK Exception의 에러코드 `INAPP_ONESTORE_NEED_UPDATE(201)`이 발생한다면 다음의 코드로 설치를 유도할 수 있습니다.
+만약 SDK의 에러코드 `INAPP_ONESTORE_NEED_UPDATE(201)`이 발생한다면 다음의 코드로 설치를 유도할 수 있습니다.
 ```java
 Intent intent = new Intent("android.intent.action.VIEW");
 intent.setData(Uri.parse("http://m.onestore.co.kr/mobilepoc/etc/downloadGuide.omp"));
@@ -84,16 +84,16 @@ startActivity(intent);
 ```
 
 #### 팝업 결제 화면용 사용
-에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
-[OneStore - 인앱결제 적용을 위한 사전준비](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_04_preparation) > `7. Android Manifest 파일 설정`
-
+SDK에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요. 
 ```xml
 <application>
     <meta-data 
         android:name="iap:view_option" 
         android:value="popup | full" />
 </application>
-```  
+```
+> 참고   
+> [OneStore - 인앱결제 적용을 위한 사전준비](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_04_preparation) > `7. Android Manifest 파일 설정`
 
 ### SDK V16
 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
@@ -107,7 +107,7 @@ startActivity(intent);
 
 ## 샘플 애플리케이션 제공
 
-IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리케이션을 제공합니다. 샘플 애플리케이션을 사용하여 IAP Android SDK가 제공하는 기능을 간편하게 테스트 할 수 있습니다.
+IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리케이션을 제공합니다.  샘플 애플리케이션을 사용하여 IAP Android SDK가 제공하는 기능을 간편하게 테스트 할 수 있습니다.
 
 > [참고]  
 > 테스트 전 유의 사항   
