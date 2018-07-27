@@ -14,7 +14,9 @@
 
 ## Android Studio & Gradle 환경에서 사용하기
 
-IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다. jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다. 아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.
+IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다.  
+jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다.  
+아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.  
 
 ### Gradle Repository
 
@@ -26,10 +28,17 @@ buildscript {
 }
 ```
 
+IAP Android SDK에서 공통으로 사용되는 권한은다음과 같습니다.  
+
+|권한|설명|
+|---|---|
+|android.permission.INTERNET|응용 프로그램이 네트워크 소켓을 열도록 허용합니다.|
+|com.android.vending.BILLING|애플리케이션이 인앱 결제 권한을 부여합니다.|
+
 ### Google Play Store 사용의 경우
 ```
 dependencies {
-    implementation 'com.toast.iap:iap:' + project.TOAST_IAP_SDK_VERSION
+    implementation 'com.toast.iap:iap:1.5.0'
 }
 ```
 
@@ -43,28 +52,51 @@ dependencies {
 #### SDK V17 (API V5) - 권장
 ```
 dependencies {
-    implementation 'com.toast.iap:iap-onestore:' + project.TOAST_IAP_SDK_VERSION
+    implementation 'com.toast.iap:iap-onestore:1.5.0'
 }
 ```
 
+One Store SDK V17에서 사용되는 추가 권한은 다음과 같습니다.
+
+|권한|설명|
+|---|---|
+|android.permission.ACCESS_NETWORK_STATE|응용 프로그램이 네트워크에 대한 정보에 액세스 할 수있게합니다.|
+
+만약 SDK Exception의 에러코드 `INAPP_ONESTORE_NEED_UPDATE(201)`이 발생한다면 다음의 코드로 설치를 유도할 수 있습니다.
+```java
+Intent intent = new Intent("android.intent.action.VIEW");
+intent.setData(Uri.parse("http://m.onestore.co.kr/mobilepoc/etc/downloadGuide.omp"));
+startActivity(intent);
+```
+
+SDK V17에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
+[OneStore - 인앱결제 적용을 위한 사전준비](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_04_preparation) > `7. Android Manifest 파일 설정`
+
+```xml
+<application>
+    <meta-data 
+        android:name="iap:view_option" 
+        android:value="popup | full" />
+</application>
+```  
+
 #### SDK V16 (API V4) 
+
 ```
 dependencies {
-    implementation 'com.toast.iap:iap-tstore:' + project.TOAST_IAP_SDK_VERSION
+    implementation 'com.toast.iap:iap-tstore:1.5.0'
 }
 ```
 
 SDK V16 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
 ```
 <application>
-    <meta-data android:name="iap:plugin_mode" android:value="development" />
+    <meta-data 
+        android:name="iap:plugin_mode" 
+        android:value="development" />
 </application>
 ```
 
-<br/>
-
-> [참고]  
-> project.TOAST_IAP_SDK_VERSION 에는 SDK의 version을 명시합니다. Gradle 은 2.3.3 Version 이상의 Gradle Project를 사용하는 것을 권장합니다.  
 
 <br/>
 
