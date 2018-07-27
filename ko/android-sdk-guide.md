@@ -14,7 +14,9 @@
 
 ## Android Studio & Gradle 환경에서 사용하기
 
-IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다. jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다. 아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.
+IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다.  
+jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다.  
+아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.  
 
 ### Gradle Repository
 
@@ -26,45 +28,38 @@ buildscript {
 }
 ```
 
-### Google Play Store 사용의 경우
+IAP Android SDK에서 공통으로 사용되는 권한은다음과 같습니다.  
+
+|권한|설명|
+|---|---|
+|android.permission.INTERNET|응용 프로그램이 네트워크 소켓을 열도록 허용합니다.|
+|com.android.vending.BILLING|애플리케이션이 인앱 결제 권한을 부여합니다.|
+
+### 의존성 추가하기
+#### Google Play Store 
 ```
 dependencies {
-    implementation 'com.toast.iap:iap:' + project.TOAST_IAP_SDK_VERSION
+    implementation 'com.toast.iap:iap:1.5.0'
 }
 ```
-
-### One Store 사용의 경우
-2018년 6월 12일(화)부터 구버전 SDK V16 이하가 적용된 신규 앱의 등록이 불가능합니다.
-신규 앱을 작업하실 경우 SDK V17을 사용하시기 바랍니다.  
-
-* [인앱 SDK v15.xx.xx 버전 미만 적용 상품 지원 종료 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31245&noticeNo=789&pageFlag=List&searchValue=)  
-* [구버전 IAP SDK 적용 신규 앱 등록 불가 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31224&noticeNo=788&pageFlag=List&searchValue=)  
-
 #### SDK V17 (API V5) - 권장
 ```
 dependencies {
-    implementation 'com.toast.iap:iap-onestore:' + project.TOAST_IAP_SDK_VERSION
+    implementation 'com.toast.iap:iap-onestore:1.5.0'
 }
 ```
+추가되는 권한은 다음과 같습니다.
+
+|권한|설명|
+|---|---|
+|android.permission.ACCESS_NETWORK_STATE|응용 프로그램이 네트워크에 대한 정보에 액세스 할 수있게합니다.|
 
 #### SDK V16 (API V4) 
 ```
 dependencies {
-    implementation 'com.toast.iap:iap-tstore:' + project.TOAST_IAP_SDK_VERSION
+    implementation 'com.toast.iap:iap-tstore:1.5.0'
 }
 ```
-
-SDK V16 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
-```
-<application>
-    <meta-data android:name="iap:plugin_mode" android:value="development" />
-</application>
-```
-
-<br/>
-
-> [참고]  
-> project.TOAST_IAP_SDK_VERSION 에는 SDK의 version을 명시합니다. Gradle 은 2.3.3 Version 이상의 Gradle Project를 사용하는 것을 권장합니다.  
 
 <br/>
 
@@ -72,11 +67,47 @@ SDK V16 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 
 > Release History   
 > SDK의 Version의 변경이력은 패키지내의 RELEASE-NOTES.md 를 참조해주세요.
 
+## One Store 설정 정보 
+2018년 6월 12일(화)부터 구버전 SDK V16 이하가 적용된 신규 앱의 등록이 불가능합니다.  
+신규 앱을 작업하실 경우 SDK V17을 사용하시기 바랍니다.  
 
+* [인앱 SDK v15.xx.xx 버전 미만 적용 상품 지원 종료 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31245&noticeNo=789&pageFlag=List&searchValue=)  
+* [구버전 IAP SDK 적용 신규 앱 등록 불가 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31224&noticeNo=788&pageFlag=List&searchValue=)  
+
+### SDK V17
+#### One Store 업데이트 및 설치 유도하기 
+만약 SDK의 에러코드 `INAPP_ONESTORE_NEED_UPDATE(201)`이 발생한다면 다음의 코드로 설치를 유도할 수 있습니다.
+```java
+Intent intent = new Intent("android.intent.action.VIEW");
+intent.setData(Uri.parse("http://m.onestore.co.kr/mobilepoc/etc/downloadGuide.omp"));
+startActivity(intent);
+```
+
+#### 팝업 결제 화면용 사용
+SDK에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요. 
+```xml
+<application>
+    <meta-data 
+        android:name="iap:view_option" 
+        android:value="popup | full" />
+</application>
+```
+> 참고   
+> [OneStore - 인앱결제 적용을 위한 사전준비](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_04_preparation) > `7. Android Manifest 파일 설정`
+
+### SDK V16
+결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
+```
+<application>
+    <meta-data 
+        android:name="iap:plugin_mode" 
+        android:value="development" />
+</application>
+```
 
 ## 샘플 애플리케이션 제공
 
-IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리케이션을 제공합니다. 샘플 애플리케이션을 사용하여 IAP Android SDK가 제공하는 기능을 간편하게 테스트 할 수 있습니다.
+IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리케이션을 제공합니다.  샘플 애플리케이션을 사용하여 IAP Android SDK가 제공하는 기능을 간편하게 테스트 할 수 있습니다.
 
 > [참고]  
 > 테스트 전 유의 사항   
