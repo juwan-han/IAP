@@ -35,33 +35,47 @@ IAP Android SDK에서 공통으로 사용되는 권한은다음과 같습니다.
 |android.permission.INTERNET|응용 프로그램이 네트워크 소켓을 열도록 허용합니다.|
 |com.android.vending.BILLING|애플리케이션이 인앱 결제 권한을 부여합니다.|
 
-### Google Play Store 사용의 경우
+### 의존성 추가하기
+#### Google Play Store 
 ```
 dependencies {
     implementation 'com.toast.iap:iap:1.5.0'
 }
 ```
-
-### One Store 사용의 경우
-2018년 6월 12일(화)부터 구버전 SDK V16 이하가 적용된 신규 앱의 등록이 불가능합니다.
-신규 앱을 작업하실 경우 SDK V17을 사용하시기 바랍니다.  
-
-* [인앱 SDK v15.xx.xx 버전 미만 적용 상품 지원 종료 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31245&noticeNo=789&pageFlag=List&searchValue=)  
-* [구버전 IAP SDK 적용 신규 앱 등록 불가 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31224&noticeNo=788&pageFlag=List&searchValue=)  
-
 #### SDK V17 (API V5) - 권장
 ```
 dependencies {
     implementation 'com.toast.iap:iap-onestore:1.5.0'
 }
 ```
-
-One Store SDK V17에서 사용되는 추가 권한은 다음과 같습니다.
+추가되는 권한은 다음과 같습니다.
 
 |권한|설명|
 |---|---|
 |android.permission.ACCESS_NETWORK_STATE|응용 프로그램이 네트워크에 대한 정보에 액세스 할 수있게합니다.|
 
+#### SDK V16 (API V4) 
+```
+dependencies {
+    implementation 'com.toast.iap:iap-tstore:1.5.0'
+}
+```
+
+<br/>
+
+> [참고]  
+> Release History   
+> SDK의 Version의 변경이력은 패키지내의 RELEASE-NOTES.md 를 참조해주세요.
+
+## One Store 설정 정보 
+2018년 6월 12일(화)부터 구버전 SDK V16 이하가 적용된 신규 앱의 등록이 불가능합니다.  
+신규 앱을 작업하실 경우 SDK V17을 사용하시기 바랍니다.  
+
+* [인앱 SDK v15.xx.xx 버전 미만 적용 상품 지원 종료 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31245&noticeNo=789&pageFlag=List&searchValue=)  
+* [구버전 IAP SDK 적용 신규 앱 등록 불가 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31224&noticeNo=788&pageFlag=List&searchValue=)  
+
+### SDK V17
+#### One Store 업데이트 및 설치 유도하기 
 만약 SDK Exception의 에러코드 `INAPP_ONESTORE_NEED_UPDATE(201)`이 발생한다면 다음의 코드로 설치를 유도할 수 있습니다.
 ```java
 Intent intent = new Intent("android.intent.action.VIEW");
@@ -69,7 +83,8 @@ intent.setData(Uri.parse("http://m.onestore.co.kr/mobilepoc/etc/downloadGuide.om
 startActivity(intent);
 ```
 
-SDK V17에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
+#### 팝업 결제 화면용 사용
+에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
 [OneStore - 인앱결제 적용을 위한 사전준비](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_04_preparation) > `7. Android Manifest 파일 설정`
 
 ```xml
@@ -80,15 +95,8 @@ SDK V17에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정
 </application>
 ```  
 
-#### SDK V16 (API V4) 
-
-```
-dependencies {
-    implementation 'com.toast.iap:iap-tstore:1.5.0'
-}
-```
-
-SDK V16 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
+### SDK V16
+결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
 ```
 <application>
     <meta-data 
@@ -96,15 +104,6 @@ SDK V16 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 
         android:value="development" />
 </application>
 ```
-
-
-<br/>
-
-> [참고]  
-> Release History   
-> SDK의 Version의 변경이력은 패키지내의 RELEASE-NOTES.md 를 참조해주세요.
-
-
 
 ## 샘플 애플리케이션 제공
 
