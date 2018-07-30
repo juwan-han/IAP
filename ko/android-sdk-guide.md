@@ -13,8 +13,8 @@
 
 ## Android Studio & Gradle 환경에서 사용하기
 
-IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다.  
-jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다.  
+IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다.
+jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다.
 아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.  
 
 ### 1. Gradle Repository
@@ -116,7 +116,8 @@ SDK에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 
 
 ## 샘플 애플리케이션 제공
 
-IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리케이션을 제공합니다.  샘플 애플리케이션을 사용하여 IAP Android SDK가 제공하는 기능을 간편하게 테스트 할 수 있습니다.
+IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리케이션을 제공합니다.
+샘플 애플리케이션을 사용하여 IAP Android SDK가 제공하는 기능을 간편하게 테스트 할 수 있습니다.
 
 > [참고]  
 > 테스트 전 유의 사항   
@@ -212,7 +213,7 @@ InAppPurchases.InAppPurchase.registerUserId(userId); // userId : String value
 
 클라이언트에서 아이템 구매를 요청합니다.
 결제 요청에 대한 응답은 PurchaseCallback 을 통해 전달 받게 됩니다.
-결제가 성공적으로 완료되면 결과값을 서버에 전달하여 [`결제 소비`](/Mobile%20Service/IAP/ko/android-sdk-guide/#_12)를 진행해야 합니다.
+결제가 성공적으로 완료되면 결과값을 서버에 전달하여 [9.결제 소비](Mobile%20Service/IAP/ko/android-sdk-guide/#9)를 진행해야 합니다.
 
 > [참고]  
 > 인앱 결제는 결제요청과 결제소비 2단계로 진행됩니다.  
