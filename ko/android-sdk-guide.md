@@ -83,9 +83,9 @@ startActivity(intent);
 ```
 
 #### One Store 로그인 요청하기
-Toast IAP SDK에서는 내부적으로 로그인 상태를 확인합니다. 따라서, 별도의 로그인 처리를 하실 필요가 없습니다.
-
-만약 사용중 로그인이 되어 있지 않다면 OneStore 로그인 팝업(예/아니요)을 자동으로 표시합니다.  
+Toast IAP SDK에서는 내부적으로 로그인 상태를 확인합니다.  
+따라서, 별도의 로그인 처리를 하실 필요가 없습니다.  
+만약 사용중 로그인이 되어 있지 않다면 OneStore 로그인 팝업(예/아니요)을 자동으로 표시합니다.
 로그인 팝업에서 `예`를 선택하게 되면 OneStore 로그인 화면으로 연결 되며 `아니오`를 선택하게 되면 `INAPP_ONESTORE_NEED_LOGIN(202)` 에러를 발생시킵니다.
 
 >[참고]  
@@ -173,7 +173,7 @@ SDK에서 초기화 시 사용할 스토어(마켓)를 설정합니다.
 InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String value
 ```
 
-### App ID 설정
+### App ID 등록
 IAP Android SDK를 사용하기 위한 서비스 ID 입니다.
 App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
 
@@ -190,7 +190,7 @@ App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
 InAppPurchases.InAppPurchase.registerAppId(1234567);// appId : long integer
 ```
 
-### 유저(사용자 식별자) 등록
+### 유저 등록
 
 인증을 완료한 사용자 ID를 등록합니다.  
 개발사에서 정의한 사용자 식별키이며, 아이템이 지급되는 대상입니다.
@@ -204,14 +204,28 @@ InAppPurchases.InAppPurchase.registerUserId(userId); // userId : String value
  
 ### 결제 요청
 
-클라이언트에서 아이템 구매를 요청합니다. 결제 요청에 대한 응답은 PurchaseCallback 을 통해 전달 받게 되고, 결제가 성공적으로 완료되면 결과값을 서버에 전달하여 결제내역을 (Consume) 해야 합니다.
+클라이언트에서 아이템 구매를 요청합니다.  
+결제 요청에 대한 응답은 PurchaseCallback 을 통해 전달 받게 됩니다.  
+결제가 성공적으로 완료되면 결과값을 서버에 전달하여 [`결제 소비`](/Mobile%20Service/IAP/ko/android-sdk-guide/#_12)를 진행해야 합니다.
 
 > [참고]  
-> 인앱 결제는 결제요청과 결제소비 2단계로 진행됩니다.   
-> 결제소비까지 완료한 이후에는 사용자의 애플리케이션에서 아이템을 지급하면 됩니다.  
+> 인앱 결제는 결제요청과 결제소비 2단계로 진행됩니다.  
 > [IAP 결제 흐름도](/Mobile%20Service/IAP/ko/Overview/#iap)  
 
+**[Method]**
+```java
+public void requestPurchase(Activity activity, long itemId, PurchaseCallback callback);
+```
 
+**[Parameter]**
+
+|Type|Name|Description|
+|---|---|---|
+| Activity | activty | 어플리케이션의 현재 액티비티 |
+| Long | itemId | Web Console에서 발급된 아이템 아이디 |
+| PurchaseCallback | callback | API 요청 결과를 전달 하는 콜백 |
+
+**[Example Code]**  
 ```java
 InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback() {
 
@@ -225,16 +239,6 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
        }
 });
 ```
-
-**[Method]**
-
-|용어|설명|
-| ----- |  --- |
-| Syntax | public void requestPurchase(Activity activity, long itemId, String currency, float price, PurchaseCallback callback) ||
-| Parameters |  activity [in] 어플리케이션의 현재 액티비티 |
-| Parameters | itemId [in] Web Console [Item]에서 발급된 ID |
-| Parameters | callback [in] API 요청 결과를 전달 하는 콜백 |
-| Return Value |  void |
 
 **[Response Example]**
 
@@ -252,7 +256,19 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 
 유저의 소비(Consume) 되지 않은 결제내역을 조회합니다.
 
-**[Request Example]**
+**[Method]**
+```java
+public void queryPurchases(Activity activity, PurchaseListCallback callback);
+```
+
+**[Parameter]**
+
+|Type|Name|Description|
+|---|---|---|
+| Activity | activty | 어플리케이션의 현재 액티비티 |
+| PurchaseCallback | callback | API 요청 결과를 전달 하는 콜백 |
+
+**[Example Code]**
 
 ```java
 InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
@@ -266,15 +282,6 @@ InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
            // Success! Include your code to handle the results here }
 });
 ```
-
-**[Method]**
-
-|용어|설명|
-|--------|--------|
-| Syntax |public void queryPurchases(Activity activity, PurchaseListCallback callback)|
-| Parameters | activity [in] 어플리케이션의 현재 액티비티 |
-| Parameter | callback [in] API 요청 결과를 전달 하는 콜백 |
-| Return Value | void |
 
 **[Response Example]**
 
@@ -304,7 +311,19 @@ InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
 
 구매 가능한 모든 아이템 내역을 조회합니다.
 
-**[Example Code]** 
+**[Method]**
+```java
+public void queryItems(Activity activity, PurchaseListCallback callback);
+```
+
+**[Parameter]**
+
+|Type|Name|Description|
+|---|---|---|
+| Activity | activty | 어플리케이션의 현재 액티비티 |
+| PurchaseCallback | callback | API 요청 결과를 전달 하는 콜백 |
+
+**[Example Code]**
 
 ```java
 InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCallback() {
@@ -319,16 +338,8 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
 });
 ```
 
-**[Method]**
-
-|용어|설명|
-| ----- | --- |
-| Syntax | public void queryItems(Activity activity, ItemListCallback callback) |
-| Parameters | activity [in] 어플리케이션의 현재 액티비티 |
-| Parameter | callback [in] API 요청 결과를 전달 하는 콜백 |
-| Return Value | void |
-
 **[Response Example]**
+
 ```json
 [
     {
@@ -353,7 +364,19 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
 
 미처리된 결제건(IAP 서버 검증 실패)들에 대해 일괄로 재처리 작업을 진행합니다.
 
-**[Request Example]**
+**[Method]**
+```java
+public void processesIncompletePurchases(Activity activity, IncompletePurchasesCallback callback);
+```
+
+**[Parameter]**
+
+|Type|Name|Description|
+|---|---|---|
+| Activity | activty | 어플리케이션의 현재 액티비티 |
+| IncompletePurchasesCallback | callback | API 요청 결과를 전달 하는 콜백 |
+
+**[Example Code]**
 
 ```java
 InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPurchase.IncompletePurchasesCallback() {
@@ -367,16 +390,6 @@ InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPur
            // Success! Include your code to handle the results here }
 });
 ```
-
-**[Method]**
-
-|용어|설명|
-|--------|--------|
-| Syntax |public void processesIncompletePurchases(Activity activity, IncompletePurchasesCallback callback)|
-| Parameters | activity [in] 어플리케이션의 현재 액티비티 |
-| Parameter | callback [in] API 요청 결과를 전달 하는 콜백 |
-| Return Value | void |
-
 **[Response Example]**
 
 ```json
@@ -413,7 +426,7 @@ InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPur
 ```
 
 ### 결제 소비
-사용자 애플리케이션 서버는 아이템을 지급하기 전 IAP 서버에게 결제를 소비할 것을 알려야 합니다.  
+사용자 애플리케이션 서버는 아이템을 지급하기 전 IAP 서버에게 결제를 소비할 것을 알려야 합니다.
 결제 소비를 위한 API는 아래를 참고 해주세요.
 
 > [참고]  
@@ -421,7 +434,7 @@ InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPur
 
 ## 에러 처리
 
-### InAppPurchaseException.java
+### InAppPurchaseException
 API 호출에 대한 에러 정보를 전달 합니다.
 만약 InAppPurchaseException이 `null`이라면 요청 성공으로 처리합니다.
 
