@@ -17,7 +17,7 @@ IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개
 jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다.  
 아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.  
 
-### Gradle Repository
+### 1. Gradle Repository
 
 ```
 buildscript {
@@ -36,7 +36,7 @@ IAP Android SDK에서 공통으로 사용되는 권한은다음과 같습니다.
 
 <br/>
 
-### 의존성 추가하기
+### 2. 의존성 추가하기
 #### Google Play Store 
 ```
 dependencies {
@@ -75,9 +75,7 @@ dependencies {
 * [인앱 SDK v15.xx.xx 버전 미만 적용 상품 지원 종료 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31245&noticeNo=789&pageFlag=List&searchValue=)  
 * [구버전 IAP SDK 적용 신규 앱 등록 불가 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31224&noticeNo=788&pageFlag=List&searchValue=)  
 
-<br/>
-
-### SDK V17
+### 1. SDK V17
 #### One Store 업데이트 및 설치 유도하기 
 만약 SDK의 에러코드 `INAPP_ONESTORE_NEED_UPDATE(201)`이 발생한다면 다음의 코드로 설치를 유도할 수 있습니다.
 ```java
@@ -106,9 +104,7 @@ SDK에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 
 > [참고]   
 > [OneStore - 인앱결제 적용을 위한 사전준비 > 7. Android Manifest 파일 설정](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_04_preparation#HAndroidManifestD30CC77CC124C815) 
 
-<br/>
-
-### SDK V16
+### 2. SDK V16
 결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
 ```
 <application>
@@ -126,11 +122,11 @@ IAP Android SDK에서는 Google Play Store, One Store에 대한 샘플 애플리
 > 테스트 전 유의 사항   
 > 결제 테스트에 앞서 [콘솔 사용 가이드](/Mobile Service/IAP/ko/console-guide/)를 숙지 하시어 콘솔 환경 구성을 먼저 진행 하시기 바랍니다.
 
-### Import Project
+### 1. Import Project
 
 배포된 SDK 패키지 내의 `/sample` 디렉토리를 Android Studio에서 `Import Project`를 합니다.
 
-### AndroidManifest.xml 정보 설정
+### 2. AndroidManifest.xml 정보 설정
 
 IAP Web Console에 등록한 `Store APP ID`를 샘플 애플리케이션의 applicationId와 동일하게 설정 합니다.
 ```
@@ -147,7 +143,7 @@ android {
 
 
 ## API Reference
-### 로그정보 활성화
+### 1. 로그정보 활성화
 디버그를 위한 로그 정보에 대한 노출을 활성화 합니다.
 
 **[Example Code]**  
@@ -158,7 +154,7 @@ InAppPurchases.InAppPurchase.setDebugMode(true);
 
 <br/>
 
-### 스토어(마켓) 설정
+### 2. 스토어(마켓) 설정
 SDK에서 초기화 시 사용할 스토어(마켓)를 설정합니다.  
 
 |MarketId|Store|  
@@ -182,7 +178,7 @@ InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String va
 
 <br/>
 
-### App ID 등록
+### 3. App ID 등록
 IAP Android SDK를 사용하기 위한 서비스 ID 입니다.
 App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
 
@@ -199,7 +195,7 @@ App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
 InAppPurchases.InAppPurchase.registerAppId(1234567);// appId : long integer
 ```
 <br/>
-### 유저 등록
+### 4. 유저 등록
 
 인증을 완료한 사용자 ID를 등록합니다.
 개발사에서 정의한 사용자 식별키이며, 아이템이 지급되는 대상입니다.
@@ -212,7 +208,7 @@ InAppPurchases.InAppPurchase.registerUserId(userId); // userId : String value
 
 <br/>
 
-### 결제 요청
+### 5. 결제 요청
 
 클라이언트에서 아이템 구매를 요청합니다.
 결제 요청에 대한 응답은 PurchaseCallback 을 통해 전달 받게 됩니다.
@@ -264,7 +260,7 @@ InAppPurchases.InAppPurchase.requestPurchase(this, 1000001, new PurchaseCallback
 
 <br/>
 
-### 미소비 결제 내역 조회
+### 6. 미소비 결제 내역 조회
 
 유저의 소비(Consume) 되지 않은 결제내역을 조회합니다.
 
@@ -321,7 +317,7 @@ InAppPurchases.InAppPurchase.queryPurchases(this, new PurchaseListCallback() {
 
 <br/>
 
-### 구매 가능한 아이템 내역 조회
+### 7. 구매 가능한 아이템 내역 조회
 
 구매 가능한 모든 아이템 내역을 조회합니다.
 
@@ -376,7 +372,7 @@ InAppPurchases.InAppPurchase.queryItems(activity, new InAppPurchase.ItemListCall
 
 <br/>
 
-### 미처리 결제건 일괄 재처리
+### 8. 미처리 결제건 일괄 재처리
 
 미처리된 결제건(IAP 서버 검증 실패)들에 대해 일괄로 재처리 작업을 진행합니다.
 
@@ -443,7 +439,7 @@ InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPur
 
 <br/>
 
-### 결제 소비
+### 9. 결제 소비
 사용자 애플리케이션 서버는 아이템을 지급하기 전 IAP 서버에게 결제를 소비할 것을 알려야 합니다.
 결제 소비를 위한 API는 아래를 참고 해주세요.
 
@@ -452,7 +448,7 @@ InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPur
 
 ## 에러 처리
 
-### InAppPurchaseException
+### 1. InAppPurchaseException
 API 호출에 대한 에러 정보를 전달 합니다.
 만약 InAppPurchaseException이 `null`이 아니라면 실패 상황으로 처리합니다.
 
