@@ -213,7 +213,7 @@ InAppPurchases.InAppPurchase.registerUserId(userId); // userId : String value
 
 클라이언트에서 아이템 구매를 요청합니다.
 결제 요청에 대한 응답은 PurchaseCallback 을 통해 전달 받게 됩니다.
-결제가 성공적으로 완료되면 결과값을 서버에 전달하여 [9.결제 소비](Mobile%20Service/IAP/ko/android-sdk-guide/#9)를 진행해야 합니다.
+결제가 성공적으로 완료되면 결과값을 서버에 전달하여 [9.결제 소비](/Mobile%20Service/IAP/ko/android-sdk-guide/#9)를 진행해야 합니다.
 
 > [참고]  
 > 인앱 결제는 결제요청과 결제소비 2단계로 진행됩니다.  
