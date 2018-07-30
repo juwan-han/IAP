@@ -6,7 +6,7 @@
 
 사용하는 오픈 소스 정보는 다음과 같습니다.
 
-|이름|참조|버전|라이선스|
+|Name|Reference|Version|License|
 |---|---|---|---|
 |okhttp|http://square.github.io/okhttp/|1.5.4|Apache License 2.0|
 |gson|https://code.google.com/p/google-gson/|2.2.4|Apache License 2.0|
@@ -29,7 +29,7 @@ buildscript {
 
 IAP Android SDK에서 공통으로 사용되는 권한은다음과 같습니다.  
 
-|권한|설명|
+|Permission|Description|
 |---|---|
 |android.permission.INTERNET|응용 프로그램이 네트워크 소켓을 열도록 허용합니다.|
 |com.android.vending.BILLING|애플리케이션이 인앱 결제 권한을 부여합니다.|
@@ -49,7 +49,7 @@ dependencies {
 ```
 추가되는 권한은 다음과 같습니다.
 
-|권한|설명|
+|Permission|Description|
 |---|---|
 |android.permission.ACCESS_NETWORK_STATE|응용 프로그램이 네트워크에 대한 정보에 액세스 할 수있게합니다.|
 
@@ -83,8 +83,7 @@ startActivity(intent);
 ```
 
 #### One Store 로그인 요청하기
-Toast IAP SDK에서는 내부적으로 로그인 상태를 확인합니다.  
-따라서, 별도의 로그인 처리를 하실 필요가 없습니다.  
+Toast IAP SDK에서는 내부적으로 로그인 상태를 확인하기 떄문에 별도의 로그인 처리를 하실 필요가 없습니다.
 만약 사용중 로그인이 되어 있지 않다면 OneStore 로그인 팝업(예/아니요)을 자동으로 표시합니다.
 로그인 팝업에서 `예`를 선택하게 되면 OneStore 로그인 화면으로 연결 되며 `아니오`를 선택하게 되면 `INAPP_ONESTORE_NEED_LOGIN(202)` 에러를 발생시킵니다.
 
@@ -436,7 +435,7 @@ InAppPurchases.InAppPurchase.processesIncompletePurchases(activity, new InAppPur
 
 ### InAppPurchaseException
 API 호출에 대한 에러 정보를 전달 합니다.
-만약 InAppPurchaseException이 `null`이라면 요청 성공으로 처리합니다.
+만약 InAppPurchaseException이 `null`이 아니라면 실패 상황으로 처리합니다.
 
 |Method Name|Return type|Description|
 |---|---|---|
