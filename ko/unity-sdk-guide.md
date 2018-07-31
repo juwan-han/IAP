@@ -36,13 +36,6 @@ Step3 : 모든 Assets을 Import 합니다.
 ![[그림 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_14.png)
 <center>[그림 4 Setting for Android]</center>
 
-```
-사용하는 마켓에 따라 AndroidManifest.xml을 수정하여 사용합니다.
-```
-
-![[그림 5 AndroidManifest-iap-template.xml]](http://static.toastoven.net/prod_iap/iap_u_02.png)
-<center>[그림 5 AndroidManifest-iap-template.xml]</center>
-
 > [참고]  
 > 자세한 Android 빌드 환경설정은 Android 프로젝트 설정을 참조합니다.
 

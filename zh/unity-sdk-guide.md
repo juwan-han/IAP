@@ -33,15 +33,8 @@ Step3 : Import all assets
 4. [Minimum API Level] IAP Unity Plugin supports Android API Level 10 and beyond
 ```
 
-![[Figure 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_u_02.png)
+![[Figure 4 Setting for Android]](http://static.toastoven.net/prod_iap/iap_14.png)
 <center>[Figure. 4 Setting for Android]</center>
-
-```
-Modify your AndroidManifest.xml depending on market type.
-```
-
-![[Figure 5 AndroidManifest-iap-template.xml]](http://static.toastoven.net/prod_iap/iap_15.png)
-<center>[Figure. 5 AndroidManifest-iap-template.xml]</center>
 
 > [Reference]
 > Refer to Android project setting for Android Build Environment Setting.
