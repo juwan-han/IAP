@@ -103,7 +103,7 @@ IAP SDK 사용을 위해서는 어플리케이션에 아래의 Framework를 추�
 
 ## API Reference
 
-### 1\. Import TIAPurchase.h
+### 1\. 헤더 파일 추가
 
 어플리케이션에 SDK 사용을 위한 준비가 완료되면, IAP SDK의 Header File을 아래와 같이 추가합니다.
 
@@ -284,3 +284,9 @@ server.
         NSLog(@"processesIncompletePurchasesWithCompletionHandler data:%@", data);
 }];
 ```
+### 8\. 결제 소비
+사용자 애플리케이션 서버는 아이템을 지급하기 전 IAP 서버에게 결제를 소비할 것을 알려야 합니다.
+결제 소비를 위한 API는 아래를 참고 해주세요.
+
+> [참고]  
+> [Payment Consume API](/Mobile Service/IAP/ko/api-guide/#payment-consume-api)

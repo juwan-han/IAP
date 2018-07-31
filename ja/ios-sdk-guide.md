@@ -103,7 +103,7 @@ Once completed, .plist will be in the following format.
 
 ## API Reference
 
-### 1\. Import TIAPurchase.h
+### 1\. Import Header File
 
 If you are ready to use SDK in application, add header file to IAP SDK as below.
 
@@ -284,3 +284,10 @@ processes whole of unconsumed(cause of verification failure or network loss) pay
         NSLog(@"processesIncompletePurchasesWithCompletionHandler data:%@", data);
 }];
 ```
+
+### 8\. Payment Consume
+
+User application server should notify IAP server for payment consume before issuing item. Use Payment Purchase Token to check validity of the payment between user server and IAP server.
+
+> [Reference]  
+> [Payment Consume API](/Mobile Service/IAP/en/api-guide/#payment-consume-api)  

@@ -66,9 +66,9 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 
 |Store|	상품유형|
 |---|---|
-|Google Play|	관리되는 제품|
+|Google Play Store|	관리되는 제품|
 |App Store|	소모품 (consumable)|
-|T-Store (One store)|	소멸성 (consumable) 상품|
+|One Store(구 TStore)|	소멸성 (consumable) 상품|
 
 <center>[표 1] 스토어 상품 유형</center>
 
@@ -206,33 +206,6 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 ![[그림 5] Client ID 및 Client Secret 생성 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
 <center>[그림 5] Client ID 및 Client Secret 생성 5</center>
 
-### AndroidManifest.xml 설정 예시
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<!-- google iab permission -->
-<uses-permission android:name="com.android.vending.BILLING" />
-
-<application>
-        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"
-	        android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-	        android:theme="@android:style/Theme.Translucent.NoTitleBar"
-	        android:windowSoftInputMode="adjustResize|stateHidden" />
-        <meta-data android:name="com.toast.iap.config.appId" android:value="1000000" />
-        <meta-data android:name="com.toast.iap.config.market" android:value="GG" />
-</application>
-```
-
-```
-* Android : 샘플 어플리케이션의 /AndroidManifest-google-example.xml 참조  
-* Unity : 유니티 플러그인의 /Plugins/Android/AndroidManifest-iap-template.xml 참조
-```
-
 ### Google Play 연동 주의사항
 
 구글연동을 위해 주의해야 할 사항이 있습니다.    
@@ -313,61 +286,6 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 1) AID : 원스토어 개발자 센터에서 생성한 애플리케이션의 ID  
 2) In-App ID : 생성한 애플리케이션에 등록한 In-App 상품의 ID
 ```
-
-### Android 원스토어 라이브러리 추가
-
-IAP Android SDK의 다운로드 받고 원스토어 연동을 위해서는 추가적으로 아래와 같이 프로젝트에 라이브러리를 추가해야합니다.
-
-\- Download한 SDK패키지에서 /libs/tstore 폴더의 파일을 애플리케이션 프로젝트의 /libs 에 복사합니다.
-
-![[그림 9 원스토어 라이브러리의 추가]](http://static.toastoven.net/prod_iap/iap_41.png)
-<center>[그림 9 원스토어 라이브러리의 추가]</center>
-
-> [참고]  
-> Unity 프로젝트에서 Library 추가   
-> Download 한 SDK패키지에서 /libs/tstore 폴더의 파일을 /Plugins/Android/iap/libs 에 복사합니다.  
-
-### AndroidManifest.xml 설정 예시
-
-원스토어 연동을 위해서는 아래와 같이 AndroidManifest.xml 설정 정보를 추가 합니다.
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<!-- Tstore configurations -->
-<uses-permission android:name="android.permission.RECEIVE_SMS " />
-<application>
-....
-        <!-- TStore configrations -->
-        <activity android:name="com.skplanet.dodo.IapWeb" android:configChanges="orientation|screenSize|keyboardHidden|locale|layoutDirection" android:excludeFromRecents="true" android:windowSoftInputMode="stateHidden" />
-<meta-data android:name="iap:api_version" android:value="3" />
-<meta-data android:name="iap:plugin_mode" android:value="development" />
-        <activity android:name="com.nhnent.mobill.api.core.IAPActivity"/>
-        <meta-data android:name="com.toast.iap.config.appId" android:value="1000000" />
-        <meta-data android:name="com.toast.iap.config.market" android:value="TS" />
-</application>
-```
-
-```
-- Android: 샘플 어플리케이션의 /AndroidManifest-tstore-example.xml 참조  
-- Unity: 유니티 플러그인의 /Plugins/Android/AndroidManifest-iap-tstore-template.xml 참조  
-- 원스토어는 결제시 개발환경을 아래와 같이 지원합니다. AndroidManifest.xml 를 통해 설정가능합니다.  
-  * iap:plugin_mode: 개발(development), 운영(release)
-```
-
-> [참고]  
-> [원스토어 개발자 센터 개발도구](http://dev.onestore.co.kr/devpoc/reference/view/Tools)
-
-<br/>
-> [참고]  
-> 원스토어 인앱 SDK 업데이트   
-> 안드로이드 6.0이 공개됨에 따라 원스토어에서는 최신 인앱 SDK (v.15.01.00) 을 적용해야함을 강력권고 하고있습니다. 
-> OneStore 개발자 센터를 통해 앱을 등록하기 위해서는 최신 인앱 SDK을 적용해야만 앱을 등록할 수 있습니다.    
-> [원스토어 Reference](http://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?noticeId=26472)
 
 <br/>
 > [참고]  
