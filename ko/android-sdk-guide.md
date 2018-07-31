@@ -1,7 +1,7 @@
 ## Mobile Service > IAP > Android SDK 사용 가이드
 
 ## 개발환경
-* Android Studio IDE 2.3.3
+* Android Studio IDE 2.3.3 이상
 * Android SDK Version은 **2.3.3 (API Level 10)** 이상
 
 사용하는 오픈 소스 정보는 다음과 같습니다.
@@ -13,7 +13,7 @@
 
 ## Android Studio & Gradle 환경에서 사용하기
 
-IAP의 Android SDK는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다.
+`Toast IAP SDK`는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다.
 jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다.
 아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.  
 
@@ -27,7 +27,7 @@ buildscript {
 }
 ```
 
-IAP Android SDK에서 공통으로 사용되는 권한은다음과 같습니다.  
+`Toast IAP SDK`에서 공통으로 사용되는 권한은 다음과 같습니다.  
 
 |Permission|Description|
 |---|---|
@@ -43,7 +43,7 @@ dependencies {
     implementation 'com.toast.iap:iap:1.5.0'
 }
 ```
-#### SDK V17 (API V5) - 권장
+#### SDK v17 (API v5) - 권장
 ```
 dependencies {
     implementation 'com.toast.iap:iap-onestore:1.5.0'
@@ -55,7 +55,7 @@ dependencies {
 |---|---|
 |android.permission.ACCESS_NETWORK_STATE|응용 프로그램이 네트워크에 대한 정보에 액세스 할 수있게합니다.|
 
-#### SDK V16 (API V4) 
+#### SDK v16 (API v4) 
 ```
 dependencies {
     implementation 'com.toast.iap:iap-tstore:1.5.0'
@@ -69,13 +69,13 @@ dependencies {
 > SDK의 Version의 변경이력은 패키지내의 RELEASE-NOTES.md 를 참조해주세요.
 
 ## One Store 설정 정보 
-2018년 6월 12일(화)부터 구버전 SDK V16 이하가 적용된 신규 앱의 등록이 불가능합니다.  
-신규 앱을 작업하실 경우 SDK V17을 사용하시기 바랍니다.  
+2018년 6월 12일(화)부터 구버전 SDK v16 (API v4) 이하가 적용된 신규 앱의 등록이 불가능합니다.  
+신규 앱을 작업하실 경우 SDK v17 (API v5)을 사용하시기 바랍니다.  
 
 * [인앱 SDK v15.xx.xx 버전 미만 적용 상품 지원 종료 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31245&noticeNo=789&pageFlag=List&searchValue=)  
 * [구버전 IAP SDK 적용 신규 앱 등록 불가 안내](https://dev.onestore.co.kr/devpoc/support/news/noticeView.omp?page.no=1&orderValue=&orderType=&noticeId=31224&noticeNo=788&pageFlag=List&searchValue=)  
 
-### 1. SDK V17
+### 1. SDK v17 (API v5)
 #### One Store 업데이트 및 설치 유도하기 
 만약 SDK의 에러코드 `INAPP_ONESTORE_NEED_UPDATE(201)`이 발생한다면 다음의 코드로 설치를 유도할 수 있습니다.
 ```java
@@ -85,15 +85,15 @@ startActivity(intent);
 ```
 
 #### One Store 로그인 요청하기
-Toast IAP SDK에서는 내부적으로 로그인 상태를 확인하기 떄문에 별도의 로그인 처리를 하실 필요가 없습니다.
-만약 사용중 로그인이 되어 있지 않다면 OneStore 로그인 팝업(예/아니요)을 자동으로 표시합니다.
+`Toast IAP SDK`에서는 내부적으로 로그인 상태를 확인하기 때문에 별도로 로그인 처리를 하실 필요가 없습니다.
+만약 사용중 로그인이 되어 있지 않다면 OneStore 로그인 팝업(예/아니요)이 나타납니다.
 로그인 팝업에서 `예`를 선택하게 되면 OneStore 로그인 화면으로 연결 되며 `아니오`를 선택하게 되면 `INAPP_ONESTORE_NEED_LOGIN(202)` 에러를 발생시킵니다.
 
 >[참고]  
 >[One Store 로그인 요청하기](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_05_implementation#HC6D0C2A4D1A0C5B4B85CADF8C778C694CCADD558AE30-getLoginIntent2829)
 
 #### 팝업 결제 화면용 사용
-SDK에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요. 
+팝업 형태의 결제화면을 사용하실 경우 `AndroidMenifest.xml`에 아래 설정을 추가해주세요. 
 ```xml
 <application>
     <meta-data 
@@ -104,8 +104,8 @@ SDK에서 팝업 형태의 결제화면을 사용하실 경우 아래 설정을 
 > [참고]   
 > [OneStore - 인앱결제 적용을 위한 사전준비 > 7. Android Manifest 파일 설정](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_04_preparation#HAndroidManifestD30CC77CC124C815) 
 
-### 2. SDK V16
-결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가로 입력해주세요.  
+### 2. SDK v16 (API v4)
+결제 테스트의 경우 아래의 설정을 `AndroidMenifest.xml`에 추가해주세요.  
 ```
 <application>
     <meta-data 
@@ -147,6 +147,17 @@ android {
 ### 1. 로그정보 활성화
 디버그를 위한 로그 정보에 대한 노출을 활성화 합니다.
 
+**[Method]**
+```java
+public void setDebugMode(boolean isDebuggable);
+```
+
+**[Parameter]**
+
+|Type|Name|Description|
+|---|---|---|
+| Boolean | isDebuggable | 디버깅 로그 노출 여부|
+
 **[Example Code]**  
 
 ```java
@@ -158,11 +169,25 @@ InAppPurchases.InAppPurchase.setDebugMode(true);
 ### 2. 스토어(마켓) 설정
 SDK에서 초기화 시 사용할 스토어(마켓)를 설정합니다.  
 
+**[스토어 별 마켓 아이디]**
+
 |MarketId|Store|  
 |---|---|  
 |GG|Google Play Store|  
 |TS|One Store SDK V16 (API V4) - 구 TStore|  
 |ONESTORE|One Store SDK V17 (API V5)|  
+
+**[Method]**
+
+```java
+public boolean registerMarketId(String marketId);
+```
+
+**[Parameter]**
+
+|Type|Name|Description|
+|---|---|---|
+| String | marketId | 마켓 아이디 |
 
 **[Example Code]**  
 
@@ -183,6 +208,18 @@ InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String va
 IAP Android SDK를 사용하기 위한 서비스 ID 입니다.
 App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
 
+**[Method]**
+
+```java
+public boolean registerAppId(long appId);
+```
+
+**[Parameter]**
+
+|Type|Name|Description|
+|---|---|---|
+| Long | appId | TOAST 콘솔의 IAP Service에서 발급한 App ID |
+
 **[Example Code]**  
 
 `AndroidMenifest.xml`파일에서 설정 시 :
@@ -196,10 +233,23 @@ App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
 InAppPurchases.InAppPurchase.registerAppId(1234567);// appId : long integer
 ```
 <br/>
+
 ### 4. 유저 등록
 
-인증을 완료한 사용자 ID를 등록합니다.
+인증을 완료한 사용자 ID를 등록합니다.  
 개발사에서 정의한 사용자 식별키이며, 아이템이 지급되는 대상입니다.
+
+**[Method]**
+
+```java
+public boolean registerUserId(String userId);
+```
+
+**[Parameter]**
+
+|Type|Name|Description|
+|---|---|---|
+| String | userId | 사용자 아이디 식별자 |
 
 **[Example Code]**  
 
