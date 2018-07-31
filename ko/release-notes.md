@@ -2,7 +2,7 @@
 
 ### 2018.07.31
 #### 기능추가/개선/변경
-* [SDK][[Unity-1.5.2](/Download/#common-iap)]
+* [SDK][[Unity-1.6.0](/Download/#common-iap)]
     * [AOS-1.5.0](/Download/#common-iap), [iOS-1.5.6](/Download/#common-iap) 적용
     
 #### 기능추가
