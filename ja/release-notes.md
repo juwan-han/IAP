@@ -1,5 +1,17 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.08.28
+#### 기능개선/변경
+* [CONSOLE] 결제상태 변경 팝업 미번역 문구 언어팩 적용
+* [CONSOLE] Transaction 탭 Item 조회 조건 개선
+    * 아이템명 선택 창 추가
+* [CONSOLE] IAP 콘솔과 GameBase 결제내역 조회 화면 문구 통일
+* [CONSOLE] App 화면, Google 앱 정보 수정 시 마켓 검증 추가
+    * Google 앱 정보 수정 시, 기 등록되어 있는 아이템 마켓에 정상 등록 되어 있는 지 검증 진행
+    * 검증 실패인 경우 확인 경고 팝업 (앱 정보는 수정됨)
+* [API] GameBase 결제내역 조회 API 이슈 개선
+    * 삭제된 아이템의 결제내역이 조회 안 되던 문제 해결
+
 ### 2018.07.31
 #### 기능추가/개선/변경
 * [SDK][[Unity-1.6.0](/Download/#common-iap)]
