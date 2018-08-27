@@ -16,7 +16,7 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 [그림 2-1]의 'URL & Appkey'를 클릭하여 AppKey를 확인하거나 클립보드에 복사합니다.
 ```
 
-![[그림 2-1 URL & Appkey 메뉴]](http://static.toastoven.net/prod_iap/iap_n_53.png)
+![[그림 2-1 URL & Appkey 메뉴]](http://static.toastoven.net/prod_iap/iap_new_05.png)
 <center>[그림 2-1 URL & Appkey 메뉴]</center>
 
 
@@ -55,7 +55,7 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 6. [추가] 버튼을 클릭하고, 등록한 [ITEM ID]를 확인합니다.  
 ```
 
-![[그림 4 아이템 등록]](http://static.toastoven.net/prod_iap/iap_n_33.png)
+![[그림 4 아이템 등록]](http://static.toastoven.net/prod_iap/iap_new_04.png)
 <center>[그림 4 아이템 등록]</center>
 
 ## 스토어 상품유형
@@ -68,7 +68,8 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 |---|---|
 |Google Play Store|	관리되는 제품|
 |App Store|	소모품 (consumable)|
-|One Store(구 TStore)|	소멸성 (consumable) 상품|
+|One Store v17(ONESTORE)|	소멸성 (consumable) 상품|
+|One Store v16(TS)|	소멸성 (consumable) 상품|
 
 <center>[표 1] 스토어 상품 유형</center>
 
@@ -85,7 +86,7 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 5. [검색] 버튼을 클릭합니다.  
 ```
 
-![[그림 5 결제 정보 조회]](http://static.toastoven.net/prod_iap/iap_n_44.png)
+![[그림 5 결제 정보 조회]](http://static.toastoven.net/prod_iap/iap_new_01.png)
 <center>[그림 5 결제 정보 조회]</center>
 
 > [참고]
@@ -114,7 +115,7 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 
 변경이 가능한 결제상태는 아래와 같이 상태 컬럼 우측에 [수정] 버튼이 노출됩니다.
 ```
-![[그림 6 결제 상태 수정]](http://static.toastoven.net/prod_iap/iap_45.png)
+![[그림 6 결제 상태 수정]](http://static.toastoven.net/prod_iap/iap_new_03.png)
 <center>[그림 6 결제 상태 수정]</center>
  
 ![[그림 7 결제 상태 수정]](http://static.toastoven.net/prod_iap/iap_46.PNG)
@@ -145,8 +146,8 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 
 | 필드 | 설명                                             |
 | ---------------------------------- | ---------------------------------------------- |
-| Market ID                          | 스토어 리스트에서 GG 선택                                 |
-| Market App ID                      | Google Play에 등록한 애플리케이션의 패키지명                  |
+| Store ID                          | 스토어 리스트에서 GG 선택                                 |
+| Store App ID                      | Google Play에 등록한 애플리케이션의 패키지명                  |
 | Google In App Purchase License Key | Google Play에 등록된 애플리케이션의 Public KEY(RSA)       |
 | Google API Client ID               | Google API Project의 OAuth Client ID            |
 | Google API Client Secret           | Google API Project의 OAuth Client Secret        |
@@ -157,7 +158,7 @@ IAP 서비스를 사용하기 위해서는 Console (https://toast.com/console)�
 | 필드        | 설명                              |
 | -------------- | ------------------------------- |
 | Item Name      | 아이템에 대한 제목 또는 설명                |
-| Market Item ID | Google Play 개발자 콘솔에 등록한 인앱상품 ID |
+| Store Item ID | Google Play 개발자 콘솔에 등록한 인앱상품 ID |
 
 <center>[표 2] Google Play 스토어 연동을 위한 아이템 등록 필드</center>
 
@@ -246,7 +247,7 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 <center>[그림 8] 인앱상품 ID 확인</center>
 
 ```
-4. 'Google Play Developer Console' 인앱상품에서 Market Item ID와 일치하는 상품이 등록이 되어있어야 합니다.  
+4. 'Google Play Developer Console' 인앱상품에서 Store Item ID와 일치하는 상품이 등록이 되어있어야 합니다.  
   - https://play.google.com/apps/publish 접속
   - 좌측 [인앱 상품]메뉴 접근  
   - 인앱 상품의 ID 확인
@@ -263,21 +264,50 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 > 2016년 6월 1일 이후로는 네이버 앱스토어는 원스토어로 양도 되었습니다.
 > [네이버앱스토어 개발자센터 공식카페](http://cafe.naver.com/naverappdev/10658)
 
-### 원스토어 연동 정보
+> [참고 2]
+> 2018년 6월 12일(화)부터 구버전 SDK v16 (API v4) 이하가 적용된 신규 앱의 등록이 불가능합니다. 신규 앱을 작업하실 경우 SDK v17 (API v5)을 사용하시기 바랍니다.  
+#### 1. 인앱 SDK v17
 
-[표 3] 원스토어 연동을 위한 앱 등록 필드
+[표 3] 원스토어 v17 연동을 위한 앱 등록 필드
 
 | 필드         | 설명                             |
 | ------------- | ------------------------------ |
-| Market ID     | 스토어 리스트에서 TS 선택                 |
-| Market App ID | 스토어에 등록한 AID (Application ID) |
+| Store ID     | 스토어 리스트에서 ONE Store v17 선택|
+| App Name      | IAP Console에서 사용할 이름|
+| ONE STORE Client App ID | 스토어에 등록한 ClientID |
+| ONE Store Client Secret | 스토어 Oauth 인증 정보 중 Client Secret |
+| ONE Store License Key | 스토어 Oauth 인증 정보 중 License Key|
 
-[표 4] 원스토어 연동을 위한 아이템 등록 필드
+원스토어 개발자 센터에서 Client Secret과 License Key를 발급받습니다.
+
+Apps>앱 선택>In-App정보>인증 및 라이선스
+
+[참고 그림]
+
+![원스토어 인증 및 라이선스 확인](http://static.toastoven.net/prod_iap/iap_52.PNG)
+<center> 원스토어 인증 및 라이선스 확인</center>
+
+[표 4] 원스토어 v17 연동을 위한 아이템 등록 필드(v16과 동일)
 
 | 필드        | 설명                      |
 | -------------- | ----------------------- |
 | Item Name      | 아이템에 대한 제목 또는 설명        |
-| Market Item ID | 원스토어에 등록한 In-App 상품의 ID |
+| Store Item ID | 원스토어에 등록한 In-App 상품의 ID |
+
+#### 2. 인앱 SDK v16 
+[표 4] 원스토어 연동을 위한 앱 등록 필드
+
+| 필드         | 설명                             |
+| ------------- | ------------------------------ |
+| Store ID     | 스토어 리스트에서 ONE Store v16 선택                 |
+| Store App ID | 스토어에 등록한 AID (Application ID) |
+
+[표 5] 원스토어 연동을 위한 아이템 등록 필드(v17과 동일)
+
+| 필드        | 설명                      |
+| -------------- | ----------------------- |
+| Item Name      | 아이템에 대한 제목 또는 설명        |
+| Store Item ID | 원스토어에 등록한 In-App 상품의 ID |
 
 ### 원스토어 개발자 센터에서 AID와 In-App ID 발급
 
@@ -297,13 +327,13 @@ Google Play 개발자 콘솔과 동일한 계정으로 Google API 콘솔에 프�
 
 | 필드         | 설명                          |
 | ------------- | --------------------------- |
-| Market ID     | 스토어 리스트에서 AS 선택              |
-| Market App ID | 앱스토어에 등록한 애플리케이션의 Bundle Id |
+| Store ID     | 스토어 리스트에서 AS 선택              |
+| Store App ID | 앱스토어에 등록한 애플리케이션의 Bundle Id |
 
 | Web Console <br/> 아이템 등록 필드        | 설명               |
 | -------------- | ---------------- |
 | Item Name      | 아이템에 대한 제목 또는 설명 |
-| Market Item ID | 앱스토어 등록한 제품 ID   |
+| Store Item ID | 앱스토어 등록한 제품 ID   |
 
 ### 앱스토어 개발자 센터에서 Bundle Id 및 In-App 제품ID 확인
 
