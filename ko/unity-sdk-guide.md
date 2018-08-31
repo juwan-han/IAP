@@ -455,6 +455,73 @@ InAppPurchase.AsyncProcessesIncompletePurchases((Result result, object data) => 
 }]
 ```
 
+### public class InAppPurchase.iOS
+
+iOS에 특화된 일부 기능을 위한 Method를 제공합니다.
+
+[Method Summary]
+
+| 이름                               | Return Value | 파라미터                           |
+| --------------------------------- | ------------ | -------------------------------- |
+| SetPromotionCallback              | Result       | OnResponsePurchase callback      |
+
+[SetPromotionCallback]
+
+|용어|설명|
+| ----- | ----- |
+| Description | 프로모션 결제 응답을 위한 콜백을 등록합니다. |
+| Syntax | public static void SetPromotionCallback(OnResponsePurchase callback) |
+| Return Value | void |
+
+> (주의) iOS 프로모션 기능 사용을 원한다면, IAP Unity 플러그인 초기화 이전에 콜백을 등록해야합니다.
+
+[Example Code]
+```csharp
+// TODO iOS 프로모션 기능 사용을 원한다면, IAP Unity 플러그인 초기화 이전에 콜백을 등록해야한다. 
+InAppPurchase.iOS.SetPromotionCallback((result, data) =>
+{
+    if (!result.IsSuccessful)
+    {
+        // TODO : 에러 처리
+        PrintLog("PromotionCallback -> Failed! -> " + result.ResultCode + ":" + result.ResultString);
+        return;
+    }
+    /*
+        Examples)
+        {
+            "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA",
+            "itemSeq": 1000001,
+            "currency": "KRW",
+            "price": 1000.0
+        }
+    */
+    var json = System.Convert.ToString(data);
+    PrintLog("PromotionCallback:" + json);
+
+    // TODO : 프로모션 결과를 애플리케이션 서버에 전달하여 Consume API 를 통해 검증 이후 아이템을 지급 한다.
+});
+```
+
+[Response (JSON)]
+
+| Attribute     | Value  | Description                      |
+| ------------- | ------ | -------------------------------- |
+| itemSeq       | Long   | 아이템번호                            |
+| purchaseToken | String | 애플리케이션 서버와 IAP 서버간 결제 통지시 필요한 토큰 |
+| currency      | String | 상품의 화폐 단위                        |
+| price         | Float  | 상품의 가격                           |
+
+[Response Example]
+
+```json
+{
+    "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
+    "itemSeq": 1000001,
+    "currency": "KRW",
+    "price":1000.0
+}
+```
+
 ### public class Result
 
 API의 응답 결과를 나타냅니다.
