@@ -487,13 +487,14 @@ InAppPurchase.iOS.SetPromotionCallback((result, data) =>
         return;
     }
     /*
-        Examples)
+        Examples)    
         {
+            "paymentSeq": "2014082210002092",
             "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA",
             "itemSeq": 1000001,
             "currency": "KRW",
             "price": 1000.0
-        }
+            }
     */
     var json = System.Convert.ToString(data);
     PrintLog("PromotionCallback:" + json);
@@ -506,6 +507,7 @@ InAppPurchase.iOS.SetPromotionCallback((result, data) =>
 
 | Attribute     | Value  | Description                      |
 | ------------- | ------ | -------------------------------- |
+| paymentSeq    | String | 완료한 결제에 대한 결제번호             |
 | itemSeq       | Long   | 아이템번호                            |
 | purchaseToken | String | 애플리케이션 서버와 IAP 서버간 결제 통지시 필요한 토큰 |
 | currency      | String | 상품의 화폐 단위                        |
