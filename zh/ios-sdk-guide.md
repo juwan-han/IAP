@@ -286,8 +286,52 @@ processes whole of unconsumed(cause of verification failure or network loss) pay
 ```
 
 ### 8\. Payment Consume
-
+Request Payment
 User application server should notify IAP server for payment consume before issuing item. Use Payment Purchase Token to check validity of the payment between user server and IAP server.
 
 > [Reference]  
 > [Payment Consume API](/Mobile Service/IAP/en/api-guide/#payment-consume-api)  
+
+
+### 9\. App Store Promoting In-App Purchase
+If you use App Store promoting in-app purchase, register your delegate and use payment details.<br>
+`You must register delegate before initialize to receive payment history.`
+
+[Example Code]
+##### TIAPurchaseDelegate
+```objc
+@interface ViewController () <TIAPurchaseDelegate>
+...
+@end
+
+// Delegate registration
+[TIAPurchase setDelegate:self];
+
+// Delegate implementation
+- (void)didFinishPurchasingItemFromStore:(TIAPItem *)item
+                              paymentSeq:(NSString *)paymentSeq
+                           purchaseToken:(NSString *)purchaseToken
+                               withError:(NSError *)error {
+    
+    if (error == nil) {
+        NSLog(@"App Store promoting in-app purchase successful");
+        
+    } else {
+        NSLog(@"App Store promoting in-app purchase failed");
+    }
+}
+```
+##### TIAPItem
+
+```objc
+@interface TIAPItem : NSObject
+
+@property (nonatomic, copy, readonly) NSString *itemSeq;
+@property (nonatomic, copy, readonly) NSString *storeId;
+@property (nonatomic, copy, readonly) NSString *marketItemId;
+@property (nonatomic, copy, readonly) NSString *currency;
+@property (nonatomic, copy, readonly) NSDecimalNumber *price;
+@property (nonatomic, copy, readonly) NSString *localizedPrice;
+
+@end
+```
