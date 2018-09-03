@@ -517,10 +517,11 @@ InAppPurchase.iOS.SetPromotionCallback((result, data) =>
 
 ```json
 {
-    "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA==",
+    "paymentSeq": "2014082210002092",
+    "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA",
     "itemSeq": 1000001,
     "currency": "KRW",
-    "price":1000.0
+    "price": 1000.0
 }
 ```
 
