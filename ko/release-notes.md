@@ -1,5 +1,10 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.09.04
+* [SDK][[Unity-1.7.0](/Download/#common-iap)]
+    * [AOS-1.5.1](/Download/#common-iap), [iOS-1.6.0](/Download/#common-iap) 적용
+    * iOS 프로모션 결제 콜백 등록 API 추가
+
 ### 2018.08.28
 #### 기능개선/변경
 * [CONSOLE] 결제상태 변경 팝업 미번역 문구 언어팩 적용

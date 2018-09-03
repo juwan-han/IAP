@@ -1,5 +1,10 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.09.04
+* [SDK][[Unity-1.7.0](/Download/#common-iap)]
+    * [AOS-1.5.1](/Download/#common-iap), [iOS-1.6.0](/Download/#common-iap) 적용
+    * iOS 프로모션 결제 콜백 등록 API 추가
+
 ### 2018.08.28
 #### 기능개선/변경
 * [CONSOLE] 결제상태 변경 팝업 미번역 문구 언어팩 적용
@@ -16,11 +21,11 @@
 #### 기능추가/개선/변경
 * [SDK][[Unity-1.6.0](/Download/#common-iap)]
     * [AOS-1.5.0](/Download/#common-iap), [iOS-1.5.6](/Download/#common-iap) 적용
-
+    
 #### 기능추가
 * [SDK][[AOS-1.5.0](/Download/#common-iap)]
-    * OneStore V17 추가
-
+    * OneStore V17 추가  
+      
 #### 기능개선/변경
 * [SDK][[iOS-1.5.6](/Download/#common-iap)]
     * Release Build 시 발생하던 ModuleCache Warning 제거
@@ -41,16 +46,16 @@
 
 #### 기능추가
 * [SDK][[AOS-1.4.1](/Download/#common-iap)]
-    * 구매가능한 상품 조회시 국가별 통화기호가 포함된 가격정보 추가
+    * 구매가능한 상품 조회시 국가별 통화기호가 포함된 가격정보 추가 
         * localizedPrice
 
 
 * [SDK][[iOS-1.5.5](/Download/#common-iap)]
     * Bitcode 지원 추가
     * sdkVersion Interface 추가
-    * 구매가능한 상품 조회시 국가별 통화기호가 포함된 가격정보 추가
+    * 구매가능한 상품 조회시 국가별 통화기호가 포함된 가격정보 추가  
         * localizedPrice
-
+  
 #### 기능개선/변경
 * [SDK][[AOS-1.4.1](/Download/#common-iap)]
     * Eclipse 지원 중단
@@ -70,6 +75,7 @@
 * [SDK][[iOS-1.5.5](/Download/#common-iap)]
     * 결제 요청시 116 Error가 지속적으로 발생할 수 있었던 문제 개선
 
+
 ### 2018.05.29
 #### 기능 개선
 * [Console] 결제내역 조회 - 결제상태코드 변경 및 툴팁 노출 개선
@@ -80,7 +86,7 @@
     * 비정상적으로 중단된 결제의 재처리시 PaymentSeq가 없는 결제건의 간헐적 크래시 수정
 
 * [SDK][[Unity-1.5.10](/Download/#common-iap)]
-    * [iOS-1.5.4](/Download/#common-iap) 적용   
+    * [iOS-1.5.4](/Download/#common-iap) 적용
 
 ### 2018.05.02
 #### 기능 개선
@@ -96,7 +102,7 @@
 #### 버그 수정
 * [SDK][[iOS-1.5.3](/Download/#common-iap)]
     * Refresh Receipt 버그 수정
-    
+
 ### 2018.03.22
 #### 기능개선
 * [Console] Transaction 탭 검색기간 한 달로 변경
@@ -148,7 +154,7 @@
 * [SDK][[AOS-1.3.4](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
     * 미처리 결제건 일괄 재처리 API 호출 시 간헐적으로 발생하는 앱 크래시 현상 수정
 * [SDK][[IOS-1.4.5](/Download/#common-iap)][[Unity-1.5.4](/Download/#common-iap)] 릴리스
-    * 결제시도시 잔존하는 결제건들 처리중 발생하는 앱 크래시 현상 수정 
+    * 결제시도시 잔존하는 결제건들 처리중 발생하는 앱 크래시 현상 수정
 
 
 #### 기능 개선/변경
@@ -162,7 +168,7 @@
 
 * [SDK][[iOS-1.4.4](/Download/#common-iap)][[Unity-1.5.3](/Download/#common-iap)] 릴리스
     * 간헐적 '해당 항목은 무료로 복구됩니다.' native alert 대신 client 에러코드 116을 반환함  (network 상태가 좋지 않을때 발생 할 수 있음)
-    
+
 
 #### 기능 개선/변경
 
