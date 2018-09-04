@@ -1,4 +1,4 @@
-## Mobile Service > IAP > 릴리스 노트
+## Mobile Service > IAP > Release Notes
 
 ### 2018.09.04
 
@@ -7,9 +7,10 @@
 * [SDK][[iOS-1.6.0](/Download/#common-iap)]
     * AppStore 프로모션 결제 지원
 
+
 * [SDK][[Unity-1.7.0](/Download/#common-iap)]
     * [AOS-1.5.1](/Download/#common-iap), [iOS-1.6.0](/Download/#common-iap) 적용
-    * iOS 프로모션 결제 콜백 등록 API 추가
+    * iOS 프로모션 결제 콜백 등록 API 추가 
 
 #### 기능개선
 
