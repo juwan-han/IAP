@@ -286,7 +286,6 @@ processes whole of unconsumed(cause of verification failure or network loss) pay
 ```
 
 ### 8\. Payment Consume
-Request Payment
 User application server should notify IAP server for payment consume before issuing item. Use Payment Purchase Token to check validity of the payment between user server and IAP server.
 
 > [Reference]  
