@@ -290,3 +290,48 @@ server.
 
 > [참고]  
 > [Payment Consume API](/Mobile Service/IAP/ko/api-guide/#payment-consume-api)
+
+
+### 9\. AppStore 프로모션 결제
+AppStore 프로모션 결제를 사용한다면 Delegate 를 등록해 결제 내역을 전달 받으세요.<br>
+`초기화 이전에 Delegate를 등록해야 정상적으로 결제 내역을 전달 받을 수 있습니다.`
+
+
+[Example Code]
+##### TIAPurchaseDelegate
+```objc
+@interface ViewController () <TIAPurchaseDelegate>
+...
+@end
+
+// Delegate 등록
+[TIAPurchase setDelegate:self];
+
+// Delegate 구현
+- (void)didFinishPurchasingItemFromStore:(TIAPItem *)item
+                              paymentSeq:(NSString *)paymentSeq
+                           purchaseToken:(NSString *)purchaseToken
+                               withError:(NSError *)error {
+    
+    if (error == nil) {
+        NSLog(@"AppStore 프로모션 결제 성공");
+        
+    } else {
+        NSLog(@"AppStore 프로모션 결제 실패");
+    }
+}
+```
+##### TIAPItem
+
+```objc
+@interface TIAPItem : NSObject
+
+@property (nonatomic, copy, readonly) NSString *itemSeq;
+@property (nonatomic, copy, readonly) NSString *storeId;
+@property (nonatomic, copy, readonly) NSString *marketItemId;
+@property (nonatomic, copy, readonly) NSString *currency;
+@property (nonatomic, copy, readonly) NSDecimalNumber *price;
+@property (nonatomic, copy, readonly) NSString *localizedPrice;
+
+@end
+```
