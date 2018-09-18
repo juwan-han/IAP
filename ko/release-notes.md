@@ -3,11 +3,10 @@
 ### 2018.09.04
 #### 기능추가
 * [SDK][[iOS-1.6.0](/Download/#mobile-service-iap)]
-	* AppStore 프로모션 결제 지원
-
+        * AppStore 프로모션 결제 지원
 * [SDK][[Unity-1.7.0](/Download/#mobile-service-iap)]
-	* [AOS-1.5.1](/Download/#mobile-service-iap), [iOS-1.6.0](/Download/#mobile-service-iap) 적용
-	* iOS 프로모션 결제 콜백 등록 API 추가 
+        * [AOS-1.5.1](/Download/#mobile-service-iap), [iOS-1.6.0](/Download/#mobile-service-iap) 적용
+        * iOS 프로모션 결제 콜백 등록 API 추가 
 
 #### 기능개선
 
