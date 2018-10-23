@@ -1,5 +1,11 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.10.23
+#### 버그수정
+
+* [SDK][[AOS-1.5.2](/Download/#mobile-service-iap)]
+	* 간헐적 크래시 수정
+	
 ### 2018.09.04
 #### 기능추가
 * [SDK][[iOS-1.6.0](/Download/#mobile-service-iap)]
