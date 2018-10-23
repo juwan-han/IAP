@@ -1,5 +1,15 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2018.10.23
+#### 버그수정
+
+* [SDK][[AOS-1.5.2](/Download/#mobile-service-iap)]
+    * 구글 빌링 서비스가 초기화 되지 않았을 때 메소드 호출 시 크래시 오류 수정
+    * Database 접근 시 크래시 오류 수정
+	
+* [SDK][[Unity-1.7.1](/Download/#mobile-service-iap)]
+	* [AOS-1.5.2](/Download/#mobile-service-iap) 적용
+		
 ### 2018.09.04
 #### 기능추가
 * [SDK][[iOS-1.6.0](/Download/#mobile-service-iap)]
