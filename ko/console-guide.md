@@ -1,5 +1,10 @@
 ## Mobile Service > IAP > 콘솔 사용 가이드
 
+> [공지]<br>
+> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br>
+> 기존 IAP SDK는 신규 기능을 개발하지 않을 예정입니다.
+
+
 IAP는 Console에서 앱과 아이템을 등록한 후 SDK를 사용할 수 있습니다.
 
 ## IAP 상품 활성화 및 Appkey 발급
