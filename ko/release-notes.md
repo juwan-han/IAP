@@ -7,6 +7,7 @@
 * 구독 결제 지원
 * 다양한 에러 처리
 * [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)
+* [console] 구독결제 기능 추가
 
 
 ### 2018.10.23
