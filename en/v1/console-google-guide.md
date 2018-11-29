@@ -31,7 +31,7 @@ Also you should set Google Real-time developer notifications for subscription.<b
 
 ### Google In App Purchase License Key
 ```
-Google Play Console > select App> (left panel) Service & API > license and In app purchase
+Google Play Console > select App> (left panel) Development tools > Services & APIs > Licensing & in-app billing
 ```
 ![](http://static.toastoven.net/prod_iap/iap_8.jpg)
 
@@ -73,6 +73,21 @@ Use the links below to generate the following information required for OAuth aut
 ![[]](http://static.toastoven.net/prod_iap/iap_g_05.png)
 
 
+
+## Google Play Addition Settings
+
+#### Google Play Android Developer API Status should be enabled.
+```
+  - https://console.developers.google.com > APIs & Services > Dashboard
+```
+![[]](http://static.toastoven.net/prod_iap/iap-console-google-console-1.png)
+<br>
+
+#### Check your project is linked in Google Play Developer Console
+```
+  - https://play.google.com/apps/publish > Settings > Developer account > API access
+```
+![[]](http://static.toastoven.net/prod_iap/iap-console-google-console-2.png)
 
 
 ## Google real-time developer notification 
