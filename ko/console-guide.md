@@ -1,9 +1,8 @@
 ## Mobile Service > IAP > 콘솔 공통 사용 가이드
 스토어에서 앱과 아이템을 등록한 후 IAP Console에서 앱과 아이템을 등록합니다.
 
-> 본 문서는 [신규 IAP SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
-<br>
-
+> [공지] 
+>본 문서는 [신규 IAP SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
 
 
 <br>
@@ -65,15 +64,11 @@ Console (https://console.toast.com)에서 [Mobile Service] > [IAP] 을  클릭�
 | Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_SUBSCRIPTION |
 | App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_SUBSCRIPTION |
 | ONEStore|	Managed product | CONSUMABLE|
-<center>[표]상품 유형</center>
-
-<br>
-<br>
 
 
 
 > [주의]  
-> 명시되지 않은 상품 유형으로 결제 진행 시의 시스템 에러 및 재산상의 피해는 책임지지 않습니다.
+> 정확하지 않은 상품 유형으로 결제 진행 시의 시스템 에러 및 재산상의 피해는 책임지지 않습니다.
 
 ## 결제 조회
 ```
@@ -88,11 +83,8 @@ Console (https://console.toast.com)에서 [Mobile Service] > [IAP] 을  클릭�
 ![[결제 조회]](http://static.toastoven.net/prod_iap/iap_new_01.png)
 
 
-<br>
-<br>
-
 > [참고] 결제 상태   
-> - Reserved : 결제 준비 완료(IAP 서버에 결제 예약 요청은 완료되었으나 검증 요청이 오지 않은 경우)   
+> - Reserved : 결제 준비 완료(IAP 서버에 결제 예약 요청은 완료되었으나 검증 요청이 오지 않은 경우)
 > - Failure : 결제 검증 실패  (스토어에서 결제를 진행했으나 결제검증에서 오류가 난 경우)
 > - Success : 결제 완료 (스토어 검증 성공 및 미소비결제내역에 포함됨) 
 > - Refund : 환불 완료 (관리자가 수동으로 환불됬다고 변경한 경우)
@@ -112,7 +104,6 @@ Console (https://console.toast.com)에서 [Mobile Service] > [IAP] 을  클릭�
 변경이 가능한 결제상태는 아래와 같이 상태 컬럼 우측에 [수정] 버튼이 노출됩니다.
 ```
 ![[결제 상태 변경]](http://static.toastoven.net/prod_iap/iap_new_03.png)
-![[결제 상태 변경시 추가 기입]](http://static.toastoven.net/prod_iap/iap_46.png)
 
 
 ## 결제 통계 조회
