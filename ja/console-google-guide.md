@@ -16,8 +16,8 @@ Notificationの設定が正しくなければ購読決済が進みません。
 | Key | Description                                             |
 | ---------------------------------- | ---------------------------------------------- |
 | Google In App Purchase License Key | Google Play Public KEY(RSA)       |
-| Google API Client ID               | Google API Project의 OAuth Client ID            |
-| Google API Client Secret           | Google API Project의 OAuth Client Secret        |
+| Google API Client ID               | Google API Project OAuth Client ID            |
+| Google API Client Secret           | Google API Project OAuth Client Secret        |
 | Refresh Token For Google OAuth     | Google Play Developer 勘定を通じて獲得したRefresh Token |
 
 
@@ -34,7 +34,7 @@ Notificationの設定が正しくなければ購読決済が進みません。
 ```
 Google Play Console > App > (左側) 開発ツール > サービス及びAPI > ライセンス及びインアップ決済
 ```
-![](http://static.toastoven.net/prod_iap/iap_8.jpg)
+![[]](http://static.toastoven.net/prod_iap/iap_8.jpg)
 
 
 ## Google API Console
@@ -54,23 +54,23 @@ Google Play Consleと同一のアカウントでGoogle API Consoleにプロジ�
 <br>
 
 ##### 1. https://console.droパス google.com/apis/credentialsでオイスクライアントを生成(ウェブアプリケーション)
-![[그림 1] Client ID 및 Client Secret 생성 1](http://static.toastoven.net/prod_iap/iap_g_01.png)
+![[그림 1] OAuth クライアント生成 1](http://static.toastoven.net/prod_iap/iap_g_01.png)
 
 
 ##### 2. 承認された redirection urlに https://developers.google.com/oauthplayground 入力
-![[그림 2] Client ID 및 Client Secret 생성 2](http://static.toastoven.net/prod_iap/iap_g_02.png)
+![[그림 2] OAuth クライアント生成 2](http://static.toastoven.net/prod_iap/iap_g_02.png)
 
 
 ##### 3. oauthplayground 設定 > Use your own OAuth credentials 使用
-![[그림 3] Client ID 및 Client Secret 생성 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
+![[그림 3] OAuth クライアント生成 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
 
 
 ##### 4. Step 1で https://www.googleapis.com/auth/androidpublisher 入力して Authorization code コード発給
-![[그림 4] Client ID 및 Client Secret 생성 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
+![[그림 4] OAuth クライアント生成 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
 
 
 ##### 5. Step 2で Exchange authorization code for tokens ボタンを押してトークン発給
-![[그림 5] Client ID 및 Client Secret 생성 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
+![[그림 5] OAuth クライアント生成 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
 
 
 ## Google Play連動注意事項
