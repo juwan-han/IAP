@@ -74,9 +74,14 @@ Use the links below to generate the following information required for OAuth aut
 
 
 
-## Google Play Addition Settings
+## Google Play Additional Settings
 
-#### Google Play Android Developer API Status should be enabled.
+After creating the OAuth credentials, proceed with the project setup by referring to the guide below.
+
+> [Reference]
+> Google Guide : https://developers.google.com/android-publisher/getting_started
+
+#### Google Play Android Developer API should be enabled.
 ```
   - https://console.developers.google.com > APIs & Services > Dashboard
 ```

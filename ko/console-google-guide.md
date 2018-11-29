@@ -77,9 +77,12 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 
 ## Google Play 연동 주의사항
 
-아래와 같은 상황이 아닌 경우 IAP 콘솔을 통해 앱,아이템 등록시 오류가 발생할 수 있습니다.
+OAuth 인증 정보 생성 후, 아래 가이드를 참고하여 프로젝트 설정을 진행합니다.
 
-### Google Play Android Developer API가 enable 상태여야 합니다.
+> [참고]
+> 구글 가이드 : https://developers.google.com/android-publisher/getting_started
+
+### Google Play Android Developer API가 enable 상태를 확인합니다.
 
 ```
   - https://console.developers.google.com > APIs & Services > Dashboard
@@ -88,7 +91,7 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 
 <br>
 
-### Google Play Developer Console에서 Linked Project를 확인해야 합니다.
+### Google Play Developer Console에서 Linked Project를 확인합니다.
  
 ```
   - https://play.google.com/apps/publish > Settings > Developer account > API access
