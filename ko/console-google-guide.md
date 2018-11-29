@@ -1,4 +1,4 @@
-## Mobile Service > IAP > Google 설정 가이드
+## Mobile Service > IAP > Google 콘솔 가이드
 
 
 Google 일반상품 및 구독상품 인앱 결제를 위해 Google Play Billing을 연동해야 합니다.<br>
