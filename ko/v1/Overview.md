@@ -6,8 +6,8 @@ In-App Purchase (이하 IAP) 서비스는 통합 인앱 결제 서비스입니�
 
 > [공지]<br>
 > 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br>
-> 기존 IAP SDK는 신규 기능을 개발하지 않을 예정입니다.<br>
-> 본 문서는 [신규 IAP SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
+> 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.<br>
+> 본 문서는 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
 
 
 ## 주요 기능
@@ -23,21 +23,24 @@ TOAST IAP는 다음과 같은 기능을 제공합니다.
 
 ## 지원 스토어
 
-IAP 에서 지원하는 스토어입니다.  
-
-[표1 IAP 지원 스토어 리스트]
-
 | 플랫폼 | 스토어 |
 | --- | --- |
 | Android | Google |
 | Android | ONEstore|
 | iOS | Apple |
 
+## 지원 상품 유형
+
+| Store | 스토어 상품유형| IAP 상품유형|    
+|---|---|---|
+| Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_SUBSCRIPTION |
+| App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_SUBSCRIPTION |
+| ONEStore|	Managed product | CONSUMABLE|
+
 ## 서비스 용어
 
 IAP 서비스에서는 다음 용어를 사용합니다.
 
-[표2 IAP 서비스 용어]
 
 | 용어 | 설명 |
 | --- | --- |
