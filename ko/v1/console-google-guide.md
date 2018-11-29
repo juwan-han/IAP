@@ -79,47 +79,23 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 
 아래와 같은 상황이 아닌 경우 IAP 콘솔을 통해 앱,아이템 등록시 오류가 발생할 수 있습니다.
 
-```
-1. 'Google API Console' 에 등록된 프로젝트가 Google Play Developer API가 활성화 되어있는지 확인합니다.
-  - https://console.developers.google.com 접속  
-  - [API 및 인증] > [API] 메뉴 접근  
-  - [모바일 API] > [Google Play Developer API] 접근  
-  - API 사용 중지 상태확인
-```
-![[그림 5] Google Developers Console 내부의 Google Play Developer API 메뉴](http://static.toastoven.net/prod_iap/iap_36_1.png)
-![[그림 6] Google Play Developer API 활성화 확인](http://static.toastoven.net/prod_iap/iap_37.png)
+### Google Play Android Developer API가 enable 상태여야 합니다.
 
+```
+  - https://console.developers.google.com > APIs & Services > Dashboard
+```
+![[]](http://static.toastoven.net/prod_iap/iap-console-google-console-1.png)
 
 <br>
 
+### Google Play Developer Console에서 Linked Project를 확인해야 합니다.
+ 
 ```
-2. 'Google Play Developer Console' 에서 프로젝트 ID와 연결되어있는지 [API 액세스] 메뉴를 통해 확인합니다.  
-  - https://play.google.com/apps/publish 접속
-  - 좌측메뉴의 [설정] > [API 액세스] 메뉴 접근  
-  - 프로젝트가 연결되어있는지 확인
+  - https://play.google.com/apps/publish > Settings > Developer account > API access
 ```
-![[그림 7] Google Play Developer API 활성화 확인](http://static.toastoven.net/prod_iap/iap_38.png)
+![[]](http://static.toastoven.net/prod_iap/iap-console-google-console-2.png)
 
 
-<br>
-
-```
-3. 'Google Play Developer Console' 의 계정 소유자가 Google Developers Console의 프로젝트에 권한이 있는 사용자 이여야 합니다.  
-  - https://console.developers.google.com 접속
-  - 좌측 [권한]메뉴 접근  
-  - 계정 확인
-```
-![[그림 8] 인앱상품 ID 확인](http://static.toastoven.net/prod_iap/iap_39.jpg)
-
-<br>
-
-
-```
-4. 'Google Play Developer Console' 인앱상품에서 Store Item ID와 일치하는 상품이 등록이 되어있어야 합니다.  
-  - https://play.google.com/apps/publish 접속
-  - 좌측 [인앱 상품]메뉴 접근  
-  - 인앱 상품의 ID 확인
-```
 
 
 ## Google real-time developer notification 설정하기
