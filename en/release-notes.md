@@ -2,12 +2,12 @@
 
 
 ### 2018.12.04
-#### 신규 SDK 릴리즈
-* iOS, Google, ONEStore 지원
-* 구독 결제 지원
-* 다양한 에러 처리
+#### New SDK Release
+* iOS, Google, ONEStore support
+* Support for subscription payments
+* Multiple Error Handling
 * [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)
-* [console] 구독결제 기능 추가
+* [console] Adding a subscription feature
 
 
 ### 2018.10.23
