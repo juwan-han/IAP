@@ -78,7 +78,7 @@ Response body에 JSON형태로 전달
 ```
 
 
-### Header
+#### Header
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
@@ -86,7 +86,7 @@ Response body에 JSON형태로 전달
 | resultCode |  Integer |  성공 및 실패의 상세코드 |
 | resultMessage |  String |  상세 메시지 |
 
-### Result
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
@@ -173,7 +173,7 @@ Response body에 JSON형태로 전달
 
 ```
 
-### Header
+#### Header
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
@@ -181,7 +181,7 @@ Response body에 JSON형태로 전달
 | resultCode |  Integer |  성공 및 실패의 상세코드 |
 | resultMessage |  String |  상세 메시지 |
 
-### Result
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
@@ -270,7 +270,6 @@ Response body에 JSON형태로 전달
 ```
 
 
-
 #### Error
 ```json
 {
@@ -281,9 +280,15 @@ Response body에 JSON형태로 전달
     }
 }
 ```
+#### Header
 
+| Property name | Value   | Description             |
+| ------------- | ------- | ----------------------- |
+| isSuccessful  | Boolean | true or false |
+| resultCode |  Integer |  성공 및 실패의 상세코드 |
+| resultMessage |  String |  상세 메시지 |
 
-### Result
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
@@ -300,7 +305,6 @@ Response body에 JSON형태로 전달
 | originalPaymentId      | String | 최초 스토어 결제 번호 |
 | purchaseTimeMillis      | long | 최근 갱신된 시간 |
 | expiryTimeMillis      | long | 만료 시간 |
-
 
 
 

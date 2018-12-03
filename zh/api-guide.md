@@ -77,7 +77,7 @@ returns a result in the response body.
 ```
 
 
-### Header
+#### Header
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
@@ -85,7 +85,7 @@ returns a result in the response body.
 | resultCode |  Integer |  0 or error code |
 | resultMessage |  String |  "SUCCESS" or errer message|
 
-### Result
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
@@ -173,7 +173,7 @@ returns a result in the response body.
 
 ```
 
-### Header
+#### Header
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
@@ -182,7 +182,7 @@ returns a result in the response body.
 | resultMessage |  String |  "SUCCESS" or errer message|
 
 
-### Result
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
@@ -283,8 +283,15 @@ returns a result in the response body.
 }
 ```
 
+#### Header
 
-### Result
+| Property name | Value   | Description             |
+| ------------- | ------- | ----------------------- |
+| isSuccessful  | Boolean | true or false |
+| resultCode |  Integer |  0 or error code |
+| resultMessage |  String |  "SUCCESS" or errer message|
+
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |

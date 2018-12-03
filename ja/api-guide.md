@@ -77,7 +77,7 @@ Response bodyにJSON形に配信
 ```
 
 
-### Header
+#### Header
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
@@ -85,7 +85,7 @@ Response bodyにJSON形に配信
 | resultCode |  Integer |  成功と失敗の詳細コード |
 | resultMessage |  String |  詳細メッセージ |
 
-### Result
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
@@ -171,14 +171,15 @@ Response bodyにJSON形に配信
 
 ```
 
-### Header
+#### Header
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
 | isSuccessful  | Boolean | true or false |
 | resultCode |  Integer |  成功と失敗の詳細コード |
 | resultMessage |  String |  詳細メッセージ |
-### Result
+
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
@@ -277,9 +278,15 @@ Response bodyにJSON形に配信
     }
 }
 ```
+#### Header
 
+| Property name | Value   | Description             |
+| ------------- | ------- | ----------------------- |
+| isSuccessful  | Boolean | true or false |
+| resultCode |  Integer |  成功と失敗の詳細コード |
+| resultMessage |  String |  詳細メッセージ |
 
-### Result
+#### Result
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
