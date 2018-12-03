@@ -1,14 +1,16 @@
 ## Mobile Service > IAP > Apple 콘솔 가이드
 
+> [공지]
+> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
+> 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.
+> 본 문서는 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
+
+
 Apple 구독 상품 결제를 사용하려면 App Store Connect에서 secret key 생성 및 Notification url 설정이 필요합니다.<br>
 Secret Key는 IAP 앱 정보에 등록합니다.<br>
 Apple 일반 상품 결제는 특별한 설정이 필요하지 않습니다.
 
-> 본 문서는 [신규 IAP SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
-<br>
-
-
-> 참고<br>
+> 참고
 > https://help.apple.com/app-store-connect/#/devf341c0f01
 
 ## shared secret key 생성하기

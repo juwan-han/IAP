@@ -1,13 +1,16 @@
 ## Mobile Service > IAP > Google 콘솔 가이드
 
 
+> [공지]
+> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
+> 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.
+> 본 문서는 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
+
 Google 일반상품 및 구독상품 인앱 결제를 위해 Google Play Billing을 연동해야 합니다.<br>
 Google Play Billing은 Google Play Console 과 Google API Console에서 생성된 값들을 사용합니다.<br>
 더불어 구글 구독상품 결제를 위해 Notification을 설정해야 합니다.<br>
 Notification 설정이 올바르지 않으면 구독 결제가 진행되지 않습니다.
 
-> 본 문서는 [신규 IAP SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
-<br>
 
 
 

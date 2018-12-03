@@ -1,12 +1,12 @@
 ## Mobile Service > IAP > 개요
 
-In-App Purchase (이하 IAP) 서비스는 통합 인앱 결제 서비스입니다.
-
-
 > [공지]
 > 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
 > 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.
 > 본 문서는 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
+
+
+In-App Purchase (이하 IAP) 서비스는 통합 인앱 결제 서비스입니다.
 
 
 ## 주요 기능
