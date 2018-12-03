@@ -1,35 +1,35 @@
 ## Mobile Service > IAP > Overview
 
 
+> [Notice]<br>
+> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> The existing IAP SDK will not be developing new features.<br>
+> This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
+
 In-App Purchase (IAP) service is an integrated in-app purchase service.
 
-## Main Features
+## Features
 
 IAP offers the following features.
 
-* Purchasing is done easily by calling API only 2 to 3 times within SDK.  
 * Various in-app purchases, such as Google Play and Apple App Store, are integrated in a single interface. 
 There is no need to study over detailed payment sync process for each store. 
 * Security will become more powerful with purchase verification server provided by IAP. 
+* IAP supports subscription , promoting of Google and App Store.
 * Web console provides purchase history inquiry function for customer support.
 
+
 ## Available Store
-
-These are stores serviced by IAP service. 
-
-[Table.1 Store Supported]
 
 | OS Type | Store |
 | --- | --- |
 | Android | Google Play |
-| Android | One Store(TStore + olleh market + UStore + Naver App Store)<br>[http://dev.onestore.co.kr](http://dev.onestore.co.kr) |
+| Android | One Store (Korea Only) |
 | iOS | Apple App Store |
 
+
+
 ## Terms
-
-These are terms for IAP service.
-
-[Table.2 IAP Terms]
 
 | Term | Description |
 | --- | --- |
@@ -80,3 +80,4 @@ In-app purchase provides IAP SDK and IAP server API. The following figure is pay
 | [4-1]<br>[4-2] | Request consume to IAP Server via transferred result from the store |
 | [5] | Deliver item to the user if consume is successful |
 | [6] | Complete payment. |
+

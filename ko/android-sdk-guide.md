@@ -1,5 +1,9 @@
 ## Mobile Service > IAP > Android SDK 사용 가이드
 
+> [공지]<br>
+> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br>
+> 기존 IAP SDK는 신규 기능을 개발하지 않을 예정입니다.
+
 ## 개발환경
 * Android Studio IDE 2.3.3 이상
 * Android SDK Version은 **2.3.3 (API Level 10)** 이상
