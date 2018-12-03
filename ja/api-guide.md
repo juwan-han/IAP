@@ -1,147 +1,146 @@
-## Mobile Service > IAP > Server API ガイド
+## Mobile Service > IAP > API Guide
 
+## Payment Consume API
 
-> [お知らせ]
-> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)として発売されました。
-> 既存IAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです
+User Application Server should notify IAP server to consume payment before issuing item <br/>. Only one consuming is available for each payment, and if the payment is invalid, consuming will not take place. <br/>Unconsumed payment can be inquired with unconsumed payment history inquiry API of the relevant SDK.
 
-
-IAPを連動するときに開発会社のサーバーで使用できるAPIです。<br>
-
-
-## Consume API
-
-ユーザアプリケーション サーバーは,アイテムを支給する前に,IAP サーバーに決済を消費することをお知らせする必要があります。 <br>
-決済1件当たり1回だけ決済消費が可能で,決済の状態が正常でないと消費されません。 <br>
-消費(Consume)していない決済内訳は,SDKの未消費決済内訳照会APIにて照会されます。<br>
-商品タイプがCONSUMABLEの決済のみconsume可能です。
-
-
+> [Reference]  
+> One consuming is available for each payment, and unconsumed payment will be considered not to have provided an item.    
+> Client may inquire all unconsumed payment.
 
 ### Request
 
-#### HTTP Request
+[URL]
 
+```http
+POST https://api-iap.cloud.toast.com/inapp/v3/consume/{paymentSeq}/items/{itemSeq}
 ```
-POST https://api-iap.cloud.toast.com/v1/service/consume
-```
 
-#### HTTP Request Header
+[Request Header]
 
-| Key | Value            |
+| Property name | Value            |
 | ------------- | ---------------- |
 | Http Method   | POST             |
 | Content-Type  | application/json |
-| X-NHN-TCIAP-AppKey  | appKey |
 
+[Path Parameter]
 
-#### Request Body
+| Name         | Data Type    | Description                     |
+| ---------- | ------ | ---------------------- |
+| paymentSeq | String | payment unique identifier                 |
+| itemSeq    | Long   | item unique identifier obtained in web console |
 
-| Property name | Value   | Description             |
+[RequestBody]
+
+| Name         | Data Type    | Description                     |
 | ------------- | ------ | --------------- |
-| paymentSeq | String | 決済番号 |
-| accessToken | String | API Accessのためのトークン情報 |
+| purchaseToken | String | token for payment verification |
 
+[Example]
+
+```http
+POST https://api-iap.cloud.toast.com/inapp/v3/consume/2014090210002254/items/1032032
+
+RequestBody
+{
+	"purchaseToken":"5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA=="
+}
+```
 
 ### Response
 
-Response bodyにJSON形に配信
 
-#### Success
+[Example Response]
 
 ```json
 {
-   "header":{
-        "isSuccessful": true,
+    "header": {
         "resultCode": 0,
-        "resultMessage": "SUCCESS"
+        "resultMessage": "request is successful",
+        "isSuccessful": true
     },
-    "result":{
-        "price": 1500,
-        "currency": "KRW",
-        "productSeq": 12345
+    "result": {
+        "price":1000.0,
+        "currency":"KRW"
     }
 }
 ```
 
-#### Error
-```json
-{
-    "header":{
-        "isSuccessful": false,
-        "resultCode": 5018,
-        "resultMessage": "error message"
-    }
-}
-```
-
-
-#### Header
+[Header]
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
-| isSuccessful  | Boolean | true or false |
-| resultCode |  Integer |  成功と失敗の詳細コード |
-| resultMessage |  String |  詳細メッセージ |
+| isSuccessful  | Boolean | consume is successful or not.(true/false)
+| resultCode |  Integer |  detail code when consume fails.|
+| resultMessage |  String |  detail message |
 
-#### Result
+[Result]
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
 | price         | long   | price |
 | currency      | String | currency |
-| productSeq      | long | 決済のアイテム番号 (consoleに登録されたアイテム固有番号) |
 
-
-
-### Error Code
+[ResultCode]
 
 | Value | Description             |
-| ------------- | ----------------------- |
-| 5000 | CONSUME FAILED (例:パラメータ誤りなど) |
-| 5018 |  ALREADY CONSUMED|
-| 9999 |  UNKNOWN ERROR|
+| - | -------------- |
+| 0 | 0 when consume is successful. |
+
+> [Reference]  
+> other Result Code    
+> Refer to Error Code page.  
+
+<br/>
+> [Reference]  
+> Even though the existing consume API v2 can be called, it will soon become unavailable. 
 
 
+## Payment Consumable API
 
-## Consumable List API
-
-決済が完了しましたが,消費(consume)されていない決済内訳をServer APIで照会することができます。 <br>
-
+Unconsumed payment history with payment complete status can be inquired with Server API. <br/> You can inquire unconsumed items with the API and perform consume process.
 
 ### Request
-#### HTTP Request
 
+[URL]
+
+```http
+POST https://api-iap.cloud.toast.com/standard/inapp/v1/consumable/list
 ```
-POST https://api-iap.cloud.toast.com/v1/service/consumable
-```
 
-#### HTTP Request Header
+[Request Header]
 
-| Key | Value            |
+| Property name | Value            |
 | ------------- | ---------------- |
 | Http Method   | POST             |
 | Content-Type  | application/json |
-| X-NHN-TCIAP-AppKey  | appKey |
 
-#### Request Body
 
-| Property name | Value  | Description       |
+[RequestBody]
+
+| Name            | Data Type    | Description              |
 | ------------- | ------ | --------------- |
-| marketId | String | ストアコード (GG : Google, AS : Apple) |
-| userChannel | String | ユーザーチャンネル (GF) |
-| userKey | String | ユーザ識別キー |
+| appSeq | Long | app unique identifier obtained in web console |
+| userChannel | String | user channel <br/>(default value : "GF") |
+| userKey | String | user identifier |
 
+[Example]
 
+```http
+POST https://api-iap.cloud.toast.com/standard/inapp/v1/consumable/list
 
+RequestBody
+{
+  "appSeq" : "1000272",
+  "userChannel" : "GF",
+  "userKey" : "tester"
+}
+```
 
 ### Response
-Response bodyにJSON形に配信
 
 
-
-#### Success
+[Example Response]
 
 ```json
 {
@@ -153,163 +152,149 @@ Response bodyにJSON形に配信
     "result":[
         {
         "paymentSeq": "2016122110023124",
-        "productSeq": 1000292,
+        "itemSeq": 1000292,
         "currency": "KRW",
         "price": 1000,
-        "accessToken": "oJgM1EfDRjnQY7yqhWCUVgAXsSxLWq698t8QyTzk3NeeSoytKxtKGjldTc1wkSktgzjsfkVTKE50DoGihsAvGQ"
+        "purchaseToken": "oJgM1EfDRjnQY7yqhWCUVgAXsSxLWq698t8QyTzk3NeeSoytKxtKGjldTc1wkSktgzjsfkVTKE50DoGihsAvGQ"
         },
  
         {
         "paymentSeq": "2016122110023125",
-        "productSeq": 1000292,
+        "itemSeq": 1000292,
         "currency": "KRW",
         "price": 1000,
-        "accessToken": "7_3zXyNJub0FNLed3m9XRAAXsSxLWq698t8QyTzk3NeeSoytKxtKGjldTc1wkSktgzjsfkVTKE50DoGihsAvGQ"
+        "purchaseToken": "7_3zXyNJub0FNLed3m9XRAAXsSxLWq698t8QyTzk3NeeSoytKxtKGjldTc1wkSktgzjsfkVTKE50DoGihsAvGQ"
         }
     ]
 }
 
 ```
 
-#### Header
+[Header]
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
-| isSuccessful  | Boolean | true or false |
-| resultCode |  Integer |  成功と失敗の詳細コード |
-| resultMessage |  String |  詳細メッセージ |
+| isSuccessful  | Boolean | inquiry is successful (true/false)|
+| resultCode |  Integer |  detail code when inquiry fails. |
+| resultMessage |  String |  detail message |
 
-#### Result
+[Result]
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
-| paymentSeq      | String | 決済番号 |
-| productSeq      | long | 決済のアイテム番号 (consoleに登録されたアイテム固有番号) |
-| price         | long   | price |
-| currency      | String | currency |
-| accessToken      | String | API accessのためのトークン |
+| paymentSeq |  String | payment unique identifier(PAYMENT ID) |
+| itemSeq |  String |  ITEM ID obtained in web console |
+| currency | Long |  currency |
+| price |  String |  price |
+| purchaseToken |  String | token for payment verification and consume |
 
-
-
-### Error Code
+[ResultCode]
 
 | Value | Description             |
-| ------------- | ----------------------- |
-| 1100 | INVALID PARAMETER |
-| 9999 |  UNKNOWN ERROR|
+| - | -------------- |
+| 0 |  successful payment count, not yet consumed|
+
+> [Reference]  
+> other Result Code    
+> Refer to Error Code page.  
 
 
+## Item Search API
 
-## ActiveSubscription List API
-アプリ別,ユーザ別に満了していない購読決済を照会する。
-
+Inquire items registered to App ID in web console.
 
 ### Request
-#### HTTP Request
+
+[URL]
+
+```http
+GET https://api-iap.cloud.toast.com/standard/item/list/{appSeq}
 
 ```
-POST https://api-iap.cloud.toast.com/v1/service/activeSubscriptionList
-```
 
-#### HTTP Request Header
+[Request Header]
 
-| Key | Value            |
+| Property name | Value            |
 | ------------- | ---------------- |
-| Http Method   | POST             |
-| Content-Type  | application/json |
-| X-NHN-TCIAP-AppKey  | appKey |  
+| Http Method   | GET             |
+
+[Path Parameter]
+
+| Name         | Data Type    | Description                     |
+| ---------- | ------ | ---------------------- |
+| appSeq    | Long   | appSeq obtained in web console |
 
 
-#### Request Body
+[Example]
 
-| Property name | Value   | Description             |
-| ------------- | ------ | --------------- |
-| marketId | String | ストアコード (GG : Google, AS : Apple) |
-| packageName | String | APP packageName (예: com.nhnent.iap.google.sample) |
-| userChannel | String | ユーザーチャンネル (GF) |
-| userKey | String | ユーザ識別キー |
-
-
+```http
+GET https://api-iap.cloud.toast.com/standard/item/list/1000047
+```
 
 ### Response
-Response bodyにJSON形に配信
 
 
-
-#### Success
+[Example Response]
 
 ```json
 {
-  "header": {
-    "isSuccessful": true,
-    "resultCode": 0,
-    "resultMessage": "SUCCESS"
-  },
-  "result": [
-    {
-      "channel": "GF",
-      "userId": "default_testUserx",
-      "paymentSeq": "2018102610330423",
-      "appId": "com.nhnent.iap.google.sample",
-      "productId": "subs_p1w",
-      "productType": "AUTO_RENEWABLE",
-      "productSeq": 1002904,
-      "currency": "KRW",
-      "price": 1000,
-      "paymentId": "GPA.3375-2193-1175-57698",
-      "originalPaymentId": "GPA.3375-2193-1175-57698",
-      "purchaseTimeMillis": 1540522998289,
-      "expiryTimeMillis": 1541134994548,
-      "productSeq" : 1000009
-    }
-  ]
-}
-```
-
-
-
-#### Error
-```json
-{
-    "header":{
-        "isSuccessful": false,
-        "resultCode": 1100,
-        "resultMessage": "error message"
+    "header": {
+        "isSuccessful": true,
+        "resultCode": 0,
+        "resultMessage": "success"
+    },
+    "result": {
+        "appUsingStatus": "USE",
+        "itemList": [
+            {
+                "itemSeq": 1000059,
+                "itemName": "gas",
+                "marketItemId": "gas",
+                "usingStatus": "USE",
+                "regYmdt": "2014-12-05 07:02:34",
+                "appName": "Google Unity Test App",
+                "marketId": "GG"
+            }
+        ],
+        "marketAppId": "com.nhnent.rich.smuggler",
+        "appSeq": "1000047"
     }
 }
+
+
+
 ```
-#### Header
+
+[Header]
 
 | Property name | Value   | Description             |
 | ------------- | ------- | ----------------------- |
-| isSuccessful  | Boolean | true or false |
-| resultCode |  Integer |  成功と失敗の詳細コード |
-| resultMessage |  String |  詳細メッセージ |
+| isSuccessful  | Boolean | inquiry is successful or not. (true/false) |
+| resultCode |  Integer | detail code when inquiry fails. |
+| resultMessage |  String |  detail message |
 
-#### Result
+[Result]
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
-| channel      | String | ユーザーチャンネル (GF) |
-| userId      | String | ユーザ識別キー |
-| paymentSeq      | String | 決済番号 |
-| appId      | String | packageName |
-| productId         | String   | ストアーに登録された商品識別子 |
-| productType      | String | 商品タイプ |
-| productSeq      | long | 決済のアイテム番号 (consoleに登録されたアイテム固有番号)|
-| currency      | String | currency |
-| price      | long | price |
-| paymentId      | String | 最近更新されたストアの決済番号 |
-| originalPaymentId      | String | 最初のストア決済番号 |
-| purchaseTimeMillis      | long | 最近更新された時間 |
-| expiryTimeMillis      | long | 満了時間 |
+| appUsingStatus | String | in use : "USE" , not use : "STOP" |
+| itemList | List | object list containing item |
+| itemSeq | Long | item seq registered in web console|
+| itemName | String | item name registered in web console|
+| marketItemId | String | store item name registered in web console|
+| usingStatus | String | in use : "USE" , not use : "STOP" |
+| regYmdt | String | ITEM registration date |
+| appName | String | app name of ITEM|
+| marketId | String | store of ITEM  <br/>Google Play : "GG"<br/> Apple App Store : "AS" <br/>One Store : "TS" |
+| marketAppId | String | Store App ID registered in web console |
+| appSeq | Long | App ID registered in web console|
 
-
-
-
-### Error Code
+[ResultCode]
 
 | Value | Description             |
-| ------------- | ----------------------- |
-| 1100 | INVALID PARAMETER |
-| 9999 |  UNKNOWN ERROR|
+| - | -------------- |
+| 0 | 0 when inquiry is successful |
+
+> [Reference]  
+> other Result Code    
+> Refer to Error Code page.  
