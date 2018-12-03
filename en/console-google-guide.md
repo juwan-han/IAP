@@ -1,12 +1,15 @@
 ## Mobile Service > IAP > Google Console Guide
 
+> [Notice]<br>
+> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> The existing IAP SDK will not be developing new features.<br>
+> This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
+
 Google Play Billing is a service that lets you sell consumable product or subscription from inside an Android app, or in-app.<br>
 Google Play Billing requires some keys created in Google Play Console and Google API Console. <br>
 Also you should set Google Real-time developer notifications for subscription.<br>
 
 
-> This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
-<br>
 
 
 

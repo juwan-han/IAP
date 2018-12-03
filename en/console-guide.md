@@ -1,8 +1,11 @@
 ## Mobile Service > IAP > Console Common Guide
-To use IAP SDK, you first need to register app and item at web console after store registration.
 
+> [Notice]<br>
+> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> The existing IAP SDK will not be developing new features.<br>
 > This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
-<br>
+
+To use IAP SDK, you first need to register app and item at web console after store registration.
 
 
 

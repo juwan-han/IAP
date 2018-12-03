@@ -1,13 +1,17 @@
 ## Mobile Service > IAP > Google 設定ガイド
 
+> [お知らせ]
+> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)として発売されました。
+> 既存IAP SDKはこれ以上新規機能を開発しない予定です。
+> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです
+
 
 Google一般商品および購読商品のインアップ決済のためにGoogle Play Billingを連動しなければなりません。<br>
 Google Play Billingは,Google Play ConsoleとGoogle API Consoleで生成された値を使用します。<br>
 さらに,グーグル購読商品の決済のため,Notificationを設定する必要があります。<br>
 Notificationの設定が正しくなければ購読決済が進みません。
 
-> 本文書は[新規のIAP SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです。
-<br>
+
 
 
 ## Google Application Key

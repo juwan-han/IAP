@@ -1,12 +1,12 @@
 ## Mobile Service > IAP > Overview
 
+> [お知らせ]
+> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)として発売されました。
+> 既存IAP SDKはこれ以上新規機能を開発しない予定です。
+> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです
+
+
 In-App Purchase (以下IAP)サービスは統合インアプリ決済サービスです。
-
-
-> [お知らせ]<br>
-> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)で発売されました。
-> 既存の IAP SDKはこれ以上新規機能を開発しない予定です。<br>
-> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです。
 
 
 ## メーン機能

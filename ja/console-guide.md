@@ -1,10 +1,12 @@
 ## Mobile Service > IAP > コンソール共通使用ガイド
+
+
+> [お知らせ]
+> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)として発売されました。
+> 既存IAP SDKはこれ以上新規機能を開発しない予定です。
+> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです
+
 ストアでアプリとアイテムを登録した後,IAP Consoleでアプリとアイテムを登録します。
-
-> 本文書は[新規のIAP SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです。
-<br>
-
-
 
 <br>
 

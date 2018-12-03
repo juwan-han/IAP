@@ -1,9 +1,13 @@
 ## Mobile Service > IAP > Server API Guide
 
+> [Notice]<br>
+> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> The existing IAP SDK will not be developing new features.<br>
+> This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
+
 IAP supports server api for in app purchase.<br>
 
-> This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
-<br>
+
 
 
 

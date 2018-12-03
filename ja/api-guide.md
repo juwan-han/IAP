@@ -1,11 +1,13 @@
 ## Mobile Service > IAP > Server API ガイド
 
+
+> [お知らせ]
+> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)として発売されました。
+> 既存IAP SDKはこれ以上新規機能を開発しない予定です。
+> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです
+
+
 IAPを連動するときに開発会社のサーバーで使用できるAPIです。<br>
-
-> 本文書は[新規のIAP SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです。
-<br>
-
-
 
 
 ## Consume API

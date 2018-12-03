@@ -1,13 +1,12 @@
 ## Mobile Service > IAP > Overview
 
-In-App Purchase (IAP) service is an integrated in-app purchase service.
-
-
 
 > [Notice]<br>
 > New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
 > The existing IAP SDK will not be developing new features.<br>
 > This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
+
+In-App Purchase (IAP) service is an integrated in-app purchase service.
 
 ## Features
 
