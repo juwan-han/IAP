@@ -1,5 +1,9 @@
 ## Mobile Service > IAP > API 가이드
 
+> [공지]<br>
+> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br>
+> 기존 IAP SDK는 신규 기능을 개발하지 않을 예정입니다.
+
 ## Payment Consume API
 
 사용자 애플리케이션 서버는 아이템을 지급하기 전에 IAP 서버에게 결제를 소비 할 것을 알려야 합니다. <br/>결제 1건당 1번만 결제소비 가능하며, 결제의 상태가 정상이 아니면 소비되지 않습니다. <br/>소비 (Consume) 하지 않은 결제내역은 SDK의 미소비 결제 내역조회 API를 통해 조회가능 합니다.

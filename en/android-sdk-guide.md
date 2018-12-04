@@ -1,5 +1,11 @@
 ## Mobile Service > IAP > Android SDK Guide
 
+
+> [Notice]<br>
+> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> The existing IAP SDK will not be developing new features.<br>
+
+
 ## Development Environment
 
 * Windows
