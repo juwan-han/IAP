@@ -1,5 +1,10 @@
 ## Mobile Service > IAP > API Guide
 
+> [Notice]<br>
+> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> The existing IAP SDK will not be developing new features.<br>
+
+
 ## Payment Consume API
 
 User Application Server should notify IAP server to consume payment before issuing item <br/>. Only one consuming is available for each payment, and if the payment is invalid, consuming will not take place. <br/>Unconsumed payment can be inquired with unconsumed payment history inquiry API of the relevant SDK.

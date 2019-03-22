@@ -1,5 +1,12 @@
 ## Mobile Service > IAP > Unity SDK Guide
 
+
+> [Notice]<br>
+> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> The existing IAP SDK will not be developing new features.<br>
+
+
+
 ### Add In App Purchase SDK
 
 ```
@@ -453,6 +460,76 @@ PrintLog ("IncompletePurchasesCallback.OnCallback():" + json);
 "price": 7.99,
 "currency": "USD"
 }]
+```
+
+### public class InAppPurchase.iOS
+
+Provides methods for some iOS specific features.
+
+[Method Summary]
+
+| Name                              | Return Value | Parameter                        |
+| --------------------------------- | ------------ | -------------------------------- |
+| SetPromotionCallback              | Result       | OnResponsePurchase callback      |
+
+[SetPromotionCallback]
+
+|Attribute|Description|
+| ----- | ----- |
+| Description | Register callback for response of Promotion |
+| Syntax | public static void SetPromotionCallback(OnResponsePurchase callback) |
+| Return Value | void |
+
+> (Causion) If you want to use iOS Promotion feature, you MUST register promotion callback before initializing IAP Unity Plugin.
+
+[Example Code]
+```csharp
+// TODO If you want to use iOS Promotion feature, you MUST register promotion callback before initializing IAP Unity Plugin.
+InAppPurchase.iOS.SetPromotionCallback((result, data) =>
+{
+    if (!result.IsSuccessful)
+    {
+        // TODO : Handle error
+        PrintLog("PromotionCallback -> Failed! -> " + result.ResultCode + ":" + result.ResultString);
+        return;
+    }
+    /*
+        Examples)    
+        {
+            "paymentSeq": "2014082210002092",
+            "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA",
+            "itemSeq": 1000001,
+            "currency": "KRW",
+            "price": 1000.0
+            }
+    */
+    var json = System.Convert.ToString(data);
+    PrintLog("PromotionCallback:" + json);
+
+    // TODO : You send this result to your application server, and give a item through Consume API after verifing.
+});
+```
+
+[Response (JSON)]
+
+| Attribute     | Value  | Description                      |
+| ------------- | ------ | -------------------------------- |
+| paymentSeq    | String | payment unique identifier                 |
+| itemSeq       | Long   | item unique identifier                            |
+| purchaseToken | String | token for verification and consume |
+| currency      | String | currency                       |
+| price         | Float  | price                           |
+
+[Response Example]
+
+```json
+{
+    "paymentSeq": "2014082210002092",
+    "purchaseToken": "5PYSHgisiCU8BditHnDbPhmlS/0DSt4JDs2UMyg1/EY8oC6Q8qkuw5VBo7GNrBYLNUy656GCAh7h9e1BtXeoBA",
+    "itemSeq": 1000001,
+    "currency": "KRW",
+    "price": 1000.0
+}
 ```
 
 ### public class Result
