@@ -39,8 +39,7 @@ Notification 설정이 올바르지 않으면 구독 결제가 진행되지 않�
 ```
 Google Play Console > App 선택 > (좌측) 개발 도구 > 서비스 및 API > 라이선스 및 인앱 결제
 ```
-![](http://static.toastoven.net/prod_iap/iap_8.jpg)
-
+![](http://static.toastoven.net/prod_iap/iap_google_license_ko.jpg)
 
 ## Google API Console
 
@@ -63,19 +62,22 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 
 
 ##### 2. 승인된 redirection url에 https://developers.google.com/oauthplayground 입력
-![[그림 2] Client ID 및 Client Secret 생성 2](http://static.toastoven.net/prod_iap/iap_g_02.png)
+![[그림 2] Client ID 및 Client Secret 생성 2](http://static.toastoven.net/prod_iap/iap_google_Oauth_ko.png)
 
 
-##### 3. oauthplayground 설정 > Use your own OAuth credentials 사용
-![[그림 3] Client ID 및 Client Secret 생성 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
+##### 3. 생성 후 팝업 창에서 클라이언트 ID / 클라이언트 seceret 복사
+![[그림 3] Client ID 및 Client Secret 생성 3](http://static.toastoven.net/prod_iap/iap_google_Oauth_clientSecret_ko.png)
+
+##### 4. [OAuth Playground](https://developers.google.com/oauthplayground/) > 오른쪽 상단 oauthplayground 설정 > Use your own OAuth credentials 사용 체크 후 복사한 클라이언트 ID, 클라이언트 Secret 입력
+![[그림 4] Client ID 및 Client Secret 생성 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
 
 
-##### 4. Step 1에서 https://www.googleapis.com/auth/androidpublisher 입력하여 Authorization code 코드 발급
-![[그림 4] Client ID 및 Client Secret 생성 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
+##### 5. Step 1에서 https://www.googleapis.com/auth/androidpublisher 입력하여 Authorization code 코드 발급
+![[그림 5] Client ID 및 Client Secret 생성 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
 
 
-##### 5. Step 2에서 Exchange authorization code for tokens 버튼을 눌러 토큰 발급
-![[그림 5] Client ID 및 Client Secret 생성 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
+##### 6. Step 2에서 Exchange authorization code for tokens 버튼을 눌러 토큰 발급
+![[그림 6] Client ID 및 Client Secret 생성 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
 
 
 ## Google Play 연동 주의사항
@@ -101,8 +103,8 @@ OAuth 인증 정보 생성 후, 아래 가이드를 참고하여 프로젝트 �
 ```
 ![[]](http://static.toastoven.net/prod_iap/iap-console-google-console-2.png)
 
-
-
+###  Google Play Developer Console의 Linked Project와 GoogleAPIs의 OAuth 클라언트 생성 프로젝트가 같은지 확인합니다.
+![[]](http://static.toastoven.net/prod_iap/iap_new_06.png)
 
 ## Google real-time developer notification 설정하기
 
@@ -124,19 +126,20 @@ OAuth 인증 정보 생성 후, 아래 가이드를 참고하여 프로젝트 �
 4. 추가 버튼을 클릭합니다.
 ```
 ![[] Topic 만들기](http://static.toastoven.net/prod_iap/iap-console-new-topic.png)
-![[] Topic 수정하기](http://static.toastoven.net/prod_iap/iap-console-topic-option.png)
+![[] Topic 수정하기](http://static.toastoven.net/prod_iap/iap_google_addMember_ko.png)
 
 <br>
 
 #### Subscription 만들기
 ```
-1. Topic  우측 마우스 클릭 > 새 구독 
+1. Topic 마우스 클릭 > 새 구독 
 2. 전송유형
 - [엔드포인트 URL로 푸시] 선택
 - URL :  https://api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG
 - {YOUR_PACKAGE_NAME} : google package name
 ```
-![[] Subscription 만들기](http://static.toastoven.net/prod_iap/iap-console-new-subscription.png)
+![[] Subscription 만들기](http://static.toastoven.net/prod_iap/iap_google_new_subscirption_ko.png)
+![[] Subscription 만들기](http://static.toastoven.net/prod_iap/iap_google_create_subscription_ko.png)
 
 <br>
 

@@ -38,7 +38,7 @@ Notificationの設定が正しくなければ購読決済が進みません。
 ```
 Google Play Console > App > (左側) 開発ツール > サービス及びAPI > ライセンス及びインアップ決済
 ```
-![[]](http://static.toastoven.net/prod_iap/iap_8.jpg)
+![[]](http://static.toastoven.net/prod_iap/iap_google_license_ja.png)
 
 
 ## Google API Console
@@ -58,23 +58,25 @@ Google Play Consleと同一のアカウントでGoogle API Consoleにプロジ�
 <br>
 
 ##### 1. https://console.droパス google.com/apis/credentialsでオイスクライアントを生成(ウェブアプリケーション)
-![[그림 1] OAuth クライアント生成 1](http://static.toastoven.net/prod_iap/iap_g_01.png)
+![[그림 1] OAuth クライアント生成 1](http://static.toastoven.net/prod_iap/iap_google_credentials_ja.png)
 
 
 ##### 2. 承認された redirection urlに https://developers.google.com/oauthplayground 入力
-![[그림 2] OAuth クライアント生成 2](http://static.toastoven.net/prod_iap/iap_g_02.png)
+![[그림 2] OAuth クライアント生成 2](http://static.toastoven.net/prod_iap/iap_google_Oauth_ja.png)
+
+##### 3. 作成後にポップアップウィンドウからクライアントID /クライアントシークレットをコピーする
+![[]](http://static.toastoven.net/prod_iap/iap_google_Oauth_clientSecret_ja.png)
+
+##### 4. [OAuth Playground](https://developers.google.com/oauthplayground/) > oauthplayground 設定 > Use your own OAuth credentials 使用
+![[그림 4] OAuth クライアント生成 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
 
 
-##### 3. oauthplayground 設定 > Use your own OAuth credentials 使用
-![[그림 3] OAuth クライアント生成 3](http://static.toastoven.net/prod_iap/iap_g_03.png)
+##### 5. Step 1で https://www.googleapis.com/auth/androidpublisher 入力して Authorization code コード発給
+![[그림 5] OAuth クライアント生成 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
 
 
-##### 4. Step 1で https://www.googleapis.com/auth/androidpublisher 入力して Authorization code コード発給
-![[그림 4] OAuth クライアント生成 4](http://static.toastoven.net/prod_iap/iap_g_04.png)
-
-
-##### 5. Step 2で Exchange authorization code for tokens ボタンを押してトークン発給
-![[그림 5] OAuth クライアント生成 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
+##### 6. Step 2で Exchange authorization code for tokens ボタンを押してトークン発給
+![[그림 6] OAuth クライアント生成 5](http://static.toastoven.net/prod_iap/iap_g_05.png)
 
 
 ## Google Play連動注意事項
@@ -100,8 +102,8 @@ OAuth 認証情報生成後,以下のガイドを参考にプロジェクト設�
 ```
 ![[]](http://static.toastoven.net/prod_iap/iap-console-google-console-2.png)
 
-
-
+### Google Play開発者コンソールのリンクされたプロジェクトがGoogleAPIのOAuthクライアントを作成プロジェクトと同じであることを確認します。
+![[]](http://static.toastoven.net/prod_iap/iap_google_linked_ja.png)
 
 ## Google real-time developer notification 設定
 
@@ -114,7 +116,7 @@ OAuth 認証情報生成後,以下のガイドを参考にプロジェクト設�
 
 掲示/購読コンソール(https://console.cloud.google.com/cloudpubsub)で下記の作業を行います。
 
-#### Topic 作り
+#### Topic 作り (プロダクト > Pub/Sub)
 
 ```
 1. Topicが生成されると,オプションの権限をクリックするか,Topic名をクリックしてTopic細部情報ページに移動します。
@@ -122,8 +124,8 @@ OAuth 認証情報生成後,以下のガイドを参考にプロジェクト設�
 3. 構成員の追加に google-play-developer-notifications@system.gserviceaccount.com を入力します。
 4. 追加ボタンをクリックします。
 ```
-![[] Topic 만들기](http://static.toastoven.net/prod_iap/iap-console-new-topic.png)
-![[] Topic 수정하기](http://static.toastoven.net/prod_iap/iap-console-topic-option.png)
+![[] Topic 만들기](http://static.toastoven.net/prod_iap/iap_google_createTopic_ja.png)
+![[] Topic 수정하기](http://static.toastoven.net/prod_iap/iap_google_create_subscription_ja.png)
 
 <br>
 
@@ -135,6 +137,7 @@ OAuth 認証情報生成後,以下のガイドを参考にプロジェクト設�
 - URL :  https://api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG
 - {YOUR_PACKAGE_NAME} : google package name
 ```
+![[] Subscription 만들기](http://static.toastoven.net/prod_iap/iap_google_new_subscirption_ja.png)
 ![[] Subscription 만들기](http://static.toastoven.net/prod_iap/iap-console-new-subscription.png)
 
 <br>
@@ -151,11 +154,11 @@ OAuth 認証情報生成後,以下のガイドを参考にプロジェクト設�
 7. [推奨方法] 下段の [ロボットではない] クリック後,[OK] をクリックします。
 8. 認証に成功すると,最後のイメージと同じ画面が表示されます。 この画面が露出しないと,購読決済を正常に使用できません。
 ```
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-1.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-2.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-3.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-4.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-5.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_1.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap_google_add_domain_ja.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_3.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_4.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_zh_5.png)<br>
 
 
 

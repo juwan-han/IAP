@@ -44,7 +44,7 @@ See Store console guide if you want store specific setting.
    - Store APP ID : Store package name or bundle id
 4. Click [Add] button. 
 ```
-![[]](http://static.toastoven.net/prod_iap/iap-console-new-app.png)
+![[]](http://static.toastoven.net/prod_iap/iap_reg_app_en.png)
 
 ## Item Registration
 ```
@@ -87,7 +87,7 @@ See Store console guide if you want store specific setting.
 4. Select sort option in [Sort]
 5. Click [Search]  
 ```
-![[]](http://static.toastoven.net/prod_iap/iap_new_01.png)
+![[]](http://static.toastoven.net/prod_iap/iap_transaction_list_en.png)
 
 
 <br>
@@ -115,10 +115,10 @@ You can change payment status in following conditions,
 Payment which status will be changable shows [Modify] button right side as below. 
 
 ```
-![[picture 6 Change payment status]](http://static.toastoven.net/prod_iap/iap_45.png)
+![[picture 6 Change payment status]](http://static.toastoven.net/prod_iap/iap_transaction_modify_en.png)
 
  
-![[picture 7 Add additional information when changing statu]](http://static.toastoven.net/prod_iap/iap_46.PNG)
+![[picture 7 Add additional information when changing statu]](http://static.toastoven.net/prod_iap/iap_transaction_update_success_en)
 
 
 ## Inquiry Payment Statistics

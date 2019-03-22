@@ -114,7 +114,7 @@ Console (https://console.toast.com)  > [Mobile Service] > Click [IAP]
 変更が可能な決済状態は,下記のように状態コラム右側に [変更] ボタンが露出されます。
 ```
 ![[결제 상태 변경]](http://static.toastoven.net/prod_iap/iap_new_03.png)
-![[결제 상태 변경시 추가 기입]](http://static.toastoven.net/prod_iap/iap_46.png)
+![[결제 상태 변경시 추가 기입]](http://static.toastoven.net/prod_iap/iap_46.PNG)
 
 
 ## 決済統計照会
