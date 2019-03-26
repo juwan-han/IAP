@@ -36,7 +36,7 @@ Also you should set Google Real-time developer notifications for subscription.<b
 ```
 Google Play Console > select App> (left panel) Development tools > Services & APIs > Licensing & in-app billing
 ```
-![](http://static.toastoven.net/prod_iap/iap_8.jpg)
+![](http://static.toastoven.net/prod_iap/iap_google_license_en.png)
 
 
 ## Google API Console
@@ -57,22 +57,24 @@ Use the links below to generate the following information required for OAuth aut
 <br>
 
 ##### 1. Create an OAuth client at https://console.developers.google.com/apis/credentials (web application)
-![[]](http://static.toastoven.net/prod_iap/iap_g_01.png)
+![[]](http://static.toastoven.net/prod_iap/iap_google_credentials_en.png)
 
 
 ##### 2. Enter https://developers.google.com/oauthplayground in the Authorized redirection urls
-![[]](http://static.toastoven.net/prod_iap/iap_g_02.png)
+![[]](http://static.toastoven.net/prod_iap/iap_google_Oauth_en.png)
 
+##### 3. Copy client ID / client secret from the popup window after creating
+![[]](http://static.toastoven.net/prod_iap/iap_google_Oauth_clientSecret_en.png)
 
-##### 3. oauthplayground Setting > Use your own OAuth credentials
+##### 4. [OAuth Playground](https://developers.google.com/oauthplayground/) > oauthplayground Setting > Use your own OAuth credentials
 ![[]](http://static.toastoven.net/prod_iap/iap_g_03.png)
 
 
-##### 4. Enter Authorization code code by entering https://www.googleapis.com/auth/androidpublisher in Step 1
+##### 5. Enter Authorization code code by entering https://www.googleapis.com/auth/androidpublisher in Step 1
 ![[]](http://static.toastoven.net/prod_iap/iap_g_04.png)
 
 
-##### 5. In Step 2, click the Exchange authorization code for tokens button to issue a token.
+##### 6. In Step 2, click the Exchange authorization code for tokens button to issue a token.
 ![[]](http://static.toastoven.net/prod_iap/iap_g_05.png)
 
 
@@ -97,6 +99,8 @@ After creating the OAuth credentials, proceed with the project setup by referrin
 ```
 ![[]](http://static.toastoven.net/prod_iap/iap-console-google-console-2.png)
 
+### Make sure that the Linked Project in the Google Play Developer Console is the same as the OAuth Client creation project in GoogleAPIs.
+![[]](http://static.toastoven.net/prod_iap/iap_google_linked_en.png)
 
 ## Google real-time developer notification 
 
@@ -111,7 +115,7 @@ After creating the OAuth credentials, proceed with the project setup by referrin
 At publication/subscription console, (https://console.cloud.google.com/cloudpubsub) do follwing jobs.<br>
 https://cloud.google.com/pubsub/docs/quickstart-console 
 
-#### Create a topic
+#### Create a topic (Products > Pub/Sub)
 
 ```
 1. After creating topic, move to detail page by clicking option or topic name.
@@ -119,8 +123,8 @@ https://cloud.google.com/pubsub/docs/quickstart-console
 3. Fill google-play-developer-notifications@system.gserviceaccount.com in member form.
 4. Click Add button.
 ```
-![[] Topic 만들기](http://static.toastoven.net/prod_iap/iap-console-new-topic.png)
-![[] Topic 수정하기](http://static.toastoven.net/prod_iap/iap-console-topic-option.png)
+![[] Topic 만들기](http://static.toastoven.net/prod_iap/iap_google_createTopic_en.png)
+![[] Topic 수정하기](http://static.toastoven.net/prod_iap/iap_google_addMember_en.png)
 
 <br>
 
@@ -132,7 +136,8 @@ https://cloud.google.com/pubsub/docs/quickstart-console
 - endpoint url :  https://api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG
 - {YOUR_PACKAGE_NAME} : google package name
 ```
-![[] Subscription 만들기](http://static.toastoven.net/prod_iap/iap-console-new-subscription.png)
+![[] Subscription 만들기](http://static.toastoven.net/prod_iap/iap_google_new_subscirption_en.png)
+![[] Subscription 만들기](http://static.toastoven.net/prod_iap/iap_google_create_subscription_en.png)
 
 <br>
 
@@ -145,17 +150,17 @@ See more documents here.(https://cloud.google.com/pubsub/docs/push)
 1. Go to https://console.cloud.google.com/apis/credentials/domainverification.
 2. At [Domain] tab, click [Add domain].
 3. Fill https://api-iap.cloud.toast.com in form and [Add domain]
-4. Click [Move Noew] button,  and go to web master center.
+4. Click [TAKE ME THERE] button,  and go to web master center.
 5. Click [Add property]
 6. At this point, the Google Cloud Platform Console checks your domain against the ones that you’ve verified in Search Console.<br>
  Assuming that you’ve properly verified the domain, the page updates to show your new list of allowed domains.
 
 ```
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-1.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-2.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-3.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-4.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-5.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_en_1.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap_google_add_domain_en.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_en_3.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_en_4.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_en_5.png)<br>
 
 
 
