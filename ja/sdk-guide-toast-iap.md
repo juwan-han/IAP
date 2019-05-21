@@ -1,22 +1,22 @@
-## Mobile Service > IAP > SDK Guide
-TOAST IAP SDK를 적용하면 모바일 애플리케이션에서 쉽고 강력한 인앱 결제를 제공할 수 있습니다.
+## Mobile Service > IAP > SDKガイド
+TOAST IAP SDKを適用すると、モバイルアプリケーションで簡単かつ強力なアプリ内決済を提供できます。
 
-## 주요 기능
+## 主な機能
 
-* 영수증 검증을 TOAST IAP가 대행해주어 보다 안전한 서비스를 제공할 수 있습니다.
-* TOAST SDK IAP를 사용하면 다양한 스토어에 대응하기 위해 서로 다른 형태로 직접 연동하는 부담이 없습니다.
-    * 단, 스토어에 등록한 앱과 상품 정보는 TOAST IAP 콘솔에도 등록이 필요합니다.
+* 領収書の検証をTOAST IAPが代行し、より安全なサービスを提供できます。
+* TOAST IAP SDKを使用すると、多様なストアに対応するために別々の形式で直接連携する負担がありません。
+    * ただし、ストアに登録したアプリと商品情報はTOAST IAPコンソールにも登録する必要があります。
 
-## 개발 가이드
+## 開発ガイド
 
 #### iOS
-* [TOAST IAP iOS 가이드](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-ios/)를 참고하십시오.
+* [TOAST IAP iOSガイド](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-ios/)を参照してください。
 
 #### Android
-* [TOAST IAP Android 가이드](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-android/)를 참고하십시오.
+* [TOAST IAP Androidガイド](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-android/)を参照してください。
 
 #### Unity
-* [TOAST IAP Unity 가이드](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-unity/)를 참고하십시오.
+* [TOAST IAP Unityガイド](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-unity/)を参照してください。
 
-#### 기타
-* 기타 플랫폼에 대한 문의는 [TOAST 고객센터](https://toast.com/support/inquiry?alias=tab3_06)로 문의해 주세요.
+#### その他
+* その他プラットフォームについてのお問い合わせは[TOASTサポート](https://toast.com/support/inquiry?alias=tab3_06)へお願いします。
