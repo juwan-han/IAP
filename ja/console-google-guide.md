@@ -158,7 +158,7 @@ OAuth 認証情報生成後,以下のガイドを参考にプロジェクト設�
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap_google_add_domain_ja.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_3.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_4.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_zh_5.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_5.png)<br>
 
 
 
