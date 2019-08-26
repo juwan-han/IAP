@@ -67,14 +67,21 @@ Console (https://console.toast.com)에서 [Mobile Service] > [IAP] 을  클릭�
 
 | Store | 스토어 상품유형| IAP 상품유형|    
 |---|---|---|
-| Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_SUBSCRIPTION |
-| App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_SUBSCRIPTION |
+| Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_RENEWABLE, CONSUMABLE_AUTO_RENEWABLE |
+| App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_RENEWABLE, CONSUMABLE_AUTO_RENEWABLE |
 | ONEStore|	Managed product | CONSUMABLE|
 
-
+### 소비성 구독상품 (CONSUMABLE_AUTO_RENEWABLE)
+* 구독 상품 + 소비성 상품이 결합된 유형
+* 기존 구독 기능 포함, 구독결제 갱신마다 상품 지급 가능 ex) 매 달 자동결제 및 게임머니 지급되는 상품
+* 결제 완료 후, [Consumable List api](https://docs.toast.com/ko/Mobile%20Service/IAP/ko/api-guide-for-toast-sdk/#consumable-list-api) 에서 조회 가능 
+    -> 서비스 서버에서 아이템 지급 후, [Consume api](https://docs.toast.com/ko/Mobile%20Service/IAP/ko/api-guide-for-toast-sdk/#consume-api) 호출하여 소비처리 
+* [ActiveSubscription List API](https://docs.toast.com/ko/Mobile%20Service/IAP/ko/api-guide-for-toast-sdk/#activesubscription-list-api)에서 조회 가능
+* 소비성 구독상품은 결제 완료 후, 반드시 소비처리를 해야 합니다.
 
 > [주의]  
 > 정확하지 않은 상품 유형으로 결제 진행 시의 시스템 에러 및 재산상의 피해는 책임지지 않습니다.
+
 
 ## 결제 조회
 ```
