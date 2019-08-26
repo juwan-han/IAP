@@ -1,4 +1,4 @@
-## Mobile Service > IAP > SDK 가이드
+## Mobile Service > IAP > SDK Guide
 TOAST IAP SDK를 적용하면 모바일 애플리케이션에서 쉽고 강력한 인앱 결제를 제공할 수 있습니다.
 
 ## 주요 기능
