@@ -1,5 +1,12 @@
 ## Mobile Service > IAP > 릴리스 노트
 
+### 2019.8.27
+#### 소비성 구독상품 기능 추가
+* 주기적으로 자동결제 및 상품을 지급할 수 있는 상품 유형(CONSUMABLE_AUTO_RENEWABLE)
+* Apple, Google 지원
+#### 원스토어 샌드박스 결제 수정 사항 
+* 콘솔>App 등록/편집 팝업에서 SandBox Y/N 항목 삭제 
+* SandBox Y/N 설정없이 샌드박스, 실결제 가능하도록 수정
 
 ### 2018.12.04
 #### 신규 SDK 릴리즈
