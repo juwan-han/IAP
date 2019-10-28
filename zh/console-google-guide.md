@@ -160,6 +160,7 @@ See more documents here.(https://cloud.google.com/pubsub/docs/push)
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_zh_1.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap_google_add_domain_zh.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_zh_3.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/google_domain_auth.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_zh_4.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_zh_5.png)<br>
 

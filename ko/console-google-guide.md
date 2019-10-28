@@ -152,12 +152,15 @@ OAuth 인증 정보 생성 후, 아래 가이드를 참고하여 프로젝트 �
 4. [지금 이동하기] 버튼을 눌러 웹마스터 센터로 이동합니다.
 5. 웹마스터 센터에서 속성추가하기를 클릭합니다.
 6. [속성 추가]에 https://api-iap.cloud.toast.com 를 입력합니다.
-7. [권장 방법] 하단의 [로봇이 아닙니다.] 클릭 후 [확인]을 클릭합니다.
-8. 인증에 성공하면 마지막 이미지와 같은 화면이 노출됩니다. 이 화면이 노출되지 않으면 구독결제를 정상적으로 사용 할 수 없습니다.
+7. 도메인 인증 URL의 html 파일명을 TOAST IAP CONSOLE App 화면에서 구글 앱 등록 시 Domain authentication File Names 항목에 입력한다.
+    -> ex) https://api-iap.cloud.toast.com/googleabc.html 인 경우 googleabc.html 입력
+8. [권장 방법] 하단의 [로봇이 아닙니다.] 클릭 후 [확인]을 클릭합니다.
+9. 인증에 성공하면 마지막 이미지와 같은 화면이 노출됩니다. 이 화면이 노출되지 않으면 구독결제를 정상적으로 사용 할 수 없습니다.
 ```
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-1.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-2.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-3.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/google_domain_auth.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-4.png)<br>
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-5.png)<br>
 
