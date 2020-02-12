@@ -90,7 +90,7 @@ Response body에 JSON형태로 전달
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
-| price         | long   | 결제의 가격 |
+| price         | Float   | 결제의 가격 |
 | currency      | String | 결제의 통화 |
 | productSeq      | long | 결제의 아이템 번호 (console에 등록된 아이템 고유 번호) |
 
@@ -187,7 +187,7 @@ Response body에 JSON형태로 전달
 | ------------- | ------ | ----------------- |
 | paymentSeq      | String | 결제번호 |
 | productSeq      | long | 결제의 아이템 번호 (console에 등록된 아이템 고유 번호) |
-| price         | long   | 결제의 가격 |
+| price         | Float   | 결제의 가격 |
 | currency      | String | 결제의 통화 |
 | accessToken      | String | API access를 위한 토큰 |
 
@@ -300,7 +300,7 @@ Response body에 JSON형태로 전달
 | productType      | String | 상품 타입 |
 | productSeq      | long | 상품 번호(iap console 내부 식별자)|
 | currency      | String | 통화 |
-| price      | long | 가격 |
+| price      | Float | 가격 |
 | paymentId      | String | 최근 갱신된 스토어 결제 번호 |
 | originalPaymentId      | String | 최초 스토어 결제 번호 |
 | purchaseTimeMillis      | long | 최근 갱신된 시간 |

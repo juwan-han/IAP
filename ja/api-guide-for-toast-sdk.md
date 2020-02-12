@@ -89,7 +89,7 @@ Response bodyにJSON形に配信
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
-| price         | long   | price |
+| price         | Float   | price |
 | currency      | String | currency |
 | productSeq      | long | 決済のアイテム番号 (consoleに登録されたアイテム固有番号) |
 
@@ -185,7 +185,7 @@ Response bodyにJSON形に配信
 | ------------- | ------ | ----------------- |
 | paymentSeq      | String | 決済番号 |
 | productSeq      | long | 決済のアイテム番号 (consoleに登録されたアイテム固有番号) |
-| price         | long   | price |
+| price         | Float   | price |
 | currency      | String | currency |
 | accessToken      | String | API accessのためのトークン |
 
@@ -298,7 +298,7 @@ Response bodyにJSON形に配信
 | productType      | String | 商品タイプ |
 | productSeq      | long | 決済のアイテム番号 (consoleに登録されたアイテム固有番号)|
 | currency      | String | currency |
-| price      | long | price |
+| price      | Float | price |
 | paymentId      | String | 最近更新されたストアの決済番号 |
 | originalPaymentId      | String | 最初のストア決済番号 |
 | purchaseTimeMillis      | long | 最近更新された時間 |

@@ -83,7 +83,7 @@ Response body에 JSON형태로 전달
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
-| price         | long   | 결제소비가 완료된 결제건의 가격 |
+| price         | Float   | 결제소비가 완료된 결제건의 가격 |
 | currency      | String | 결제소비가 완료된 결제건의 통화 |
 
 [ResultCode]
@@ -190,8 +190,8 @@ Response body에 JSON형태로 전달
 | ------------- | ------ | ----------------- |
 | paymentSeq |  String | 결제번호(PAYMENT ID) |
 | itemSeq |  String |  웹콘솔에 등록된 ITEM ID |
-| currency | Long |  결제 통화 |
-| price |  String |  결제 가격 |
+| currency | String |  결제 통화 |
+| price |  Float |  결제 가격 |
 | purchaseToken |  String | 소비(consume)하기 위한 토큰정보 |
 
 [ResultCode]

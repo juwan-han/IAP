@@ -83,7 +83,7 @@ RequestBody
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
-| price         | long   | price |
+| price         | Float   | price |
 | currency      | String | currency |
 
 [ResultCode]
@@ -189,8 +189,8 @@ RequestBody
 | ------------- | ------ | ----------------- |
 | paymentSeq |  String | payment unique identifier(PAYMENT ID) |
 | itemSeq |  String |  ITEM ID obtained in web console |
-| currency | Long |  currency |
-| price |  String |  price |
+| currency | String |  currency |
+| price |  Float |  price |
 | purchaseToken |  String | token for payment verification and consume |
 
 [ResultCode]

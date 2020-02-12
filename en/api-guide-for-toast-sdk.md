@@ -89,7 +89,7 @@ returns a result in the response body.
 
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
-| price         | long   | price |
+| price         | Float   | price |
 | currency      | String | currency |
 | productSeq      | long | item unique identifier in IAP web console |
 
@@ -187,7 +187,7 @@ returns a result in the response body.
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
 | paymentSeq      | String | unique payment identifier in IAP web console |
-| price         | long   | price |
+| price         | Float   | price |
 | currency      | String | currency |
 | productSeq      | long | item unique identifier in IAP web console |
 | accessToken      | String | API access token |
@@ -303,7 +303,7 @@ returns a result in the response body.
 | productType      | String | consumable or auto renewable |
 | productSeq      | long | item unique identifier in IAP web console|
 | currency      | String | currency |
-| price      | long | price |
+| price      | Float | price |
 | paymentId      | String | latest store payment unique identifier|
 | originalPaymentId      | String | original store payment unique identifier |
 | purchaseTimeMillis      | long | latest renewal time in millis |
