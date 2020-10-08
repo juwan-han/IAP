@@ -2,9 +2,9 @@
 
 
 > [お知らせ]
-> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)として発売されました。
+> 定期購入決済をサポートする新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
 > 既存IAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです
+> 本文書は[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
 
 
 IAPを連動するときに開発会社のサーバーで使用できるAPIです。<br>
@@ -12,10 +12,10 @@ IAPを連動するときに開発会社のサーバーで使用できるAPIで�
 
 ## Consume API
 
-ユーザアプリケーション サーバーは,アイテムを支給する前に,IAP サーバーに決済を消費することをお知らせする必要があります。 <br>
-決済1件当たり1回だけ決済消費が可能で,決済の状態が正常でないと消費されません。 <br>
-消費(Consume)していない決済内訳は,SDKの未消費決済内訳照会APIにて照会されます。<br>
-商品タイプがCONSUMABLEの決済のみconsume可能です。
+ユーザアプリケーションサーバーは、アイテムを支給する前に、IAP サーバーに決済を消費することをお知らせする必要があります。 <br>
+決済1件当たり1回だけ決済消費が可能で、決済の状態が正常でないと消費されません。 <br>
+消費(Consume)していない決済内訳は、SDKの未消費決済内訳照会APIにて照会されます。<br>
+商品タイプがCONSUMABLEの決済のみ消費が可能です。
 
 
 
@@ -107,7 +107,7 @@ Response bodyにJSON形に配信
 
 ## Consumable List API
 
-決済が完了しましたが,消費(consume)されていない決済内訳をServer APIで照会することができます。 <br>
+決済が完了しましたが、消費(consume)されていない決済内訳をServer APIで照会することができます。 <br>
 
 
 ### Request
@@ -184,7 +184,7 @@ Response bodyにJSON形に配信
 | Property name | Value  | Description       |
 | ------------- | ------ | ----------------- |
 | paymentSeq      | String | 決済番号 |
-| productSeq      | long | 決済のアイテム番号 (consoleに登録されたアイテム固有番号) |
+| productSeq      | long | 決済のアイテム番号 (コンソールに登録されたアイテム固有番号) |
 | price         | Float   | price |
 | currency      | String | currency |
 | accessToken      | String | API accessのためのトークン |
@@ -201,7 +201,7 @@ Response bodyにJSON形に配信
 
 
 ## ActiveSubscription List API
-アプリ別,ユーザ別に満了していない購読決済を照会する。
+アプリ別、ユーザ別に満了していない定期購入決済を照会する。
 
 
 ### Request
@@ -296,7 +296,7 @@ Response bodyにJSON形に配信
 | appId      | String | packageName |
 | productId         | String   | ストアーに登録された商品識別子 |
 | productType      | String | 商品タイプ |
-| productSeq      | long | 決済のアイテム番号 (consoleに登録されたアイテム固有番号)|
+| productSeq      | long | 決済のアイテム番号 (コンソールに登録されたアイテム固有番号)|
 | currency      | String | currency |
 | price      | Float | price |
 | paymentId      | String | 最近更新されたストアの決済番号 |
