@@ -1,11 +1,11 @@
 ## Mobile Service > IAP > Apple 設定ガイド
 
 > [お知らせ]
-> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)として発売されました。
+> 定期購入決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
 > 既存IAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです
+> 本文書は[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
 
-Apple購読商品の決済を使用するには,App Store Connectでsecret key生成およびNotification url設定が必要です。<br>
+Apple定期購入商品の決済を使用するには,App Store Connectでsecret key生成およびNotification url設定が必要です。<br>
 Secret KeyはIAPアプリ情報に登録します。<br>
 Apple一般商品決済は特別な設定が必要でありません。
 
@@ -17,7 +17,7 @@ Apple一般商品決済は特別な設定が必要でありません。
 
 ## shared secret key 生成下期
 ```
-shared secret keyはすべてのアプリに共通したマスターキーで生成でき,アプリ別に生成することもできます。
+shared secret keyはすべてのアプリに共通したマスターキーで生成でき、アプリ別に生成することもできます。
 secret keyをIAPアプリ情報に登録します。
 ```
 
@@ -52,7 +52,7 @@ secret keyをIAPアプリ情報に登録します。
 ## Notification url 登録する
 ```
 1. App Store Connect > My Apps > App information> General
-2. 購読状態URL にIAP urlを登録します。
+2. 定期購入（サブスクリプション）状態URL にIAP urlを登録します。
 - URL : https://api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/AS
 - {YOUR_PACKAGE_NAME} : app bundle id
 ```
