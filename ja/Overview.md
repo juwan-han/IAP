@@ -1,25 +1,25 @@
 ## Mobile Service > IAP > Overview
 
 > [お知らせ]
-> 購読決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)として発売されました。
-> 既存IAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです
+> 定期購入決済をサポートする新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
+> 既存のIAP SDKはこれ以上新規機能を開発しない予定です。
+> 本文書は[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
 
 
 In-App Purchase (以下IAP)サービスはアプリ内決済の統合ソリューションです。
 
 
-## メーン機能
+## 主要機能
 
 TOAST IAPは次のような機能を提供します。
 
-* Google Play、Apple AppStore のアプリ決済に対し、ひとつのインターフェースで連動します。
+* Google Play、Apple AppStore のアプリ決済に対し、ひとつのインターフェイスで連動します。
 それぞれのストアー別の決済連動の仕様を学びなおす必要はありません。
 * IAPで提供する決済検証サーバーを通じて決済することで、セキュリティおよび安定性を高めます。
-* GoogleとAppleの購読決済およびプロモーション機能をサポートしています。
+* GoogleとAppleの定期購入決済およびプロモーション機能をサポートしています。
 * 顧客サポートのためにウェブコンソールで決済内訳照会機能を提供します。
 
-## 支援ストア
+## サポートするストア
 
 | プラットフォーム | ストアー |
 | --- | --- |
@@ -27,9 +27,9 @@ TOAST IAPは次のような機能を提供します。
 | Android | ONEstore (Korea only)|
 | iOS | Apple |
 
-## 支援商品類型
+## サポートするプロダクトタイプ
 
-| ストア | ストア商品類型| IAP商品類型|    
+| ストア | ストアプロダクトタイプ| IAPプロダクトタイプ|    
 |---|---|---|
 | Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_SUBSCRIPTION |
 | App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_SUBSCRIPTION |
@@ -50,10 +50,10 @@ TOAST IAPは次のような機能を提供します。
 
 IAPサービスでは次の図のように、IAP SDK、ユーザーアプリケーションサーバー、 IAP サーバー,プラットフォーム別ストアの4つで構成されます。
 
-![[그림 1 IAP 서비스 구조 - Server To Server Model]](http://static.toastoven.net/prod_iap/iap_n_1.png)
+![[図1 IAPサービス構造 - Server To Server Model]](http://static.toastoven.net/prod_iap/iap_n_1.png)
 
 
-![[그림 2 IAP 서비스 구조 - Build-in Model]](http://static.toastoven.net/prod_iap/iap_n_23.png)
+![[図2 IAP サービス構造 - Build-in Model]](http://static.toastoven.net/prod_iap/iap_n_23.png)
 
 
 | コンポーネント名 | 説明 |
@@ -65,13 +65,13 @@ IAPサービスでは次の図のように、IAP SDK、ユーザーアプリケ�
 | Store | Google Store、Apple App Storeなどのさまざまなストアです。 プラットフォーム別ストアはIAPサーバーと連動しています。 |
 
 
-## IAP 決済流れ図
+## IAP 決済フローチャート
 
 
-![[그림 3 Server To Server Model 결제 흐름도]](http://static.toastoven.net/prod_iap/iap_n_28.png)
+![[図3 Server To Server Model 決済フローチャート]](http://static.toastoven.net/prod_iap/iap_n_28.png)
 
 
-![[그림 4 Build-in model 결제 흐름도]](http://static.toastoven.net/prod_iap/iap_n_29.png)
+![[図4 Build-in model決済フローチャート]](http://static.toastoven.net/prod_iap/iap_n_29.png)
 
 
 | Step | Description |
