@@ -27,7 +27,7 @@ Console (https://console.toast.com)  > [Mobile Service] > Click [IAP]
 
 ## AppKey確認
 ```
-"URL & Appkey"をクリックしてAppKeyを確認し,SDKの設定に使用します。
+"URL & Appkey"をクリックしてAppKeyを確認し、SDKの設定に使用します。
 ```
 ![[AppKey 확인]](http://static.toastoven.net/prod_iap/iap-console-appkey.png)
 
