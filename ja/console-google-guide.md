@@ -7,7 +7,7 @@
 
 
 Google一般商品および定期購入商品のアプリ内決済のためにGoogle Play Billingと連動しなければなりません。<br>
-Google Play Billingは,Google Play ConsoleとGoogle API Consoleで生成された値を使用します。<br>
+Google Play Billingは、Google Play ConsoleとGoogle API Consoleで生成された値を使用します。<br>
 さらに、Google定期購入商品の決済のため、Notificationを設定する必要があります。<br>
 Notificationの設定が正しくなければ定期購入決済が進行しません。
 
@@ -153,7 +153,7 @@ Pub/Subコンソール(https://console.cloud.google.com/cloudpubsub)で下記の
 6. [プロパティ追加]に https://api-iap.cloud.toast.com を入力します。
 7. ドメイン認証URLのhtmlファイル名をTOAST CONSOLEアプリの登録時に入力します。
     -> 例) https://api-iap.cloud.toast.com/googleabc.htmlの場合、googleabc.html入力
-8. [推奨方法] 下段の [ロボットではない] クリック後,[OK] をクリックします。
+8. [推奨方法] 下段の [ロボットではない] クリック後、[OK] をクリックします。
 9. 認証に成功すると、最後のイメージと同じ画面が表示されます。 この画面が表示されないと、定期購入決済を正常に使用できません。
 ```
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_1.png)<br>
