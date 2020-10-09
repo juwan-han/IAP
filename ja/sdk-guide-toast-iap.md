@@ -10,13 +10,13 @@ TOAST IAP SDKを適用すると、モバイルアプリケーションで簡単�
 ## 開発ガイド
 
 #### iOS
-* [TOAST IAP iOSガイド](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-ios/)を参照してください。
+* [TOAST IAP iOSガイド](https://docs.toast.com/ja/TOAST/ja/toast-sdk/iap-ios/)を参照してください。
 
 #### Android
-* [TOAST IAP Androidガイド](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-android/)を参照してください。
+* [TOAST IAP Androidガイド](https://docs.toast.com/ja/TOAST/ja/toast-sdk/iap-android/)を参照してください。
 
 #### Unity
-* [TOAST IAP Unityガイド](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-unity/)を参照してください。
+* [TOAST IAP Unityガイド](https://docs.toast.com/ja/TOAST/ja/toast-sdk/iap-unity/)を参照してください。
 
 #### その他
-* その他プラットフォームについてのお問い合わせは[TOASTサポート](https://toast.com/support/inquiry?alias=tab3_06)へお願いします。
+* その他プラットフォームについてのお問い合わせは[TOASTサポート](https://toast.com/support/inquiry)へお願いします。
