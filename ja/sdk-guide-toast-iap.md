@@ -19,4 +19,4 @@ TOAST IAP SDKを適用すると、モバイルアプリケーションで簡単�
 * [TOAST IAP Unityガイド](https://docs.toast.com/ja/TOAST/ja/toast-sdk/iap-unity/)を参照してください。
 
 #### その他
-* その他プラットフォームについてのお問い合わせは[TOASTサポート](https://toast.com/support/inquiry?alias=tab3_06)へお願いします。
+* その他プラットフォームについてのお問い合わせは[TOASTサポート](https://toast.com/support/inquiry)へお願いします。
