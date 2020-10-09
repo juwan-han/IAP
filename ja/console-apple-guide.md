@@ -5,7 +5,7 @@
 > 既存IAP SDKはこれ以上新規機能を開発しない予定です。
 > 本文書は[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
 
-Apple定期購入商品の決済を使用するには,App Store Connectでsecret key生成およびNotification url設定が必要です。<br>
+Apple定期購入商品の決済を使用するには、App Store Connectでsecret key生成およびNotification url設定が必要です。<br>
 Secret KeyはIAPアプリ情報に登録します。<br>
 Apple一般商品決済は特別な設定が必要でありません。
 
