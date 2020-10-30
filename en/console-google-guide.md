@@ -56,11 +56,11 @@ Use the links below to generate the following information required for OAuth aut
 <br>
 
 ##### 1. Create an OAuth client at https://console.developers.google.com/apis/credentials (web application)
-![[]](http://static.toastoven.net/prod_iap/iap_google_credentials_en.png)
+![[]](http://static.toastoven.net/prod_iap/2020/oAuth_en.png)
 
 
 ##### 2. Enter https://developers.google.com/oauthplayground in the Authorized redirection urls
-![[]](http://static.toastoven.net/prod_iap/iap_google_Oauth_en.png)
+![[]](http://static.toastoven.net/prod_iap/2020/oAuth_2_en.png)
 
 ##### 3. Copy client ID / client secret from the popup window after creating
 ![[]](http://static.toastoven.net/prod_iap/iap_google_Oauth_clientSecret_en.png)
