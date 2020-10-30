@@ -36,9 +36,9 @@ Notificationの設定が正しくなければ定期購入決済が進行しま�
 
 ### Google In App Purchase License Key 確認
 ```
-https://play.google.com/console/developers > [Select App] > Monetize > Monetization setup > Licensing
+Google Play Console > App > (左側) 開発ツール > サービス及びAPI > ライセンス及びインアップ決済
 ```
-![](http://static.toastoven.net/prod_iap/2020/google_license_en.png)
+![[]](http://static.toastoven.net/prod_iap/iap_google_license_ja.png)
 
 
 ## Google API Console
