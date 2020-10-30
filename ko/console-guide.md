@@ -101,7 +101,7 @@ Console (https://console.toast.com)에서 [Mobile Service] > [IAP] 을  클릭�
 > - Failure : 결제 검증 실패  (스토어에서 결제를 진행했으나 결제검증에서 오류가 난 경우)
 > - Success : 결제 완료 (스토어 검증 성공 및 미소비결제내역에 포함됨) 
 > - Refund : 환불 완료 (관리자가 수동으로 환불됬다고 변경한 경우)
-
+> - UserClose : 유저가 결제 진행중 취소(결제 안됨) 
 
 
 ## 결제 상태 변경
