@@ -156,7 +156,7 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 7. 도메인 인증 URL의 html 파일명을 TOAST IAP CONSOLE App 화면에서 구글 앱 등록 시 Domain authentication File Names 항목에 입력한다.
     -> ex) https://api-iap.cloud.toast.com/googleabc.html 인 경우 googleabc.html 입력
 8. [권장 방법] 하단의 [로봇이 아닙니다.] 클릭 후 [확인]을 클릭합니다.
-9. 인증에 성공하면 마지막 이미지와 같은 화면이 노출됩니다. 이 화면이 노출되지 않으면 구독결제를 정상적으로 사용 할 수 없습니다.
+9. 인증에 성공하면 마지막 이미지와 같은 화면이 노출됩니다. 이 화면이 노출되지 않으면 구독결제를 정상적으로 사용할 수 없습니다.
 ```
 
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-1.png) <br>
@@ -167,7 +167,7 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 ![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-5.png) <br>
 
 ### 실시간 개발자 알림
-*  웹마스터 설정이 끝나면, 앱 설정 페이지로 돌아와 Pub/Sub 설정에 `주제 이름`을 입력합니다.
+*  웹마스터 설정이 끝나면, 앱 설정 페이지로 돌아와 Pub/Sub 설정에 주제 이름을 입력합니다.
 ````
 https://play.google.com/console/developers > [앱 선택] > 수익 창출 > 수입 창출 설정 > 실시간 개발자 알림
 ````
