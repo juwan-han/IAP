@@ -36,9 +36,9 @@ Notificationの設定が正しくなければ定期購入決済が進行しま�
 
 ### Google In App Purchase License Key 確認
 ```
-Google Play Console > App > (左側) 開発ツール > サービス及びAPI > ライセンス及びインアップ決済
+https://play.google.com/console/developers > [Select App] > Monetize > Monetization setup > Licensing
 ```
-![[]](http://static.toastoven.net/prod_iap/iap_google_license_ja.png)
+![](http://static.toastoven.net/prod_iap/2020/google_license_en.png)
 
 
 ## Google API Console
@@ -156,12 +156,17 @@ Pub/Subコンソール(https://console.cloud.google.com/cloudpubsub)で下記の
 8. [推奨方法] 下段の [ロボットではない] クリック後、[OK] をクリックします。
 9. 認証に成功すると、最後のイメージと同じ画面が表示されます。 この画面が表示されないと、定期購入決済を正常に使用できません。
 ```
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_1.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap_google_add_domain_ja.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_3.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/google_domain_auth.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_4.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_5.png)<br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_1.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap_google_add_domain_ja.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_3.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/google_domain_auth.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_4.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification_ja_5.png) <br>
 
 
 
+### Realtime developer notifications
+````
+https://play.google.com/console/developers > [Select App] > Monetize > Monetization setup > Real-time developer notificqations
+````
+![[]realtime notification](http://static.toastoven.net/prod_iap/2020/google_realtime_notification_en.png)

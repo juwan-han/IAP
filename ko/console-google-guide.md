@@ -29,17 +29,18 @@ Notification 설정이 올바르지 않으면 구독 결제가 진행되지 않�
 ## Google Console
 | Console        | 위치                              |
 | -------------- | ------------------------------- |
-| Google Play Console | https://developer.android.com/distribute/console |
+| Google Play Console | https://play.google.com/console/developers |
 | Google API Console | https://console.developers.google.com/apis/dashboard |
 
 
 ## Google Play Console
 
 ### Google In App Purchase License Key 확인하기
+
 ```
-Google Play Console > App 선택 > (좌측) 개발 도구 > 서비스 및 API > 라이선스 및 인앱 결제
+Google Play Console > 앱 선택 > 수익 창출 > 수익 창출 설정 > 라이선스
 ```
-![](http://static.toastoven.net/prod_iap/iap_google_license_ko.jpg)
+![](http://static.toastoven.net/prod_iap/2020/google_license_kr.png)
 
 ## Google API Console
 
@@ -58,11 +59,11 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 <br>
 
 ##### 1. https://console.developers.google.com/apis/credentials 에서 OAuth 클라이언트 생성 (웹 어플리케이션)
-![[그림 1] Client ID 및 Client Secret 생성 1](http://static.toastoven.net/prod_iap/iap_g_01.png)
+![[그림 1] Client ID 및 Client Secret 생성 1](http://static.toastoven.net/prod_iap/2020/oAuth_kr.png)
 
 
 ##### 2. 승인된 redirection url에 https://developers.google.com/oauthplayground 입력
-![[그림 2] Client ID 및 Client Secret 생성 2](http://static.toastoven.net/prod_iap/iap_google_Oauth_ko.png)
+![[그림 2] Client ID 및 Client Secret 생성 2](http://static.toastoven.net/prod_iap/2020/oAuth_2_kr.png)
 
 
 ##### 3. 생성 후 팝업 창에서 클라이언트 ID / 클라이언트 seceret 복사
@@ -81,8 +82,8 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 
 
 ## Google Play 연동 주의사항
-
-OAuth 인증 정보 생성 후, 아래 가이드를 참고하여 프로젝트 설정을 진행합니다.
+* 상품 등록은 반드시 판매자 계정으로 진행해야 합니다.
+* OAuth 인증 정보 생성 후, 아래 가이드를 참고하여 프로젝트 설정을 진행합니다.
 
 > [참고]
 > 구글 가이드 : https://developers.google.com/android-publisher/getting_started
@@ -96,15 +97,15 @@ OAuth 인증 정보 생성 후, 아래 가이드를 참고하여 프로젝트 �
 
 <br>
 
-### Google Play Developer Console에서 Linked Project를 확인합니다.
+### Google Play Developer Console에서 연결된 프로젝트를 확인합니다.
  
 ```
-  - https://play.google.com/apps/publish > Settings > Developer account > API access
+  - https://play.google.com/console/developers > Settings > Developer account > API access
 ```
-![[]](http://static.toastoven.net/prod_iap/iap-console-google-console-2.png)
+![[]](http://static.toastoven.net/prod_iap/2020/API_access_kr.png)
 
-###  Google Play Developer Console의 Linked Project와 GoogleAPIs의 OAuth 클라언트 생성 프로젝트가 같은지 확인합니다.
-![[]](http://static.toastoven.net/prod_iap/iap_new_06.png)
+### Google Play Developer Console의 Linked Project와 GoogleAPIs의 OAuth 클라언트 생성 프로젝트가 같은지 확인합니다.
+![[]](http://static.toastoven.net/prod_iap/2020/API_access_2_kr.png)
 
 ## Google real-time developer notification 설정하기
 
@@ -157,12 +158,17 @@ OAuth 인증 정보 생성 후, 아래 가이드를 참고하여 프로젝트 �
 8. [권장 방법] 하단의 [로봇이 아닙니다.] 클릭 후 [확인]을 클릭합니다.
 9. 인증에 성공하면 마지막 이미지와 같은 화면이 노출됩니다. 이 화면이 노출되지 않으면 구독결제를 정상적으로 사용 할 수 없습니다.
 ```
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-1.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-2.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-3.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/google_domain_auth.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-4.png)<br>
-![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-5.png)<br>
 
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-1.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-2.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-3.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/google_domain_auth.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-4.png) <br>
+![[] domain verification](http://static.toastoven.net/prod_iap/iap-console-domain-verification-5.png) <br>
 
-
+### 실시간 개발자 알림
+*  웹마스터 설정이 끝나면, 앱 설정 페이지로 돌아와 Pub/Sub 설정에 `주제 이름`을 입력합니다.
+````
+https://play.google.com/console/developers > [앱 선택] > 수익 창출 > 수입 창출 설정 > 실시간 개발자 알림
+````
+![[]실시간 개발자 알림 설정](http://static.toastoven.net/prod_iap/2020/google_realtime_notification_kr.png)
