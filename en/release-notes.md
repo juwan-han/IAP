@@ -3,7 +3,7 @@
 
 ### 2018.12.04
 #### New SDK Release
-* iOS, Google, ONEStore support
+* iOS, Google, ONE Store support
 * Support for subscription payments
 * Multiple Error Handling
 * [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)
@@ -62,7 +62,7 @@
     
 #### 기능추가
 * [SDK][[AOS-1.5.0](/Download/#mobile-service-iap)]
-    * OneStore V17 추가  
+    * One Store V17 추가  
       
 #### 기능개선/변경
 * [SDK][[iOS-1.5.6](/Download/#mobile-service-iap)]

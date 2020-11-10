@@ -24,7 +24,7 @@ TOAST IAPは次のような機能を提供します。
 | プラットフォーム | ストアー |
 | --- | --- |
 | Android | Google |
-| Android | ONEstore (Korea only)|
+| Android | ONE Store (Korea only)|
 | iOS | Apple |
 
 ## サポートする商品タイプ
@@ -33,7 +33,7 @@ TOAST IAPは次のような機能を提供します。
 |---|---|---|
 | Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_SUBSCRIPTION |
 | App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_SUBSCRIPTION |
-| ONEStore|	Managed product | CONSUMABLE|
+| ONE Store|	Managed product | CONSUMABLE|
 
 ## サービス用語
 

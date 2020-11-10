@@ -38,7 +38,7 @@ Console (https://console.toast.com)  > [Mobile Service] > Click [IAP]
 1. [App] Tab Click > [追加]ボタン·クリック
 2. [Store ID]からストアー選択
 3. 共通情報
-   - Store ID : Google, Apple, ONEStore
+   - Store ID : Google, Apple, ONE Store
    - App Name : アプリ名
    - Store APP ID : ストア package name or bundle id
 4. [追加]ボタン·クリック
@@ -66,7 +66,7 @@ Console (https://console.toast.com)  > [Mobile Service] > Click [IAP]
 |---|---|---|
 | Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_SUBSCRIPTION |
 | App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_SUBSCRIPTION |
-| ONEStore|	Managed product | CONSUMABLE|
+| ONE Store|	Managed product | CONSUMABLE|
 
 
 <br>

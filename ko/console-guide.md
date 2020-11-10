@@ -41,7 +41,7 @@ Console (https://console.toast.com)에서 [Mobile Service] > [IAP] 을  클릭�
 1. [App] 탭 선택 > [추가] 버튼 클릭
 2. [Store ID]에서 스토어 선택  
 3. 공통 정보
-   - Store ID : Google, Apple, ONEStore
+   - Store ID : Google, Apple, ONE Store
    - App Name : 앱이름
    - Store APP ID : 스토어 package name or bundle id
 4. [추가] 버튼 클릭 
@@ -69,7 +69,7 @@ Console (https://console.toast.com)에서 [Mobile Service] > [IAP] 을  클릭�
 |---|---|---|
 | Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_RENEWABLE, CONSUMABLE_AUTO_RENEWABLE |
 | App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_RENEWABLE, CONSUMABLE_AUTO_RENEWABLE |
-| ONEStore|	Managed product | CONSUMABLE|
+| ONE Store|	Managed product | CONSUMABLE|
 
 ### 소비성 구독상품 (CONSUMABLE_AUTO_RENEWABLE)
 * 구독 상품 + 소비성 상품이 결합된 유형

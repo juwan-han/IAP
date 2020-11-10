@@ -1,4 +1,4 @@
-## Mobile Service > IAP > ONEStore 콘솔 가이드
+## Mobile Service > IAP > ONE Store 콘솔 가이드
 
 > [공지]
 > 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.

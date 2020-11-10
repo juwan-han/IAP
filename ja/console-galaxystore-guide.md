@@ -1,4 +1,4 @@
-## Mobile Service > IAP > GalaxyStore Console Guide
+## Mobile Service > IAP > Galaxy Store Console Guide
 
 > [お知らせ]
 > 定期購入決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
