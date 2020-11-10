@@ -1,11 +1,11 @@
-## Mobile Service > IAP > GalaxyStore Console Guide
+## Mobile Service > IAP > Galaxy Store Console Guide
 
 > [Notice]<br>
 > New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
 > The existing IAP SDK will not be developing new features.<br>
 > This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
 
-To use GalaxyStore in IAP, you should enter PackageName at app registration.
+To use Galaxy Store in IAP, you should enter PackageName at app registration.
 
 ## Check Package Name
 After binary file registration , Check the package name. <br>

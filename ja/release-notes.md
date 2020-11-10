@@ -64,7 +64,7 @@
     
 #### 기능추가
 * [SDK][[AOS-1.5.0](/Download/#mobile-service-iap)]
-    * OneStore V17 추가  
+    * One Store V17 추가  
       
 #### 기능개선/변경
 * [SDK][[iOS-1.5.6](/Download/#mobile-service-iap)]

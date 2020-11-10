@@ -39,7 +39,7 @@ See Store console guide if you want store specific setting.
 1. Select [App] Tab and Click [Add]
 2. Select [Store ID] 
 3. Common Information
-   - Store ID : Google, Apple, ONEStore
+   - Store ID : Google, Apple, ONE Store
    - App Name : Your App Name
    - Store APP ID : Store package name or bundle id
 4. Click [Add] button. 
@@ -66,7 +66,7 @@ See Store console guide if you want store specific setting.
 |---|---|---|
 | Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_SUBSCRIPTION |
 | App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_SUBSCRIPTION |
-| ONEStore|	Managed product | CONSUMABLE|
+| ONE Store|	Managed product | CONSUMABLE|
 
 
 <br>

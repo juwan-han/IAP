@@ -1,4 +1,4 @@
-## Mobile Service > IAP > ONEStore Console Guide
+## Mobile Service > IAP > ONE Store Console Guide
 
 > [Notice]<br>
 > New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
@@ -25,9 +25,9 @@ Apps > select App> In-App정보 > Licensing & in-app billing
 
 | Key | Description                                             |
 | ------------- | ------------------------------ |
-| Store ID     | ONEStore v17 |
+| Store ID     | ONE Store v17 |
 | App Name      | App Name|
-| ONE Store Client ID | ONEStore ClientID |
-| ONE Store Client Secret | ONEStore Oauth Client Secret |
-| ONE Store License Key | ONEStore Oauth License Key|
+| ONE Store Client ID | ONE Store ClientID |
+| ONE Store Client Secret | ONE Store Oauth Client Secret |
+| ONE Store License Key | ONE Store Oauth License Key|
 
