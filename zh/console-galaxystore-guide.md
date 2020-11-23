@@ -13,7 +13,7 @@ After binary file registration , Check the package name. <br>
  ![[]](http://static.toastoven.net/prod_iap/2020/galaxy_app_en.png)
  
 
-## IAP 콘솔에서 Package Name 등록하기
-[콘솔 접속](https://console.toast.com/) > Select Organization and Project > Mobile Service > IAP > App > Click Add button <br>
+## Registering app from the console
+[CONSOLE](https://console.toast.com/) > Select Organization and Project > Mobile Service > IAP > App > Click Add button <br>
 Please enter Package Name in the Store App ID
 ![[]](http://static.toastoven.net/prod_iap/2020/galaxy_app_2_en.png)
