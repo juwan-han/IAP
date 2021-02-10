@@ -1,7 +1,7 @@
 ## Mobile Service > IAP > 오류 코드
 
 > [공지]<br>
-> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br>
+> 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br>
 > 기존 IAP SDK는 신규 기능을 개발하지 않을 예정입니다.
 
 ## Client API 에러 타입

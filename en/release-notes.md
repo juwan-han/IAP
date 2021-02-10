@@ -6,7 +6,7 @@
 * iOS, Google, ONE Store support
 * Support for subscription payments
 * Multiple Error Handling
-* [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)
+* [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)
 * [console] Adding a subscription feature
 
 

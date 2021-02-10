@@ -2,9 +2,9 @@
 
 
 > [공지]
-> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
+> 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
 > 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.
-> 본 문서는 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
+> 본 문서는 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
 
 Google 일반상품 및 구독상품 인앱 결제를 위해 Google Play Billing을 연동해야 합니다.<br>
 Google Play Billing은 Google Play Console 과 Google API Console에서 생성된 값들을 사용합니다.<br>
@@ -153,7 +153,7 @@ Google Play Consle과 동일한 계정으로 Google API Console에 프로젝트�
 4. [지금 이동하기] 버튼을 눌러 웹마스터 센터로 이동합니다.
 5. 웹마스터 센터에서 속성추가하기를 클릭합니다.
 6. [속성 추가]에 https://api-iap.cloud.toast.com 를 입력합니다.
-7. 도메인 인증 URL의 html 파일명을 TOAST IAP CONSOLE App 화면에서 구글 앱 등록 시 Domain authentication File Names 항목에 입력한다.
+7. 도메인 인증 URL의 html 파일명을 NHN Cloud IAP CONSOLE App 화면에서 구글 앱 등록 시 Domain authentication File Names 항목에 입력한다.
     -> ex) https://api-iap.cloud.toast.com/googleabc.html 인 경우 googleabc.html 입력
 8. [권장 방법] 하단의 [로봇이 아닙니다.] 클릭 후 [확인]을 클릭합니다.
 9. 인증에 성공하면 마지막 이미지와 같은 화면이 노출됩니다. 이 화면이 노출되지 않으면 구독결제를 정상적으로 사용할 수 없습니다.

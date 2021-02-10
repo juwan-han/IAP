@@ -2,9 +2,9 @@
 
 
 > [Notice]<br>
-> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> New IAP SDK suppoting subscription are released as [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
 > The existing IAP SDK will not be developing new features.<br>
-> This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
+> This documents describes [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
 
 In-App Purchase (IAP) service is an integrated in-app purchase service.
 
@@ -55,7 +55,7 @@ IAP service is comprised of 4 components as in following figure: IAP SDK, User A
 | IAP SDK | Register User ID and request payment for in-app purchase. If payment is performed, you’ll move to in-app purchase screen of the store (Google Store for Android). |
 | User Application Server | Verify purchase history requested by client via IAP server, consume purchase and transfer item. |
 | User Application Client | If there is no server existent to user application, perform payment consume in application’s client and grant authority for item.  |
-| IAP Server | This is in-app purchase server provided by TOAST Cloud|
+| IAP Server | This is in-app purchase server provided by NHN Cloud Cloud|
 | Store | It includes various stores such as Google Store and Apple App Store. Store server for each platform is synchronized with IAP server. |
 <center>[Table. 3 IAP Component]</center>
 

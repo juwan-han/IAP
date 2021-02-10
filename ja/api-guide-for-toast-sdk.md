@@ -2,9 +2,9 @@
 
 
 > [お知らせ]
-> 定期購入決済をサポートする新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
+> 定期購入決済をサポートする新規のIAP SDKが[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
 > 既存IAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
+> 本文書は[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
 
 
 IAPを連動するときに開発会社のサーバーで使用できるAPIです。<br>

@@ -5,7 +5,7 @@
 * iOS,Google支援
 * 購読決済支援
 * 多様なエラー処理
-* [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)
+* [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)
 * [console] 購読決済機能を追加
 
 

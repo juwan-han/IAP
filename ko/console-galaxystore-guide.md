@@ -1,9 +1,9 @@
 ## Mobile Service > IAP > Galaxy Store 콘솔 가이드
 
 > [공지]
-> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
+> 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
 > 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.
-> 본 문서는 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
+> 본 문서는 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
 
 IAP 에서 Galaxy Store 연동을 하려면 앱 등록 시, PackageName 을 입력해야 합니다.
 

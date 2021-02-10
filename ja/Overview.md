@@ -1,9 +1,9 @@
 ## Mobile Service > IAP > Overview
 
 > [お知らせ]
-> 定期購入決済をサポートする新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
+> 定期購入決済をサポートする新規のIAP SDKが[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
 > 既存のIAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
+> 本文書は[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
 
 
 In-App Purchase (以下IAP)サービスはアプリ内決済の統合ソリューションです。
@@ -11,7 +11,7 @@ In-App Purchase (以下IAP)サービスはアプリ内決済の統合ソリュ�
 
 ## 主要機能
 
-TOAST IAPは次のような機能を提供します。
+NHN Cloud IAPは次のような機能を提供します。
 
 * Google Play、Apple AppStore のアプリ決済に対し、ひとつのインターフェイスで連動します。
 それぞれのストアー別の決済連動の仕様を学びなおす必要はありません。
@@ -39,7 +39,7 @@ TOAST IAPは次のような機能を提供します。
 
 | 用語 | 説明 |
 | --- | --- |
-| AppKey | TOAST Cloud ユーザープロジェクトと商品間の1:1 マッチングキー. 1プロジェクト当たり1つのIAP向けAppKeyを発給する。 |
+| AppKey | NHN Cloud ユーザープロジェクトと商品間の1:1 マッチングキー. 1プロジェクト当たり1つのIAP向けAppKeyを発給する。 |
 | ストア(Store) | App Store、 Google Playのようなアプリを販売・配信する窓口となるオンラインアプリストア |
 | 決済内訳(Payment) | 使用者が決済した内訳 |
 | 決済要請(Purchase) | アプリ内、あるいはストアでアイテムを購入する。 |
@@ -61,7 +61,7 @@ IAPサービスでは次の図のように、IAP SDK、ユーザーアプリケ�
 | IAP SDK | アプリ内決済のためにユーザーID登録、決済リクエストを実行します。 <br> 決済を行う際、ストア(Androidの場合、Google Store)のアプリ内決済画面に移動します。 |
 | User Application Server | ユーザーアプリケーションのサーバーです。 <br> IAP サーバーを通じてクライアントが要請した決済内訳を確認した後、決済消費を進め、アイテムの伝達を行います。 |
 | User Application Client | ユーザーアプリケーションにサーバーが存在しない場合は、アプリケーションのクライアントで決済消費を行い、アイテムに対する権限を与えることになります。 |
-| IAP Server | TOAST Cloudで提供するアプリ内決済サーバーです。|
+| IAP Server | NHN Cloudで提供するアプリ内決済サーバーです。|
 | Store | Google Store、Apple App Storeなどのさまざまなストアです。 プラットフォーム別ストアはIAPサーバーと連動しています。 |
 
 

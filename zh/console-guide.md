@@ -1,9 +1,9 @@
 ## Mobile Service > IAP > Console Common Guide
 
 > [Notice]<br>
-> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> New IAP SDK suppoting subscription are released as [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
 > The existing IAP SDK will not be developing new features.<br>
-> This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
+> This documents describes [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
 
 To use IAP SDK, you first need to register app and item at web console after store registration.
 
@@ -14,14 +14,14 @@ To use IAP SDK, you first need to register app and item at web console after sto
 
 ## Project Creation
 ```
-At TOAST Console (https://console.toast.com), click [+ Create New Project]
+At NHN Cloud Console (https://console.toast.com), click [+ Create New Project]
 ```
 ![[]](http://static.toastoven.net/prod_iap/iap-console-new-project.png)
 
 
 ## Activating IAP
 ```
-At TOAST Console (https://console.toast.com), click [Mobile Service] > [IAP] 
+At NHN Cloud Console (https://console.toast.com), click [Mobile Service] > [IAP] 
 ```
 ![[]](http://static.toastoven.net/prod_iap/iap-console-iap-on.png)
 
