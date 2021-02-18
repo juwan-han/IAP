@@ -1,9 +1,9 @@
 ## Mobile Service > IAP > Apple Console Guide
 
 > [Notice]<br>
-> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
+> New IAP SDK suppoting subscription are released as [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
 > The existing IAP SDK will not be developing new features.<br>
-> This documents describes [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
+> This documents describes [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
 
 
 To use App store subscription, you should create a secret key and set a notification url in App Store Connect.<br>

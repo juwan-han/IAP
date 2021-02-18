@@ -1,9 +1,9 @@
 ## Mobile Service > IAP > Apple 設定ガイド
 
 > [お知らせ]
-> 定期購入決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
+> 定期購入決済を支援する新規のIAP SDKが[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
 > 既存IAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
+> 本文書は[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
 
 Apple定期購入商品の決済を使用するには、App Store Connectでsecret key生成およびNotification url設定が必要です。<br>
 Secret KeyはIAPアプリ情報に登録します。<br>

@@ -1,20 +1,20 @@
 ## Mobile Service > IAP > 개요
 
 > [공지] <br>
-기존 IAP에서 제공하던 주요 스토어(Apple App Store, Google Play Store, ONE Store)결제 기능 외에 주요 스토어(Apple App Store, Google Play Store)의 구독서비스를 제공하는 IAP(In-App Purchase) 기능이 TOAST SDK에 포함되었습니다.<br>
-기존 IAP SDK는 구독 서비스를 지원하지 않습니다. 또한, TOAST IAP의 기능 추가 및 개선 작업은 TOAST SDK로 제공할 예정입니다.<br>
-본 문서는 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 를 기준으로 작성된 가이드 문서입니다.
+기존 IAP에서 제공하던 주요 스토어(Apple App Store, Google Play Store, ONE Store)결제 기능 외에 주요 스토어(Apple App Store, Google Play Store)의 구독서비스를 제공하는 IAP(In-App Purchase) 기능이 NHN Cloud SDK에 포함되었습니다.<br>
+기존 IAP SDK는 구독 서비스를 지원하지 않습니다. 또한, NHN Cloud IAP의 기능 추가 및 개선 작업은 NHN Cloud SDK로 제공할 예정입니다.<br>
+본 문서는 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 를 기준으로 작성된 가이드 문서입니다.
 
 
-TOAST In-App Purchase(이하 TOAST IAP)는 주요 서비스 플랫폼(Apple App Store, Google Play, ONE Store)을 아우르는 통합 인앱 결제 서비스입니다.
+NHN Cloud In-App Purchase(이하 NHN Cloud IAP)는 주요 서비스 플랫폼(Apple App Store, Google Play, ONE Store)을 아우르는 통합 인앱 결제 서비스입니다.
 
 
 ## 주요 기능
 
-TOAST IAP는 다음과 같은 기능을 제공합니다.
+NHN Cloud IAP는 다음과 같은 기능을 제공합니다.
 
 * Google Play, Apple AppStore, ONE store 의 인앱 결제를 단일 인터페이스로 제공합니다. 따라서 주요 스토어별 결제 연동 스펙을 완벽하게 학습하지 않아도 쉽게 적용할 수 있습니다.
-* TOAST IAP에서 별도로 운용하는 결제 검증 서버로 결제 보안 및 안정성을 확보할 수 있습니다.
+* NHN Cloud IAP에서 별도로 운용하는 결제 검증 서버로 결제 보안 및 안정성을 확보할 수 있습니다.
 * Google Play Store, Apple App Store의 구독, Promotion 기능을 제공합니다.
 * 웹콘솔에서의 다양한 기능(결제내역 조회기능 등)으로 고객 문의에 대한 원활한 대응이 가능합니다.
 
@@ -29,7 +29,7 @@ TOAST IAP는 다음과 같은 기능을 제공합니다.
 
 ## 지원 상품 유형
 
-| Store | 스토어 상품유형| TOAST IAP 상품유형|    
+| Store | 스토어 상품유형| NHN Cloud IAP 상품유형|    
 |---|---|---|
 | Google Play Store| One-time, Subscriptions | CONSUMABLE, AUTO_SUBSCRIPTION |
 | App Store| Consumable, Auto-Renewable | CONSUMABLE, AUTO_SUBSCRIPTION |
@@ -40,7 +40,7 @@ TOAST IAP는 다음과 같은 기능을 제공합니다.
 
 | 용어 | 설명 |
 | --- | --- |
-| AppKey | TOAST Cloud 사용자 프로젝트와 상품간 1:1 매칭키. 프로젝트당 하나의 IAP용 AppKey를 발급함 |
+| AppKey | NHN Cloud 사용자 프로젝트와 상품간 1:1 매칭키. 프로젝트당 하나의 IAP용 AppKey를 발급함 |
 | 스토어(Store) | Apple App Store, Google Play Store 같은 앱을 판매하는 곳 |
 | 결제내역(Payment) | 사용자가 결제한 내역 |
 | 결제요청(Purchase) | 앱 내에서 혹은 스토어에서 아이템을 구매함 |
@@ -59,10 +59,10 @@ IAP 서비스는 다음 그림과 같이 IAP SDK, User Application Server, IAP S
 
 | 컴포넌트 | 설명 |
 | ----- | --- |
-| TOAST IAP SDK | IAP Android SDK입니다. 인앱 결제를 위하여 사용자ID 등록, 결제요청을 수행합니다. <br>결제 수행시 스토어(Google Play Store, Apple App Store등)의 인앱 결제 화면으로 이동합니다. |
+| NHN Cloud IAP SDK | IAP Android SDK입니다. 인앱 결제를 위하여 사용자ID 등록, 결제요청을 수행합니다. <br>결제 수행시 스토어(Google Play Store, Apple App Store등)의 인앱 결제 화면으로 이동합니다. |
 | User Application Server | 사용자 애플리케이션 서버입니다. <br>IAP 서버를 통하여 클라이언트가 요청한 결제내역을 확인한 후 결제소비를 진행하고 아이템 전달을 수행합니다. |
 | User Application Client | 사용자 애플리케이션에 서버가 존재하지 않는다면, 애플리케이션의 클라이언트에서 결제소비를 진행하고 아이템에 대한 권한을 부여하게 됩니다. |
-| IAP Server | TOAST Cloud에서 제공하는 인앱 결제 서버입니다. |
+| IAP Server | NHN Cloud에서 제공하는 인앱 결제 서버입니다. |
 | Store | Google Store, Apple App Store 등의 다양한 스토어입니다. 플랫폼별 스토어는 IAP 서버와 연동되어 있습니다. |
 
 

@@ -1,9 +1,9 @@
 ## Mobile Service > IAP > Google 設定ガイド
 
 > [お知らせ]
-> 定期購入決済を支援する新規のIAP SDKが[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
+> 定期購入決済を支援する新規のIAP SDKが[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
 > 既存のIAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[TOAST SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
+> 本文書は[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
 
 
 Google一般商品および定期購入商品のアプリ内決済のためにGoogle Play Billingと連動しなければなりません。<br>
@@ -151,7 +151,7 @@ Pub/Subコンソール(https://console.cloud.google.com/cloudpubsub)で下記の
 4. [今移動]ボタンを押してウェブマスターセンターに移動します。
 5. ウェブマスターセンターでプロパティを合わせることをクリックします。
 6. [プロパティ追加]に https://api-iap.cloud.toast.com を入力します。
-7. ドメイン認証URLのhtmlファイル名をTOAST CONSOLEアプリの登録時に入力します。
+7. ドメイン認証URLのhtmlファイル名をNHN Cloud CONSOLEアプリの登録時に入力します。
     -> 例) https://api-iap.cloud.toast.com/googleabc.htmlの場合、googleabc.html入力
 8. [推奨方法] 下段の [ロボットではない] クリック後、[OK] をクリックします。
 9. 認証に成功すると、最後のイメージと同じ画面が表示されます。 この画面が表示されないと、定期購入決済を正常に使用できません。
