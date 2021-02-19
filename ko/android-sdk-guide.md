@@ -1,7 +1,7 @@
 ## Mobile Service > IAP > Android SDK 사용 가이드
 
 > [공지]<br>
-> 구독 결제를 지원하는 신규 IAP SDK가 [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br>
+> 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br>
 > 기존 IAP SDK는 신규 기능을 개발하지 않을 예정입니다.
 
 ## 개발환경
@@ -17,7 +17,7 @@
 
 ## Android Studio & Gradle 환경에서 사용하기
 
-`Toast IAP SDK`는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다.
+`NHN Cloud IAP SDK`는 Gradle을 기반으로한 Android Studio IDE에 대한 개발환경을 제공합니다.
 jCenter Maven Repository 로부터 Remote로 다운로드 받을수 있습니다.
 아래의 같이 프로젝트의 build.gradle 파일에 repository와 dependency에 대한 정의를 하시면 됩니다.  
 
@@ -31,7 +31,7 @@ buildscript {
 }
 ```
 
-`Toast IAP SDK`에서 공통으로 사용되는 권한은 다음과 같습니다.  
+`NHN Cloud IAP SDK`에서 공통으로 사용되는 권한은 다음과 같습니다.  
 
 |Permission|Description|
 |---|---|
@@ -89,7 +89,7 @@ startActivity(intent);
 ```
 
 #### One Store 로그인 요청하기
-`Toast IAP SDK`에서는 내부적으로 로그인 상태를 확인하기 때문에 별도로 로그인 처리를 하실 필요가 없습니다.
+`NHN Cloud IAP SDK`에서는 내부적으로 로그인 상태를 확인하기 때문에 별도로 로그인 처리를 하실 필요가 없습니다.
 만약 사용중 로그인이 되어 있지 않다면 One Store 로그인 팝업(예/아니요)이 나타납니다.
 로그인 팝업에서 `예`를 선택하게 되면 One Store 로그인 화면으로 연결 되며 `아니오`를 선택하게 되면 `INAPP_ONESTORE_NEED_LOGIN(202)` 에러를 발생시킵니다.
 
@@ -210,7 +210,7 @@ InAppPurchases.InAppPurchase.registerMarketId(marketId); // marketId : String va
 
 ### 3. App ID 등록
 IAP Android SDK를 사용하기 위한 서비스 ID 입니다.
-App ID는 `TOAST Console > Mobile Service > IAP`에서 확인 가능합니다.
+App ID는 `NHN Cloud Console > Mobile Service > IAP`에서 확인 가능합니다.
 
 **[Method]**
 
@@ -222,7 +222,7 @@ public boolean registerAppId(long appId);
 
 |Type|Name|Description|
 |---|---|---|
-| Long | appId | TOAST 콘솔의 IAP Service에서 발급한 App ID |
+| Long | appId | NHN Cloud 콘솔의 IAP Service에서 발급한 App ID |
 
 **[Example Code]**  
 
