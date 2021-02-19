@@ -40,7 +40,7 @@ NHN Cloud IAP는 다음과 같은 기능을 제공합니다.
 
 | 용어 | 설명 |
 | --- | --- |
-| AppKey | NHN Cloud Cloud 사용자 프로젝트와 상품간 1:1 매칭키. 프로젝트당 하나의 IAP용 AppKey를 발급함 |
+| AppKey | NHN Cloud 사용자 프로젝트와 상품간 1:1 매칭키. 프로젝트당 하나의 IAP용 AppKey를 발급함 |
 | 스토어(Store) | Apple App Store, Google Play Store 같은 앱을 판매하는 곳 |
 | 결제내역(Payment) | 사용자가 결제한 내역 |
 | 결제요청(Purchase) | 앱 내에서 혹은 스토어에서 아이템을 구매함 |
@@ -62,7 +62,7 @@ IAP 서비스는 다음 그림과 같이 IAP SDK, User Application Server, IAP S
 | NHN Cloud IAP SDK | IAP Android SDK입니다. 인앱 결제를 위하여 사용자ID 등록, 결제요청을 수행합니다. <br>결제 수행시 스토어(Google Play Store, Apple App Store등)의 인앱 결제 화면으로 이동합니다. |
 | User Application Server | 사용자 애플리케이션 서버입니다. <br>IAP 서버를 통하여 클라이언트가 요청한 결제내역을 확인한 후 결제소비를 진행하고 아이템 전달을 수행합니다. |
 | User Application Client | 사용자 애플리케이션에 서버가 존재하지 않는다면, 애플리케이션의 클라이언트에서 결제소비를 진행하고 아이템에 대한 권한을 부여하게 됩니다. |
-| IAP Server | NHN Cloud Cloud에서 제공하는 인앱 결제 서버입니다. |
+| IAP Server | NHN Cloud에서 제공하는 인앱 결제 서버입니다. |
 | Store | Google Store, Apple App Store 등의 다양한 스토어입니다. 플랫폼별 스토어는 IAP 서버와 연동되어 있습니다. |
 
 
