@@ -1,9 +1,9 @@
 ## Mobile Service > IAP > Console Common Guide
 
-> [Notice]<br>
-> New IAP SDK suppoting subscription are released as [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
-> The existing IAP SDK will not be developing new features.<br>
-> This documents describes [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) specifications.
+> [Notice]
+> A new IAP SDK that supports subscription has been released as [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
+> No new features will be developed for the existing IAP SDK.
+> This document is the guide for [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
 
 To use IAP SDK, you first need to register app and item at web console after store registration.
 

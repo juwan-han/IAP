@@ -1,8 +1,8 @@
 ## Mobile Service > IAP > iOS SDK Guide
 
-> [Notice]<br>
-> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
-> The existing IAP SDK will not be developing new features.<br>
+> [Notice]
+> A new IAP SDK that supports subscription has been released as [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
+> No new features will be developed for the existing IAP SDK.
 
 
 ## Development Environment
@@ -62,7 +62,7 @@ Add below framework to application to use IAP SDK.
 
 ```
 1. [Xcode] > [Project] > [Targets – Build Phases]  
-2. Add following frameworks to [Link Bianry With Libraries]  
+2. Add the following frameworks to [Link Binary With Libraries]  
     - libsqlite3.tbd
     - TIAPurchase.framework
     - StoreKit.framework  
@@ -126,7 +126,7 @@ Activate log information exposure for debugging.
 [TIAPurchase setDebugMode:YES];
 ```
 
-### 3\. Registeration User
+### 3\. Register User
 
 Register user identifier value after user verification in application
 
@@ -139,7 +139,7 @@ If (!result) {
     // An error occurred, we need to handle the error.
     NSLog(@"errorInfo = %@", purchaseError);
 }
-// register user id succeccfully.
+// register user id successfully.
 ```
 
 ### 4\. Request Payment

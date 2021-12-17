@@ -1,8 +1,8 @@
 ## Mobile Service > IAP > Error Code
 
-> [Notice]<br>
-> New IAP SDK suppoting subscription are released as [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
-> The existing IAP SDK will not be developing new features.<br>
+> [Notice]
+> A new IAP SDK that supports subscription has been released as [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
+> No new features will be developed for the existing IAP SDK.
 
 
 ## Client API Errors
@@ -42,7 +42,7 @@
 |---|---|---|
 |1100|	INVALID_PARAMETERS|	invalid parameter|
 |5003|	INVALID_AUTHENTICATED|	Store authentication error|
-|5013|	MARKET_GOOGLE_INVALID_REQUEST|	Google Registeration error|
+|5013|	MARKET_GOOGLE_INVALID_REQUEST|	Google registration error|
 
 ## Trouble Shooting
 
