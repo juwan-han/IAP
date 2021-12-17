@@ -15,8 +15,8 @@
 3. NHN Cloud IAP는 화웨이 스토어 연동의 경우 안드로이드 APK 패키지 타입과 모바일 디바이스만을 지원합니다.<br/>
    또한, 앱은 최종적으로 프로젝트에 연동되어 있어야 하므로, 처음 앱을 생성할 때부터 미리 프로젝트를 함께 생성하거나, 기존에 생성되어 있는 프로젝트를 선택하여 연동시켜 놓아야 합니다.
    ![화웨이 신규 앱 등록 화면](http://static.toastoven.net/prod_iap/huawei_console_app_02_eng.png)
-5. 앱 생성 후 추가적인 정보를 입력하고, 화웨이 AppGallery Connect 콘솔에서 확인할 수 있는 정보들을 NHN Cloud IAP 콘솔의 앱 설정에 입력해 줘야 합니다.
-6. 본 가이드의 내용은 화웨이 AppGallery Connect에 등록된 앱의 정보와 NHN Cloud IAP 간의 앱 정보를 연결하기 위한 정보만을 다루고 있으며, <br/> 보다 자세한 화웨이 앱갤러리의 앱 등록 절차에 대해서는 [아마존의 가이드 문서](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/introduction-0000001050033062)를 참조하시기 바랍니다.
+4. 앱 생성 후 추가적인 정보를 입력하고, 화웨이 AppGallery Connect 콘솔에서 확인할 수 있는 정보들을 NHN Cloud IAP 콘솔의 앱 설정에 입력해 줘야 합니다.
+5. 본 가이드의 내용은 화웨이 AppGallery Connect에 등록된 앱의 정보와 NHN Cloud IAP 간의 앱 정보를 연결하기 위한 정보만을 다루고 있으며, <br/> 보다 자세한 화웨이 앱갤러리의 앱 등록 절차에 대해서는 [화웨이의 가이드 문서](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/introduction-0000001050033062)를 참조하시기 바랍니다.
 
 ## 연결을 위해 필요한 설정 값들
 ![NHN Cloud IAP 앱 설정 팝업](http://static.toastoven.net/prod_iap/huawei_iap_console_kor.png)
