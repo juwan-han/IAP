@@ -1,9 +1,9 @@
 ## Mobile Service > IAP > Unity SDK Guide
 
 
-> [Notice]<br>
-> New IAP SDK suppoting subscription are released as [TOAST SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/).<br>
-> The existing IAP SDK will not be developing new features.<br>
+> [Notice]
+> A new IAP SDK that supports subscription has been released as [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
+> No new features will be developed for the existing IAP SDK.
 
 
 
@@ -74,7 +74,7 @@ Register [Player Settings] > [Settings for iOS] > Bundle identifier
 ```
 Implement created Xcode project.
 1. [Xcode] > [Project] > [Targets – Build Phases]
-2. Add frameworks under [Link Bianry With Libraries]
+2. Add the following frameworks under [Link Binary With Libraries]
 - StoreKit.framework
 - libsqlite3.tbd
 - CoreTelephony.framework (beyond TOAST-IAP-UnityPlugin-1.3.0 version)
