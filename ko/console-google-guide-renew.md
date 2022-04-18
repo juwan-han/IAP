@@ -15,33 +15,33 @@
   - 이미 연결된 Google Cloud 프로젝트가 있다면 연결된 Google Cloud 프로젝트의 상태가 표시됩니다.
   - [Google Cloud Console 메인 페이지](https://console.cloud.google.com/home/dashboard)에서 미리 프로젝트를 생성 후 기존 프로젝트 연결도 가능합니다.
 
-![구글 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_01.png)
+![Google 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_01.png)
 - 신규 프로젝트 생성 후 연동 인증 설정을 위해선 OAuth 동의 화면 설정 등이 필요합니다.
-   - OAuth 동의 화면 설정 관련 자세한 내용은 화면 내 가이드 및 [구글이 제공하는 OAuth2 가이드](https://developers.google.com/identity/protocols/oauth2/)를 참조 바랍니다.
+   - OAuth 동의 화면 설정 관련 자세한 내용은 화면 내 가이드 및 [Google이 제공하는 OAuth2 가이드](https://developers.google.com/identity/protocols/oauth2/)를 참조 바랍니다.
 
-![구글 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_02.png)
+![Google 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_02.png)
 
 
 # 두가지 연동 인증 방식 제공
 
 ![NHN Cloud IAP 앱 설정](http://static.toastoven.net/prod_iap/console_google/google_iap_console.png)
 
-- 구글 연동을 위해서는 구글의 안드로이드 개발자 API 접근을 위한 인증이 필요합니다. 
+- Google 연동을 위해서는 Google의 안드로이드 개발자 API 접근을 위한 인증이 필요합니다. 
 - NHN Cloud IAP 는 두가지 인증 모델을 제공하며, 두 인증 모델들은 각기 인증을 위해 각기 다른 특화 정보들이 필요합니다. 
-- 모델 별 특화 정보 외 공통적으로 필요한 정보도 구글 연동 및 결제 확인을 위해 필요하므로, **공통 입력 정보도 함께 확인**을 부탁 드립니다.
+- 모델 별 특화 정보 외 공통적으로 필요한 정보도 Google 연동 및 결제 확인을 위해 필요하므로, **공통 입력 정보도 함께 확인**을 부탁 드립니다.
   - `Store App ID` : 공통 입력 정보 가이드 Package Name 참조
   - `Google In App Purchase License Key` : 공통 입력 정보 가이드 InAppPurchase License Public Key 참조
   - `마켓 연동 검증 생략` : 공통 입력 정보 가이드 마켓 검증 생략 참조 
-- 모델 특화 / 공통 필요 정보들은 구글이 제공하는 아래 가이드 단계들를 따라가며 [Google Cloud Platform Console](https://console.cloud.google.com/apis/dashboard), [Google Play Console](https://play.google.com/console/developers), [Google Developer Console](https://developers.google.com/oauthplayground/)등을 통해 얻을 수 있습니다. 
+- 모델 특화 / 공통 필요 정보들은 Google이 제공하는 아래 가이드 단계들를 따라가며 [Google Cloud Platform Console](https://console.cloud.google.com/apis/dashboard), [Google Play Console](https://play.google.com/console/developers), [Google Developer Console](https://developers.google.com/oauthplayground/)등을 통해 얻을 수 있습니다. 
 - Google Play 앱의 결제 정보를 확인하기 위한 [Google Android Publisher API](https://developers.google.com/android-publisher)는 OAuth2 필수 인증 대상 API 입니다.  
 
 
 # 최고 관리자 (Supervisor) 인증 모델
-- 등록하려는 앱을 구글 콘솔에서 관리하는 구글 계정의 인증을 대행하는 모델이며, NHN Cloud IAP 가 기본값으로 제공해온 인증 모델입니다.
-- 구글 콘솔상의 관점에서 하나의 구글 계정에는 여러 앱들이 등록 관리될 수 있으며, 동일한 계정 하위의 앱들을 모두 등록할 경우 각 앱들의 NHN Cloud IAP 설정 정보들은 동일합니다.
-- 다음 안내되는 스탭들을 따라가며 총 3가지의 정보들을 확인하여 NHN Cloud IAP 의 앱 정보로 입력해야 하며, 이 정보들은 해당 구글 계정의 OAuth 인증에 사용됩니다.
+- 등록하려는 앱을 Google 콘솔에서 관리하는 Google 계정의 인증을 대행하는 모델이며, NHN Cloud IAP 가 기본값으로 제공해온 인증 모델입니다.
+- Google 콘솔상의 관점에서 하나의 Google 계정에는 여러 앱들이 등록 관리될 수 있으며, 동일한 계정 하위의 앱들을 모두 등록할 경우 각 앱들의 NHN Cloud IAP 설정 정보들은 동일합니다.
+- 다음 안내되는 스탭들을 따라가며 총 3가지의 정보들을 확인하여 NHN Cloud IAP 의 앱 정보로 입력해야 하며, 이 정보들은 해당 Google 계정의 OAuth 인증에 사용됩니다.
 
-1. NHN Cloud IAP 구글 최고 관리자 인증 모델 특화 입력 정보
+1. NHN Cloud IAP Google 최고 관리자 인증 모델 특화 입력 정보
    - `Google API Client ID` : 최고관리자 인증모델 가이드 4단계 참조
    - `Google API Client Secret` : 최고관리자 인증모델 가이드 4단계 참조
    - `Refresh Token For Google Oauth` : 최고관리자 인증모델 가이드 6단계 참조
@@ -66,11 +66,11 @@
 4. 신규 OAuth Client 가 생성되면 생성된 OAuth Client 의 두가지 정보에 대한 안내 팝업이 노출됩니다.
    - 클라이언트 ID : NHN Cloud IAP 앱 정보 설정 화면의 `Google API Client ID` 의 값으로 입력합니다.
    - 클라이언트 보안 비밀번호 : NHN Cloud IAP 앱 정보 설정 화면의 `Google API Client Secret` 의 값으로 입력합니다.
-   - 위 두 정보는 OAuth Client 정보 화면에서 재확인할 수 있으며, 구글이 제공하는 OAuth Client 정보 JSON 다운로드 파일에서도 확인할 수 있습니다.
+   - 위 두 정보는 OAuth Client 정보 화면에서 재확인할 수 있으며, Google이 제공하는 OAuth Client 정보 JSON 다운로드 파일에서도 확인할 수 있습니다.
 
     ![최고관리자 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_supervisor_step_03.png)
 
-5. [구글 OAuth 2 Playground](https://developers.google.com/oauthplayground) 페이지로 이동
+5. [Google OAuth 2 Playground](https://developers.google.com/oauthplayground) 페이지로 이동
    - 화면 우측 상단의 톱니바퀴 버튼을 누르면 나타나는 OAuth 2.0 Configuration 팝업 설정에서 Use your own OAuth credentials 체크박스를 체크합니다.
    - OAuth 2.0 Configuration 팝업 설정의 Client ID, Client Secret 에 각각 4번 단계에서 얻은 정보를 입력 합니다.
    - 좌측의 API 권한 범위 선택 화면에서 `Google PlayAndroid Developer API` 를 선택합니다.
@@ -85,11 +85,11 @@
     ![최고관리자 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_supervisor_step_05.png)
 
 # 서비스 계정 인증 모델
-- 최고 관리자 계정이 위임한 권한을 가지는 구글 내 서비스 계정의 인증을 대행하는 모델이며, 2022년 4월 NHN Cloud IAP 에 신규 추가된 인증 지원 모델입니다.
-- 권한 범위를 위임받는 서비스 계정의 생성 및 관리는 최고 관리자(구글의 실제 관리 계정)가 구글 콘솔에서 수행해야 합니다.
+- 최고 관리자 계정이 위임한 권한을 가지는 Google 내 서비스 계정의 인증을 대행하는 모델이며, 2022년 4월 NHN Cloud IAP 에 신규 추가된 인증 지원 모델입니다.
+- 권한 범위를 위임받는 서비스 계정의 생성 및 관리는 최고 관리자(Google의 실제 관리 계정)가 Google 콘솔에서 수행해야 합니다.
 - 서비스 계정은 최고 관리자에 의해 최고 관리자에 준하는 범위의 권한을 위임받을 수도 있고, 최고 관리자가 권한을 가진 특정 앱만으로 한정된 범위의 권한을 위임받을 수도 있습니다.
   - 위임 권한 범위에 대한 설정 전략은 고객의 의도 특성에 맞게 설정하시면 됩니다.
-- 최고 관리자 인증 모델이 가지는 권한의 범위에 대한 부담을 느끼신다면, 구글 콘솔 내에서 서비스 계정 생성 후 이 인증 모델을 사용하시면 됩니다. ([구글 가이드](https://developers.google.com/identity/protocols/oauth2/service-account))
+- 최고 관리자 인증 모델이 가지는 권한의 범위에 대한 부담을 느끼신다면, Google 콘솔 내에서 서비스 계정 생성 후 이 인증 모델을 사용하시면 됩니다. ([Google 가이드](https://developers.google.com/identity/protocols/oauth2/service-account))
 
 1. NHN Cloud IAP 서비스 계정 인증 모델 특화 입력 정보
    - `서비스 계정 연동 정보` : 서비스 계정 인증 모델 가이드 5단계 참조   
@@ -122,17 +122,17 @@
 5. API 및 서비스 페이지의 새로 생성된 서비스 계정 목록 중 생성한 서비스 계정의 세부 정보 화면으로 이동
    - 키 탭으로 이동 후 키 추가 > 새 키 만들기
    - 신규 팝업에서 `JSON` 형식 선택 후 만들기 클릭
-   - 키 만들기가 완료되면 자동으로 JSON 형식의 파일이 구글로부터 다운로드 됩니다.
+   - 키 만들기가 완료되면 자동으로 JSON 형식의 파일이 Google로부터 다운로드 됩니다.
    - 해당 파일을 윈도우 메모장과 같은 순수 텍스트 편집기로 불러내어 전체 내용을 복사 후 NHN Cloud IAP 앱 정보 설정 화면의 `서비스 계정 연동 정보` 에 입력해야 합니다.
    - 다운로드 받은 파일은 최초 다운로드 받은 후 다시 다운로드 받을 수 없으므로, 잘 보관하여 입력 하시길 바랍니다.
-   - 4번 단계에서 언급되어 있듯이, 구글 내부적으로 미처 권한 반영이 되지 않은 경우 권한 없음 등록 오류가 발생할 수 있으니, 이 때는 시간을 두고 재시도 해보시길 바랍니다.
+   - 4번 단계에서 언급되어 있듯이, Google 내부적으로 미처 권한 반영이 되지 않은 경우 권한 없음 등록 오류가 발생할 수 있으니, 이 때는 시간을 두고 재시도 해보시길 바랍니다.
 
     ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_04.png)
 
 
 # 공통 입력 정보
 ## Package Name
-- Google Play Console 을 통해 등록한 앱을 빌드 시 지정한 packageName 이 있습니다. 이 값은 구글 내에서 앱의 고유 지정자로 활용됩니다.
+- Google Play Console 을 통해 등록한 앱을 빌드 시 지정한 packageName 이 있습니다. 이 값은 Google 내에서 앱의 고유 지정자로 활용됩니다.
 - 이 값을 NHN Cloud IAP 앱 설정의 `Store App ID` 로 입력합니다.
 
 ## InAppPurchase License Public Key
@@ -142,23 +142,23 @@
 ![IAP 라이센스 키](http://static.toastoven.net/prod_iap/console_google/google_iap_license_key.png)
 
 ## 마켓 검증 생략
-- NHN Cloud IAP 가 제공하는 구글 결제의 검증은 크게 두 단계로 나뉩니다. 두 단계 중 **2단계의 생략 여부를 설정**합니다.
-- 생략은 권장 사양이 아니며, 간혹 발생하는 구글 서버 장애 상황에 대응하는 일시적인 결제 승인 상태를 유지할 수 있습니다. (기본 값은 `NO`)
+- NHN Cloud IAP 가 제공하는 Google 결제의 검증은 크게 두 단계로 나뉩니다. 두 단계 중 **2단계의 생략 여부를 설정**합니다.
+- 생략은 권장 사양이 아니며, 간혹 발생하는 Google 서버 장애 상황에 대응하는 일시적인 결제 승인 상태를 유지할 수 있습니다. (기본 값은 `NO`)
   - 생략을 하더라도 유입되는 결제 검증 요청이 무조건 정상 결제로 처리되는 것은 아닙니다.
   - 구독 결제의 검증은 생략 옵션이 적용되는 범위가 아닙니다. 
 
-#### 구글 검증 단계
+#### Google 검증 단계
 | 단계 | 설명           |
 | --------------- | ----------------------------- |
 | 1 단계 | 검증이 요청된 결제 정보의 변조 여부 확인         |
-| 2 단계 | 검증이 요청된 결제 정보의 구글 서버측 최신 상태 확인 및 재검증   |
+| 2 단계 | 검증이 요청된 결제 정보의 Google 서버측 최신 상태 확인 및 재검증   |
  
 
-# 구글 시스템 내 실시간 구독 정보 이벤트 전파 설정
-- 구글이 제공하는 구독 구매의 실시간 상태 전파 이벤트를 NHN Cloud IAP 서버가 받아 처리하도록 설정할 수 있습니다. <br/>
+# Google 시스템 내 실시간 구독 정보 이벤트 전파 설정
+- Google이 제공하는 구독 구매의 실시간 상태 전파 이벤트를 NHN Cloud IAP 서버가 받아 처리하도록 설정할 수 있습니다. <br/>
 - Google Cloud Platform 에 결제 프로필을 등록하고 (신용카드 필요) 사용 상태로 변경해야 합니다.<br/>
-- 이 전파 이벤트 설정을 구글 내에서 하지 않으면, 구독 결제에 대한 갱신 정보가 사용자의 앱 클라이언트 실행 액션에 기반하여 반영되므로, 구독 결제를 사용하신다면 반드시 설정하시길 권장드립니다. <br/>  
-- 과거에는 구독 실시간 전파 이벤트의 푸시 수신을 위해 수신받을 주소에 대한 도메인 검증을 구글 웹마스터 도구를 통해 진행해야 했으나, 현재는 도메인 검증을 요구하지 않습니다.
+- 이 전파 이벤트 설정을 Google 내에서 하지 않으면, 구독 결제에 대한 갱신 정보가 사용자의 앱 클라이언트 실행 액션에 기반하여 반영되므로, 구독 결제를 사용하신다면 반드시 설정하시길 권장드립니다. <br/>  
+- 과거에는 구독 실시간 전파 이벤트의 푸시 수신을 위해 수신받을 주소에 대한 도메인 검증을 Google 웹마스터 도구를 통해 진행해야 했으나, 현재는 도메인 검증을 요구하지 않습니다.
 
 1. [Google Cloud Pub/Sub Console](https://console.cloud.google.com/cloudpubsub) 이동
     - Google Play 앱 과 연결된 프로젝트를 제대로 선택해야 합니다.
