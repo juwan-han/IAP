@@ -16,6 +16,12 @@
   - [Google Cloud Console 메인 페이지](https://console.cloud.google.com/home/dashboard)에서 미리 프로젝트를 생성 후 기존 프로젝트 연결도 가능합니다.
 
 ![Google 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_01.png)
+
+- Google Play 와 Google Cloud 간의 프로젝트 연결이 정상적으로 이뤄지면 Google Play Console > 설정 > API 액세스 페이지에 연결된 Google Cloud 프로젝트와 API 목록이 노출됩니다.
+- 아래 가이드 내용대로 설정 완료 후 스크린샷과 같은 형태로 Google Play Console에서 연결된 프로젝트의 상태가 나타나지 않는다면, Google Cloud 와의 연결 부분을 우선 확인하세요.
+
+![Google 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_03.png)
+
 - 신규 프로젝트 생성 후 연동 인증 설정을 위해선 OAuth 동의 화면 설정 등이 필요합니다.
    - OAuth 동의 화면 설정 관련 자세한 내용은 화면 내 가이드 및 [Google이 제공하는 OAuth2 가이드](https://developers.google.com/identity/protocols/oauth2/)를 참조 바랍니다.
 
@@ -93,7 +99,7 @@
 
 1. NHN Cloud IAP 서비스 계정 인증 모델 특화 입력 정보
    - `서비스 계정 연동 정보` : 서비스 계정 인증 모델 가이드 5단계 참조   
-   ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_01.png)
+   ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_iap_console_service_account.png)
 
 2. [Google Cloud Console](https://console.cloud.google.com/apis/dashboard) API 및 서비스 페이지로 이동
    - Google Play 관리 계정과 연동할 프로젝트 선택
