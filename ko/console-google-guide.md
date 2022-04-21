@@ -5,8 +5,8 @@
 > 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br/>
 > 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다. <br/>
 > <br/>
-> 본 문서는 Google Play 로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법에 대한 부분을 다루고 있습니다. <br/>
-> Google Play 로 앱 출시를 위한 보다 자세한 콘솔 설정 관련 사항들은 Google 이 제공하는 Google Play Console 가이드를 참조하시길 바랍니다. <br/>
+> 본 문서는 Google Play로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법에 대한 부분을 다루고 있습니다. <br/>
+> Google Play로 앱 출시를 위한 보다 자세한 콘솔 설정 관련 사항들은 Google 이 제공하는 Google Play Console 가이드를 참조하시길 바랍니다. <br/>
 
 # Google Cloud 프로젝트 연결
 - Google Play 에 등록된 앱과 관련된 정보를 연동하기 위해 Google Play 와 연결될 Google Cloud 프로젝트가 필요합니다.
@@ -189,10 +189,10 @@
 
    ![구독정보 전파 설정](http://static.toastoven.net/prod_iap/console_google/google_subscription_event_04.png)
 
-4. 테스트를 위한 알파 환경 / 게임베이스 샌드박스 환경 을 사용할 경우 3번 단계의 구독을 알파 / 샌드박스 용으로 각각 생성해야 합니다.
+4. 테스트를 위한 알파 환경 / 게임베이스 샌드박스 환경을 사용할 경우 3번 단계의 구독을 알파 / 샌드박스 용으로 각각 생성해야 합니다.
     - 알파 엔드포인트 URL 입력 : `https://alpha-api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG`
     - 게임베이스 샌드박스 엔드포인트 URL 입력 : `https://sandbox-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG`
-5. [Google Play Console](https://play.google.com/console) 의 앱 대시보드로 이동
-    - **수익창출 설정** 메뉴 > Google Play 결제 화면 의 실시간 개발자 알림 주제 이름에 1번 단계에서 생성한 주제의 전체 명칭을 입력
+5. [Google Play Console](https://play.google.com/console)의 앱 대시보드로 이동
+    - **수익창출 설정** 메뉴 > Google Play 결제 화면의 실시간 개발자 알림 주제 이름에 1번 단계에서 생성한 주제의 전체 명칭을 입력
 
    ![구독정보 전파 설정](http://static.toastoven.net/prod_iap/console_google/google_subscription_event_05.png)
