@@ -14,8 +14,7 @@
 3. 앱을 생성하면 아래와 같이 생성된 앱의 목록을 확인할 수 있습니다.
    ![앱스토어 개발자 콘솔의 앱 목록](http://static.toastoven.net/prod_iap/amazon_appmenu_1_eng.png)
 4. 앱 생성 후 추가적인 정보를 입력하고, 개발자 콘솔에서 제공하는 정보들을 NHN Cloud IAP 콘솔의 앱 설정에 입력해 줘야 합니다.
-5. 본 가이드의 내용은 Amazon 앱스토어에 등록된 앱의 정보와 NHN Cloud IAP 간의 앱 정보를 연결하기 위한 가이드만을 다루고 있으며, 보다 자세한 Amazon 앱스토어의 앱 등록 절차에
-   대해서는 [Amazon의 가이드 문서](https://developer.amazon.com/apps-and-games/documentation)를 참조하시기 바랍니다.
+5. 본 가이드의 내용은 Amazon 앱스토어에 등록된 앱의 정보와 NHN Cloud IAP 간의 앱 정보를 연결하기 위한 가이드만을 다루고 있으며, 보다 자세한 Amazon 앱스토어의 앱 등록 절차에 대해서는 [Amazon의 가이드 문서](https://developer.amazon.com/apps-and-games/documentation)를 참조하시기 바랍니다.
 
 ## 연결을 위해 필요한 설정 값들
 

@@ -5,7 +5,7 @@
 > 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br/>
 > 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다. <br/>
 > <br/>
-> 본 문서는 Google Play로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법에 대한 부분을 다루고 있습니다. <br/>
+> 본 문서는 Google Play로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법을 다룹니다. <br/>
 > Google Play로 앱을 출시하기 위한 보다 자세한 콘솔 설정 관련 사항들은 Google 이 제공하는 Google Play Console 가이드를 참조하시길 바랍니다. <br/>
 
 # Google Cloud 프로젝트 연결
@@ -69,7 +69,7 @@
 
    ![최고관리자 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_supervisor_step_02.png)
 
-4. 신규 OAuth Client 가 생성되면 생성된 OAuth Client의 두 가지 정보에 대한 안내 팝업이 노출됩니다.
+4. 신규 OAuth Client가 생성되면 생성된 OAuth Client의 두 가지 정보에 대한 안내 팝업이 노출됩니다.
     - 클라이언트 ID: NHN Cloud IAP 앱 정보 설정 화면의 `Google API Client ID`의 값으로 입력합니다.
     - 클라이언트 보안 비밀번호: NHN Cloud IAP 앱 정보 설정 화면의 `Google API Client Secret`의 값으로 입력합니다.
     - 위 두 정보는 OAuth Client 정보 화면에서 재확인할 수 있으며, Google이 제공하는 OAuth Client 정보 JSON 다운로드 파일에서도 확인할 수 있습니다.
@@ -110,7 +110,7 @@
 
 3. 신규 서비스 계정 기본 정보 입력
     - 관리하기 용이한 형태의 기본 정보들을 입력 후 `만들고 계속 하기`를 클릭합니다.
-    - 서비스 계정에 대한 액세스 권한 부여에서 역할을 `소유자`로 선택 합니다.
+    - 서비스 계정에 대한 액세스 권한 부여에서 역할을 `소유자`로 선택합니다.
     - 추가 선택 사항에서 생성하려는 서비스 계정의 관리자 이메일을 입력하면, 해당 관리자에게 서비스 계정 설정에 대한 권한이 부여됩니다.
         - Google Cloud Console 내 존재하지 않는 관리자 이메일 주소일 경우엔 입력한 메일 주소로 관리자 초대 메일이 발송됩니다.
 
@@ -130,7 +130,7 @@
     - 신규 팝업에서 `JSON` 형식 선택 후 만들기 클릭
     - 키 만들기가 완료되면 자동으로 JSON 형식의 파일이 Google로 부터 다운로드됩니다.
     - 해당 파일을 윈도우 메모장과 같은 순수 텍스트 편집기로 불러내어 전체 내용을 복사 후 NHN Cloud IAP 앱 정보 설정 화면의 `서비스 계정 연동 정보`에 입력해야 합니다.
-    - 다운로드 받은 파일은 최초 다운로드 받은 후 다시 다운로드 받을 수 없으므로, 잘 보관하여 입력 하시길 바랍니다.
+    - 다운로드한 파일은 최초 다운로드 후 다시 다운로드할 수 없으므로, 잘 보관하여 입력하시기 바랍니다.
     - 4번 단계에서 언급되어 있듯이, Google 내부적으로 미처 권한 반영이 되지 않은 경우 권한 없음 등록 오류가 발생할 수 있으니, 이 때는 시간을 두고 재시도 해보시길 바랍니다.
 
    ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_04.png)
@@ -138,18 +138,18 @@
 
 # 공통 입력 정보
 ## Package Name
-- Google Play Console 을 통해 등록한 앱을 빌드 시 지정한 packageName 이 있습니다. 이 값은 Google 내에서 앱의 고유 지정자로 활용됩니다.
+- Google Play Console을 통해 등록한 앱을 빌드 시 지정한 packageName이 있습니다. 이 값은 Google 내에서 앱의 고유 지정자로 활용됩니다.
 - 이 값을 NHN Cloud IAP 앱 설정의 `Store App ID`로 입력합니다.
 
 ## InAppPurchase License Public Key
 - Google Play Console > 해당 앱 대시보드 > 수입 창출 메뉴 진입
-- 화면 하단에 Base64 인코딩된 라이센스 공개 키가 표기됩니다. 이 값을 NHN Cloud IAP 앱 설정의 `Google In App Purchase License Key`로 입력합니다.
+- 화면 하단에 Base64 인코딩된 라이선스 공개 키가 표기됩니다. 이 값을 NHN Cloud IAP 앱 설정의 `Google In App Purchase License Key`로 입력합니다.
 
-![IAP 라이센스 키](http://static.toastoven.net/prod_iap/console_google/google_iap_license_key.png)
+![IAP 라이선스 키](http://static.toastoven.net/prod_iap/console_google/google_iap_license_key.png)
 
 ## 마켓 검증 생략
 - NHN Cloud IAP 가 제공하는 Google 결제의 검증은 크게 두 단계로 나뉩니다. 두 단계 중 **2단계의 생략 여부를 설정**합니다.
-- 생략은 권장 사양이 아니며, 간혹 발생하는 Google 서버 장애 상황에 대응하는 일시적인 결제 승인 상태를 유지할 수 있습니다. (기본 값은 `NO`)
+- 생략은 권장 사양이 아니며, 간혹 발생하는 Google 서버 장애 상황에 대응하는 일시적인 결제 승인 상태를 유지할 수 있습니다. (기본값은 `NO`)
     - 생략을 하더라도 유입되는 결제 검증 요청이 무조건 정상 결제로 처리되는 것은 아닙니다.
     - 구독 결제의 검증은 생략 옵션이 적용되는 범위가 아닙니다.
 
@@ -162,12 +162,12 @@
 
 # Google 시스템 내 실시간 구독 정보 이벤트 전파 설정
 - Google이 제공하는 구독 구매의 실시간 상태 전파 이벤트를 NHN Cloud IAP 서버가 받아 처리하도록 설정할 수 있습니다. <br/>
-- Google Cloud Platform에 결제 프로필을 등록하고 (신용카드 필요) 사용 상태로 변경해야 합니다.<br/>
+- Google Cloud Platform에 결제 프로필을 등록하고(신용카드 필요) 사용 상태로 변경해야 합니다.<br/>
 - 이 전파 이벤트 설정을 Google 내에서 하지 않으면, 구독 결제에 대한 갱신 정보가 사용자의 앱 클라이언트 실행 액션에 기반하여 반영되므로, 구독 결제를 사용하신다면 반드시 설정하시길 권장드립니다. <br/>
 - 과거에는 구독 실시간 전파 이벤트의 푸시 수신을 위해 수신받을 주소에 대한 도메인 검증을 Google 웹마스터 도구를 통해 진행해야 했으나, 현재는 도메인 검증을 요구하지 않습니다.
 
 1. [Google Cloud Pub/Sub Console](https://console.cloud.google.com/cloudpubsub) 이동
-    - Google Play 앱 과 연결된 프로젝트를 제대로 선택해야 합니다.
+    - Google Play 앱과 연결된 프로젝트를 제대로 선택해야 합니다.
     - **주제 (Topic) 메뉴**에서 새로운 주제를 생성합니다.
     - 주제 ID는 관리하기 쉬운 임의의 명칭을 사용하시면 됩니다.
 
