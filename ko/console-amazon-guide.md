@@ -19,9 +19,9 @@
 ![NHN Cloud IAP 앱 설정 팝업](http://static.toastoven.net/prod_iap/amazon_iap_console_kor.png)
 ### Store App ID
 - Amazon 콘솔을 통해 제출했거나 제출 예정의 앱의 빌드 정보로 입력한 안드로이드 패키지 값을 입력합니다.
-- 이미 앱을 제출한 상태라면 다음과 같은 경로로 Amazon 콘솔 화면에서 확인하실 수 있습니다.
-  - [앱 목록](https://developer.amazon.com/apps-and-games/console/apps/list.html) 화면에서 생성된 앱의 이름을 클릭하면 상세 설정 메뉴로 진입
-  - 앱 상세 설정 화면에서 APK Files > Manifest 
+- 이미 앱을 제출한 상태라면 다음과 같은 절차로 Amazon 콘솔 화면에서 확인할 수 있습니다.
+  - [앱 목록](https://developer.amazon.com/apps-and-games/console/apps/list.html) 화면에서 생성된 앱의 이름을 클릭하여 상세 설정 메뉴로 진입
+  - 앱 상세 설정 화면에서 앱 상세 설정 화면에서 **APK Files** > **Manifest** 클릭
     ![Amazon 개발자 콘솔의 APK Files](http://static.toastoven.net/prod_iap/amazon_app_store_id_01.png)
     ![Amazon 개발자 콘솔의 APK Files](http://static.toastoven.net/prod_iap/amazon_app_store_id_02.png)
 
