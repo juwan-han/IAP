@@ -1,14 +1,14 @@
 ## Mobile Service > IAP > Google 콘솔 가이드
 
 
-> [공지]<br/>
-> 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다. <br/>
-> 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다. <br/>
-> <br/>
-> 본 문서는 Google Play로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법을 다룹니다. <br/>
-> Google Play로 앱을 출시하기 위한 보다 자세한 콘솔 설정 관련 사항들은 Google 이 제공하는 Google Play Console 가이드를 참조하시길 바랍니다. <br/>
+> [공지]
+> 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
+> 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.
+>
+> 본 문서는 Google Play로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법을 다룹니다.
+> Google Play로 앱을 출시하기 위한 보다 자세한 콘솔 설정 관련 사항들은 Google 이 제공하는 Google Play Console 가이드를 참조하시길 바랍니다.
 
-# Google Cloud 프로젝트 연결
+## Google Cloud 프로젝트 연결
 - Google Play에 등록된 앱과 관련된 정보를 연동하기 위해 Google Play와 연결될 Google Cloud 프로젝트가 필요합니다.
 - Google Play Console > 설정 > **API 액세스 페이지**로 이동
     - 신규 Google Cloud 프로젝트 생성 혹은 기존 프로젝트 연결 중 선택하여 Google Play와 Google Cloud 프로젝트 연결을 진행하세요.
@@ -28,7 +28,7 @@
 ![Google 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_02.png)
 
 
-# 두가지 연동 인증 방식 제공
+## 두가지 연동 인증 방식 제공
 
 ![NHN Cloud IAP 앱 설정](http://static.toastoven.net/prod_iap/console_google/google_iap_console.png)
 
@@ -42,7 +42,7 @@
 - Google Play 앱의 결제 정보를 확인하기 위한 [Google Android Publisher API](https://developers.google.com/android-publisher)는 OAuth2 필수 인증 대상 API 입니다.
 
 
-# 최고 관리자(Supervisor) 인증 모델
+## 최고 관리자(Supervisor) 인증 모델
 - 등록하려는 앱을 Google 콘솔에서 관리하는 Google 계정의 인증을 대행하는 모델이며, NHN Cloud IAP가 기본값으로 제공해온 인증 모델입니다.
 - Google 콘솔상의 관점에서 하나의 Google 계정에는 여러 앱들이 등록 관리될 수 있으며, 동일한 계정 하위의 앱들을 모두 등록할 경우 각 앱들의 NHN Cloud IAP 설정 정보들은 동일합니다.
 - 다음 안내되는 단계를 따라가며 총 3가지의 정보들을 확인하여 NHN Cloud IAP의 앱 정보로 입력해야 하며, 이 정보들은 해당 Google 계정의 OAuth 인증에 사용됩니다.
@@ -90,7 +90,7 @@
 
    ![최고관리자 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_supervisor_step_05.png)
 
-# 서비스 계정 인증 모델
+## 서비스 계정 인증 모델
 - 최고 관리자 계정이 위임한 권한을 가지는 Google 내 서비스 계정의 인증을 대행하는 모델이며, 2022년 4월 NHN Cloud IAP에 신규 추가된 인증 지원 모델입니다.
 - 권한 범위를 위임받는 서비스 계정의 생성 및 관리는 최고 관리자(Google의 실제 관리 계정)가 Google 콘솔에서 수행해야 합니다.
 - 서비스 계정은 최고 관리자에 의해 최고 관리자에 준하는 범위의 권한을 위임받을 수도 있고, 최고 관리자가 권한을 가진 특정 앱만으로 한정된 범위의 권한을 위임받을 수도 있습니다.
@@ -136,18 +136,18 @@
    ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_04.png)
 
 
-# 공통 입력 정보
-## Package Name
+## 공통 입력 정보
+### Package Name
 - Google Play Console을 통해 등록한 앱을 빌드 시 지정한 packageName이 있습니다. 이 값은 Google 내에서 앱의 고유 지정자로 활용됩니다.
 - 이 값을 NHN Cloud IAP 앱 설정의 `Store App ID`로 입력합니다.
 
-## InAppPurchase License Public Key
+### InAppPurchase License Public Key
 - Google Play Console > 해당 앱 대시보드 > 수입 창출 메뉴 진입
 - 화면 하단에 Base64 인코딩된 라이선스 공개 키가 표기됩니다. 이 값을 NHN Cloud IAP 앱 설정의 `Google In App Purchase License Key`로 입력합니다.
 
 ![IAP 라이선스 키](http://static.toastoven.net/prod_iap/console_google/google_iap_license_key.png)
 
-## 마켓 검증 생략
+### 마켓 검증 생략
 - NHN Cloud IAP가 제공하는 Google 결제의 검증은 크게 두 단계로 나뉩니다. 두 단계 중 **2단계의 생략 여부를 설정**합니다.
 - 생략은 권장 사양이 아니며, 간혹 발생하는 Google 서버 장애 상황에 대응하는 일시적인 결제 승인 상태를 유지할 수 있습니다. (기본값은 `NO`)
     - 생략을 하더라도 유입되는 결제 검증 요청이 무조건 정상 결제로 처리되는 것은 아닙니다.
@@ -160,10 +160,10 @@
 | 2 단계 | 검증이 요청된 결제 정보의 Google 서버측 최신 상태 확인 및 재검증   |
 
 
-# Google 시스템 내 실시간 구독 정보 이벤트 전파 설정
-- Google이 제공하는 구독 구매의 실시간 상태 전파 이벤트를 NHN Cloud IAP 서버가 받아 처리하도록 설정할 수 있습니다. <br/>
-- Google Cloud Platform에 결제 프로필을 등록하고(신용카드 필요) 사용 상태로 변경해야 합니다.<br/>
-- 이 전파 이벤트 설정을 Google 내에서 하지 않으면, 구독 결제에 대한 갱신 정보가 사용자의 앱 클라이언트 실행 액션에 기반하여 반영되므로, 구독 결제를 사용하신다면 반드시 설정하시길 권장드립니다. <br/>
+## Google 시스템 내 실시간 구독 정보 이벤트 전파 설정
+- Google이 제공하는 구독 구매의 실시간 상태 전파 이벤트를 NHN Cloud IAP 서버가 받아 처리하도록 설정할 수 있습니다.
+- Google Cloud Platform에 결제 프로필을 등록하고(신용카드 필요) 사용 상태로 변경해야 합니다.
+- 이 전파 이벤트 설정을 Google 내에서 하지 않으면, 구독 결제에 대한 갱신 정보가 사용자의 앱 클라이언트 실행 액션에 기반하여 반영되므로, 구독 결제를 사용하신다면 반드시 설정하시길 권장드립니다.
 - 과거에는 구독 실시간 전파 이벤트의 푸시 수신을 위해 수신받을 주소에 대한 도메인 검증을 Google 웹마스터 도구를 통해 진행해야 했으나, 현재는 도메인 검증을 요구하지 않습니다.
 
 1. [Google Cloud Pub/Sub Console](https://console.cloud.google.com/cloudpubsub) 이동
