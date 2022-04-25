@@ -6,11 +6,11 @@
 > 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.
 >
 > 본 문서는 Google Play로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법을 다룹니다.
-> Google Play로 앱을 출시하기 위한 보다 자세한 콘솔 설정 관련 사항들은 Google 이 제공하는 Google Play Console 가이드를 참조하시길 바랍니다.
+> Google Play로 앱을 출시하기 위한 보다 자세한 콘솔 설정 관련 사항들은 Google이 제공하는 Google Play Console 가이드를 참조하시길 바랍니다.
 
 ## Google Cloud 프로젝트 연결
 - Google Play에 등록된 앱과 관련된 정보를 연동하기 위해 Google Play와 연결될 Google Cloud 프로젝트가 필요합니다.
-- Google Play Console > 설정 > **API 액세스 페이지**로 이동
+- Google Play Console > 설정 > **API 액세스** 페이지로 이동
     - 신규 Google Cloud 프로젝트 생성 혹은 기존 프로젝트 연결 중 선택하여 Google Play와 Google Cloud 프로젝트 연결을 진행하세요.
     - 이미 연결된 Google Cloud 프로젝트가 있다면 연결된 Google Cloud 프로젝트의 상태가 표시됩니다.
     - [Google Cloud Console 메인 페이지](https://console.cloud.google.com/home/dashboard)에서 미리 프로젝트를 생성 후 기존 프로젝트 연결도 가능합니다.
@@ -56,7 +56,7 @@
 
 2. [Google Cloud Console API 및 서비스](https://console.cloud.google.com/apis/dashboard) 대시보드로 이동
     - Google Play 관리 계정과 연동할 프로젝트 선택
-    - **사용자 인증 정보 메뉴로** 이동
+    - **사용자 인증 정보** 메뉴로 이동
     - **사용자 인증 정보 만들기** > **OAuth 클라이언트 ID** 선택
 
    ![최고관리자 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_supervisor_step_01.png)
@@ -79,7 +79,7 @@
 5. [Google OAuth 2 Playground](https://developers.google.com/oauthplayground) 페이지로 이동
     - 화면 우측 상단의 톱니바퀴 버튼을 누르면 나타나는 **OAuth 2.0 Configuration** 팝업 설정에서 Use your own OAuth credentials 체크박스를 체크합니다.
     - OAuth 2.0 Configuration 팝업 설정의 Client ID, Client Secret에 각각 4번 단계에서 얻은 정보를 입력합니다.
-    - 좌측의 API 권한 범위 선택 화면에서 `Google PlayAndroid Developer API`를 선택합니다.
+    - 좌측의 API 권한 범위 선택 화면에서 `Google Play Android Developer API`를 선택합니다.
         - 좌측 선택화면 하단의 범위 입력 부분에 `https://www.googleapis.com/auth/androidpublisher`를 입력해도 무방합니다.
     - 모든 설정 값 입력 및 선택이 완료되면 좌측 하단의 Authorize API 버튼을 클릭합니다.
 
@@ -103,7 +103,7 @@
 
 2. [Google Cloud Console](https://console.cloud.google.com/apis/dashboard) API 및 서비스 페이지로 이동
     - Google Play 관리 계정과 연동할 프로젝트 선택
-    - **사용자 인증 정보 메뉴**로 이동
+    - **사용자 인증 정보** 메뉴로 이동
     - **사용자 인증 정보 만들기** > **서비스 계정 선택**
 
    ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_02.png)
@@ -117,7 +117,7 @@
    ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_03.png)
 
 4. 서비스 계정으로의 권한 위임
-    - **Google Play Console** > **API 액세스 메뉴** 이동
+    - **Google Play Console** > **API 액세스** 메뉴로 이동
     - Google Cloud Console에서 생성한 서비스 계정이 화면 하단의 서비스 계정 목록에 노출됩니다. 생성한 서비스 계정 우측의 **권한 부여** 링크를 클릭합니다.
     - 권한의 범위는 최고관리자 계정이 가진 앱 전체 혹은 앱 개별 단위로 복수 지정이 가능하며, 범위 내에서 권한의 종류를 지정할 수 있습니다.
     - 범위는 고객의 의도에 맞게 설정하되, 권한의 종류 중 `앱 정보 보기 (읽기 전용)` , `재무 데이터 보기`, `주문 및 구독 관리`의 권한은 필수로 위임 설정해야 합니다.
@@ -168,19 +168,19 @@
 
 1. [Google Cloud Pub/Sub Console](https://console.cloud.google.com/cloudpubsub) 이동
     - Google Play 앱과 연결된 프로젝트를 제대로 선택해야 합니다.
-    - **주제 (Topic) 메뉴**에서 새로운 주제를 생성합니다.
+    - **주제 (Topic)** 메뉴에서 새로운 주제를 생성합니다.
     - 주제 ID는 관리하기 쉬운 임의의 명칭을 사용하시면 됩니다.
 
    ![구독정보 전파 설정](http://static.toastoven.net/prod_iap/console_google/google_subscription_event_01.png)
 
-2. 생성한 주제에 **주 구성원을 추가** 합니다.
+2. 생성한 주제에 **주 구성원을 추가**합니다.
     - 세부 구성원 정보 `google-play-developer-notifications@system.gserviceaccount.com` 입력
     - 역할 `게시/구독` > `게시/구독 게시자` 선택
 
    ![구독정보 전파 설정](http://static.toastoven.net/prod_iap/console_google/google_subscription_event_02.png)
    ![구독정보 전파 설정](http://static.toastoven.net/prod_iap/console_google/google_subscription_event_03.png)
 
-3. **구독 메뉴**로 이동해 IAP 서버에게 알려줄 구독을 생성합니다.
+3. **구독** 메뉴로 이동해 IAP 서버에게 알려줄 구독을 생성합니다.
     - 구독 ID는 관리용으로 편한 값을 입력
     - Cloud Pub/Sub 주제 선택: 앞서 생성한 주제를 선택
     - 전송 유형: 푸시 선택
