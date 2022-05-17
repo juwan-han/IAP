@@ -13,15 +13,20 @@
 3. After creating an app, you can check the list of created apps as shown below.
    ![App list in Appstore Developer Console](http://static.toastoven.net/prod_iap/amazon_appmenu_1_eng.png)
 4. After creating the app, enter additional information and enter the information provided by the Developer Console in the app settings of the NHN Cloud IAP console.
-5. This guide covers only how to link the app information registered in the Amazon Appstore and the app information of the NHN Cloud IAP. <br/> For more detailed steps for Amazon Appstore app registration, refer to [Amazon documentation](https://developer.amazon.com/apps-and-games/documentation).
+5. This guide covers only how to link the app information registered in the Amazon Appstore and the app information of the NHN Cloud IAP. For more detailed steps for Amazon Appstore app registration, refer to the [Amazon documentation](https://developer.amazon.com/apps-and-games/documentation).
 
 ## Setting Values ​​Required for Linking
-![NHN Cloud IAP app settings popup](http://static.toastoven.net/prod_iap/amazon_iap_console_en.png)
-### Store App ID
-- Click the name of the created app on the [app list](https://developer.amazon.com/apps-and-games/console/apps/list.html) screen to enter the detailed settings menu.
-- In the detailed settings menu, click Edit and enter `App SKU`, and enter the value of this App SKU in `Store App ID` in the NHN Cloud IAP console app settings.
-  ![App detailed settings screen in Amazon Developer Console](http://static.toastoven.net/prod_iap/amazon_appmenu_2_eng.png)
 
+![NHN Cloud IAP app settings popup](http://static.toastoven.net/prod_iap/amazon_iap_console_en.png)
+
+### Store App ID
+
+- Enter the Android package name that you entered as build information for the app that you submitted or plan to submit through the Amazon console.
+- If you have already submitted your app, you can check the information on the Amazon console screen in the following steps.
+    - Click the name of the created app on the [app list](https://developer.amazon.com/apps-and-games/console/apps/list.html) screen to enter the detailed settings menu.
+    - In the app detailed settings screen, click **APK Files** > **Manifest**.
+      ![APK Files in the Amazon Developer Console](http://static.toastoven.net/prod_iap/amazon_app_store_id_01.png)
+      ![APK Files in the Amazon Developer Console](http://static.toastoven.net/prod_iap/amazon_app_store_id_02.png)
 
 ### Amazon Shared Key
 - Go to [Settings -> Identity menu](https://developer.amazon.com/settings/console/sdk/shared-key) in the Amazon Developer Console, and you can check the shared key on the following screen.
