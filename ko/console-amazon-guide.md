@@ -6,7 +6,6 @@
 > 본 문서는 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 가이드입니다.
 
 ## Amazon Developer Console
-
 1. [Amazon 개발자 콘솔](https://developer.amazon.com/)에 계정을 등록한 후 Amazon 앱스토어 관리 메뉴에서 앱을 생성합니다.
    ![Amazon 개발자 콘솔](http://static.toastoven.net/prod_iap/amazon_developer_console_eng.png)
 2. NHN Cloud IAP는 안드로이드 플랫폼의 Amazon 앱스토어 앱만을 공식 지원합니다. 안드로이드 플랫폼을 선택하고 앱 이름을 입력한 후 `Create app` 버튼을 클릭하여 앱을 생성합니다.

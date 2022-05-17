@@ -1,7 +1,8 @@
 ## Mobile Service > IAP > Error Codes
 
-> [Notice]<br>
-> A new IAP SDK that supports subscription has been released as [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/). <br>
+
+> [Notice]
+> A new IAP SDK that supports subscription has been released as [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
 > No new features will be developed for the existing IAP SDK.
 
 ## Client API Errors

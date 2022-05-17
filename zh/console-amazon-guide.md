@@ -6,7 +6,6 @@
 > This document is the guide for [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
 
 ## Amazon Developer Console
-
 1. After registering an account in [Amazon Developer Console](https://developer.amazon.com/), create an app in the Amazon Appstore Management menu.
    ![Amazon Developer Console](http://static.toastoven.net/prod_iap/amazon_developer_console_eng.png)
 2. NHN Cloud IAP officially supports only the Amazon Appstore app for the Android platform. Select the Android platform, enter the app name, and click the `Create app` button to create an app.
@@ -30,7 +29,6 @@
       ![APK Files in the Amazon Developer Console](http://static.toastoven.net/prod_iap/amazon_app_store_id_02.png)
 
 ### Amazon Shared Key
-
 - Go to [Settings -> Identity menu](https://developer.amazon.com/settings/console/sdk/shared-key) in the Amazon Developer Console, and you can check the shared key on the following screen.
   ![Identity screen in Amazon Developer Console](http://static.toastoven.net/prod_iap/amazon_appmenu_3_eng.png)
 - You must enter this value in the `Amazon Shared Key` item in the NHN Cloud IAP console app settings.
