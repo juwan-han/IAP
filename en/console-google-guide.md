@@ -189,7 +189,7 @@
    ![Subscription information propagation setting](http://static.toastoven.net/prod_iap/console_google/google_subscription_event_04.png)
 
 4. If you are using a Gamebase sandbox environment for testing, you must create subscriptions for sandbox, in Step 3.
-   - Enter the Gamebase sandbox endpoint URL: `https://sandbox-api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG`
+    - Enter the Gamebase sandbox endpoint URL: `https://sandbox-api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG`
 5. Go to App Dashboard in [Google Play Console](https://play.google.com/console)
     - Enter the full name of the topic you created in Step 1 in the **Monetization** menu > Real-time developer notification topic name on Google Play billing screen
 
