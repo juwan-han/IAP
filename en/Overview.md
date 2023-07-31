@@ -1,11 +1,5 @@
 ## Mobile Service > IAP > Overview
 
-
-> [Notice]
-> A new IAP SDK that supports subscription has been released as [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
-> No new features will be developed for the existing IAP SDK.
-> This document is the guide for [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
-
 In-App Purchase (IAP) service is an integrated in-app purchase service.
 
 ## Features

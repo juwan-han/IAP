@@ -1,10 +1,5 @@
 ## Mobile Service > IAP > Huawei AppGalleryコンソールガイド
 
-> [告知]
-> 購読決済をサポートする新規IAP SDKが[NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)としてリリースされました。
-> 従来のIAP SDKは、新規機能を開発しない予定です。
-> この文書は[NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです。
-
 ## Huawei Developer Console
 1. [ファーウェイ 開発者コンソール](https://developer.huawei.com/consumer/en/console)にアカウントを登録し <br/>
    エコシステムサービス / アプリサービス -> [AppGallery Connectコンソール](https://developer.huawei.com/consumer/en/service/josp/agc/index.html#/)に移動します。
