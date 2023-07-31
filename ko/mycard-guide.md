@@ -8,6 +8,6 @@
 
 ```
 1. 마이카드 결제에 사용하는 정보는 Store App ID 와 App Name 입니다. 각각은 마이카드의 facGameId 와 facGameName 항목에 이용되며, 마이카드 문의 시 참고하시기 바랍니다.
-2. 현재 운영중인 서비스라면 두 값의 수정은 결제 및 정산에 장애의 원인이 될 수 있습니다.  
+2. 현재 운영중인 서비스라면 두 값의 수정은 결제 및 정산 오류 발생의 원인이 될 수 있습니다.  
 ```
 ![[앱 등록]](http://static.toastoven.net/prod_iap/iap-console-new-app.png)
