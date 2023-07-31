@@ -1,9 +1,5 @@
 ## Mobile Service > IAP > Google Console Guide
 
-> [Notice]
-> A new IAP SDK that supports subscription has been released as [NHN Cloud SDK](http://docs.toast.com/en/TOAST/en/toast-sdk/overview/).
-> No new features will be developed for the existing IAP SDK.
->
 > This document covers how to register and link the information of apps released on Google Play to the [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) console.
 > For more details on console settings to release apps on Google Play, refer to the Google Play Console guide provided by Google.
 
