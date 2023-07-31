@@ -1,10 +1,5 @@
 ## Mobile Service > IAP > Google 콘솔 가이드
 
-
-> [공지]
-> 구독 결제를 지원하는 신규 IAP SDK가 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)로 출시됐습니다.
-> 기존 IAP SDK는 더 이상 신규 기능을 개발하지 않을 예정입니다.
->
 > 본 문서는 Google Play로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법을 다룹니다.
 > Google Play로 앱을 출시하기 위한 보다 자세한 콘솔 설정 관련 사항들은 Google이 제공하는 Google Play Console 가이드를 참조하시길 바랍니다.
 
