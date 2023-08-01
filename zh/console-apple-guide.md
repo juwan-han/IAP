@@ -32,7 +32,7 @@ or an app-specific shared secret for individual apps.
 
 
 ## Notification url
-Notification V2 is not supported. Please use V1.
+**Notification V2** is not supported. Please use **V1**.
 ```
 1. App Store Connect > My Apps > select App > App Information 
 2. Enter IAP url and click save.
