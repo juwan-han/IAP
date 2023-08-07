@@ -1,6 +1,6 @@
 ## Mobile Service > IAP > MyCard Guide
 
-## App MyCard, etc.
+## Register MyCard App
 
 - MyCard does not provide a web console where customers can log in. (As of July 2023)
 - MyCard uses the payment service only with the settings set in the NHN Cloud IAP console.
