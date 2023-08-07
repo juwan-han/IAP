@@ -42,7 +42,7 @@ secret key를 IAP 앱 정보에 등록합니다.
 
 
 ## Notification url 등록하기
-**Notification V2** 는 아직 지원하지 않습니다. **V1** 을 사용해 주시기 바랍니다.
+**Notification V2**는 아직 지원하지 않습니다. **V1**을 사용하십시오.
 ```
 1. App Store Connect > 나의 앱 > 앱 정보 > 일반 정보 
 2. 구독 상태 URL 에 IAP url을 등록합니다.
