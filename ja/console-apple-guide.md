@@ -45,7 +45,7 @@ secret keyをIAPアプリ情報に登録します。
 
 
 ## Notification url 登録する
-Notification V2 はサポートされていません。V1 を使用してください。
+**Notification V2** はサポートされていません。**V1** を使用してください。
 ```
 1. App Store Connect > My Apps > App information> General
 2. 定期購入（サブスクリプション）状態URL にIAP urlを登録します。
