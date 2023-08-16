@@ -1,11 +1,5 @@
 ## Mobile Service > IAP > Overview
 
-> [お知らせ]
-> 定期購入決済をサポートする新規のIAP SDKが[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)として発売されました。
-> 既存のIAP SDKはこれ以上新規機能を開発しない予定です。
-> 本文書は[NHN Cloud SDK](http://docs.toast.com/ja/TOAST/ja/toast-sdk/overview/)ガイドです
-
-
 In-App Purchase (以下IAP)サービスはアプリ内決済の統合ソリューションです。
 
 

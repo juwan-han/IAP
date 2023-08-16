@@ -1,10 +1,5 @@
 ## Mobile Service > IAP > Amazon Appstoreコンソールガイド
 
-> [告知]
-> 購読決済をサポートする新規IAP SDKが[NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)としてリリースされました。
-> 従来のIAP SDKは、新規機能を開発しない予定です。
-> この文書は[NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)ガイドです。
-
 ## Amazon Developer Console
 1. [Amazon開発者コンソール](https://developer.amazon.com/)にアカウントを登録し、Amazon AppStore管理メニューでアプリを作成します。
    ![Amazon開発者コンソール](http://static.toastoven.net/prod_iap/amazon_developer_console_eng.png)
