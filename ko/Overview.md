@@ -1,11 +1,5 @@
 ## Mobile Service > IAP > 개요
 
-> [공지] <br>
-기존 IAP에서 제공하던 주요 스토어(Apple App Store, Google Play Store, ONE Store)결제 기능 외에 주요 스토어(Apple App Store, Google Play Store)의 구독서비스를 제공하는 IAP(In-App Purchase) 기능이 NHN Cloud SDK에 포함되었습니다.<br>
-기존 IAP SDK는 구독 서비스를 지원하지 않습니다. 또한, NHN Cloud IAP의 기능 추가 및 개선 작업은 NHN Cloud SDK로 제공할 예정입니다.<br>
-본 문서는 [NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/) 를 기준으로 작성된 가이드 문서입니다.
-
-
 NHN Cloud In-App Purchase(이하 NHN Cloud IAP)는 주요 서비스 플랫폼(Apple App Store, Google Play, ONE Store)을 아우르는 통합 인앱 결제 서비스입니다.
 
 

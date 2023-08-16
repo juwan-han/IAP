@@ -1,10 +1,5 @@
 ## Mobile Service > IAP >  Google設定ガイド
 
-
-> [告知]
-> 定期購入決済を支援する新規IAP SDKが[NHN Cloud SDK](http://docs.toast.com/ko/TOAST/ko/toast-sdk/overview/)としてリリースされました。
-> 既存のIAP SDKはこれ以上新規機能を開発しない予定です。
->
 > 本文書はGoogle Playにリリースされたアプリの情報を[NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/)コンソールに登録および連動させる方法について扱います。
 > Google Playにアプリをリリースするためのより詳細なコンソール設定関連事項については、Googleが提供するGoogle Play Consoleガイドを参照してください。
 
