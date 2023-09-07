@@ -57,7 +57,7 @@
 
 ### 아이템 ID 확인 및 IAP 등록
 * 아이템 ID 확인은 등록 후 오퍼 세부 정보에서 확인할 수 있습니다.
-* ID 항목에서 `대상 아아템 ID`를 IAP의 `Store Item ID`로 등록합니다.
+* ID 항목에서 `대상 아이템 ID`를 IAP의 `Store Item ID`로 등록합니다.
 
 ![에픽 아이템 등록](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_item_03_kor.png)
 ![에픽 아이템 등록](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_item_04_kor.png)
