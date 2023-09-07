@@ -22,7 +22,7 @@
 * `제품 설정 > 클라이언트` 메뉴에서 IAP에 사용할 클라이언트를 생성할 수 있습니다.
 > 클라이언트 생성 전 클라이언트 정책을 먼저 생성하세요.
 
-* 클라이언트 생성을 위해서는 클라이언트에 적용할 정책이 먼저 추가가 되어야 합니다.
+* 클라이언트 생성을 위해서는 클라이언트에 적용할 정책이 먼저 추가되어야 합니다.
   * 클라이언트 정책 이름은 임의의 이름을 설정합니다.
   * 클라이언트 정책 유형은 `TrustedServer` 를 선택합니다.
   * 기능은 IAP에서 필요하지 않습니다. 선택하지 않습니다.
@@ -38,7 +38,7 @@
 
 ![에픽 앱 정보](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_app_03_kor.png)
 
-* Stroe APP ID(디플로이 ID), Client ID(클라이언트 ID), Client Secret(클라이언트 비밀 키), Sandbox ID(샌드박스 ID)를 IAP 앱정보에 등록합니다.
+* `디플로이 ID`, `클라이언트 ID`, `클라이언트 비밀 키`, `샌드박스 ID`를 IAP 앱정보에 등록합니다.
 
 ![에픽 앱 등록](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_app_04_kor.png)
 
