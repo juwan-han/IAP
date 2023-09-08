@@ -1,7 +1,11 @@
 ## Mobile Service > IAP > EPIC 콘솔 가이드
 
-> 본 문서는 에픽게임즈 스토어(이하 에픽)와 연동하는 방법을 다룹니다.
-> 에픽에 제품 출시를 위한 보다 자세한 문서는 [에픽 개발자 리소스 문서](https://dev.epicgames.com/docs/ko)를 참고하시기 바랍니다.
+본 문서는 에픽게임즈 스토어(이하 에픽)와 연동하는 방법을 다룹니다.
+에픽에 제품 출시를 위한 보다 자세한 문서는 [에픽 개발자 리소스 문서](https://dev.epicgames.com/docs/ko)를 참고하시기 바랍니다.
+
+>[참고]
+> 현재 해당 스토어 연동은 Gamebase SDK를 통해서 처리 됩니다.
+> 따라서 연동을 준비하신다면 [Gamebase 가이드](https://docs.nhncloud.com/ko/Game/Gamebase/ko/Overview)를 참고해서 작업해 주시기 바랍니다.
 
 ## 에픽 프로젝트 연결
 연동과 관련된 정보는 [에픽 데브 포털](https://dev.epicgames.com/)에서 생성합니다.
