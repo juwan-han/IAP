@@ -1,52 +1,74 @@
 ## Mobile Service > IAP > Apple 콘솔 가이드
 
-Apple 구독 상품 결제를 사용하려면 App Store Connect에서 secret key 생성 및 Notification url 설정이 필요합니다.<br>
-Secret Key는 IAP 앱 정보에 등록합니다.<br>
-Apple 일반 상품 결제는 특별한 설정이 필요하지 않습니다.
+> 본 문서는 App Store로 출시된 앱의 정보를 [NHN Cloud IAP](https://docs.nhncloud.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법을 다룹니다.
+> 연동 방법은 **(신)영수증 검증 + Notification V2**, **(구)영수증 검증 + Notification V1** 두 가지 방식으로 나뉘어 집니다.
 
-> 참고
-> https://help.apple.com/app-store-connect/#/devf341c0f01
+## (신)영수증 검증 + Notification V2
+> 해당 방식을 정상적으로 사용하려면 **NHN Cloud SDK iOS v1.7.0 버전 이상**이어야 합니다.
 
-## shared secret key 생성하기
-```
-shared secret key은 모든 앱에 공통인 마스터키로 생성할 수 있고 앱 별로 생성할 수도 있습니다.
-secret key를 IAP 앱 정보에 등록합니다.
-```
+### 앱 내 구입 키 생성
+> **참고** 
+> [https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases)
+1. App Store Connect > 사용자 및 액세스 > 키 탭 클릭
+2. 키 유형 > 앱 내 구입 클릭
+3. 앱 내 구입 키 생성 버튼 클릭
+4. 키 이름 입력 후 생성 버튼 클릭
+5. 앱 내 구입 키 다운로드 링크 클릭
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-in-app-purchase-key.png)
 
-### master shared secret key
-```
-1. App Store Connect
-2. [My Apps] 클릭
-3. [Master Shared Secret] 클릭
-```
-![[]](http://static.toastoven.net/prod_iap/iap-console-apple-shared-key-1.png)
+### IAP 앱 정보에 앱 내 구입 키 입력
+1. [콘솔 접속](https://console.nhncloud.com) > 조직 및 프로젝트 선택 > Mobile Service > IAP > App > 추가 및 App 선택 후 편집 버튼 클릭
+2. Store APP ID: **App Bundle ID** 입력
+3. 영수증 검증 및 노티 방식: **(신)영수증 검증 + Notification V2** 선택
+4. 다운로드 받은 앱 내 구입 키, Key ID, Issuer ID 입력
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit-v2.png)
 
-<br>
-
-### 앱 별 shared secret key
-```
-1. App Store Connect
-2. [My Apps] 클릭 > 생성 하려는 [앱] 클릭 > toolbar에서 [Features] 클릭
-3. [App-Specific Shared Secret] 클릭
-```
-![[]](http://static.toastoven.net/prod_iap/iap-console-apple-shared-key-2.png)
+### Notification V2 URL 등록
+1. App Store Connect > 나의 앱 > 앱 선택 > 일반 정보 > 앱 정보 > App Store 서버 알림
+2. 프로덕션 서버 URL 또는 Sandbox 서버 URL 편집 클릭
+3. 알림 버전: **버전 2 알림** 선택
+4. 서버 URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2` 입력
 
 
-### IAP 앱 정보에 shared secret key 입력하기
-```
-1. IAP Console > App > ios 앱 선택
-2. Apple Shared Secret 입력
-```
-![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit.png)
+## (구)영수증 검증 + Notification V1 (Deprecated 예정)
+> 해당 방식을 정상적으로 사용하려면 **NHN Cloud SDK iOS v1.7.0 이전 버전**을 사용해야 됩니다.
+
+Apple 구독 상품 결제를 사용하려면 App Store Connect에서 공유 암호 생성 및 Notification V1 URL 설정이 필요합니다.<br>
+공유 암호는 IAP 앱 정보에 등록합니다.<br>
+Apple 일반 상품 결제는 별도 설정이 필요하지 않습니다.
+
+### 공유 암호 생성
+> **참고**
+> 모든 앱에 대한 단일 암호인 **기본 공유 암호** 또는 개별 앱에 대한 **앱 공유 암호**를 생성할 수 있습니다.
+> [https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-a-shared-secret-to-verify-receipts](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-a-shared-secret-to-verify-receipts)
+
+#### 기본 공유 암호
+1. App Store Connect > 사용자 및 액세스 > 공유 암호 탭 클릭
+2. 생성 클릭
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-primary-shared-secret.png)
+
+#### 앱 공유 암호
+1. App Store Connect > 나의 앱 > 앱 선택 > 일반 정보 > 앱 정보 > 앱 공유 암호 > 관리 클릭
+2. 생성 클릭
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-app-specific-shared-secret.png)
+
+### IAP 앱 정보에 shared secret 입력
+1. [콘솔 접속](https://console.nhncloud.com) > 조직 및 프로젝트 선택 > Mobile Service > IAP > App > 추가 및 App 선택 후 편집 버튼 클릭
+2. Store APP ID: **App Bundle ID** 입력
+3. 영수증 검증 및 노티 방식: **(구)영수증 검증 + Notification V1** 선택
+4. Shared Secret 입력
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit-v1.png)
+
+### Notification V1 URL 등록
+1. App Store Connect > 나의 앱 > 앱 선택 > 일반 정보 > 앱 정보 > App Store 서버 알림
+2. 프로덕션 서버 URL 또는 Sandbox 서버 URL 편집 클릭
+3. 알림 버전: **버전 1 알림** 선택
+4. 서버 URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS` 입력
 
 
-
-## Notification url 등록하기
-**Notification V2**는 아직 지원하지 않습니다. **V1**을 사용하십시오.
-```
-1. App Store Connect > 나의 앱 > 앱 정보 > 일반 정보 
-2. 구독 상태 URL 에 IAP url을 등록합니다.
-- URL : https://api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/AS
-- {YOUR_PACKAGE_NAME} : app bundle id
-```
-
+## (구)영수증 검증 + Notification V1 -> (신)영수증 검증 + Notification V2 변경시 주의사항
+- App 운영 중에 변경할 경우 **장애**가 발생하므로 반드시 **점검 중에 변경**하셔야 합니다.
+- App 점검 동안 **(신)영수증 검증 + Notification V2** 가이드를 참고하셔서 진행하시기 바랍니다.
+  - Product App 변경 전 Sandbox App에서 충분한 테스트 후 작업하시기 바랍니다.
+- 점검을 마친 후 사용자는 App의 최신 버전을 사용하도록 **강제 업데이트**가 필요합니다.
+  - 최신 버전이 아닐 경우 사용자는 App 실행 중 **오류**가 발생할 수 있습니다.
