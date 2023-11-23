@@ -9,6 +9,7 @@
 ### 앱 내 구입 키 생성
 > **참고** 
 > [https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases)
+
 1. **App Store Connect** > **사용자 및 액세스** > **키** 탭 클릭
 2. **키 유형** > **앱 내 구입** 클릭
 3. **앱 내 구입 키 생성** 버튼 클릭
@@ -33,9 +34,9 @@
 ## (구)영수증 검증 + Notification V1 (Deprecated 예정)
 > 해당 방식을 정상적으로 사용하려면 **NHN Cloud SDK iOS v1.7.0 이전 버전**을 사용해야 됩니다.
 
-Apple 구독 상품 결제를 사용하려면 App Store Connect에서 공유 암호 생성 및 Notification V1 URL 설정이 필요합니다.<br>
-공유 암호는 IAP 앱 정보에 등록합니다.<br>
-Apple 일반 상품 결제는 별도 설정이 필요하지 않습니다.
+- Apple 구독 상품 결제를 사용하려면 App Store Connect에서 **공유 암호 생성** 및 **Notification V1 URL 설정**이 필요합니다.
+- 공유 암호는 IAP 앱 정보에 등록합니다.
+- Apple 일반 상품 결제는 별도 설정이 필요하지 않습니다.
 
 ### 공유 암호 생성
 > **참고**
@@ -52,7 +53,7 @@ Apple 일반 상품 결제는 별도 설정이 필요하지 않습니다.
 2. 생성 클릭
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-app-specific-shared-secret.png)
 
-### IAP 앱 정보에 shared secret 입력
+### IAP 앱 정보에 Shared Secret 입력
 1. [콘솔 접속](https://console.nhncloud.com) > **조직 및 프로젝트 선택** > **Mobile Service** > **IAP** > **App** > **추가** 및 App 선택 후 **편집** 버튼 클릭
 2. Store APP ID: **App Bundle ID** 입력
 3. 영수증 검증 및 노티 방식: **(구)영수증 검증 + Notification V1** 선택
@@ -69,6 +70,6 @@ Apple 일반 상품 결제는 별도 설정이 필요하지 않습니다.
 ## (구)영수증 검증 + Notification V1 -> (신)영수증 검증 + Notification V2 변경시 주의사항
 - App 운영 중에 변경할 경우 **장애**가 발생하므로 반드시 **점검 중에 변경**하셔야 합니다.
 - App 점검 동안 **(신)영수증 검증 + Notification V2** 가이드를 참고하셔서 진행하시기 바랍니다.
-  - Product App 변경 전 Sandbox App에서 충분한 테스트 후 작업하시기 바랍니다.
+    - Product App 변경 전 Sandbox App에서 충분한 테스트 후 작업하시기 바랍니다.
 - 점검을 마친 후 사용자는 App의 최신 버전을 사용하도록 **강제 업데이트**가 필요합니다.
-  - 최신 버전이 아닐 경우 사용자는 App 실행 중 **오류**가 발생할 수 있습니다.
+    - 최신 버전이 아닐 경우 사용자는 App 실행 중 **오류**가 발생할 수 있습니다.
