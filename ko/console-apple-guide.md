@@ -9,23 +9,23 @@
 ### 앱 내 구입 키 생성
 > **참고** 
 > [https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases)
-1. App Store Connect > 사용자 및 액세스 > 키 탭 클릭
-2. 키 유형 > 앱 내 구입 클릭
-3. 앱 내 구입 키 생성 버튼 클릭
+1. **App Store Connect** > **사용자 및 액세스** > **키** 탭 클릭
+2. **키 유형** > **앱 내 구입** 클릭
+3. **앱 내 구입 키 생성** 버튼 클릭
 4. 키 이름 입력 후 생성 버튼 클릭
 5. 앱 내 구입 키 다운로드 링크 클릭
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-in-app-purchase-key.png)
 
 ### IAP 앱 정보에 앱 내 구입 키 입력
-1. [콘솔 접속](https://console.nhncloud.com) > 조직 및 프로젝트 선택 > Mobile Service > IAP > App > 추가 및 App 선택 후 편집 버튼 클릭
+1. [콘솔 접속](https://console.nhncloud.com) > **조직 및 프로젝트 선택** > **Mobile Service** > **IAP** > **App** > **추가** 및 App 선택 후 **편집** 버튼 클릭
 2. Store APP ID: **App Bundle ID** 입력
 3. 영수증 검증 및 노티 방식: **(신)영수증 검증 + Notification V2** 선택
 4. 다운로드 받은 앱 내 구입 키, Key ID, Issuer ID 입력
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit-v2.png)
 
 ### Notification V2 URL 등록
-1. App Store Connect > 나의 앱 > 앱 선택 > 일반 정보 > 앱 정보 > App Store 서버 알림
-2. 프로덕션 서버 URL 또는 Sandbox 서버 URL 편집 클릭
+1. **App Store Connect** > **나의 앱** > **앱 선택** > **일반 정보** > **앱 정보** > **App Store 서버 알림**
+2. **프로덕션 서버 URL** 또는 **Sandbox 서버 URL** 편집 클릭
 3. 알림 버전: **버전 2 알림** 선택
 4. 서버 URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2` 입력
 
@@ -43,25 +43,25 @@ Apple 일반 상품 결제는 별도 설정이 필요하지 않습니다.
 > [https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-a-shared-secret-to-verify-receipts](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-a-shared-secret-to-verify-receipts)
 
 #### 기본 공유 암호
-1. App Store Connect > 사용자 및 액세스 > 공유 암호 탭 클릭
+1. **App Store Connect** > **사용자 및 액세스** > **공유 암호** 탭 클릭
 2. 생성 클릭
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-primary-shared-secret.png)
 
 #### 앱 공유 암호
-1. App Store Connect > 나의 앱 > 앱 선택 > 일반 정보 > 앱 정보 > 앱 공유 암호 > 관리 클릭
+1. **App Store Connect** > **나의 앱** > **앱 선택** > **일반 정보** > **앱 정보** > **앱 공유 암호** > **관리** 클릭
 2. 생성 클릭
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-app-specific-shared-secret.png)
 
 ### IAP 앱 정보에 shared secret 입력
-1. [콘솔 접속](https://console.nhncloud.com) > 조직 및 프로젝트 선택 > Mobile Service > IAP > App > 추가 및 App 선택 후 편집 버튼 클릭
+1. [콘솔 접속](https://console.nhncloud.com) > **조직 및 프로젝트 선택** > **Mobile Service** > **IAP** > **App** > **추가** 및 App 선택 후 **편집** 버튼 클릭
 2. Store APP ID: **App Bundle ID** 입력
 3. 영수증 검증 및 노티 방식: **(구)영수증 검증 + Notification V1** 선택
 4. Shared Secret 입력
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit-v1.png)
 
 ### Notification V1 URL 등록
-1. App Store Connect > 나의 앱 > 앱 선택 > 일반 정보 > 앱 정보 > App Store 서버 알림
-2. 프로덕션 서버 URL 또는 Sandbox 서버 URL 편집 클릭
+1. **App Store Connect** > **나의 앱** > **앱 선택** > **일반 정보** > **앱 정보** > **App Store 서버 알림**
+2. **프로덕션 서버 URL** 또는 **Sandbox 서버 URL** 편집 클릭
 3. 알림 버전: **버전 1 알림** 선택
 4. 서버 URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS` 입력
 
