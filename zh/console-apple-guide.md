@@ -1,42 +1,75 @@
 ## Mobile Service > IAP > Apple Console Guide
 
-To use App store subscription, you should create a secret key and set a notification url in App Store Connect.<br>
-After that, register secret key into IAP app property.<br>
-Consumable product payment does not require above things.<br>
+> This document describes how to register and integrate the information of an app released on the App Store with [NHN Cloud IAP](https://docs.nhncloud.com/ko/Mobile%20Service/IAP/ko/Overview/) Console.
+There are two methods of integration: **(New) Receipt Verification + Notification V2** and **(Old) Receipt Verification + Notification V1**.
+
+## (New) Receipt Verification + Notification V2
+> To use this method properly, **NHN Cloud SDK iOS v1.7.0 or later** is required.
+
+### Generate keys for in-app purchases
+> **Note**
+[https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases)
+
+1. Go to **App Store Connect** > **Users & Access** > **Keys**
+2. Click **Key Type** > **In-app purchases**
+3. Click **Generate keys for in-app purchases**
+4. Enter a name for the key and click **Generate**
+5. Click **Download in-app purchase key**
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-in-app-purchase-key.png)
+
+### Enter the in-app purchase key in the IAP app information
+1. [In the console,](https://console.nhncloud.com) select the organization and project, **Mobile Service** > **IAP** > **App** > **Add** or select an app, and click **Edit**
+2. Store APP ID: Enter your **app bundle ID**
+3. Receipt verification and notification method: Choose **(New) Receipt Verification + Notification V2**
+4. Enter the purchase key, Key ID, and Issuer ID for the downloaded app.
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit-v2.png)
+
+### Register Notification V2 URL
+1. **App Store Connect** > **My Apps** > **Select an app** > **General Information** > **App information > App** **App Store Server Notifications**
+2. Click **Edit Production Server URL** or **Sandbox Server URL**
+3. Notification version: Select **Version 2 notifications**.
+4. Enter the server URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2`
 
 
+## (Old) Receipt validation + Notification V1 (soon to be deprecated)
+> To use this method properly, you need to use **NHN Cloud SDK iOS v1.7.0 or earlier**.
 
-> Reference<br>
-> https://help.apple.com/app-store-connect/#/devf341c0f01
+- Apple subscription billing requires you to create a **shared secret** and set up a **Notification V1 URL** in App Store Connect.
+- Register the shared secret in the IAP app information.
+- Do not need any setup for payments for Apple general merchandise.
 
-## Create a shared secret key
-```
-You may generate a master shared secret, which is single code for all of your apps, <br>
-or an app-specific shared secret for individual apps. 
-```
+### Generate a shared secret
+> **Note**
+You can generate a **default shared secret**, which is a single secret for all apps, or **app-specific shared secret** for individual apps.
+[For more information, see https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-a-shared-secret-to-verify-receipts](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-a-shared-secret-to-verify-receipts)
 
-### master shared secret key
+#### Default shared secret
+1. Go to **App Store Connect** > **Users & Access** > **Shared Secret**
+2. Click **Generate**
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-primary-shared-secret.png)
 
-![[]](http://static.toastoven.net/prod_iap/iap-console-apple-shared-key-1.png)
+#### App-Specific Shared Secret
+1. Click **App Store Connect** > **My Apps** > **Select an app** > **General** > **App Information** > App-Specific Shared Secret ** > **Manage**
+2. Click **Generate**
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-app-specific-shared-secret.png)
 
-<br>
+### Enter the Shared Secret in the IAP app information
+1. [In the console,](https://console.nhncloud.com)select the organization and project, **Mobile Service** > **IAP** > **App** > **Add** or select an app, and click **Edit**
+2. Store APP ID: Enter your **app bundle ID**
+3. Receipt verification and ** notification** method: Select **(Old) Receipt verification + Notification V1**
+4. Enter the Shared Secret
+![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit-v1.png)
 
-### App specific shared secret key
-
-![[]](http://static.toastoven.net/prod_iap/iap-console-apple-shared-key-2.png)
-
-
-### Register shared secret key into IAP App.
-![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit.png)
+### Register a Notification V1 URL
+1. **App Store Connect** > **My Apps** > **Select an app** > **General Information** > **App information > App** **App Store Server Notifications**
+2. Click **Edit Production Server URL** or **Sandbox Server URL**
+3. Notification version: Select **version 1 notifications**
+4. Enter the server URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS`
 
 
-
-## Notification url
-**Notification V2** is not supported. Please use **V1**.
-```
-1. App Store Connect > My Apps > select App > App Information 
-2. Enter IAP url and click save.
-- URL : https://api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/AS
-- {YOUR_PACKAGE_NAME} : app bundle id
-```
-
+## Precautions for changing from (Old) Receipt Verification + Notification V1 → (New) Receipt Verification + Notification V2
+- If you make changes while the app is running, it may fail, so be sure to make changes during inspections.
+- Refer to the **(New) Receipt Verification + Notification V2** guide to proceed during the app check.
+    - Test thoroughly in Sandbox app before making changes to your product app.
+- After completing the checks, a force update is required to ensure that users are using the latest version of the app.
+    - If it's not the latest version, users may experience errors when using your app.
