@@ -34,7 +34,7 @@
 ## (旧)領収書検証 + Notification V1 (Deprecated予定)
 > この方式を正常に使用するには**NHN Cloud SDK iOS v1.7.0以前のバージョン**を使用する必要があります。
 
-Appleサブスクリプション商品決済を使用するには、App Store Connectで**共有パスワード**の作成と**Notification V1 URL**の設定が必要です。
+- Appleサブスクリプション商品決済を使用するには、App Store Connectで**共有パスワード**の作成と**Notification V1 URL**の設定が必要です。
 - 共有パスワードはIAPアプリ情報に登録します。
 - Apple一般商品決済は別途設定が必要ありません。
 
