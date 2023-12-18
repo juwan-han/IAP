@@ -19,19 +19,19 @@ There are two methods of integration: **(New) Receipt Verification + Notificatio
 
 ### Enter the in-app purchase key in the IAP app information
 1. [In the console,](https://console.nhncloud.com) select the organization and project, **Mobile Service** > **IAP** > **App** > **Add** or select an app, and click **Edit**
-2. Store APP ID: Enter your **app bundle ID**
-3. Receipt verification and notification method: Choose **(New) Receipt Verification + Notification V2**
+2. Store APP ID: Enter your **App Bundle ID**
+3. Receipt Verification and Notification method: Choose **(New) Receipt Verification + Notification V2**
 4. Enter the purchase key, Key ID, and Issuer ID for the downloaded app.
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit-v2.png)
 
 ### Register Notification V2 URL
-1. **App Store Connect** > **My Apps** > **Select an app** > **General Information** > **App information > App** **App Store Server Notifications**
+1. **App Store Connect** > **My Apps** > **Select an App** > **General Information** > **App information > App** **App Store Server Notifications**
 2. Click **Edit Production Server URL** or **Sandbox Server URL**
-3. Notification version: Select **Version 2 notifications**.
+3. Notification version: Select **Version 2 Notifications**.
 4. Enter the server URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2`
 
 
-## (Old) Receipt validation + Notification V1 (soon to be deprecated)
+## (Old) Receipt Verification + Notification V1 (soon to be deprecated)
 > To use this method properly, you need to use **NHN Cloud SDK iOS v1.7.0 or earlier**.
 
 - Apple subscription billing requires you to create a **shared secret** and set up a **Notification V1 URL** in App Store Connect.
@@ -40,30 +40,30 @@ There are two methods of integration: **(New) Receipt Verification + Notificatio
 
 ### Generate a shared secret
 > **Note**
-You can generate a **default shared secret**, which is a single secret for all apps, or **app-specific shared secret** for individual apps.
+You can generate a **primary shared secret**, which is a single secret for all apps, or **app-specific shared secret** for individual apps.
 [For more information, see https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-a-shared-secret-to-verify-receipts](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-a-shared-secret-to-verify-receipts)
 
-#### Default shared secret
+#### Primary Shared Secret
 1. Go to **App Store Connect** > **Users & Access** > **Shared Secret**
 2. Click **Generate**
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-primary-shared-secret.png)
 
 #### App-Specific Shared Secret
-1. Click **App Store Connect** > **My Apps** > **Select an app** > **General** > **App Information** > App-Specific Shared Secret ** > **Manage**
+1. Click **App Store Connect** > **My Apps** > **Select an app** > **General** > **App Information** > **App-Specific Shared Secret** > **Manage**
 2. Click **Generate**
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-app-specific-shared-secret.png)
 
 ### Enter the Shared Secret in the IAP app information
 1. [In the console,](https://console.nhncloud.com)select the organization and project, **Mobile Service** > **IAP** > **App** > **Add** or select an app, and click **Edit**
-2. Store APP ID: Enter your **app bundle ID**
-3. Receipt verification and ** notification** method: Select **(Old) Receipt verification + Notification V1**
+2. Store APP ID: Enter your **App Bundle ID**
+3. Receipt Verification and Notification method: Select **(Old) Receipt Verification + Notification V1**
 4. Enter the Shared Secret
 ![[]](http://static.toastoven.net/prod_iap/iap-console-apple-edit-v1.png)
 
 ### Register a Notification V1 URL
-1. **App Store Connect** > **My Apps** > **Select an app** > **General Information** > **App information > App** **App Store Server Notifications**
+1. **App Store Connect** > **My Apps** > **Select an App** > **General Information** > **App information > App** **App Store Server Notifications**
 2. Click **Edit Production Server URL** or **Sandbox Server URL**
-3. Notification version: Select **version 1 notifications**
+3. Notification version: Select **Version 1 Notifications**
 4. Enter the server URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS`
 
 
