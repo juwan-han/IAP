@@ -13,14 +13,14 @@
 
 ![NHN Cloud IAP 앱 설정](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_01.png)
 
-### 1. **Store App ID**
+### 1. Store App ID
 
 - Google Play 등록을 위해 빌드한 앱의 Package Name으로 Google Play 내에서 앱을 식별할 수 있는 고유값입니다.
 - 앱을 등록했다면 Google Play Console의 앱 목록 또는 대시보드 등에서 확인이 가능합니다.
 
 ![Google Play 앱 패키지 이름](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_05.png)
 
-### 2. **Google InApp Purchase License Key**
+### 2. Google InApp Purchase License Key
 
 - 라이선스 확인을 위해 Google Play Console에 접속합니다.
 - **홈** 화면에서 설정할 앱을 선택 후 **수익 창출 설정**으로 들어갑니다.
@@ -28,13 +28,13 @@
 
 ![Google Play 앱 라이선스 키](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_06.png)
 
-### 3. **마켓 연동 검증 생략**
+### 3. 마켓 연동 검증 생략
 
 - Google 장애 상황을 대비한 옵션으로 일반적인 경우 기본값인 **NO**로 설정하십시오. 
 - **YES**로 설정 시 전송된 결제 정보의 변조 여부만 확인하고, Google의 검증을 생략합니다.
 - 모든 결제에 유효한 것은 아니며, 구독이나 재검증 등에는 적용되지 않습니다.
 
-### 4. **Domain authentication File Names**
+### 4. Domain authentication File Names
 
 - 더 이상 사용하지 않는 항목으로 공란으로 둡니다.
 
