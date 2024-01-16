@@ -13,14 +13,14 @@
 
 ![NHN Cloud IAPアプリ設定](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_01.png)
 
-1. **Store App ID**
+### 1. Store App ID
 
 * Google Play登録のためにビルドしたアプリのPackage Nameで、Google Play内でアプリを識別できる固有の値です。
 * アプリを登録したら、Google Play Consoleのアプリ一覧やダッシュボードなどで確認できます。
 
 ![Google Playアプリパッケージ名](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_05.png)
 
-2. **Google InApp Purchase License Key**
+### 2. Google InApp Purchase License Key
 
 * ライセンス確認のためGoogle Play Consoleに接続します。
 * **ホーム**画面で設定するアプリを選択し、**収益化設定**に移動します。
@@ -34,7 +34,7 @@
 * **YES**に設定すると、送信された決済情報の改ざん有無のみを確認し、Googleの検証を省略します。
 * すべての決済に有効なわけではなく購読や再検証などには適用されません。
 
-4. **Domain authentication File Names**
+### 4. Domain authentication File Names
 
 * 廃止予定の項目なので、空白のままにしておきます。
 
@@ -45,7 +45,7 @@
 * NHN Cloud IAP連動方式でクライアントIDは**SUPERVISOR**に、サービスアカウントは**SERVICE_ACCOUNT**にマッピングされます。
 * 二つの方式の違いは以下の通りで、詳細は[GoogleのOAuth 2.0ガイド](https://developers.google.com/identity/protocols/oauth2?hl=ko)を参照してください。
 
-**[クライアントID方式]** 
+**[クライアントID方式]**
 * ユーザーに代わって認証に使うクライアントIDと認証情報を生成します。
 * 認証情報を生成する過程で、実際のGoogleユーザー(開発者)の承認が必要です。
 * 承認はWeb上で1回だけ行われ,生成された認証情報と承認結果をWebサイトにリターンします。
@@ -58,6 +58,7 @@
 * サービスアカウントがアプリにアクセスするためには、適切な権限を付与する必要があります。
 
 ![NHN Cloud IAPアプリ設定](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_1.1.png)
+
 
 ## Google Cloudプロジェクト設定
 * Google Playに登録されたアプリと連動するためにGoogle Cloudプロジェクトが必要です。
@@ -77,8 +78,8 @@
 
 * 生成したプロジェクトを選択して、**API及びサービス > ライブラリ**メニューに移動します。
 * **APIライブラリ**で使用するAPIを選択します。Google Playに登録したアプリと連動するために次のAPIが必要です。
-    * **Play Android Developer API**
-    * **Play Games Services Publishing API**
+  * **Play Android Developer API**
+  * **Play Games Services Publishing API**
 * 該当APIを選択後、**製品詳細**で使用に設定します。
 
 ![Google Cloud API選択](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_03.png)
@@ -170,7 +171,7 @@ NHN Cloud IAPでGoogle CloudクライアントID認証を使用するために�
 ![Google Cloud IAMでサービスアカウントの作成](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_08.png)
 
 ![Google Cloud APIでサービスアカウントの作成](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_09.png)
- 
+
 * **サービスアカウント名**と**サービスアカウントID**に適切な情報を入力し、**作成して続行**を押して次に進みます。
 
 ![Google Cloudサービスアカウント入力](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_10.png)
