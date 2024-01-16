@@ -13,14 +13,14 @@
 
 ![NHN Cloud IAPアプリ設定](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_01.png)
 
-### 1. Store App ID
+1. **Store App ID**
 
 * Google Play登録のためにビルドしたアプリのPackage Nameで、Google Play内でアプリを識別できる固有の値です。
 * アプリを登録したら、Google Play Consoleのアプリ一覧やダッシュボードなどで確認できます。
 
 ![Google Playアプリパッケージ名](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_05.png)
 
-### 2. Google InApp Purchase License Key
+2. **Google InApp Purchase License Key**
 
 * ライセンス確認のためGoogle Play Consoleに接続します。
 * **ホーム**画面で設定するアプリを選択し、**収益化設定**に移動します。
@@ -34,7 +34,7 @@
 * **YES**に設定すると、送信された決済情報の改ざん有無のみを確認し、Googleの検証を省略します。
 * すべての決済に有効なわけではなく購読や再検証などには適用されません。
 
-### 4. Domain authentication File Names
+4. **Domain authentication File Names**
 
 * 廃止予定の項目なので、空白のままにしておきます。
 
@@ -58,7 +58,6 @@
 * サービスアカウントがアプリにアクセスするためには、適切な権限を付与する必要があります。
 
 ![NHN Cloud IAPアプリ設定](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_1.1.png)
-
 
 ## Google Cloudプロジェクト設定
 * Google Playに登録されたアプリと連動するためにGoogle Cloudプロジェクトが必要です。

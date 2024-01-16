@@ -2,26 +2,21 @@
 
 Create your license key and OAuth credentials in the one-store to register for the IAP app information.
 
-
-
 ### Create One-Store Key
 ```
-Apps > select App> In-App정보 > Licensing & in-app billing
+Apps > select App> In-App > Managed Product > Managed In-App API
 ```
-![원스토어 인증 및 라이선스 확인](http://static.toastoven.net/prod_iap/iap_52.PNG)
 
-<br>
+![In-App API 관리](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_onestore/onestore_console_01.png)
 
-![[]](http://static.toastoven.net/prod_iap/iap-console-onestore-edit.png)
+![NHN Cloud IAP 앱 설정](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_onestore/onestore_iap_console_01.png)
 
-<br>
-
-
-| Key | Description                                             |
-| ------------- | ------------------------------ |
-| Store ID     | ONE Store v17 |
-| App Name      | App Name|
-| ONE Store Client ID | ONE Store ClientID |
-| ONE Store Client Secret | ONE Store Oauth Client Secret |
-| ONE Store License Key | ONE Store Oauth License Key|
+| Key                     | Description                       |
+|-------------------------|-----------------------------------|
+| **Store ID**              | **ONESTORE**                      |
+| **App Name**                | App Name                          |
+| **ONE Store API Version**     | **OneStore API V7**             |
+| **ONE Store Client ID**     | ONE Store Oauth **Client ID**           |
+| **ONE Store Client Secret** | ONE Store Oauth **Client Secret** |
+| **ONE Store License Key**   | **License Key**   |
 
