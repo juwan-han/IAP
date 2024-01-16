@@ -5,7 +5,7 @@
 
 ## Googleサイト
 連動に必要な情報を得るために下記のGoogleサイトを利用します。
-*[Google Play Console](https://play.google.com/console/developers)
+* [Google Play Console](https://play.google.com/console/developers)
 * [Google Cloud Console](https://console.cloud.google.com)
 * [Google Developers - OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
 
