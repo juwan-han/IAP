@@ -122,7 +122,7 @@ NHN Cloud IAP에서 Google Cloud 클라이언트 ID 인증을 사용하기 위�
 
 ### 3. OAuth 클라이언트로 Refresh token 생성
 
-* Refresh token 생성을 위해 [Google Developers * OAuth 2.0 Playground](https://developers.google.com/oauthplayground)에 접속합니다.
+* Refresh token 생성을 위해 [Google Developers - OAuth 2.0 Playground](https://developers.google.com/oauthplayground)에 접속합니다.
 * **Step 1**에서 인증에 사용할 API인 **Google Play Android Developer API v3**의  `https://www.googleapis.com/auth/androidpublisher`를 선택합니다.
 * 우측 상단의 톱니바퀴 모양 버튼을 눌러 **OAuth 2.0 configuration**을 열고, **Use your own OAuth credentials**를 체크하여 추가 입력란이 나오게 합니다.
 * 앞에서 생성한 **클라이언트 ID**와 **클라이언트 보안 비밀번호**를 **OAuth Client ID**와 **OAuth Client secret**에 입력합니다.
