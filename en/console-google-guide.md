@@ -1,257 +1,257 @@
-## Mobile Service > IAP > Google 콘솔 가이드
+## Mobile Service > IAP > Google Console Guide
 
-> 본 문서는 Google Play로 출시된 앱의 정보를 [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법을 다룹니다.
-> Google Play로 앱을 출시하기 위한 보다 자세한 사항들은 Google이 제공하는 Google Play Console 가이드를 참조하십시오.
+> This document describes how to register and link information from an app released on Google Play to [NHN Cloud IAP](http://docs.toast.com/ko/Mobile%20Service/IAP/ko/Overview/) Console.
+> For more details on releasing apps with Google Play, please refer to the Google Play Console guide provided by Google.
 
-## Google 사이트
-연동에 필요한 정보를 얻기 위해 아래 Google 사이트를 이용합니다.
+## Google site
+We use the Google site below to get the information for the integration.
 * [Google Play Console](https://play.google.com/console/developers)
 * [Google Cloud Console](https://console.cloud.google.com)
 * [Google Developers - OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
 
-## 기본 정보 입력
+## Enter Basic Information
 
-![NHN Cloud IAP 앱 설정](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_01.png)
+![NHN Cloud IAP App Settings](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_01.png)
 
 ### 1. Store App ID
 
-* Google Play 등록을 위해 빌드한 앱의 Package Name으로 Google Play 내에서 앱을 식별할 수 있는 고유값입니다.
-* 앱을 등록했다면 Google Play Console의 앱 목록 또는 대시보드 등에서 확인이 가능합니다.
+* The Package Name of the app you build for Google Play registration, a unique value that identifies your app within Google Play.
+* If you've registered your app, you can see it in your app list in the Google Play Console, or in your dashboard.
 
-![Google Play 앱 패키지 이름](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_05.png)
+![Google Play app package name](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_05.png)
 
 ### 2. Google InApp Purchase License Key
 
-* 라이선스 확인을 위해 Google Play Console에 접속합니다.
-* **홈** 화면에서 설정할 앱을 선택 후 **수익 창출 설정**으로 들어갑니다.
-* 항목 중 **라이선스**에 있는 Base64로 인코딩된 내용을 복사하여 붙여넣습니다.
+* Access the Google Play Console to verify your license.
+* From **Home**, select the app you want to set up and enter the **Monetization setup**.
+* Copy and paste the Base64-encoded portion of the item from **License**.
 
-![Google Play 앱 라이선스 키](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_06.png)
+![Google Play app license key](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_06.png)
 
-### 3. 마켓 연동 검증 생략
+### 3. Skip Market Integration Verification
 
-* Google 장애 상황을 대비한 옵션으로 일반적인 경우 기본값인 **NO**로 설정하십시오.
-* **YES**로 설정 시 전송된 결제 정보의 변조 여부만 확인하고, Google의 검증을 생략합니다.
-* 모든 결제에 유효한 것은 아니며, 구독이나 재검증 등에는 적용되지 않습니다.
+* Set to **NO**, which is usually the default, as an option in case of a Google outage. 
+* When set to **YES**, it only checks for tampering with the sent payment information and skips verification by Google.
+* Do not apply to all payments, and subscriptions and revalidations are excluded.
 
-### 4. Domain authentication File Names
+### 4. Domain Authentication File Names
 
-* 더 이상 사용하지 않는 항목으로 공란으로 둡니다.
+* This field is left blank as it is no longer used.
 
-## 연동을 위한 두 가지 인증 방식 제공
+## Two Authentication Methods for Integration
 
-* Google 연동을 위해서는 Google Cloud API를 사용해야 하며, Google Cloud API는 Google에서 제공하는 OAuth2.0 인증이 필요합니다.
-* NHN Cloud IAP는 Google의 OAuth2.0 인증 중 **클라이언트 ID** 방식과 **서비스 계정** 방식을 지원합니다.
-* NHN Cloud IAP 연동 방식에서 클라이언트 ID는 **SUPERVISOR**로, 서비스 계정은 **SERVICE_ACCOUNT**로 매핑됩니다.
-* 두 방식의 차이는 간략히 아래와 같으며, 자세한 내용은 [Google의 OAuth 2.0 가이드](https://developers.google.com/identity/protocols/oauth2?hl=ko)를 참고하십시오.
+* To integrate with Google, you must use the Google Cloud API, which requires OAuth2.0 authorization provided by Google. 
+* NHN Cloud IAP supports the **Client ID** and **service account** methods among Google OAuth2.0 authentications. 
+* In the NHN Cloud IAP integration methods, the client ID is mapped to **SUPERVISOR**and the service account is **to SERVICE_ACCOUNT**.
+* The differences between the two are summarized below, and you can read more about them in [Google's OAuth 2.0 guide](https://developers.google.com/identity/protocols/oauth2?hl=ko).
 
-**[클라이언트 ID 방식]**
-* 사용자를 대신하여 인증에 사용할 클라이언트 ID와 인증 정보를 생성합니다.
-* 인증 정보를 생성하는 과정에 실제 Google 사용자(개발자)의 승인이 필요합니다.
-* 승인은 웹에서 1회만 이루어지고, 생성된 인증 정보와 승인 결과가 웹사이트로 반환됩니다.
-* 승인된 클라이언트 ID로 Google Cloud API를 사용하면 승인한 사용자와 동일한 권한을 갖습니다.
-* Google Play Console을 생성(소유)한 사용자가 인증 정보를 생성했다면 해당 클라이언트 ID는 Google Play Console 내 모든 앱에 접근이 가능합니다.
+**[Client ID method].** 
+* Create a client ID and credentials to use for authentication on behalf of the user.
+* While creating credentials, an approval from a Google user (developer) is required. 
+* Authorization happens only once on the web, and the generated credentials and authorization results are returned to the website.
+* When you use the Google Cloud API with an authorized client ID, you have the same permissions as the authorized user.
+* If the credentials are generated by the user who creates (owns) Google Play Console, then that client ID can access any app within Google Play Console.
 
-**[서비스 계정 방식]**
-* Google Cloud Console에서는 프로젝트를 위한 서비스 계정을 생성할 수 있습니다. 서비스 계정은 Google 이메일을 갖는 일반 사용자 계정이 아닙니다.
-* Google Play Console에서는 Google Cloud Console에서 생성한 서비스 계정을 추가하여 사용합니다.
-* 서비스 계정이 앱에 접근하기 위해서는 적절한 권한을 부여해야 합니다.
+**[Service account method]**
+* In the Google Cloud Console, you can create a service account for your project. A service account is not a regular user account with a Google email. 
+* Google Play Console adds and uses the service account you created in Google Cloud Console.
+* In order for the service account to access the app, you must grant the appropriate permissions.
 
-![NHN Cloud IAP 앱 설정](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_1.1.png)
+![NHN Cloud IAP App Settings](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_1.1.png)
 
 
-## Google Cloud 프로젝트 설정
-* Google Play에 등록된 앱과 연동하기 위해 Google Cloud 프로젝트가 필요합니다.
-* 이미 만들어진 프로젝트가 있다면 기존 프로젝트 사용도 가능하나 여기서는 Google Cloud 프로젝트 생성부터 가이드합니다.
+## Set up Google Cloud Project
+* To integrate with apps registered on Google Play, you require a Google Cloud project.
+* You can use an existing project if you already have one, but you can learn how to create a Google Cloud project first.
 
-### 1. 프로젝트 생성
+### 1. Create a project
 
-* 프로젝트 생성을 위해 [Google Cloud Console](https://console.cloud.google.com/)에 접속합니다.
-* Google Play Console 개발자 계정을 소유한 사용자로 로그인합니다.
-* **IAM 및 관리자 > 프로젝트 만들기**를 선택합니다.
-* **프로젝트 이름**과 **위치**를 입력 후 프로젝트를 생성합니다.
+* Access the [Google Cloud Console](https://console.cloud.google.com/)to create a project.
+* Sign in as the user who owns the Google Play Console developer account.
+* Select **IAM & Admin > Create Project**.
+* Create a project by entering a **project name** and **location**.
 
-![Google Cloud 프로젝트 생성 메뉴](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_01.png)
-![Google Cloud 프로젝트 생성](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_02.png)
+![Create Google Cloud Project Menu](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_01.png)
+![Create a Google Cloud project](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_02.png)
 
-### 2. 프로젝트에서 사용할 API 추가
+### 2. Add APIs to Use in Your Project
 
-* 생성한 프로젝트를 선택하고, **API 및 서비스 > 라이브러리** 메뉴로 이동합니다.
-* **API 라이브러리**에서 사용할 API를 선택합니다. Google Play에 등록한 앱과 연동하기 위해 다음 API가 필요합니다.
-   * **Play Android Developer API**
-   * **Play Games Services Publishing API**
-* 해당 API 선택 후 **제품 세부정보**에서 사용으로 설정합니다.
+* Select the project you created, and navigate to the **APIs & Services > Library** menu.
+* Select the API you want to use from **API Library**. The following APIs are required to integrate with apps registered in Google Play.
+    * **Play Android Developer API**
+    * **Play Games Services Publishing API**
+* Select the appropriate API and enable it in the **Product Details**.
 
-![Google Cloud API 선택](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_03.png)
+![Select a Google Cloud API](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_03.png)
 
-### 3. Google Cloud Console 메뉴 노출
+### 3. Show the Google Cloud Console Menu
 
-* 설정 과정 중 Google Cloud Pub/Sub와 같이 보이지 않는 메뉴가 있을 경우 **제품 및 솔루션 > 모든 제품**에 들어가면 메뉴(고정된 제품)에 추가할 수 있습니다.
+* If you have an invisible menu during the setup process, such as Google Cloud Pub/Sub, you can add it to your menu (pinned products) by navigating to **Products & Solutions > All Products**.
 
-![Google Cloud 고정된 제품 설정](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_13.png)
+![Set up Google Cloud Pinned Products](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_13.png)
 
-## SUPERVISOR 연동 방식 설정
-NHN Cloud IAP에서 Google Cloud 클라이언트 ID 인증을 사용하기 위해 클라이언트 ID로 생성한 Refresh token이 필요합니다. Refresh token 생성 중에는 사용자의 승인 과정이 있으며, 이를 위해 Google Cloud 프로젝트에서 **OAuth 동의 화면**을 구성해야 합니다. Google Play Console에 등록한 앱의 접근 권한은 Refresh token 생성을 승인한 사용자의 권한을 따릅니다.
+## Set up SUPERVISOR integration
+To use Google Cloud Client ID authentication in NHN Cloud IAP, you need a Refresh token created with your client ID. While creating a Refresh token, there is a user authorization process, and you need to configure the **OAuth consent screen**in your Google Cloud project. The access permissions of apps registered in Google Play Console are based on the permissions of the user who approved the Refresh token generation.
 
-### 1. OAuth 동의 화면 구성
+### 1. Configure the OAuth Consent Screen
 
-* 클라이언트 ID 생성 전 **OAuth 동의 화면**을 구성한 적이 없다면 먼저 **OAuth 동의 화면**을 구성해야 합니다.
-* **API 및 서비스 > OAuth 동의 화면**에서 사용자가 인증 정보 생성을 승인할 때 보게 될 화면을 구성합니다.
-* Google Workspace를 사용하지 않았다면, **User Type**은 **외부**만 선택이 가능합니다.
-* 나머지 구성 관련 설정은 화면 내 **알아보기**를 따라 진행합니다.
+* If you haven't configured the **OAuth consent** screen before creating a client ID, you must do so first.
+* **In APIs & Services > OAuth consent screen**, configure the screen that users will see when they authorize the creation of their credentials.
+* If you're not using Google Workspace, you can only select **External**for **User Type**. 
+* Follow the **Learn more** on the screen for other configuration-related settings.
 
-![Google Cloud Oauth 동의 화면 구성](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_04.png)
+![Configure the Google Cloud Oauth consent screen](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_04.png)
 
-### 2. Google Cloud 클라이언트 ID 생성
+### 2. Create a Google Cloud Client ID
 
-* **API 및 서비스 > 사용자 인증 정보**에서 상단의 **사용자 인증 정보 만들기 > OAuth 클라이언트 ID**를 선택하여 **OAuth 클라이언트 ID 만들기** 페이지로 들어갑니다.
+* **Under APIs & Services > User Credentials**, select **Create User Credentials > OAuth Client ID** at the top to enter the **Create OAuth client ID** page.
 
-![Google Cloud 사용자 인증 정보 만들기](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_05.png)
+![Create Google Cloud User Credentials](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_05.png)
 
-* **애플리케이션 유형**은 **웹 애플리케이션**을 선택합니다.
-* 클라이언트 ID를 식별할 **이름**을 입력합니다.
-* **승인된 리디렉션 URI**는 앞서 설정한 **OAuth 동의 화면**에서 사용자 승인 후 결과를 반환 받을 주소입니다. **애플리케이션 유형**을 **웹 애플리케이션**으로 설정하면 승인된 인증 정보(Authorization code)를 웹으로 받습니다.
-* 별도의 사용자 웹 애플리케이션으로 인증 결과를 받고 싶다면 사용자의 웹 주소 설정도 가능합니다. 여기서는 Google Developers 사이트를 이용하여 인증 정보를 확인합니다.
-* **승인된 리디렉션 URI**에 `https://developers.google.com/oauthplayground`를 입력합니다.
+* For **Application type**, select **web application**.
+* Enter a **name**to identify the client ID.
+* The **authorized redirect URI** is the address to which the result will be returned after user authorization on the **OAuth consent screen**you set up earlier. If you set the **application type** to **web application**, you will receive the approved authorization code over the web.
+* If you want to receive the authentication results in a separate user web application, you can also set the user's web address. In this example, we'll use the Google Developers site to verify the credentials.
+* For **authorized redirect URI**, enter `https://developers.google.com/oauthplayground`.
 
-![Google Cloud Oauth 클라이언트 생성 정보 입력](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_06.png)
+![Enter information to create a Google Cloud Oauth client](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_06.png)
 
-* **만들기**를 클릭해 OAuth 클라이언트를 생성하면 **클라이언트 ID**와 **클라이언트 보안 비밀번호**를 확인할 수 있습니다.
+* Click **Create**to create an OAuth client, and you'll see the **client ID** and **client security password**.
 
-![Google Cloud Oauth 클라이언트 생성 결과](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_07.png)
+![Google Cloud Oauth Client Creation Results](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_07.png)
 
-### 3. OAuth 클라이언트로 Refresh token 생성
+### 3. Create a Refresh Token with OAuth Client
 
-* Refresh token 생성을 위해 [Google Developers * OAuth 2.0 Playground](https://developers.google.com/oauthplayground)에 접속합니다.
-* **Step 1**에서 인증에 사용할 API인 **Google Play Android Developer API v3**의  `https://www.googleapis.com/auth/androidpublisher`를 선택합니다.
-* 우측 상단의 톱니바퀴 모양 버튼을 눌러 **OAuth 2.0 configuration**을 열고, **Use your own OAuth credentials**를 체크하여 추가 입력란이 나오게 합니다.
-* 앞에서 생성한 **클라이언트 ID**와 **클라이언트 보안 비밀번호**를 **OAuth Client ID**와 **OAuth Client secret**에 입력합니다.
+* Access the [Google Developers - OAuth 2.0 Playground](https://developers.google.com/oauthplayground)to generate a Refresh token.
+* **In Step 1**, select https: `//www.googleapis.com/auth/androidpublisher` of **Google Play Android Developer API v3** used for authentication.
+* Click the gear button in the top right to open the **OAuth 2.0 configuration** **, and**check **Use your own OAuth credentials**to bring up additional fields.
+* Enter the **client ID** and **client security password** created earlier in **OAuth Client ID** and **OAuth Client secret**.
 
 ![Google Developers OAuth2.0 Playground - Step1](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_playground_02.png)
 
-* **Authorize APIs** 버튼을 누르고, 다음 로그인 페이지에서 Google Play Console 개발자 계정을 가진 사용자로 로그인합니다.
-* 로그인하면 **OAuth 동의 화면** 메뉴에서 구성한 페이지로 이동합니다.
-* **계속**을 누르면 **Google Developers - Oauth 2.0 Playground**의 **Step 2**로 리디렉션합니다.
+* Click the **Authorize APIs** button, and on the next sign-in page, sign in as a user with a Google Play Console developer account.
+* When you sign in, you'll be taken to the page you configured in the **OAuth consent screen** menu.
+* After clicking **Continue**, you will be redirected to **Step 2** of **Google Developers - Oauth 2.0 Playground**.
 
-![Google Developers OAuth2.0 Playground - 인증 동의](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_playground_04.png)
+![Google Developers OAuth2.0 Playground - Authentication Agreement](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_playground_04.png)
 
-* **OAuth 동의 화면**에서 **게시 상태**가 테스트 상태인 경우 **Google에서 확인하지 않은 앱** 화면을 볼 수도 있습니다.
+* **On the OAuth consent screen**, if your **publishing status**is Test, you might see the **Apps not verified by Google** screen.
 
-![Google Developers OAuth2.0 Playground - 확인하지 않은 앱](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_playground_03.png)
+![Google Developers OAuth2.0 Playground - Unverified apps](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_playground_03.png)
 
-* 클라이언트 ID를 생성할 때 **승인된 리디렉션 URI**에 `https://developers.google.com/oauthplayground`를 입력하지 않았다면 결과를 수신할 수 없습니다.
-* 정상적으로 리디렉션되면 **Step 2**에서 **Authorization code**를 확인할 수 있습니다.
-* 여기서 **Exchange authorization code for tokens**를 눌러 **Refresh token**과 **Access token**을 발급 받습니다.
+* If you didn't enter `https://developers.google.com/oauthplayground` in the **authorized redirect URI** when you created your client ID, you cannot receive results.
+* If you are redirected successfully, you can verify your **authorization code** **in Step 2**.
+* Here, click **Exchange authorization code for tokens**to get a **Refresh token and** **Access token**.
 
 ![Google Developers OAuth2.0 Playground - Refresh token](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_playground_05.png)
 
-* **Step 3**는 진행하지 않아도 무방합니다.
+* You don't need to proceed with **Step 3**.
 
-### 4. NHN Cloud IAP 앱에서 클라이언트 정보 설정
+### 4. Set up Client Information in NHN Cloud IAP app
 
-* **IAP > App**의 **추가** 또는 **편집**에서 Google Cloud Console과 Google Developers에서 확인한 정보를 입력합니다.
-* **Google API Client ID**: **클라이언트 ID**를 입력
-* **Google API Client Secret**: **클라이언트 보안 비밀번호**를 입력
-* **Refresh Token For Google Oauth**: Google Developsers OAuth Playground에서 수신한 **Refresh token**을 입력
+* In **IAP > App** > **Add** or **Modify**, enter the information you verified in Google Cloud Console and Google Developers.
+* **Google API Client ID**: Enter your **client ID**
+* **Google API Client Secret**: Enter your **client security password**
+* **Refresh Token For Google Oauth**: Enter the **Refresh token**received from the Google Developers OAuth Playground
 
-![NHN Cloud IAP 앱 설정](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_03.png)
+![NHN Cloud IAP App Settings](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_03.png)
 
-> [주의]<br>
-> 발급 받은 Refresh token은 인증한 사용자 계정의 비밀번호를 변경하면 즉시 만료됩니다. 만약 앱이 운영 중이라면 이는 장애를 초래할 수 있습니다.
-> 그 밖에도 만료되는 경우가 있으니 [Google의 OAuth 2.0 가이드 - 갱신 토큰 만료](https://developers.google.com/identity/protocols/oauth2?hl=ko#expiration)를 반드시 확인해 주시기 바랍니다.
-
-
-## SERVICE_ACCOUNT 연동 방식 설정
-사람이 아닌 사용자가 Google Cloud 리소스에 접근 가능하도록 Google Cloud IAM에서 서비스 계정을 발급할 수 있습니다. 사용자 계정과의 차이점 및 운영 전략은 [Google Cloud IAM 문서](https://cloud.google.com/iam/docs/service-account-overview?hl=ko) 또는 [Google Cloud 인증 문서](https://cloud.google.com/docs/authentication?hl=ko#credentials)를 참고하십시오.
-
-### 1. Google Cloud 서비스 계정 생성
-
-* **IAM 및 관리자 > 서비스 계정**에서 **서비스 계정 만들기**를 누르거나 **API 및 서비스 > 사용자 인증 정보**에서 **사용자 인증 정보 만들기 > 서비스 계정**을 선택합니다.
-
-![Google Cloud IAM에서 서비스 계정 만들기](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_08.png)
-
-![Google Cloud API에서 서비스 계정 만들기](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_09.png)
-
-* **서비스 계정 이름**과 **서비스 계정 ID**에 알맞은 정보를 입력 후 **만들고 계속하기**를 눌러 다음으로 진행합니다.
-
-![Google Cloud 서비스 계정 입력](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_10.png)
-
-* 액세스 권한 부여는 **소유자**를 선택합니다.
-
-![Google Cloud 서비스 계정의 액세스 권한](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_11.png)
-
-* 이후 완료하거나 추가로 서비스 계정에 대한 관리자 이메일을 등록할 수 있습니다. 관리자 이메일을 등록하면 생성 중인 서비스 계정의 관리 권한을 얻습니다. 등록한 이메일이 현재 프로젝트에 참여 중이 아닐 경우 초대 메일이 발송됩니다.
-
-### 2. Google Cloud 서비스 계정의 키 생성
-
-* 생성된 서비스 계정을 클릭하여 세부 정보를 확인합니다.
-* **키** 탭으로 이동하여 **키 추가 > 새 키 만들기**를 선택합니다.
-* **키 유형**은 **JSON**을 선택하고 **만들기**를 누르면 키 파일을 다운로드합니다.
-* 다운로드된 파일의 내용은 NHN Cloud IAP 앱을 설정할 때 사용합니다.
-
-![Google Cloud 서비스 계정의 키 생성](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_12.png)
-
-> [주의]<br>
-> 다운로드한 서비스 계정의 키 파일은 다시 다운로드할 수 없습니다. 분실한다면 키를 폐기하고, 신규로 생성해야 합니다.
-> 또한 키는 서비스 계정에 부여한 모든 권한을 사용할 수 있으므로 키 보안에 각별히 유의하십시오.
-
-### 3. Google Play Console에 서비스 계정 등록
-
-* Google Play Console에 접속합니다.
-* **사용자 및 권한**에서 **신규 사용자 초대** 버튼을 클릭합니다.
-
-![Google Cloud 서비스 계정 초대](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_02.png)
-
-* 사용자 초대 화면에서 생성한 서비스 계정 이메일을 입력합니다. **액세스 권한 만료일 설정**은 체크하지 않습니다.
-* 권한은 서비스 계정 하위에 애플리케이션을 추가해 앱별로 부여할 수도 있고, 등록하는 서비스 계정에 권한을 부여할 수도 있습니다. 여기서는 **계정 권한**으로 등록합니다.
-* 범위는 고객의 의도에 맞게 설정하되, **앱 정보 보기 및 보고서 일괄 다운로드(읽기 전용)**, **재무 데이터, 주문, 취소 설문조사 응답 보기**, **주문 및 구독 관리**는 반드시 선택해야 합니다.
-* 권한 설정이 반영되기까지 일정 시일이 소요됩니다. 경우에 따라 7일 정도의 시일이 소요될 수 있습니다.
-* 서비스 계정은 초대 후 사용자의 이메일 승인 과정 없이 활성화됩니다.
-
-![Google Cloud 서비스 계정 권한 부여](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_03.png)
-
-> Google의 일반 사용자 계정도 Google Cloud의 프로젝트에 주 구성원으로 등록되어 있고, Google Play Console에서 사용자 초대와 권한을 부여한다면 SUPERVISOR 방식과 같이 클라이언트 ID를 통한 Google Cloud API 접근이 가능합니다.
-
-### 4. NHN Cloud IAP 앱에서 서비스 계정 설정
-
-* **IAP > App**의 **추가** 또는 **편집**에서 **서비스 계정 연동 정보** 항목에 다운로드한 서비스 계정의 키 파일 내용을 입력합니다.
-* 복사할 때는 메모장과 같은 텍스트 편집기를 사용해 내용 전체를 복사하십시오.
-
-![Google Cloud 서비스 계정 정보 입력](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_02.png)
+> [Caution]<br>
+> The Refresh token issued will expire immediately if you change the password of the user account you authenticated with. If your app is live, this can cause a failure.
+> There are other reasons for expiration, please check out [Google's OAuth 2.0 guide - Refresh token expiration](https://developers.google.com/identity/protocols/oauth2?hl=ko#expiration).
 
 
-## 실시간 구독 상태 수신을 위한 Google 알림 설정
-Google Play에서 구독 상품을 판매하는 경우 NHN Cloud IAP에서 Google로부터 알림을 받아 구독의 최신 상태를 관리할 수 있습니다. 구독 상품은 갱신 시점에 Google 내에서 자동으로 갱신됩니다. 이와 같은 Google 내에서 발생하는 구독 이벤트를 추적하기 위해 Google Cloud의 **주제(Topic)** 를 사용합니다. 주제에 대한 자세한 내용은 [Android Developers - 주제 만들기](https://developer.android.com/google/play/billing/getting-ready#create-topic)에서 확인할 수 있습니다.
+## Setting up the SERVICE_ACCOUNT Integration Method
+You can issue service accounts in Google Cloud IAM to allow non-human users to access Google Cloud resources. For differences from user accounts and operational strategies, see the [Google Cloud IAM documentation[](https://cloud.google.com/iam/docs/service-account-overview?hl=ko) or the [Google Cloud Authentication documentation](https://cloud.google.com/docs/authentication?hl=ko#credentials).
 
-### 1. Google Cloud 알림 주제 생성
+### 1. Create a Google Cloud Services Account
 
-* [Google Cloud Console](https://console.cloud.google.com/)에 접속합니다.
-* **Pub/Sub**에서 **주제 만들기**를 클릭합니다.
-* **주제 ID**를 입력하고, **기본 구독 추가**와 **Google 관리 암호화 키**를 선택하여 주제를 만듭니다.
-* **Pub/Sub** 메뉴가 보이지 않는다면 **제품 및 솔루션 > 모든 제품**에서 접근할 수 있습니다.
+* **In IAM & Admin > Service accounts**, click **Create Service Account**, or in **APIs & Services > User credentials**, select **Create User Credentials > Service Account**.
 
-![Google Cloud Pub/Sub 주제](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_14.png)
+![Create a service account in Google Cloud IAM](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_08.png)
 
-![Google Cloud Pub/Sub 주제 만들기](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_15.png)
+![Create a service account in the Google Cloud API](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_09.png)
+ 
+* Enter the appropriate information for the **service account name** and **service account ID**, then click **Create and Continue**to proceed to the next step.
 
-* 주제가 생성되면 구독 이벤트가 발생했을 때 주제에 게시할 게시자를 추가해야 합니다. 생성된 주제를 선택 후 **권한** 탭에서 **주 구성원 추가**를 클릭합니다.
-* **새 주 구성원**은 `google-play-developer-notifications@system.gserviceaccount.com`를, **역할**은 **게시/구독 게시자**를 선택하고 저장합니다.
+![Enter your Google Cloud service account](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_10.png)
 
-![Google Cloud Pub/Sub 주제에 게시자 추가](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_16.png)
+* To grant access, select **Owner**.
 
-### 2. 주제에 게시할 구독 설정
+![Access rights for your Google Cloud Services account](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_11.png)
 
-* 주제를 생성하면 **구독** 메뉴에서 해당 주제의 구독이 함께 생성된 것을 볼 수 있습니다.
-* 구독 수정으로 들어가 **전송 유형**은 **푸시**를 선택하고, **엔드포인트 URL**은 NHN Cloud IAP의 알림 수신 주소인 `https://api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG`을 입력합니다. 입력할 때 `{YOUR_PACKAGE_NAME}`은 위의 NHN Cloud IAP 앱 기본 정보 입력 중 **Store App ID**와 동일한 값으로 교체해야 합니다.
-* Gamebase 샌드박스를 사용하고 있다면 **엔드포인트 URL**은 `https://sandbox-api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG`로 입력합니다.
-* 이미 만들어진 주제에 구독을 추가하고 싶다면 **구독 만들기**로 구독을 추가할 수도 있습니다.
+* You can then complete or register additional administrator emails for the service account. Registering an admin email gives you administrative permissions for the service account you're creating. If the registered email isn't currently working on a project, you'll receive an invitation. 
 
-![Google Cloud Pub/Sub 구독 정보 입력](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_17.png)
+### 2. Generate a key for your Google Cloud Services account
 
-### 3. Google Play Console에 구독 주제 등록
+* Click the created service account to view its details.
+* Go to the **Keys** tab and select **Add key > Create new key**.
+* Select **JSON** for the **key type**and click **Create**to download the key file.
+* The contents of the downloaded file are used to set up the NHN Cloud IAP app.
 
-* **홈** 화면에서 알림을 받을 앱을 선택 후 **수익 창출 설정**으로 들어갑니다.
-* **Google Play 결제** 항목 중 **주제 이름**에 앞서 만든 주제의 이름을 입력합니다.
+![Generate a key for your Google Cloud Services account](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_12.png)
 
-![Google Play 알림 주제 등록](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_04.png)
+> [Caution]<br>
+> Once downloaded, the key file for a service account cannot be re-downloaded. If you lose the key, you must destroy it and generate a new one.
+> Also, remember that keys can use any permissions you've granted to the service account, so be extra careful about key security.
+
+### 3. Register a Service Account with Google Play Console
+
+* Access Google Play Console.
+* In **Users and permissions,**click the **Invite new user** button.
+
+![Invite a Google Cloud Services account](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_02.png)
+
+* Enter the service account email you created on the Invite users screen. Do not check **Set access expiration date**.
+* Permissions can be granted on a per-app basis by adding applications under the service account, or they can be granted to the service account you register with. Here, we're registering with account permissions**.
+* Set the scope to match your intent, but make sure to select **View app info and bulk download reports (read-only)**, **View financial data, order, and cancel survey responses**, and **Manage orders and subscriptions**.
+* It will take some time for your permission settings to be reflected. In some cases, it can take as long as 7 days.
+* Service accounts are activated after invitation without requiring email authorization from the user.
+
+![Authorize your Google Cloud Services account](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_03.png)
+
+> Google's regular user account can also access the Google Cloud API through the client ID, just like the SUPERVISOR method, as long as the project is registered as a primary member in Google Cloud and the user is invited and authorized in the Google Play Console.
+
+### 4. Set up a Service Account in the NHN Cloud IAP app
+
+* In **IAP > App** > **Add** or **Modify**, in the **Service account integration information** field, enter the contents of the key file for the downloaded service account.
+* When copying, use a text editor like notepad to copy the entire content.
+
+![Enter Google Cloud services account information](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_iap_console_app_02.png)
+
+
+## Set up Google Notifications to receive real-time subscription status
+If you sell subscription products on Google Play, you can receive notifications from Google in NHN Cloud IAP to manage the latest status of your subscriptions. Subscription products are automatically renewed within Google at the time of renewal. To track these subscription events within Google, you use **Topics** in Google Cloud. You can learn more about topics in [Android Developers - Creating topics](https://developer.android.com/google/play/billing/getting-ready#create-topic).
+
+### 1. Create a Google Cloud Notification topic
+
+* Access [Google Cloud Console](https://console.cloud.google.com/).
+* **In Pub/Sub,**click **Create a topic**.
+* Create a topic by entering **a topic ID**, **adding a default subscription**, and selecting a **Google-managed encryption key**.
+* If you don't see the **Pub/Sub** menu, you can access it **from Products & Solutions > All Products**.
+
+![Google Cloud Pub/Sub Topics](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_14.png)
+
+![Create a Google Cloud Pub/Sub topic](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_15.png)
+
+* Once the topic is created, you need to add a publisher to post to the topic when a subscription event occurs. Select the created topic and click **Add primary member**on the **Permissions** tab.
+* Select `google-play-developer-notifications@system.gserviceaccount.com를`for the **new primary member**, **publish/subscribe publisher**for the **role**, and save.
+
+![Add a publisher to a Google Cloud Pub/Sub topic](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_16.png)
+
+### 2. Set up Subscriptions to Publish to the Topic
+
+* When you create a topic, you'll see a subscription for that topic created alongside it in the **Subscriptions** menu.
+* Go to modify subscription, select **Push**for **Delivery type**, and enter `https://api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG`as the **endpoint URL**to receive notifications from NHN Cloud IAP. When entering, `{YOUR_PACKAGE_NAME}`must be replaced with the same value as the **Store App ID**during the NHN Cloud IAP app basic information entry above.
+* If you're using the Gamebase sandbox, enter the **endpoint URL** `as https://sandbox-api-iap.cloud.toast.com/callback/subscription/{YOUR_PACKAGE_NAME}/GG`.
+* If you want to add a subscription to an already created topic, you can also add a subscription with Create Subscription**.
+
+![Enter your Google Cloud Pub/Sub subscription information](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_cloud_console_17.png)
+
+### 3. Register a Subscription Topic in Google Play Console
+
+* From the **home** screen, select the apps you want to receive notifications for and enter the **monetization settings**.
+* Under **Google Play Payments**, in **Topic name**, enter the name of the topic that you created earlier.
+
+![Register a Google Play Notification topic](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_google/google_play_console_04.png)
 
