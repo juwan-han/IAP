@@ -291,22 +291,22 @@ Response body에 JSON형태로 전달
 
 #### Result
 
-| Property name | Value  | Description       |
-| ------------- | ------ | ----------------- |
-| channel      | String | 사용자 채널 |
-| userId      | String | 사용자 키 |
-| paymentSeq      | String | 결제번호 |
-| appId      | String | packageName |
-| productId         | String   | 스토어에 등록된 상품 식별자 |
-| productType      | String | 상품 타입 |
-| productSeq      | long | 상품 번호(iap console 내부 식별자)|
-| currency      | String | 통화 |
-| price      | Float | 가격 |
-| paymentId      | String | 최근 갱신된 스토어 결제 번호 |
-| originalPaymentId      | String | 최초 스토어 결제 번호 |
-| purchaseTimeMillis      | long | 최근 갱신된 시간 |
-| expiryTimeMillis      | long | 만료 시간 |
-| renewTimeMillis      | long | 갱신 발생 시간 |
+| Property name | Value  | Description               |
+| ------------- | ------ |---------------------------|
+| channel      | String | 사용자 채널                    |
+| userId      | String | 사용자 키                     |
+| paymentSeq      | String | 결제번호                      |
+| appId      | String | packageName               |
+| productId         | String   | 스토어에 등록된 상품 식별자           |
+| productType      | String | 상품 타입                     |
+| productSeq      | long | 상품 번호(iap console 내부 식별자) |
+| currency      | String | 통화                        |
+| price      | Float | 가격                        |
+| paymentId      | String | 최근 갱신된 스토어 결제 번호          |
+| originalPaymentId      | String | 최초 스토어 결제 번호              |
+| purchaseTimeMillis      | long | 최근 갱신된 시간                 |
+| expiryTimeMillis      | long | 만료 시간                     |
+| renewTimeMillis      | long | 갱신 등록 또는 갱신 알림 발생 시간      |
 
 
 
