@@ -263,6 +263,7 @@ Response body에 JSON형태로 전달
       "originalPaymentId": "GPA.3375-2193-1175-57698",
       "purchaseTimeMillis": 1540522998289,
       "expiryTimeMillis": 1541134994548,
+      "renewTimeMillis": 1540523045377,
       "productSeq" : 1000009
     }
   ]
@@ -305,6 +306,7 @@ Response body에 JSON형태로 전달
 | originalPaymentId      | String | 최초 스토어 결제 번호 |
 | purchaseTimeMillis      | long | 최근 갱신된 시간 |
 | expiryTimeMillis      | long | 만료 시간 |
+| renewTimeMillis      | long | 갱신 등록 또는 갱신 알림 발생 시간      |
 
 
 
