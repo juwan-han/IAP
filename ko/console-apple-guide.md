@@ -3,9 +3,15 @@
 > 본 문서는 App Store로 출시된 앱의 정보를 [NHN Cloud IAP](https://docs.nhncloud.com/ko/Mobile%20Service/IAP/ko/Overview/) 콘솔에 등록 및 연동시키는 방법을 다룹니다.
 > 연동 방법은 **(신)영수증 검증 + Notification V2**, **(구)영수증 검증 + Notification V1** 두 가지 방식으로 나뉩니다.
 
-## (신)영수증 검증 + Notification V2
-> 해당 방식을 정상적으로 사용하려면 **NHN Cloud SDK iOS v1.7.0 버전 이상**이어야 합니다.
+## NHN Cloud SDK iOS 버전 별 지원 연동 방식
+| 버전        | 지원 연동 방식                                                 |
+|-----------|----------------------------------------------------------|
+| v1.8.0 이상 | (신)영수증 검증 + Notification V2, (구)영수증 검증 + Notification V1 |
+| v1.7.0 이상 | (신)영수증 검증 + Notification V2                              |
+| v1.6.2 이하 | (구)영수증 검증 + Notification V1                              |
 
+
+## (신)영수증 검증 + Notification V2
 ### 앱 내 구입 키 생성
 > **참고** 
 > [https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases)
@@ -32,8 +38,6 @@
 
 
 ## (구)영수증 검증 + Notification V1 (Deprecated 예정)
-> 해당 방식을 정상적으로 사용하려면 **NHN Cloud SDK iOS v1.7.0 이전 버전**을 사용해야 됩니다.
-
 - Apple 구독 상품 결제를 사용하려면 App Store Connect에서 **공유 암호** 생성 및 **Notification V1 URL** 설정이 필요합니다.
 - 공유 암호는 IAP 앱 정보에 등록합니다.
 - Apple 일반 상품 결제는 별도 설정이 필요하지 않습니다.
