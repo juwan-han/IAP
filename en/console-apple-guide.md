@@ -1,14 +1,14 @@
 ## Mobile Service > IAP > Apple Console Guide
 
 > This document describes how to register and integrate the information of an app released on the App Store with [NHN Cloud IAP](https://docs.nhncloud.com/ko/Mobile%20Service/IAP/ko/Overview/) Console.
-There are two methods of integration: **(New) Receipt Verification + Notification V2** and **(Old) Receipt Verification+Notification V1**.
+There are two methods of integration: **(New) Receipt Verification + Notification V2** and **(Old) Receipt Verification + Notification V1**.
 
 ## NHN Cloud SDK Integration for iOS Versions
-| Version        | Integration Method                                                 |
-|-----------|----------------------------------------------------------|
+| Version        | Integration Method                                                                         |
+|-----------|--------------------------------------------------------------------------------------------|
 | v1.8.0 or later | (New) Receipt Verification + Notification V2, (Old) Receipt Verification + Notification V1 |
-| v1.7.*    | (New) Receipt Verification+Notification V2                              |
-| v1.6.2 and earlier | (Old) Receipt Verification + Notification V1                              |
+| v1.7.*    | (New) Receipt Verification + Notification V2                                               |
+| v1.6.2 and earlier | (Old) Receipt Verification + Notification V1                                               |
 
 
 ## (New) Receipt Verification + Notification V2
