@@ -1,11 +1,17 @@
 ## Mobile Service > IAP > Apple Console Guide
 
 > This document describes how to register and integrate the information of an app released on the App Store with [NHN Cloud IAP](https://docs.nhncloud.com/ko/Mobile%20Service/IAP/ko/Overview/) Console.
-There are two methods of integration: **(New) Receipt Verification + Notification V2** and **(Old) Receipt Verification + Notification V1**.
+There are two methods of integration: **(New) Receipt Verification + Notification V2** and **(Old) Receipt Verification+Notification V1**.
+
+## NHN Cloud SDK Integration for iOS Versions
+| Version        | Integration Method                                                 |
+|-----------|----------------------------------------------------------|
+| v1.8.0 or later | (New) Receipt Verification + Notification V2, (Old) Receipt Verification + Notification V1 |
+| v1.7.*    | (New) Receipt Verification+Notification V2                              |
+| v1.6.2 and earlier | (Old) Receipt Verification + Notification V1                              |
+
 
 ## (New) Receipt Verification + Notification V2
-> To use this method properly, **NHN Cloud SDK iOS v1.7.0 or later** is required.
-
 ### Generate keys for in-app purchases
 > **Note**
 [https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases)
@@ -32,8 +38,6 @@ There are two methods of integration: **(New) Receipt Verification + Notificatio
 
 
 ## (Old) Receipt Verification + Notification V1 (soon to be deprecated)
-> To use this method properly, you need to use **NHN Cloud SDK iOS v1.7.0 or earlier**.
-
 - Apple subscription billing requires you to create a **shared secret** and set up a **Notification V1 URL** in App Store Connect.
 - Register the shared secret in the IAP app information.
 - Do not need any setup for payments for Apple general merchandise.
