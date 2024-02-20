@@ -264,6 +264,7 @@ returns a result in the response body.
       "originalPaymentId": "GPA.3375-2193-1175-57698",
       "purchaseTimeMillis": 1540522998289,
       "expiryTimeMillis": 1541134994548,
+      "renewTimeMillis": 1540523045377,
       "productSeq" : 1000009
     }
   ]
@@ -308,6 +309,7 @@ returns a result in the response body.
 | originalPaymentId      | String | original store payment unique identifier |
 | purchaseTimeMillis      | long | latest renewal time in millis |
 | expiryTimeMillis      | long | expiry time in millis |
+| renewTimeMillis      | long | renewal enrollment or renewal notification time in millis |
 
 
 
