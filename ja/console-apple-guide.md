@@ -3,9 +3,15 @@
 > この文書、はApp Storeにリリースされたアプリの情報を[NHN Cloud IAP](https://docs.nhncloud.com/ko/Mobile%20Service/IAP/ko/Overview/)コンソールに登録及び連動させる方法を説明します。
 > 連動方法は**(新)領収書検証 + Notification V2**, **(旧)領収書検証 + Notification V1**の2つの方法に分かれています。
 
-## (新)領収書検証 + Notification V2
-> この方式を正常に使用するには、**NHN Cloud SDK iOS v1.7.0バージョン以上**が必要です。
+## NHN Cloud SDK iOSバージョン別の連動方式
+| バージョン       | 連動方式                                                |
+|-----------|----------------------------------------------------------|
+| v1.8.0以上 | (新)領収書検証+Notification V2, (旧)領収書検証+Notification V1 |
+| v1.7.*    | (新)領収書検証+Notification V2                              |
+| v1.6.2以下 | (旧)領収書検証+Notification V1                              |
 
+
+## (新)領収書検証 + Notification V2
 ### アプリ内購入キーの生成
 > **参考** 
 > [https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases)
@@ -32,8 +38,6 @@
 
 
 ## (旧)領収書検証 + Notification V1 (Deprecated予定)
-> この方式を正常に使用するには**NHN Cloud SDK iOS v1.7.0以前のバージョン**を使用する必要があります。
-
 - Appleサブスクリプション商品決済を使用するには、App Store Connectで**共有パスワード**の作成と**Notification V1 URL**の設定が必要です。
 - 共有パスワードはIAPアプリ情報に登録します。
 - Apple一般商品決済は別途設定が必要ありません。

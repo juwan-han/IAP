@@ -225,7 +225,7 @@ POST https://api-iap.cloud.toast.com/v1/service/activeSubscriptionList
 | Property name | Value   | Description             |
 | ------------- | ------ | --------------- |
 | marketId | String | ストアコード (GG : Google, AS : Apple) |
-| packageName | String | APP packageName (예: com.nhnent.iap.google.sample) |
+| packageName | String | APP packageName (例: com.nhnent.iap.google.sample) |
 | userChannel | String | ユーザーチャンネル (GF) |
 | userKey | String | ユーザ識別キー |
 
@@ -260,6 +260,7 @@ Response bodyにJSON形に配信
       "originalPaymentId": "GPA.3375-2193-1175-57698",
       "purchaseTimeMillis": 1540522998289,
       "expiryTimeMillis": 1541134994548,
+      "renewTimeMillis": 1540523045377,
       "productSeq" : 1000009
     }
   ]
@@ -303,6 +304,7 @@ Response bodyにJSON形に配信
 | originalPaymentId      | String | 最初のストア決済番号 |
 | purchaseTimeMillis      | long | 最近更新された時間 |
 | expiryTimeMillis      | long | 満了時間 |
+| renewTimeMillis      | long | 更新登録または更新通知発生時間     |
 
 
 
