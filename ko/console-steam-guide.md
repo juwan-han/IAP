@@ -6,6 +6,12 @@
 
 ## 기본 정보 입력
 
+STEAM 연동을 위해서는 다음의 3가지 정보를 정확히 입력해 주시기 바랍니다. 
+
+연동과 관련된 정보는 [Steamworks](https://partner.steamgames.com/)에서 생성합니다.
+
+기타 본 페이지에서 설명하지 않는 항목은 ‘Mobile Service > IAP > [콘솔 공통 사용 가이드](https://docs.alpha-nhncloud.com/ko/Mobile%20Service/IAP/ko/console-guide/)’ 페이지를 참고 하시기 바랍니다. 
+
 
 ![NHN Cloud IAP 앱 설정](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_steam/steam_console_app_01_kor.png)
 
@@ -29,8 +35,10 @@
 
 ### STEAM 기본 통화
 
-* 유저가 구매 시도를 할 때 기본값으로 선택되는 결제 통화 정보입니다.
-* 기본으로 지원하려 하는 결제 통화 코드를 선택합니다.
+* 유저가 구매를 시도하여 스팀 결제 오버레이에 진입 시 아이템 가격에 적용된 통화코드의 기본 값을 설정할 수 있습니다. 
+* 유저 스팀 지갑의 통화와 일치하는 아이템 정보 내 통화코드가 존재하지 않을 경우, 본 항목에서 설정된 기본통화로 상품의 가격이 출력 됩니다. 
+  * ‘판매 아이템 설정’ 섹션 내 ‘국가 별 판매 아이템 정보 입력’ 항목 참고
+
 
 ![STEAM 기본 통화](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_steam/steam_console_app_04_kor.png)
 
