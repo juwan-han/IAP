@@ -29,9 +29,9 @@
 * 클라이언트 생성을 위해서는 클라이언트에 적용할 정책이 먼저 추가되어야 합니다.
   * 클라이언트 정책 이름은 임의의 이름을 설정합니다.
   * 클라이언트 정책 유형은 **TrustedServer**를 선택합니다.
-  * 기능은 IAP에서 필요하지 않으므로 선택하지 않습니다.
+  * **Ecom** 기능을 활성화합니다.
 
-![에픽 클라이언트 정책 생성](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_app_01_kor.png)
+![에픽 클라이언트 정책 생성](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_app_05_kor.png)
 
 * 클라이언트 정책 추가 후 클라이언트를 생성합니다.
 
