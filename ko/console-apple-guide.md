@@ -35,6 +35,7 @@
 2. **프로덕션 서버 URL** 또는 **Sandbox 서버 URL** 편집 클릭
 3. 알림 버전: **버전 2 알림** 선택
 4. 서버 URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2` 입력
+    - Gamebase 샌드박스를 사용하고 있다면 **서버 URL**은 `https://sandbox-api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2` 입력
 
 
 ## (구)영수증 검증+Notification V1 (Deprecated 예정)
@@ -69,6 +70,7 @@
 2. **프로덕션 서버 URL** 또는 **Sandbox 서버 URL** 편집 클릭
 3. 알림 버전: **버전 1 알림** 선택
 4. 서버 URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS` 입력
+    - Gamebase 샌드박스를 사용하고 있다면 **서버 URL**은 `https://sandbox-api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS` 입력
 
 
 ## (구)영수증 검증+Notification V1 → (신)영수증 검증+Notification V2 변경 시 주의 사항
