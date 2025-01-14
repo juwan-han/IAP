@@ -35,6 +35,7 @@
 2. **プロダクションサーバーURL** または **SandboxサーバーURL**編集をクリック
 3. 通知バージョン: **バージョン2通知**を選択
 4. サーバーURL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2`を入力
+    - Gamebaseサンドボックスを使用している場合、**サーバーURL**は`https://sandbox-api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2`を入力
 
 
 ## (旧)領収書検証 + Notification V1 (Deprecated予定)
@@ -69,6 +70,7 @@
 2. **プロダクションサーバーURL** または **SandboxサーバーURL**編集をクリック
 3. 通知バージョン: **バージョン1通知**を選択
 4. サーバーURL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS`入力
+    - Gamebaseサンドボックスを使用している場合、**サーバーURL**は`https://sandbox-api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS`を入力
 
 
 ## (旧)領収書検証 + Notification V1 → (新)領収書検証 + Notification V2 変更時の注意事項
