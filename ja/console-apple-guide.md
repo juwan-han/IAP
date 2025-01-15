@@ -36,7 +36,7 @@
 3. 通知バージョン: **バージョン2通知**を選択
 4. サーバーURL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2`を入力
     - Gamebaseサンドボックスを使用している場合、**サーバーURL**は`https://sandbox-api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2`を入力
-    
+
 
 ## (旧)領収書検証 + Notification V1 (Deprecated予定)
 - Appleサブスクリプション商品決済を使用するには、App Store Connectで**共有パスワード**の作成と**Notification V1 URL**の設定が必要です。
@@ -71,7 +71,7 @@
 3. 通知バージョン: **バージョン1通知**を選択
 4. サーバーURL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS`入力
     - Gamebaseサンドボックスを使用している場合、**サーバーURL**は`https://sandbox-api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS`を入力
-    
+
 
 ## (旧)領収書検証 + Notification V1 → (新)領収書検証 + Notification V2 変更時の注意事項
 - App運営中に変更する場合、障害が発生する可能性がありますので、必ず点検中に変更してください。

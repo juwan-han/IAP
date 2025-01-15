@@ -35,6 +35,7 @@ There are two methods of integration: **(New) Receipt Verification + Notificatio
 2. Click **Edit Production Server URL** or **Sandbox Server URL**
 3. Notification version: Select **Version 2 Notifications**.
 4. Enter the server URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2`
+    - If you are using Gamebase Sandbox, enter `https://sandbox-api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS/v2` for the **Server URL**.
 
 
 ## (Old) Receipt Verification + Notification V1 (soon to be deprecated)
@@ -69,6 +70,7 @@ You can generate a **primary shared secret**, which is a single secret for all a
 2. Click **Edit Production Server URL** or **Sandbox Server URL**
 3. Notification version: Select **Version 1 Notifications**
 4. Enter the server URL: `https://api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS`
+    - If you are using Gamebase Sandbox, enter `https://sandbox-api-iap.cloud.toast.com/callback/subscription/{APP_BUNDLE_ID}/AS` for the **Server URL**.
 
 
 ## Precautions for changing from (Old) Receipt Verification + Notification V1 → (New) Receipt Verification + Notification V2
