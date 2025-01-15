@@ -29,9 +29,9 @@ Epicが製品配布のために提供する環境は次のとおりです。
 * クライアントを作成するためには、クライアントに適用するポリシーを先に追加する必要があります。
   * クライアントポリシー名は任意の名前を設定します。
   * クライアントポリシータイプは**TrustedServer**を選択します。
-  * 機能はIAPで必要ないため、選択しません。
+  * **Ecom**機能を有効にします
 
-![Epicクライアントポリシー作成](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_app_01_kor.png)
+![Epicクライアントポリシー作成](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_app_05_kor.png)
 
 * クライアントポリシーの追加後にクライアントを作成します。
 

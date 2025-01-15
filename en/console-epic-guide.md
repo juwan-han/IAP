@@ -29,9 +29,9 @@ The environments Epic provides for product release are as follows.
 * To create a client, must create the policy to be applied to the client first.
   * Set the client policy name as a random name.
   * For the client policy type, select **TrustedServer**.
-  * The feature is not required by IAP, so it is not selected.
+  * Enable the **Ecom** feature.
 
-![Create an Epic Client Policy](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_app_01_kor.png)
+![Create an Epic Client Policy](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_iap/console_epic/epic_console_app_05_kor.png)
 
 * After adding the client policy, create a client.
 
